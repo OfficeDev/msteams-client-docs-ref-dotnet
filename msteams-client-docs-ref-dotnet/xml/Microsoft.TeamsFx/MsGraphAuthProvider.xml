@@ -1,0 +1,135 @@
+<Type Name="MsGraphAuthProvider" FullName="Microsoft.TeamsFx.MsGraphAuthProvider">
+  <TypeSignature Language="C#" Value="public class MsGraphAuthProvider : Microsoft.Graph.IAuthenticationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MsGraphAuthProvider extends System.Object implements class Microsoft.Graph.IAuthenticationProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.MsGraphAuthProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Class MsGraphAuthProvider&#xA;Implements IAuthenticationProvider" />
+  <TypeSignature Language="F#" Value="type MsGraphAuthProvider = class&#xA;    interface IAuthenticationProvider" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Graph.IAuthenticationProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Microsoft Graph auth provider for Teams Framework.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsGraphAuthProvider (Azure.Core.TokenCredential credential, string scopes = &quot;.default&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Core.TokenCredential credential, string scopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (credential As TokenCredential, Optional scopes As String = &quot;.default&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.MsGraphAuthProvider : Azure.Core.TokenCredential * string -&gt; Microsoft.TeamsFx.MsGraphAuthProvider" Usage="new Microsoft.TeamsFx.MsGraphAuthProvider (credential, scopes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="scopes" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="credential">Credential used to invoke Microsoft Graph APIs.</param>
+        <param name="scopes">The string of Microsoft Token scopes of access separated by space. Default value is `.default`.</param>
+        <summary>
+            Constructor of MsGraphAuthProvider.
+            </summary>
+        <returns>
+            An instance of MsGraphAuthProvider.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsGraphAuthProvider (Azure.Core.TokenCredential credential, string[] scopes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Core.TokenCredential credential, string[] scopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (credential As TokenCredential, scopes As String())" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.MsGraphAuthProvider : Azure.Core.TokenCredential * string[] -&gt; Microsoft.TeamsFx.MsGraphAuthProvider" Usage="new Microsoft.TeamsFx.MsGraphAuthProvider (credential, scopes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="scopes" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="credential">Credential used to invoke Microsoft Graph APIs.</param>
+        <param name="scopes">The scopes required for the token.</param>
+        <summary>
+            Constructor of MsGraphAuthProvider.
+            </summary>
+        <returns>
+            An instance of MsGraphAuthProvider.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticateRequestAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AuthenticateRequestAsync (System.Net.Http.HttpRequestMessage request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task AuthenticateRequestAsync(class System.Net.Http.HttpRequestMessage request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.MsGraphAuthProvider.AuthenticateRequestAsync(System.Net.Http.HttpRequestMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AuthenticateRequestAsync (request As HttpRequestMessage) As Task" />
+      <MemberSignature Language="F#" Value="abstract member AuthenticateRequestAsync : System.Net.Http.HttpRequestMessage -&gt; System.Threading.Tasks.Task&#xA;override this.AuthenticateRequestAsync : System.Net.Http.HttpRequestMessage -&gt; System.Threading.Tasks.Task" Usage="msGraphAuthProvider.AuthenticateRequestAsync request" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Graph.IAuthenticationProvider.AuthenticateRequestAsync(System.Net.Http.HttpRequestMessage)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessTokenAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; GetAccessTokenAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GetAccessTokenAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.MsGraphAuthProvider.GetAccessTokenAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAccessTokenAsync () As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetAccessTokenAsync : unit -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="msGraphAuthProvider.GetAccessTokenAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get access token for Microsoft Graph API requests.
+            </summary>
+        <returns>Access token from the credential.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="F:Microsoft.TeamsFx.ExceptionCode.InternalError">When get access token failed due to empty token or unknown other problems.</exception>
+        <exception cref="F:Microsoft.TeamsFx.ExceptionCode.TokenExpiredError">When SSO token has already expired.</exception>
+        <exception cref="F:Microsoft.TeamsFx.ExceptionCode.UiRequiredError">When need user consent to get access token.</exception>
+        <exception cref="F:Microsoft.TeamsFx.ExceptionCode.ServiceError">When failed to get access token from simple auth or AAD server.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

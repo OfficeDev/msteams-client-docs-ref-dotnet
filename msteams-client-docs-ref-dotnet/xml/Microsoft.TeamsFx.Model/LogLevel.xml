@@ -1,0 +1,106 @@
+<Type Name="LogLevel" FullName="Microsoft.TeamsFx.Model.LogLevel">
+  <TypeSignature Language="C#" Value="public enum LogLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Model.LogLevel" />
+  <TypeSignature Language="VB.NET" Value="Public Enum LogLevel" />
+  <TypeSignature Language="F#" Value="type LogLevel = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Log Level
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Model.LogLevel Error = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Model.LogLevel.Error" />
+      <MemberSignature Language="VB.NET" Value="Error" />
+      <MemberSignature Language="F#" Value="Error = 3" Usage="Microsoft.TeamsFx.Model.LogLevel.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Model.LogLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Show error message.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Info">
+      <MemberSignature Language="C#" Value="Info" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Model.LogLevel Info = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Model.LogLevel.Info" />
+      <MemberSignature Language="VB.NET" Value="Info" />
+      <MemberSignature Language="F#" Value="Info = 1" Usage="Microsoft.TeamsFx.Model.LogLevel.Info" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Model.LogLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Show information, warning and error message.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbose">
+      <MemberSignature Language="C#" Value="Verbose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Model.LogLevel Verbose = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Model.LogLevel.Verbose" />
+      <MemberSignature Language="VB.NET" Value="Verbose" />
+      <MemberSignature Language="F#" Value="Verbose = 0" Usage="Microsoft.TeamsFx.Model.LogLevel.Verbose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Model.LogLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Show verbose, information, warning and error message.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Warn">
+      <MemberSignature Language="C#" Value="Warn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Model.LogLevel Warn = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Model.LogLevel.Warn" />
+      <MemberSignature Language="VB.NET" Value="Warn" />
+      <MemberSignature Language="F#" Value="Warn = 2" Usage="Microsoft.TeamsFx.Model.LogLevel.Warn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Model.LogLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Show warning and error message.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
