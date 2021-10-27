@@ -1,0 +1,253 @@
+<Type Name="ExceptionCode" FullName="Microsoft.TeamsFx.ExceptionCode">
+  <TypeSignature Language="C#" Value="public enum ExceptionCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExceptionCode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.ExceptionCode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ExceptionCode" />
+  <TypeSignature Language="F#" Value="type ExceptionCode = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Exception code to trace the exception types.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChannelNotSupported">
+      <MemberSignature Language="C#" Value="ChannelNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode ChannelNotSupported = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.ChannelNotSupported" />
+      <MemberSignature Language="VB.NET" Value="ChannelNotSupported" />
+      <MemberSignature Language="F#" Value="ChannelNotSupported = 3" Usage="Microsoft.TeamsFx.ExceptionCode.ChannelNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Channel is not supported error.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsentFailed">
+      <MemberSignature Language="C#" Value="ConsentFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode ConsentFailed = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.ConsentFailed" />
+      <MemberSignature Language="VB.NET" Value="ConsentFailed" />
+      <MemberSignature Language="F#" Value="ConsentFailed = 5" Usage="Microsoft.TeamsFx.ExceptionCode.ConsentFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            User failed to finish the AAD consent flow failed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FailedOperation">
+      <MemberSignature Language="C#" Value="FailedOperation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode FailedOperation = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.FailedOperation" />
+      <MemberSignature Language="VB.NET" Value="FailedOperation" />
+      <MemberSignature Language="F#" Value="FailedOperation = 9" Usage="Microsoft.TeamsFx.ExceptionCode.FailedOperation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            Operation failed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalError">
+      <MemberSignature Language="C#" Value="InternalError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode InternalError = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.InternalError" />
+      <MemberSignature Language="VB.NET" Value="InternalError" />
+      <MemberSignature Language="F#" Value="InternalError = 2" Usage="Microsoft.TeamsFx.ExceptionCode.InternalError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Internal error.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidConfiguration">
+      <MemberSignature Language="C#" Value="InvalidConfiguration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode InvalidConfiguration = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.InvalidConfiguration" />
+      <MemberSignature Language="VB.NET" Value="InvalidConfiguration" />
+      <MemberSignature Language="F#" Value="InvalidConfiguration = 1" Usage="Microsoft.TeamsFx.ExceptionCode.InvalidConfiguration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Invalid configuration error.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidParameter">
+      <MemberSignature Language="C#" Value="InvalidParameter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode InvalidParameter = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.InvalidParameter" />
+      <MemberSignature Language="VB.NET" Value="InvalidParameter" />
+      <MemberSignature Language="F#" Value="InvalidParameter = 0" Usage="Microsoft.TeamsFx.ExceptionCode.InvalidParameter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Invalid parameter error.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="JSRuntimeError">
+      <MemberSignature Language="C#" Value="JSRuntimeError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode JSRuntimeError = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.JSRuntimeError" />
+      <MemberSignature Language="VB.NET" Value="JSRuntimeError" />
+      <MemberSignature Language="F#" Value="JSRuntimeError = 10" Usage="Microsoft.TeamsFx.ExceptionCode.JSRuntimeError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>
+            General JSException that are not generated by TeamsFx SDK. 
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeNotSupported">
+      <MemberSignature Language="C#" Value="RuntimeNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode RuntimeNotSupported = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.RuntimeNotSupported" />
+      <MemberSignature Language="VB.NET" Value="RuntimeNotSupported" />
+      <MemberSignature Language="F#" Value="RuntimeNotSupported = 4" Usage="Microsoft.TeamsFx.ExceptionCode.RuntimeNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Runtime is not supported error.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceError">
+      <MemberSignature Language="C#" Value="ServiceError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode ServiceError = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.ServiceError" />
+      <MemberSignature Language="VB.NET" Value="ServiceError" />
+      <MemberSignature Language="F#" Value="ServiceError = 8" Usage="Microsoft.TeamsFx.ExceptionCode.ServiceError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Call service (AAD or simple authentication server) failed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenExpiredError">
+      <MemberSignature Language="C#" Value="TokenExpiredError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode TokenExpiredError = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.TokenExpiredError" />
+      <MemberSignature Language="VB.NET" Value="TokenExpiredError" />
+      <MemberSignature Language="F#" Value="TokenExpiredError = 7" Usage="Microsoft.TeamsFx.ExceptionCode.TokenExpiredError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            Token is not within its valid time range error.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UiRequiredError">
+      <MemberSignature Language="C#" Value="UiRequiredError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.ExceptionCode UiRequiredError = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.ExceptionCode.UiRequiredError" />
+      <MemberSignature Language="VB.NET" Value="UiRequiredError" />
+      <MemberSignature Language="F#" Value="UiRequiredError = 6" Usage="Microsoft.TeamsFx.ExceptionCode.UiRequiredError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.ExceptionCode</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            The user or administrator has not consented to use the application error.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

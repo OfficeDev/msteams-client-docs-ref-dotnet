@@ -1,0 +1,64 @@
+<Type Name="ResourceType" FullName="Microsoft.TeamsFx.Model.ResourceType">
+  <TypeSignature Language="C#" Value="public enum ResourceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ResourceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Model.ResourceType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ResourceType" />
+  <TypeSignature Language="F#" Value="type ResourceType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Available resource type.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="API">
+      <MemberSignature Language="C#" Value="API" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Model.ResourceType API = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Model.ResourceType.API" />
+      <MemberSignature Language="VB.NET" Value="API" />
+      <MemberSignature Language="F#" Value="API = 1" Usage="Microsoft.TeamsFx.Model.ResourceType.API" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Model.ResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Rest API.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SQL">
+      <MemberSignature Language="C#" Value="SQL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Model.ResourceType SQL = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Model.ResourceType.SQL" />
+      <MemberSignature Language="VB.NET" Value="SQL" />
+      <MemberSignature Language="F#" Value="SQL = 0" Usage="Microsoft.TeamsFx.Model.ResourceType.SQL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Model.ResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            SQL database.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

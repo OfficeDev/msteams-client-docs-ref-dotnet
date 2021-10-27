@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Framework Name="msteams-client-dotnet-latest">
+  <Assemblies>
+    <Assembly Name="Microsoft.TeamsFx" Version="0.1.0.0" />
+  </Assemblies>
+  <Namespace Name="Microsoft.TeamsFx">
+    <Type Name="Microsoft.TeamsFx._Imports" Id="T:Microsoft.TeamsFx._Imports">
+      <Member Id="M:Microsoft.TeamsFx._Imports.#ctor" />
+      <Member Id="M:Microsoft.TeamsFx._Imports.Execute" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.ExceptionCode" Id="T:Microsoft.TeamsFx.ExceptionCode">
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.ChannelNotSupported" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.ConsentFailed" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.FailedOperation" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.InternalError" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.InvalidConfiguration" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.InvalidParameter" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.JSRuntimeError" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.RuntimeNotSupported" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.ServiceError" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.TokenExpiredError" />
+      <Member Id="F:Microsoft.TeamsFx.ExceptionCode.UiRequiredError" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.ExceptionWithCode" Id="T:Microsoft.TeamsFx.ExceptionWithCode">
+      <Member Id="F:Microsoft.TeamsFx.ExceptionWithCode.Code" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.MsGraphAuthProvider" Id="T:Microsoft.TeamsFx.MsGraphAuthProvider">
+      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String)" />
+      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String[])" />
+      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.AuthenticateRequestAsync(System.Net.Http.HttpRequestMessage)" />
+      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.GetAccessTokenAsync" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.TeamsFx" Id="T:Microsoft.TeamsFx.TeamsFx">
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.#ctor(Microsoft.JSInterop.IJSRuntime)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String[])" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.DisposeAsync" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.GetAuthenticationConfigurationAsync" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.GetLogLevelAsync" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.GetResourceConfigurationAsync(Microsoft.TeamsFx.Model.ResourceType,System.String)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.LoadConfigurationAsync(Microsoft.TeamsFx.Model.Configuration)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.SetLogFunctionAsync(Microsoft.TeamsFx.Model.LogFunction)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.SetLogLevelAsync(Microsoft.TeamsFx.Model.LogLevel)" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.TeamsUserCredential" Id="T:Microsoft.TeamsFx.TeamsUserCredential">
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.#ctor(Microsoft.JSInterop.IJSRuntime)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.DisposeAsync" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.GetUserInfoAsync" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.LoginAsync(System.String)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.LoginAsync(System.String[])" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.TeamsFx.Model">
+    <Type Name="Microsoft.TeamsFx.Model.AuthenticationConfiguration" Id="T:Microsoft.TeamsFx.Model.AuthenticationConfiguration">
+      <Member Id="M:Microsoft.TeamsFx.Model.AuthenticationConfiguration.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.ApplicationIdUri" />
+      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.AuthorityHost" />
+      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.ClientId" />
+      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.ClientSecret" />
+      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.InitiateLoginEndpoint" />
+      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.SimpleAuthEndpoint" />
+      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.TenantId" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Model.Configuration" Id="T:Microsoft.TeamsFx.Model.Configuration">
+      <Member Id="M:Microsoft.TeamsFx.Model.Configuration.#ctor(Microsoft.TeamsFx.Model.AuthenticationConfiguration,Microsoft.TeamsFx.Model.ResourceConfiguration[])" />
+      <Member Id="P:Microsoft.TeamsFx.Model.Configuration.Authentication" />
+      <Member Id="P:Microsoft.TeamsFx.Model.Configuration.Resources" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Model.LogFunction" Id="T:Microsoft.TeamsFx.Model.LogFunction" />
+    <Type Name="Microsoft.TeamsFx.Model.LogLevel" Id="T:Microsoft.TeamsFx.Model.LogLevel">
+      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Error" />
+      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Info" />
+      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Verbose" />
+      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Warn" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Model.ResourceConfiguration" Id="T:Microsoft.TeamsFx.Model.ResourceConfiguration">
+      <Member Id="M:Microsoft.TeamsFx.Model.ResourceConfiguration.#ctor(Microsoft.TeamsFx.Model.ResourceType,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})" />
+      <Member Id="P:Microsoft.TeamsFx.Model.ResourceConfiguration.Name" />
+      <Member Id="P:Microsoft.TeamsFx.Model.ResourceConfiguration.Properties" />
+      <Member Id="P:Microsoft.TeamsFx.Model.ResourceConfiguration.Type" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Model.ResourceType" Id="T:Microsoft.TeamsFx.Model.ResourceType">
+      <Member Id="F:Microsoft.TeamsFx.Model.ResourceType.API" />
+      <Member Id="F:Microsoft.TeamsFx.Model.ResourceType.SQL" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Model.UserInfo" Id="T:Microsoft.TeamsFx.Model.UserInfo">
+      <Member Id="M:Microsoft.TeamsFx.Model.UserInfo.#ctor" />
+      <Member Id="P:Microsoft.TeamsFx.Model.UserInfo.DisplayName" />
+      <Member Id="P:Microsoft.TeamsFx.Model.UserInfo.ObjectId" />
+      <Member Id="P:Microsoft.TeamsFx.Model.UserInfo.PreferredUserName" />
+    </Type>
+  </Namespace>
+</Framework>

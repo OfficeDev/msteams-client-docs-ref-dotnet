@@ -46,6 +46,12 @@
     "fileMetadata": {
       "author": {
         "api/**.yml": "dotnet-bot"
+      },
+      "ms.prod": {
+        "api/Microsoft.TeamsFx*.yml": "msteams"
+      },
+      "ms.author": {
+        "api/Microsoft.TeamsFx*.yml": "o365devx"
       }
     },
     "template": [],
