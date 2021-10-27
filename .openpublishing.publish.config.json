@@ -50,11 +50,6 @@
   "JoinTOCPlugin": [
     {
       "TopLevelTOC": "msteams-client-docs-ref-dotnet/docs-ref-toc/fxtoc.yml",
-      "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest",
-      "ConceptualTOCUrl": "/microsoftteams/platform/toc.json"
-    },
-    {
-      "TopLevelTOC": "msteams-client-docs-ref-dotnet/docs-ref-toc/fxtoc.yml",
       "ReferenceTOC": "msteams-client-docs-ref-dotnet/api/msteams-client-docs-ref-dotnet/toc.yml",
       "ConceptualTOCUrl": "/microsoftteams/platform/toc.json"
     }
