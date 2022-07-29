@@ -1,20 +1,18 @@
 <Type Name="TeamsFx" FullName="Microsoft.TeamsFx.TeamsFx">
-  <TypeSignature Language="C#" Value="public class TeamsFx : IAsyncDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsFx extends System.Object implements class System.IAsyncDisposable" />
+  <TypeSignature Language="C#" Value="public class TeamsFx" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsFx extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.TeamsFx" />
-  <TypeSignature Language="VB.NET" Value="Public Class TeamsFx&#xA;Implements IAsyncDisposable" />
-  <TypeSignature Language="F#" Value="type TeamsFx = class&#xA;    interface IAsyncDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsFx" />
+  <TypeSignature Language="F#" Value="type TeamsFx = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces>
-    <Interface>
-      <InterfaceName>System.IAsyncDisposable</InterfaceName>
-    </Interface>
   </Interfaces>
   <Docs>
     <summary>
@@ -39,6 +37,30 @@
       </Parameters>
       <Docs>
         <param name="jsRuntime">To be added.</param>
+        <summary>
+            The constructor of TeamsFx.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsFx (Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.TeamsFx&gt; logger, Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; authLogger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.TeamsFx.TeamsFx&gt; logger, class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.TeamsFx.MsGraphAuthProvider&gt; authLogger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.TeamsFx},Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (logger As ILogger(Of TeamsFx), authLogger As ILogger(Of MsGraphAuthProvider))" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.TeamsFx : Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.TeamsFx&gt; * Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; -&gt; Microsoft.TeamsFx.TeamsFx" Usage="new Microsoft.TeamsFx.TeamsFx (logger, authLogger)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.TeamsFx&gt;" />
+        <Parameter Name="authLogger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="logger">To be added.</param>
+        <param name="authLogger">To be added.</param>
         <summary>
             The constructor of TeamsFx.
             </summary>
@@ -101,27 +123,63 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="DisposeAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask DisposeAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Threading.Tasks.ValueTask DisposeAsync() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.DisposeAsync" />
-      <MemberSignature Language="VB.NET" Value="Public Function DisposeAsync () As ValueTask" />
-      <MemberSignature Language="F#" Value="abstract member DisposeAsync : unit -&gt; System.Threading.Tasks.ValueTask&#xA;override this.DisposeAsync : unit -&gt; System.Threading.Tasks.ValueTask" Usage="teamsFx.DisposeAsync " />
+    <Member MemberName="CreateMicrosoftGraphClient">
+      <MemberSignature Language="C#" Value="public Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient (Azure.Core.TokenCredential credential, string scopes = &quot;.default&quot;, Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; logger = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient(class Azure.Core.TokenCredential credential, string scopes, class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.TeamsFx.MsGraphAuthProvider&gt; logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String,Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateMicrosoftGraphClient (credential As TokenCredential, Optional scopes As String = &quot;.default&quot;, Optional logger As ILogger(Of MsGraphAuthProvider) = Nothing) As GraphServiceClient" />
+      <MemberSignature Language="F#" Value="member this.CreateMicrosoftGraphClient : Azure.Core.TokenCredential * string * Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; -&gt; Microsoft.Graph.GraphServiceClient" Usage="teamsFx.CreateMicrosoftGraphClient (credential, scopes, logger)" />
       <MemberType>Method</MemberType>
-      <Implements>
-        <InterfaceMember>M:System.IAsyncDisposable.DisposeAsync</InterfaceMember>
-      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
+        <ReturnType>Microsoft.Graph.GraphServiceClient</ReturnType>
       </ReturnValue>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="scopes" Type="System.String" />
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt;" />
+      </Parameters>
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="credential">Token credential instance.</param>
+        <param name="scopes">The string of Microsoft Token scopes of access separated by space. Default value is `.default`.</param>
+        <param name="logger">Logger of MsGraphAuthProvider class. If the value is null, it will use the logger constructed by DI during TeamsFx class initialization.</param>
+        <summary>
+            Get Microsoft graph client.
+            </summary>
+        <returns>Graph client with specified scopes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMicrosoftGraphClient">
+      <MemberSignature Language="C#" Value="public Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient (Azure.Core.TokenCredential credential, string[] scopes, Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; logger = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient(class Azure.Core.TokenCredential credential, string[] scopes, class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.TeamsFx.MsGraphAuthProvider&gt; logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String[],Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateMicrosoftGraphClient (credential As TokenCredential, scopes As String(), Optional logger As ILogger(Of MsGraphAuthProvider) = Nothing) As GraphServiceClient" />
+      <MemberSignature Language="F#" Value="member this.CreateMicrosoftGraphClient : Azure.Core.TokenCredential * string[] * Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; -&gt; Microsoft.Graph.GraphServiceClient" Usage="teamsFx.CreateMicrosoftGraphClient (credential, scopes, logger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Graph.GraphServiceClient</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="scopes" Type="System.String[]" />
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="credential">Token credential instance.</param>
+        <param name="scopes">The array of Microsoft Token scopes of access. Default value is `[.default]`.</param>
+        <param name="logger">Logger of MsGraphAuthProvider class. If the value is null, it will use the logger constructed by DI during TeamsFx class initialization.</param>
+        <summary>
+            Get Microsoft graph client.
+            </summary>
+        <returns>Graph client with specified scopes.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,0 +1,102 @@
+<Type Name="StringTrigger" FullName="Microsoft.TeamsFx.Conversation.StringTrigger">
+  <TypeSignature Language="C#" Value="public class StringTrigger : Microsoft.TeamsFx.Conversation.ITriggerPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StringTrigger extends System.Object implements class Microsoft.TeamsFx.Conversation.ITriggerPattern" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.StringTrigger" />
+  <TypeSignature Language="VB.NET" Value="Public Class StringTrigger&#xA;Implements ITriggerPattern" />
+  <TypeSignature Language="F#" Value="type StringTrigger = class&#xA;    interface ITriggerPattern" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.TeamsFx.Conversation.ITriggerPattern</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a command trigger that triggered by string match.
+            </summary>
+    <remarks>To be added.</remarks>
+    <altmember cref="T:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringTrigger (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.StringTrigger.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pattern As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.Conversation.StringTrigger : string -&gt; Microsoft.TeamsFx.Conversation.StringTrigger" Usage="new Microsoft.TeamsFx.Conversation.StringTrigger pattern" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">The string used to compare with the input.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.TeamsFx.Conversation.StringTrigger" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pattern" />is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public string Pattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.StringTrigger.Pattern" />
+      <MemberSignature Language="VB.NET" Value="Public Property Pattern As String" />
+      <MemberSignature Language="F#" Value="member this.Pattern : string with get, set" Usage="Microsoft.TeamsFx.Conversation.StringTrigger.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the string pattern used to match the input.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrigger">
+      <MemberSignature Language="C#" Value="public bool ShouldTrigger (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldTrigger(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.StringTrigger.ShouldTrigger(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldTrigger (input As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member ShouldTrigger : string -&gt; bool&#xA;override this.ShouldTrigger : string -&gt; bool" Usage="stringTrigger.ShouldTrigger input" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.TeamsFx.Conversation.ITriggerPattern.ShouldTrigger(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

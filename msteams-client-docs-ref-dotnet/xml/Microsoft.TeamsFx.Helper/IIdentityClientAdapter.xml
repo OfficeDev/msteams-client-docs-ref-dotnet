@@ -1,0 +1,48 @@
+<Type Name="IIdentityClientAdapter" FullName="Microsoft.TeamsFx.Helper.IIdentityClientAdapter">
+  <TypeSignature Language="C#" Value="public interface IIdentityClientAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IIdentityClientAdapter" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Helper.IIdentityClientAdapter" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IIdentityClientAdapter" />
+  <TypeSignature Language="F#" Value="type IIdentityClientAdapter = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Adapter of IConfidentialClientApplication On-behalf-of flow.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAccessToken">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt; GetAccessToken (string ssoToken, System.Collections.Generic.IEnumerable&lt;string&gt; scopes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Identity.Client.AuthenticationResult&gt; GetAccessToken(string ssoToken, class System.Collections.Generic.IEnumerable`1&lt;string&gt; scopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Helper.IIdentityClientAdapter.GetAccessToken(System.String,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAccessToken (ssoToken As String, scopes As IEnumerable(Of String)) As Task(Of AuthenticationResult)" />
+      <MemberSignature Language="F#" Value="abstract member GetAccessToken : string * seq&lt;string&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;" Usage="iIdentityClientAdapter.GetAccessToken (ssoToken, scopes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Identity.Client.AuthenticationResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ssoToken" Type="System.String" />
+        <Parameter Name="scopes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="ssoToken">token from Teams client</param>
+        <param name="scopes">required scopes</param>
+        <summary>
+            Use On-behalf-of flow to exchange access token.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

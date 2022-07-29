@@ -1,0 +1,105 @@
+<Type Name="ConversationOptions" FullName="Microsoft.TeamsFx.Conversation.ConversationOptions">
+  <TypeSignature Language="C#" Value="public class ConversationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConversationOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.ConversationOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationOptions" />
+  <TypeSignature Language="F#" Value="type ConversationOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the options used to initialize a <see cref="T:Microsoft.TeamsFx.Conversation.ConversationBot" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.ConversationOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.BotAdapter Adapter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.BotAdapter Adapter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ConversationOptions.Adapter" />
+      <MemberSignature Language="VB.NET" Value="Public Property Adapter As BotAdapter" />
+      <MemberSignature Language="F#" Value="member this.Adapter : Microsoft.Bot.Builder.BotAdapter with get, set" Usage="Microsoft.TeamsFx.Conversation.ConversationOptions.Adapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.BotAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the bot adapter 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.CommandOptions Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Conversation.CommandOptions Command" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ConversationOptions.Command" />
+      <MemberSignature Language="VB.NET" Value="Public Property Command As CommandOptions" />
+      <MemberSignature Language="F#" Value="member this.Command : Microsoft.TeamsFx.Conversation.CommandOptions with get, set" Usage="Microsoft.TeamsFx.Conversation.ConversationOptions.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.CommandOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the command option used to initialize the <see cref="P:Microsoft.TeamsFx.Conversation.ConversationBot.Command" /> .
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Notification">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.NotificationOptions Notification { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Conversation.NotificationOptions Notification" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ConversationOptions.Notification" />
+      <MemberSignature Language="VB.NET" Value="Public Property Notification As NotificationOptions" />
+      <MemberSignature Language="F#" Value="member this.Notification : Microsoft.TeamsFx.Conversation.NotificationOptions with get, set" Usage="Microsoft.TeamsFx.Conversation.ConversationOptions.Notification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the notification option used to initialize <see cref="P:Microsoft.TeamsFx.Conversation.ConversationBot.Notification" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
