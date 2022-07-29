@@ -41,6 +41,8 @@
     },
     "globalMetadata": {
       "apiPlatform": "dotnet",
+      "ms.author": "zhany",
+      "ms.prod": "office",
       "breadcrumb_path": "~/breadcrumb/toc.yml"
     },
     "fileMetadata": {
