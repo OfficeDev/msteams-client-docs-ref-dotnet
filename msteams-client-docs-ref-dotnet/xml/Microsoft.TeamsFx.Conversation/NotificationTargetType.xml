@@ -1,0 +1,106 @@
+<Type Name="NotificationTargetType" FullName="Microsoft.TeamsFx.Conversation.NotificationTargetType">
+  <TypeSignature Language="C#" Value="public enum NotificationTargetType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NotificationTargetType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.NotificationTargetType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum NotificationTargetType" />
+  <TypeSignature Language="F#" Value="type NotificationTargetType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            The target type where the notification will be sent to.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Channel">
+      <MemberSignature Language="C#" Value="Channel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.NotificationTargetType Channel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Channel" />
+      <MemberSignature Language="VB.NET" Value="Channel" />
+      <MemberSignature Language="F#" Value="Channel = 1" Usage="Microsoft.TeamsFx.Conversation.NotificationTargetType.Channel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationTargetType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Represent a team channel. (By default, notification to a team will be sent to its "General" channel.)
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="Group" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.NotificationTargetType Group = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Group" />
+      <MemberSignature Language="VB.NET" Value="Group" />
+      <MemberSignature Language="F#" Value="Group = 2" Usage="Microsoft.TeamsFx.Conversation.NotificationTargetType.Group" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationTargetType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Represent a group chat.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Person">
+      <MemberSignature Language="C#" Value="Person" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.NotificationTargetType Person = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Person" />
+      <MemberSignature Language="VB.NET" Value="Person" />
+      <MemberSignature Language="F#" Value="Person = 3" Usage="Microsoft.TeamsFx.Conversation.NotificationTargetType.Person" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationTargetType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Represent a personal chat.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.NotificationTargetType Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="F#" Value="Unknown = 0" Usage="Microsoft.TeamsFx.Conversation.NotificationTargetType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationTargetType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Represent an unknown target.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

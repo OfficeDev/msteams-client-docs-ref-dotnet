@@ -1,0 +1,107 @@
+<Type Name="TeamsFxConfigurationMethods" FullName="Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods">
+  <TypeSignature Language="C#" Value="public static class TeamsFxConfigurationMethods" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TeamsFxConfigurationMethods extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods" />
+  <TypeSignature Language="VB.NET" Value="Public Module TeamsFxConfigurationMethods" />
+  <TypeSignature Language="F#" Value="type TeamsFxConfigurationMethods = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Service Registration
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddTeamsFx">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddTeamsFx (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration namedConfigurationSection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddTeamsFx(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, class Microsoft.Extensions.Configuration.IConfiguration namedConfigurationSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddTeamsFx (services As IServiceCollection, namedConfigurationSection As IConfiguration) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddTeamsFx : Microsoft.Extensions.DependencyInjection.IServiceCollection * Microsoft.Extensions.Configuration.IConfiguration -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx (services, namedConfigurationSection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="namedConfigurationSection" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="services">service collection for DI</param>
+        <param name="namedConfigurationSection">configuration instance</param>
+        <summary>
+            Add TeamsFx SDK.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTeamsFx">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddTeamsFx (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, Microsoft.TeamsFx.Configuration.AuthenticationOptions userOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddTeamsFx(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, class Microsoft.TeamsFx.Configuration.AuthenticationOptions userOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.TeamsFx.Configuration.AuthenticationOptions)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddTeamsFx (services As IServiceCollection, userOptions As AuthenticationOptions) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddTeamsFx : Microsoft.Extensions.DependencyInjection.IServiceCollection * Microsoft.TeamsFx.Configuration.AuthenticationOptions -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx (services, userOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="userOptions" Type="Microsoft.TeamsFx.Configuration.AuthenticationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="services">service collection for DI</param>
+        <param name="userOptions">customized option instance</param>
+        <summary>
+            Add TeamsFx SDK.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTeamsFx">
+      <MemberSignature Language="C#" Value="public static Microsoft.Extensions.DependencyInjection.IServiceCollection AddTeamsFx (this Microsoft.Extensions.DependencyInjection.IServiceCollection services, Action&lt;Microsoft.TeamsFx.Configuration.AuthenticationOptions&gt; configureOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Extensions.DependencyInjection.IServiceCollection AddTeamsFx(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, class System.Action`1&lt;class Microsoft.TeamsFx.Configuration.AuthenticationOptions&gt; configureOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.TeamsFx.Configuration.AuthenticationOptions})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AddTeamsFx (services As IServiceCollection, configureOptions As Action(Of AuthenticationOptions)) As IServiceCollection" />
+      <MemberSignature Language="F#" Value="static member AddTeamsFx : Microsoft.Extensions.DependencyInjection.IServiceCollection * Action&lt;Microsoft.TeamsFx.Configuration.AuthenticationOptions&gt; -&gt; Microsoft.Extensions.DependencyInjection.IServiceCollection" Usage="Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx (services, configureOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
+        <Parameter Name="configureOptions" Type="System.Action&lt;Microsoft.TeamsFx.Configuration.AuthenticationOptions&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="services">service collection for DI</param>
+        <param name="configureOptions">customized action to configure option</param>
+        <summary>
+            Add TeamsFx SDK.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

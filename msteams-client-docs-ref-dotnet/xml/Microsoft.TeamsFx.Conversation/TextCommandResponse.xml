@@ -1,0 +1,105 @@
+<Type Name="TextCommandResponse" FullName="Microsoft.TeamsFx.Conversation.TextCommandResponse">
+  <TypeSignature Language="C#" Value="public class TextCommandResponse : Microsoft.TeamsFx.Conversation.ICommandResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextCommandResponse extends System.Object implements class Microsoft.TeamsFx.Conversation.ICommandResponse" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.TextCommandResponse" />
+  <TypeSignature Language="VB.NET" Value="Public Class TextCommandResponse&#xA;Implements ICommandResponse" />
+  <TypeSignature Language="F#" Value="type TextCommandResponse = class&#xA;    interface ICommandResponse" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.TeamsFx.Conversation.ICommandResponse</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a simple text message for a command response.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextCommandResponse (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.TextCommandResponse.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (text As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.Conversation.TextCommandResponse : string -&gt; Microsoft.TeamsFx.Conversation.TextCommandResponse" Usage="new Microsoft.TeamsFx.Conversation.TextCommandResponse text" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">The text of the message to send.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.TeamsFx.Conversation.TextCommandResponse" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> is null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponseAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendResponseAsync (Microsoft.Bot.Builder.ITurnContext turnContext, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SendResponseAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.TextCommandResponse.SendResponseAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendResponseAsync (turnContext As ITurnContext, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SendResponseAsync : Microsoft.Bot.Builder.ITurnContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.SendResponseAsync : Microsoft.Bot.Builder.ITurnContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="textCommandResponse.SendResponseAsync (turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.TeamsFx.Conversation.ICommandResponse.SendResponseAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.TextCommandResponse.Text" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Text As String" />
+      <MemberSignature Language="F#" Value="member this.Text : string" Usage="Microsoft.TeamsFx.Conversation.TextCommandResponse.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the text messages used to reply to a command.
+            </summary>
+        <value>
+            The text message.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

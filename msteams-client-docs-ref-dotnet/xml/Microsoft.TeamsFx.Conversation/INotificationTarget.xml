@@ -1,0 +1,98 @@
+<Type Name="INotificationTarget" FullName="Microsoft.TeamsFx.Conversation.INotificationTarget">
+  <TypeSignature Language="C#" Value="public interface INotificationTarget" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INotificationTarget" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.INotificationTarget" />
+  <TypeSignature Language="VB.NET" Value="Public Interface INotificationTarget" />
+  <TypeSignature Language="F#" Value="type INotificationTarget = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represent a notification target.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SendAdaptiveCard">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendAdaptiveCard (object card, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SendAdaptiveCard(object card, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendAdaptiveCard (card As Object, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SendAdaptiveCard : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iNotificationTarget.SendAdaptiveCard (card, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="card" Type="System.Object" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="card">The adaptive card object.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Send an adaptive card message.
+            </summary>
+        <returns>The task object representing the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendMessage (string message, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SendMessage(string message, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendMessage(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendMessage (message As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SendMessage : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iNotificationTarget.SendMessage (message, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="message">The plain text message.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Send a plain text message.
+            </summary>
+        <returns>The task object representing the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.NotificationTargetType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.TeamsFx.Conversation.NotificationTargetType Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.INotificationTarget.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As NotificationTargetType" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.TeamsFx.Conversation.NotificationTargetType" Usage="Microsoft.TeamsFx.Conversation.INotificationTarget.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationTargetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of target.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

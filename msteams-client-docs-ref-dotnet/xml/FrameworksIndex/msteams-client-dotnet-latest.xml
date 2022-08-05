@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msteams-client-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.TeamsFx" Version="0.1.0.0" />
+    <Assembly Name="Microsoft.TeamsFx" Version="1.0.0.0" />
   </Assemblies>
+  <Namespace Name="Microsoft.Extensions.DependencyInjection">
+    <Type Name="Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods" Id="T:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods">
+      <Member Id="M:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <Member Id="M:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.TeamsFx.Configuration.AuthenticationOptions)" />
+      <Member Id="M:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods.AddTeamsFx(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.TeamsFx.Configuration.AuthenticationOptions})" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.TeamsFx">
     <Type Name="Microsoft.TeamsFx._Imports" Id="T:Microsoft.TeamsFx._Imports">
       <Member Id="M:Microsoft.TeamsFx._Imports.#ctor" />
-      <Member Id="M:Microsoft.TeamsFx._Imports.Execute" />
+      <Member Id="M:Microsoft.TeamsFx._Imports.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)" />
     </Type>
     <Type Name="Microsoft.TeamsFx.ExceptionCode" Id="T:Microsoft.TeamsFx.ExceptionCode">
       <Member Id="F:Microsoft.TeamsFx.ExceptionCode.ChannelNotSupported" />
@@ -25,25 +32,18 @@
       <Member Id="F:Microsoft.TeamsFx.ExceptionWithCode.Code" />
     </Type>
     <Type Name="Microsoft.TeamsFx.MsGraphAuthProvider" Id="T:Microsoft.TeamsFx.MsGraphAuthProvider">
-      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String)" />
-      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String[])" />
+      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String,Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
+      <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.#ctor(Azure.Core.TokenCredential,System.String[],Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
       <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.AuthenticateRequestAsync(System.Net.Http.HttpRequestMessage)" />
       <Member Id="M:Microsoft.TeamsFx.MsGraphAuthProvider.GetAccessTokenAsync" />
     </Type>
     <Type Name="Microsoft.TeamsFx.TeamsFx" Id="T:Microsoft.TeamsFx.TeamsFx">
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.#ctor(Microsoft.JSInterop.IJSRuntime)" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String)" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String[])" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.DisposeAsync" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.GetAuthenticationConfigurationAsync" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.GetLogLevelAsync" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.GetResourceConfigurationAsync(Microsoft.TeamsFx.Model.ResourceType,System.String)" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.LoadConfigurationAsync(Microsoft.TeamsFx.Model.Configuration)" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.SetLogFunctionAsync(Microsoft.TeamsFx.Model.LogFunction)" />
-      <Member Id="M:Microsoft.TeamsFx.TeamsFx.SetLogLevelAsync(Microsoft.TeamsFx.Model.LogLevel)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.TeamsFx},Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String,Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String[],Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
     </Type>
     <Type Name="Microsoft.TeamsFx.TeamsUserCredential" Id="T:Microsoft.TeamsFx.TeamsUserCredential">
-      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.#ctor(Microsoft.JSInterop.IJSRuntime)" />
+      <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.TeamsFx.Configuration.AuthenticationOptions},Microsoft.JSInterop.IJSRuntime,Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.TeamsUserCredential},Microsoft.TeamsFx.Helper.IIdentityClientAdapter)" />
       <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.DisposeAsync" />
       <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)" />
@@ -51,45 +51,143 @@
       <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.LoginAsync(System.String)" />
       <Member Id="M:Microsoft.TeamsFx.TeamsUserCredential.LoginAsync(System.String[])" />
     </Type>
+    <Type Name="Microsoft.TeamsFx.UserInfo" Id="T:Microsoft.TeamsFx.UserInfo">
+      <Member Id="M:Microsoft.TeamsFx.UserInfo.#ctor" />
+      <Member Id="P:Microsoft.TeamsFx.UserInfo.DisplayName" />
+      <Member Id="P:Microsoft.TeamsFx.UserInfo.ObjectId" />
+      <Member Id="P:Microsoft.TeamsFx.UserInfo.PreferredUserName" />
+    </Type>
   </Namespace>
-  <Namespace Name="Microsoft.TeamsFx.Model">
-    <Type Name="Microsoft.TeamsFx.Model.AuthenticationConfiguration" Id="T:Microsoft.TeamsFx.Model.AuthenticationConfiguration">
-      <Member Id="M:Microsoft.TeamsFx.Model.AuthenticationConfiguration.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)" />
-      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.ApplicationIdUri" />
-      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.AuthorityHost" />
-      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.ClientId" />
-      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.ClientSecret" />
-      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.InitiateLoginEndpoint" />
-      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.SimpleAuthEndpoint" />
-      <Member Id="P:Microsoft.TeamsFx.Model.AuthenticationConfiguration.TenantId" />
+  <Namespace Name="Microsoft.TeamsFx.Configuration">
+    <Type Name="Microsoft.TeamsFx.Configuration.AuthenticationOptions" Id="T:Microsoft.TeamsFx.Configuration.AuthenticationOptions">
+      <Member Id="F:Microsoft.TeamsFx.Configuration.AuthenticationOptions.Authentication" />
+      <Member Id="M:Microsoft.TeamsFx.Configuration.AuthenticationOptions.#ctor" />
+      <Member Id="P:Microsoft.TeamsFx.Configuration.AuthenticationOptions.ClientId" />
+      <Member Id="P:Microsoft.TeamsFx.Configuration.AuthenticationOptions.ClientSecret" />
+      <Member Id="P:Microsoft.TeamsFx.Configuration.AuthenticationOptions.OAuthAuthority" />
     </Type>
-    <Type Name="Microsoft.TeamsFx.Model.Configuration" Id="T:Microsoft.TeamsFx.Model.Configuration">
-      <Member Id="M:Microsoft.TeamsFx.Model.Configuration.#ctor(Microsoft.TeamsFx.Model.AuthenticationConfiguration,Microsoft.TeamsFx.Model.ResourceConfiguration[])" />
-      <Member Id="P:Microsoft.TeamsFx.Model.Configuration.Authentication" />
-      <Member Id="P:Microsoft.TeamsFx.Model.Configuration.Resources" />
+  </Namespace>
+  <Namespace Name="Microsoft.TeamsFx.Conversation">
+    <Type Name="Microsoft.TeamsFx.Conversation.ActivityCommandResponse" Id="T:Microsoft.TeamsFx.Conversation.ActivityCommandResponse">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.ActivityCommandResponse.#ctor(Microsoft.Bot.Schema.IActivity)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.ActivityCommandResponse.SendResponseAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ActivityCommandResponse.Activity" />
     </Type>
-    <Type Name="Microsoft.TeamsFx.Model.LogFunction" Id="T:Microsoft.TeamsFx.Model.LogFunction" />
-    <Type Name="Microsoft.TeamsFx.Model.LogLevel" Id="T:Microsoft.TeamsFx.Model.LogLevel">
-      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Error" />
-      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Info" />
-      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Verbose" />
-      <Member Id="F:Microsoft.TeamsFx.Model.LogLevel.Warn" />
+    <Type Name="Microsoft.TeamsFx.Conversation.Channel" Id="T:Microsoft.TeamsFx.Conversation.Channel">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.Channel.#ctor(Microsoft.TeamsFx.Conversation.TeamsBotInstallation,Microsoft.Bot.Schema.Teams.ChannelInfo)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.Channel.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.Channel.SendMessage(System.String,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.Channel.Info" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.Channel.Parent" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.Channel.Type" />
     </Type>
-    <Type Name="Microsoft.TeamsFx.Model.ResourceConfiguration" Id="T:Microsoft.TeamsFx.Model.ResourceConfiguration">
-      <Member Id="M:Microsoft.TeamsFx.Model.ResourceConfiguration.#ctor(Microsoft.TeamsFx.Model.ResourceType,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})" />
-      <Member Id="P:Microsoft.TeamsFx.Model.ResourceConfiguration.Name" />
-      <Member Id="P:Microsoft.TeamsFx.Model.ResourceConfiguration.Properties" />
-      <Member Id="P:Microsoft.TeamsFx.Model.ResourceConfiguration.Type" />
+    <Type Name="Microsoft.TeamsFx.Conversation.CommandBot" Id="T:Microsoft.TeamsFx.Conversation.CommandBot">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.CommandBot.#ctor(Microsoft.Bot.Builder.BotAdapter,Microsoft.TeamsFx.Conversation.CommandOptions)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.CommandBot.RegisterCommand(Microsoft.TeamsFx.Conversation.ITeamsCommandHandler)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.CommandBot.RegisterCommands(System.Collections.Generic.IList{Microsoft.TeamsFx.Conversation.ITeamsCommandHandler})" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.CommandBot.CommandHandlers" />
     </Type>
-    <Type Name="Microsoft.TeamsFx.Model.ResourceType" Id="T:Microsoft.TeamsFx.Model.ResourceType">
-      <Member Id="F:Microsoft.TeamsFx.Model.ResourceType.API" />
-      <Member Id="F:Microsoft.TeamsFx.Model.ResourceType.SQL" />
+    <Type Name="Microsoft.TeamsFx.Conversation.CommandMessage" Id="T:Microsoft.TeamsFx.Conversation.CommandMessage">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.CommandMessage.#ctor" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.CommandMessage.Matches" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.CommandMessage.Text" />
     </Type>
-    <Type Name="Microsoft.TeamsFx.Model.UserInfo" Id="T:Microsoft.TeamsFx.Model.UserInfo">
-      <Member Id="M:Microsoft.TeamsFx.Model.UserInfo.#ctor" />
-      <Member Id="P:Microsoft.TeamsFx.Model.UserInfo.DisplayName" />
-      <Member Id="P:Microsoft.TeamsFx.Model.UserInfo.ObjectId" />
-      <Member Id="P:Microsoft.TeamsFx.Model.UserInfo.PreferredUserName" />
+    <Type Name="Microsoft.TeamsFx.Conversation.CommandOptions" Id="T:Microsoft.TeamsFx.Conversation.CommandOptions">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.CommandOptions.#ctor" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.CommandOptions.Commands" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.CommandResponseMiddleware" Id="T:Microsoft.TeamsFx.Conversation.CommandResponseMiddleware">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.CommandResponseMiddleware.#ctor(System.Collections.Generic.IList{Microsoft.TeamsFx.Conversation.ITeamsCommandHandler})" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.CommandResponseMiddleware.OnTurnAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.NextDelegate,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.CommandResponseMiddleware.CommandHandlers" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.ConversationBot" Id="T:Microsoft.TeamsFx.Conversation.ConversationBot">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.ConversationBot.#ctor(Microsoft.TeamsFx.Conversation.ConversationOptions)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ConversationBot.Adapter" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ConversationBot.Command" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ConversationBot.Notification" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.ConversationOptions" Id="T:Microsoft.TeamsFx.Conversation.ConversationOptions">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.ConversationOptions.#ctor" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ConversationOptions.Adapter" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ConversationOptions.Command" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ConversationOptions.Notification" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.ICommandResponse" Id="T:Microsoft.TeamsFx.Conversation.ICommandResponse">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.ICommandResponse.SendResponseAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.INotificationTarget" Id="T:Microsoft.TeamsFx.Conversation.INotificationTarget">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendMessage(System.String,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.INotificationTarget.Type" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.INotificationTargetStorage" Id="T:Microsoft.TeamsFx.Conversation.INotificationTargetStorage">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.INotificationTargetStorage.Delete(System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.INotificationTargetStorage.List(System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.INotificationTargetStorage.Read(System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.INotificationTargetStorage.Write(System.String,Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.ITeamsCommandHandler" Id="T:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler.HandleCommandAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.TeamsFx.Conversation.CommandMessage,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler.TriggerPatterns" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.ITriggerPattern" Id="T:Microsoft.TeamsFx.Conversation.ITriggerPattern">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.ITriggerPattern.ShouldTrigger(System.String)" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.Member" Id="T:Microsoft.TeamsFx.Conversation.Member">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.Member.#ctor(Microsoft.TeamsFx.Conversation.TeamsBotInstallation,Microsoft.Bot.Schema.Teams.TeamsChannelAccount)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.Member.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.Member.SendMessage(System.String,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.Member.Account" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.Member.Parent" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.Member.Type" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.NotificationBot" Id="T:Microsoft.TeamsFx.Conversation.NotificationBot">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.NotificationBot.#ctor(Microsoft.Bot.Builder.BotAdapter,Microsoft.TeamsFx.Conversation.NotificationOptions)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.NotificationBot.GetInstallationsAsync(System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.NotificationOptions" Id="T:Microsoft.TeamsFx.Conversation.NotificationOptions">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.NotificationOptions.#ctor" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.NotificationOptions.BotAppId" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.NotificationOptions.Storage" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.NotificationTargetType" Id="T:Microsoft.TeamsFx.Conversation.NotificationTargetType">
+      <Member Id="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Channel" />
+      <Member Id="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Group" />
+      <Member Id="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Person" />
+      <Member Id="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Unknown" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.RegExpTrigger" Id="T:Microsoft.TeamsFx.Conversation.RegExpTrigger">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.RegExpTrigger.#ctor(System.String)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.RegExpTrigger.#ctor(System.Text.RegularExpressions.Regex)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.RegExpTrigger.ShouldTrigger(System.String)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.RegExpTrigger.Pattern" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.StringTrigger" Id="T:Microsoft.TeamsFx.Conversation.StringTrigger">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.StringTrigger.#ctor(System.String)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.StringTrigger.ShouldTrigger(System.String)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.StringTrigger.Pattern" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.TeamsBotInstallation" Id="T:Microsoft.TeamsFx.Conversation.TeamsBotInstallation">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.#ctor(System.String,Microsoft.Bot.Builder.BotAdapter,Microsoft.Bot.Schema.ConversationReference)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.GetChannelsAsync(System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.GetMembersAsync(System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.SendMessage(System.String,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.Adapter" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.BotAppId" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.ConversationReference" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.Type" />
+    </Type>
+    <Type Name="Microsoft.TeamsFx.Conversation.TextCommandResponse" Id="T:Microsoft.TeamsFx.Conversation.TextCommandResponse">
+      <Member Id="M:Microsoft.TeamsFx.Conversation.TextCommandResponse.#ctor(System.String)" />
+      <Member Id="M:Microsoft.TeamsFx.Conversation.TextCommandResponse.SendResponseAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.TeamsFx.Conversation.TextCommandResponse.Text" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.TeamsFx.Helper">
+    <Type Name="Microsoft.TeamsFx.Helper.IIdentityClientAdapter" Id="T:Microsoft.TeamsFx.Helper.IIdentityClientAdapter">
+      <Member Id="M:Microsoft.TeamsFx.Helper.IIdentityClientAdapter.GetAccessToken(System.String,System.Collections.Generic.IEnumerable{System.String})" />
     </Type>
   </Namespace>
 </Framework>

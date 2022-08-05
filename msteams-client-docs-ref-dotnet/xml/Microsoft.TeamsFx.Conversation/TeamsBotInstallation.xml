@@ -1,0 +1,271 @@
+<Type Name="TeamsBotInstallation" FullName="Microsoft.TeamsFx.Conversation.TeamsBotInstallation">
+  <TypeSignature Language="C#" Value="public class TeamsBotInstallation : Microsoft.TeamsFx.Conversation.INotificationTarget" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsBotInstallation extends System.Object implements class Microsoft.TeamsFx.Conversation.INotificationTarget" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.TeamsBotInstallation" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsBotInstallation&#xA;Implements INotificationTarget" />
+  <TypeSignature Language="F#" Value="type TeamsBotInstallation = class&#xA;    interface INotificationTarget" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.TeamsFx.Conversation.INotificationTarget</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+      <para>
+            An <see cref="T:Microsoft.TeamsFx.Conversation.INotificationTarget" /> that represents a bot installation. Teams Bot could be installed into:
+            </para>
+      <list type="bullet">
+        <item>
+          <description>Personal chat.</description>
+        </item>
+        <item>
+          <description>Group chat.</description>
+        </item>
+        <item>
+          <description>Team (by default the "General" channel).</description>
+        </item>
+      </list>
+    </summary>
+    <remarks>
+            It's recommended to get bot installations from <c>ConversationBot.Notification.GetInstallationsAsync</c>.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsBotInstallation (string botAppId, Microsoft.Bot.Builder.BotAdapter adapter, Microsoft.Bot.Schema.ConversationReference conversationReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string botAppId, class Microsoft.Bot.Builder.BotAdapter adapter, class Microsoft.Bot.Schema.ConversationReference conversationReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.#ctor(System.String,Microsoft.Bot.Builder.BotAdapter,Microsoft.Bot.Schema.ConversationReference)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (botAppId As String, adapter As BotAdapter, conversationReference As ConversationReference)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.Conversation.TeamsBotInstallation : string * Microsoft.Bot.Builder.BotAdapter * Microsoft.Bot.Schema.ConversationReference -&gt; Microsoft.TeamsFx.Conversation.TeamsBotInstallation" Usage="new Microsoft.TeamsFx.Conversation.TeamsBotInstallation (botAppId, adapter, conversationReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="botAppId" Type="System.String" />
+        <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
+        <Parameter Name="conversationReference" Type="Microsoft.Bot.Schema.ConversationReference" />
+      </Parameters>
+      <Docs>
+        <param name="botAppId">The application ID of the bot.</param>
+        <param name="adapter">The bot adapter.</param>
+        <param name="conversationReference">The <see cref="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.ConversationReference" /> of the bot installation.</param>
+        <summary>
+            Constructor.
+            </summary>
+        <remarks>
+            It's recommended to get bot installations from <c>ConversationBot.Notification.GetInstallationsAsync</c>.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">Throws if provided parameter is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.BotAdapter Adapter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.BotAdapter Adapter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.Adapter" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Adapter As BotAdapter" />
+      <MemberSignature Language="F#" Value="member this.Adapter : Microsoft.Bot.Builder.BotAdapter" Usage="Microsoft.TeamsFx.Conversation.TeamsBotInstallation.Adapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.BotAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bot adapter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BotAppId">
+      <MemberSignature Language="C#" Value="public string BotAppId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BotAppId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.BotAppId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BotAppId As String" />
+      <MemberSignature Language="F#" Value="member this.BotAppId : string" Usage="Microsoft.TeamsFx.Conversation.TeamsBotInstallation.BotAppId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The application ID of the bot.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversationReference">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Schema.ConversationReference ConversationReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Schema.ConversationReference ConversationReference" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.ConversationReference" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConversationReference As ConversationReference" />
+      <MemberSignature Language="F#" Value="member this.ConversationReference : Microsoft.Bot.Schema.ConversationReference" Usage="Microsoft.TeamsFx.Conversation.TeamsBotInstallation.ConversationReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Schema.ConversationReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.ConversationReference" /> of the bot installation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannelsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt; GetChannelsAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.Channel[]&gt; GetChannelsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.GetChannelsAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetChannelsAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Channel())" />
+      <MemberSignature Language="F#" Value="member this.GetChannelsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt;" Usage="teamsBotInstallation.GetChannelsAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Get channels from this bot installation.
+            </summary>
+        <returns>An array of channels if bot is installed into a team, otherwise returns an empty array.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMembersAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member[]&gt; GetMembersAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.Member[]&gt; GetMembersAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.GetMembersAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMembersAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Member())" />
+      <MemberSignature Language="F#" Value="member this.GetMembersAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member[]&gt;" Usage="teamsBotInstallation.GetMembersAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Get members from this bot installation.
+            </summary>
+        <returns>An array of members from where the bot is installed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAdaptiveCard">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendAdaptiveCard (object card, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SendAdaptiveCard(object card, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendAdaptiveCard (card As Object, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SendAdaptiveCard : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.SendAdaptiveCard : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsBotInstallation.SendAdaptiveCard (card, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="card" Type="System.Object" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="card">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendMessage (string message, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SendMessage(string message, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.SendMessage(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendMessage (message As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SendMessage : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.SendMessage : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsBotInstallation.SendMessage (message, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendMessage(System.String,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="message">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.NotificationTargetType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.TeamsFx.Conversation.NotificationTargetType Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.TeamsBotInstallation.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As NotificationTargetType" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.TeamsFx.Conversation.NotificationTargetType" Usage="Microsoft.TeamsFx.Conversation.TeamsBotInstallation.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationTargetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The notification target type.
+            <list type="bullet"><item><description><see cref="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Channel" /> means bot is installed into a team and notification will be sent to its "General" channel.</description></item><item><description><see cref="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Group" /> means bot is installed into a group chat.</description></item><item><description><see cref="F:Microsoft.TeamsFx.Conversation.NotificationTargetType.Person" /> means bot is installed into a personal scope and notification will be sent to personal chat.</description></item></list></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
