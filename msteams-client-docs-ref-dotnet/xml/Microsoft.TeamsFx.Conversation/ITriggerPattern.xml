@@ -1,0 +1,46 @@
+<Type Name="ITriggerPattern" FullName="Microsoft.TeamsFx.Conversation.ITriggerPattern">
+  <TypeSignature Language="C#" Value="public interface ITriggerPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITriggerPattern" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.ITriggerPattern" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ITriggerPattern" />
+  <TypeSignature Language="F#" Value="type ITriggerPattern = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a contract that represents a trigger used to trigger command handler.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ShouldTrigger">
+      <MemberSignature Language="C#" Value="public bool ShouldTrigger (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldTrigger(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.ITriggerPattern.ShouldTrigger(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldTrigger (input As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member ShouldTrigger : string -&gt; bool" Usage="iTriggerPattern.ShouldTrigger input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">The input string.</param>
+        <summary>
+            Check whether the trigger pattern is matched.
+            </summary>
+        <returns>True if the trigger can be fired, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

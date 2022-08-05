@@ -1,0 +1,63 @@
+<Type Name="CommandOptions" FullName="Microsoft.TeamsFx.Conversation.CommandOptions">
+  <TypeSignature Language="C#" Value="public class CommandOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.CommandOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CommandOptions" />
+  <TypeSignature Language="F#" Value="type CommandOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options to initialize a <see cref="T:Microsoft.TeamsFx.Conversation.CommandBot" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.CommandOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.TeamsFx.Conversation.ITeamsCommandHandler&gt; Commands { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.TeamsFx.Conversation.ITeamsCommandHandler&gt; Commands" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.CommandOptions.Commands" />
+      <MemberSignature Language="VB.NET" Value="Public Property Commands As IList(Of ITeamsCommandHandler)" />
+      <MemberSignature Language="F#" Value="member this.Commands : System.Collections.Generic.IList&lt;Microsoft.TeamsFx.Conversation.ITeamsCommandHandler&gt; with get, set" Usage="Microsoft.TeamsFx.Conversation.CommandOptions.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.TeamsFx.Conversation.ITeamsCommandHandler&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a set of command handlers used to process commands for this bot.
+            </summary>
+        <value>
+            The command handler used to process command.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

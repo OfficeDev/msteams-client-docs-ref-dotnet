@@ -1,0 +1,75 @@
+<Type Name="ITeamsCommandHandler" FullName="Microsoft.TeamsFx.Conversation.ITeamsCommandHandler">
+  <TypeSignature Language="C#" Value="public interface ITeamsCommandHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITeamsCommandHandler" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ITeamsCommandHandler" />
+  <TypeSignature Language="F#" Value="type ITeamsCommandHandler = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a contract that represents a command handler that can handle commands received from Teams.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HandleCommandAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.ICommandResponse&gt; HandleCommandAsync (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.TeamsFx.Conversation.CommandMessage message, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.ICommandResponse&gt; HandleCommandAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.TeamsFx.Conversation.CommandMessage message, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler.HandleCommandAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.TeamsFx.Conversation.CommandMessage,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HandleCommandAsync (turnContext As ITurnContext, message As CommandMessage, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ICommandResponse)" />
+      <MemberSignature Language="F#" Value="abstract member HandleCommandAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.TeamsFx.Conversation.CommandMessage * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.ICommandResponse&gt;" Usage="iTeamsCommandHandler.HandleCommandAsync (turnContext, message, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.ICommandResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="message" Type="Microsoft.TeamsFx.Conversation.CommandMessage" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">The turn context.</param>
+        <param name="message">The command message.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Handles the command.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerPatterns">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.TeamsFx.Conversation.ITriggerPattern&gt; TriggerPatterns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.TeamsFx.Conversation.ITriggerPattern&gt; TriggerPatterns" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler.TriggerPatterns" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TriggerPatterns As IEnumerable(Of ITriggerPattern)" />
+      <MemberSignature Language="F#" Value="member this.TriggerPatterns : seq&lt;Microsoft.TeamsFx.Conversation.ITriggerPattern&gt;" Usage="Microsoft.TeamsFx.Conversation.ITeamsCommandHandler.TriggerPatterns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.TeamsFx.Conversation.ITriggerPattern&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a set of string or regular expression pattern used to trigger the command handler.
+            If not provided, the handler will be triggered by the command name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The command handler can be triggered if
+            <list type="bullet"><item><description> the input command equals to the one of the string patterns.</description></item><item><description> the input command matches one of the regular expression patterns.</description></item></list></remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

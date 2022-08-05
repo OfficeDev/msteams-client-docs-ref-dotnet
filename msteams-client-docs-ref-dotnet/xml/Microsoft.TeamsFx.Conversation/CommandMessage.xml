@@ -1,0 +1,84 @@
+<Type Name="CommandMessage" FullName="Microsoft.TeamsFx.Conversation.CommandMessage">
+  <TypeSignature Language="C#" Value="public class CommandMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandMessage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.CommandMessage" />
+  <TypeSignature Language="VB.NET" Value="Public Class CommandMessage" />
+  <TypeSignature Language="F#" Value="type CommandMessage = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the command message received from Teams.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.CommandMessage.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.MatchCollection Matches { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.MatchCollection Matches" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.CommandMessage.Matches" />
+      <MemberSignature Language="VB.NET" Value="Public Property Matches As MatchCollection" />
+      <MemberSignature Language="F#" Value="member this.Matches : System.Text.RegularExpressions.MatchCollection with get, set" Usage="Microsoft.TeamsFx.Conversation.CommandMessage.Matches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.MatchCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a collection of the <see cref="T:System.Text.RegularExpressions.Match" /> objects that matches to the trigger pattern of 
+            a command handler. If no matches are found, the method returns an empty collection object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.CommandMessage.Text" />
+      <MemberSignature Language="VB.NET" Value="Public Property Text As String" />
+      <MemberSignature Language="F#" Value="member this.Text : string with get, set" Usage="Microsoft.TeamsFx.Conversation.CommandMessage.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the text of the message sent by the user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

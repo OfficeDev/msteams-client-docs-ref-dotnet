@@ -1,0 +1,125 @@
+<Type Name="ConversationBot" FullName="Microsoft.TeamsFx.Conversation.ConversationBot">
+  <TypeSignature Language="C#" Value="public class ConversationBot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConversationBot extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.ConversationBot" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationBot" />
+  <TypeSignature Language="F#" Value="type ConversationBot = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provide utilities for bot conversation, including:
+            <list type="bullet"><item><description>Send notification to varies targets (e.g., member, group, channel).</description></item><item><description>Handle command and send a response to Teams.</description></item></list></summary>
+    <remarks>
+      <para>
+            Set <c>Adapter</c> in <see cref="T:Microsoft.TeamsFx.Conversation.ConversationOptions" /> to use your own bot adapter.
+            </para>
+      <para>
+            For notification, set <c>Notification.Storage</c> in <see cref="T:Microsoft.TeamsFx.Conversation.ConversationOptions" /> to use your own storage implementation.
+            </para>
+      <para>
+            For command, set <c>Command.Commands</c> in <see cref="T:Microsoft.TeamsFx.Conversation.CommandOptions" /> to register your command handlers.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationBot (Microsoft.TeamsFx.Conversation.ConversationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.TeamsFx.Conversation.ConversationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.ConversationBot.#ctor(Microsoft.TeamsFx.Conversation.ConversationOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As ConversationOptions)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.Conversation.ConversationBot : Microsoft.TeamsFx.Conversation.ConversationOptions -&gt; Microsoft.TeamsFx.Conversation.ConversationBot" Usage="new Microsoft.TeamsFx.Conversation.ConversationBot options" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.TeamsFx.Conversation.ConversationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Initialize options.</param>
+        <summary>
+            Creates new instance of the <see cref="T:Microsoft.TeamsFx.Conversation.ConversationBot" />.
+            </summary>
+        <remarks>
+            It's recommended to create your own adapter and storage for production environment.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">Throws if provided parameter is null.</exception>
+        <exception cref="T:System.ArgumentException">Throws if provided parameter is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.BotAdapter Adapter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.BotAdapter Adapter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ConversationBot.Adapter" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Adapter As BotAdapter" />
+      <MemberSignature Language="F#" Value="member this.Adapter : Microsoft.Bot.Builder.BotAdapter" Usage="Microsoft.TeamsFx.Conversation.ConversationBot.Adapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.BotAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bot adapter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.CommandBot Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Conversation.CommandBot Command" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ConversationBot.Command" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Command As CommandBot" />
+      <MemberSignature Language="F#" Value="member this.Command : Microsoft.TeamsFx.Conversation.CommandBot" Usage="Microsoft.TeamsFx.Conversation.ConversationBot.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.CommandBot</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The entry point of command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Notification">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.NotificationBot Notification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Conversation.NotificationBot Notification" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ConversationBot.Notification" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Notification As NotificationBot" />
+      <MemberSignature Language="F#" Value="member this.Notification : Microsoft.TeamsFx.Conversation.NotificationBot" Usage="Microsoft.TeamsFx.Conversation.ConversationBot.Notification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.NotificationBot</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The entry point of notification.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

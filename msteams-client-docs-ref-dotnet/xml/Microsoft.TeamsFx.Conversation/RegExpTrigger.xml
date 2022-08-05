@@ -1,0 +1,126 @@
+<Type Name="RegExpTrigger" FullName="Microsoft.TeamsFx.Conversation.RegExpTrigger">
+  <TypeSignature Language="C#" Value="public class RegExpTrigger : Microsoft.TeamsFx.Conversation.ITriggerPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegExpTrigger extends System.Object implements class Microsoft.TeamsFx.Conversation.ITriggerPattern" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.RegExpTrigger" />
+  <TypeSignature Language="VB.NET" Value="Public Class RegExpTrigger&#xA;Implements ITriggerPattern" />
+  <TypeSignature Language="F#" Value="type RegExpTrigger = class&#xA;    interface ITriggerPattern" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.TeamsFx.Conversation.ITriggerPattern</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a command trigger that triggered by regular expression match.
+            </summary>
+    <remarks>To be added.</remarks>
+    <altmember cref="T:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegExpTrigger (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.RegExpTrigger.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pattern As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.Conversation.RegExpTrigger : string -&gt; Microsoft.TeamsFx.Conversation.RegExpTrigger" Usage="new Microsoft.TeamsFx.Conversation.RegExpTrigger pattern" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">The regular expression pattern string.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.TeamsFx.Conversation.RegExpTrigger" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pattern" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegExpTrigger (System.Text.RegularExpressions.Regex pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Text.RegularExpressions.Regex pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.RegExpTrigger.#ctor(System.Text.RegularExpressions.Regex)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pattern As Regex)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.Conversation.RegExpTrigger : System.Text.RegularExpressions.Regex -&gt; Microsoft.TeamsFx.Conversation.RegExpTrigger" Usage="new Microsoft.TeamsFx.Conversation.RegExpTrigger pattern" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.Text.RegularExpressions.Regex" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">The regular expression pattern.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.TeamsFx.Conversation.RegExpTrigger" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pattern" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.Regex Pattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.Regex Pattern" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.RegExpTrigger.Pattern" />
+      <MemberSignature Language="VB.NET" Value="Public Property Pattern As Regex" />
+      <MemberSignature Language="F#" Value="member this.Pattern : System.Text.RegularExpressions.Regex with get, set" Usage="Microsoft.TeamsFx.Conversation.RegExpTrigger.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Regex</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the regular expression used to match the input.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrigger">
+      <MemberSignature Language="C#" Value="public bool ShouldTrigger (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldTrigger(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.RegExpTrigger.ShouldTrigger(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ShouldTrigger (input As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member ShouldTrigger : string -&gt; bool&#xA;override this.ShouldTrigger : string -&gt; bool" Usage="regExpTrigger.ShouldTrigger input" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.TeamsFx.Conversation.ITriggerPattern.ShouldTrigger(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
