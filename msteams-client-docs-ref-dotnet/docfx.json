@@ -49,7 +49,7 @@
       "author": {
         "api/**.yml": "dotnet-bot"
       },
-      "ms.prod": {
+      "ms.service": {
         "api/Microsoft.TeamsFx*.yml": "msteams"
       },
       "ms.author": {
