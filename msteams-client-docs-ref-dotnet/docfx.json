@@ -40,6 +40,7 @@
       ]
     },
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
       "apiPlatform": "dotnet",
       "ms.author": "zhany",
       "ms.prod": "office",
