@@ -6,7 +6,7 @@
       "build_output_subfolder": "msteams-client-docs-ref-dotnet",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": [],
+      "moniker_ranges": [], 
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
