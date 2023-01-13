@@ -2,6 +2,7 @@
 title: Microsoft Teams Framework (TeamsFx) .NET SDK reference
 description: TeamsFx (Microsoft Teams Framework) .NET SDK is a NuGet package for Blazor projects that streamlines authentication and cloud service access
 author: erikadoyle
+ms.service: msteams
 keywords: msteams framework sdk teamsfx .net teams toolkit sso
 ---
 # Microsoft Teams Framework (TeamsFx) .NET SDK reference
