@@ -1,0 +1,97 @@
+<Type Name="IAdaptiveCardActionHandler" FullName="Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler">
+  <TypeSignature Language="C#" Value="public interface IAdaptiveCardActionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAdaptiveCardActionHandler" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IAdaptiveCardActionHandler" />
+  <TypeSignature Language="F#" Value="type IAdaptiveCardActionHandler = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an adaptive card action handler to respond to an adaptiveCard/action invoke activity.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdaptiveCardResponse">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.AdaptiveCardResponse AdaptiveCardResponse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.TeamsFx.Conversation.AdaptiveCardResponse AdaptiveCardResponse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler.AdaptiveCardResponse" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdaptiveCardResponse As AdaptiveCardResponse" />
+      <MemberSignature Language="F#" Value="member this.AdaptiveCardResponse : Microsoft.TeamsFx.Conversation.AdaptiveCardResponse" Usage="Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler.AdaptiveCardResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.AdaptiveCardResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the behavior for how the card response will be sent in Teams conversation.
+            The default value is `AdaptiveCardResponse.ReplaceForInteractor`, which means the card
+            response will replace the current one only for the interactor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleActionInvokedAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt; HandleActionInvokedAsync (Microsoft.Bot.Builder.ITurnContext turnContext, object cardData, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Builder.InvokeResponse&gt; HandleActionInvokedAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, object cardData, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler.HandleActionInvokedAsync(Microsoft.Bot.Builder.ITurnContext,System.Object,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HandleActionInvokedAsync (turnContext As ITurnContext, cardData As Object, Optional cancellationToken As CancellationToken = Nothing) As Task(Of InvokeResponse)" />
+      <MemberSignature Language="F#" Value="abstract member HandleActionInvokedAsync : Microsoft.Bot.Builder.ITurnContext * obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;" Usage="iAdaptiveCardActionHandler.HandleActionInvokedAsync (turnContext, cardData, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="cardData" Type="System.Object" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">The context object for this turn.</param>
+        <param name="cardData">The card data object associated with the action.</param>
+        <param name="cancellationToken" />
+        <summary>
+            The handler function that will be invoked when the card action is executed.
+            </summary>
+        <returns>Async task with invoke response.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerVerb">
+      <MemberSignature Language="C#" Value="public string TriggerVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TriggerVerb" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler.TriggerVerb" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TriggerVerb As String" />
+      <MemberSignature Language="F#" Value="member this.TriggerVerb : string" Usage="Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler.TriggerVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The verb defined in adaptive card action that can trigger this handler.
+            The verb string here is case-insensitive.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

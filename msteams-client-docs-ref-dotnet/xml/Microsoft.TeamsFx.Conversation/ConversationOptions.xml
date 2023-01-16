@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,6 +29,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,6 +47,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.BotAdapter</ReturnType>
@@ -52,6 +55,28 @@
       <Docs>
         <summary>
             Gets or sets the bot adapter 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CardAction">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.CardActionOptions CardAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Conversation.CardActionOptions CardAction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.ConversationOptions.CardAction" />
+      <MemberSignature Language="VB.NET" Value="Public Property CardAction As CardActionOptions" />
+      <MemberSignature Language="F#" Value="member this.CardAction : Microsoft.TeamsFx.Conversation.CardActionOptions with get, set" Usage="Microsoft.TeamsFx.Conversation.ConversationOptions.CardAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.CardActionOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the adaptive card action options used to initialize the <see cref="P:Microsoft.TeamsFx.Conversation.ConversationBot.CardAction" /> .
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -67,6 +92,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.TeamsFx.Conversation.CommandOptions</ReturnType>
@@ -89,6 +115,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.TeamsFx.Conversation.NotificationOptions</ReturnType>

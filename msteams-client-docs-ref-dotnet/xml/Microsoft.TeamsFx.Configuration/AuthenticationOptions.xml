@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,10 +29,33 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationIdUri">
+      <MemberSignature Language="C#" Value="public string ApplicationIdUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationIdUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Configuration.AuthenticationOptions.ApplicationIdUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationIdUri As String" />
+      <MemberSignature Language="F#" Value="member this.ApplicationIdUri : string with get, set" Usage="Microsoft.TeamsFx.Configuration.AuthenticationOptions.ApplicationIdUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Application ID URI.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -45,6 +69,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -53,6 +78,28 @@
         <summary>
             Entry name in configuration file.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bot">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations Bot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations Bot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Configuration.AuthenticationOptions.Bot" />
+      <MemberSignature Language="VB.NET" Value="Public Property Bot As BotAuthenticationConfigurations" />
+      <MemberSignature Language="F#" Value="member this.Bot : Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations with get, set" Usage="Microsoft.TeamsFx.Configuration.AuthenticationOptions.Bot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Bot specific authentication configurations.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -66,6 +113,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -94,6 +142,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -122,6 +171,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

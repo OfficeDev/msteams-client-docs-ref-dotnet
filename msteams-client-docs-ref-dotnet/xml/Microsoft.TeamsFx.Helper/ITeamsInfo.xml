@@ -1,0 +1,51 @@
+<Type Name="ITeamsInfo" FullName="Microsoft.TeamsFx.Helper.ITeamsInfo">
+  <TypeSignature Language="C#" Value="public interface ITeamsInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITeamsInfo" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Helper.ITeamsInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ITeamsInfo" />
+  <TypeSignature Language="F#" Value="type ITeamsInfo = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            provides utility methods for interactions that occur within Microsoft Teams.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetTeamsMemberAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt; GetTeamsMemberAsync (Microsoft.Bot.Builder.ITurnContext context, string userId, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt; GetTeamsMemberAsync(class Microsoft.Bot.Builder.ITurnContext context, string userId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Helper.ITeamsInfo.GetTeamsMemberAsync(Microsoft.Bot.Builder.ITurnContext,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTeamsMemberAsync (context As ITurnContext, userId As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of TeamsChannelAccount)" />
+      <MemberSignature Language="F#" Value="abstract member GetTeamsMemberAsync : Microsoft.Bot.Builder.ITurnContext * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt;" Usage="iTeamsInfo.GetTeamsMemberAsync (context, userId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context"> Turn context. </param>
+        <param name="userId"> ID of the user in question. </param>
+        <param name="cancellationToken"> cancellation token. </param>
+        <summary>
+            Gets the account of a single conversation member. 
+            This works in one-on-one, group, and teams scoped conversations.
+            </summary>
+        <returns>Team Account Details.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

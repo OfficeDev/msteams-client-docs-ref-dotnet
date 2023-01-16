@@ -1,0 +1,116 @@
+<Type Name="TeamsBotSsoPromptSettings" FullName="Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings">
+  <TypeSignature Language="C#" Value="public class TeamsBotSsoPromptSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsBotSsoPromptSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsBotSsoPromptSettings" />
+  <TypeSignature Language="F#" Value="type TeamsBotSsoPromptSettings = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains settings for an <see cref="T:Microsoft.TeamsFx.Bot.TeamsBotSsoPrompt" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsBotSsoPromptSettings (Microsoft.TeamsFx.Configuration.BotAuthenticationOptions botAuthOptions, string[] scopes, int timeout = 900000);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.TeamsFx.Configuration.BotAuthenticationOptions botAuthOptions, string[] scopes, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings.#ctor(Microsoft.TeamsFx.Configuration.BotAuthenticationOptions,System.String[],System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (botAuthOptions As BotAuthenticationOptions, scopes As String(), Optional timeout As Integer = 900000)" />
+      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings : Microsoft.TeamsFx.Configuration.BotAuthenticationOptions * string[] * int -&gt; Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings" Usage="new Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings (botAuthOptions, scopes, timeout)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="botAuthOptions" Type="Microsoft.TeamsFx.Configuration.BotAuthenticationOptions" />
+        <Parameter Name="scopes" Type="System.String[]" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="botAuthOptions">To be added.</param>
+        <param name="scopes">To be added.</param>
+        <param name="timeout">To be added.</param>
+        <summary>
+            Constructor of TeamsBotSsoPromptSettings
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BotAuthOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Configuration.BotAuthenticationOptions BotAuthOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Configuration.BotAuthenticationOptions BotAuthOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings.BotAuthOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property BotAuthOptions As BotAuthenticationOptions" />
+      <MemberSignature Language="F#" Value="member this.BotAuthOptions : Microsoft.TeamsFx.Configuration.BotAuthenticationOptions with get, set" Usage="Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings.BotAuthOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Configuration.BotAuthenticationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets bot related authentication options.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public string[] Scopes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Scopes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings.Scopes" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scopes As String()" />
+      <MemberSignature Language="F#" Value="member this.Scopes : string[] with get, set" Usage="Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the array of strings that declare the desired permissions and the resources requested.
+            </summary>
+        <value>The array of strings that declare the desired permissions and the resources requested.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings.Timeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property Timeout As Integer" />
+      <MemberSignature Language="F#" Value="member this.Timeout : int with get, set" Usage="Microsoft.TeamsFx.Bot.TeamsBotSsoPromptSettings.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the number of milliseconds the prompt waits for the user to authenticate.
+            Default is 900,000 (15 minutes).
+            </summary>
+        <value>The number of milliseconds the prompt waits for the user to authenticate.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

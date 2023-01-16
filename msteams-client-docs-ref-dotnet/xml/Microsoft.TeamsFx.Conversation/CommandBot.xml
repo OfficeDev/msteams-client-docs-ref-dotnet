@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,20 +30,22 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
         <Parameter Name="options" Type="Microsoft.TeamsFx.Conversation.CommandOptions" />
       </Parameters>
       <Docs>
-        <param name="adapter" />
-        <param name="options" />
+        <param name="adapter">The bot adapter.</param>
+        <param name="options">The initialize options.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Microsoft.TeamsFx.Conversation.CommandBot" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="options" /> is null.</exception>
+          <paramref name="adapter" /> or <paramref name="options" /> is null.
+            </exception>
       </Docs>
     </Member>
     <Member MemberName="CommandHandlers">
@@ -55,6 +58,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.TeamsFx.Conversation.ITeamsCommandHandler&gt;</ReturnType>
@@ -77,6 +81,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -87,7 +92,7 @@
       <Docs>
         <param name="commandHandler">A command handler implements <seealso cref="T:Microsoft.TeamsFx.Conversation.ITeamsCommandHandler" />.</param>
         <summary>
-            Register a command to the command bot.
+            Registers a command to the command bot.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -104,6 +109,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -112,9 +118,9 @@
         <Parameter Name="commandHandlers" Type="System.Collections.Generic.IList&lt;Microsoft.TeamsFx.Conversation.ITeamsCommandHandler&gt;" />
       </Parameters>
       <Docs>
-        <param name="commandHandlers" />
+        <param name="commandHandlers">A list of command handlers to be registered to the bot.</param>
         <summary>
-            Register a set of commands to the command bot.
+            Registers a set of commands to the command bot.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">
