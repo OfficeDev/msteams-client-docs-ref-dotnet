@@ -1,0 +1,83 @@
+<Type Name="TeamsBotSsoPromptTokenResponse" FullName="Microsoft.TeamsFx.Bot.TeamsBotSsoPromptTokenResponse">
+  <TypeSignature Language="C#" Value="public class TeamsBotSsoPromptTokenResponse : Microsoft.Bot.Schema.TokenResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsBotSsoPromptTokenResponse extends Microsoft.Bot.Schema.TokenResponse" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptTokenResponse" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsBotSsoPromptTokenResponse&#xA;Inherits TokenResponse" />
+  <TypeSignature Language="F#" Value="type TeamsBotSsoPromptTokenResponse = class&#xA;    inherit TokenResponse" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Bot.Schema.TokenResponse</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Token response provided by Teams Bot SSO prompt
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsBotSsoPromptTokenResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptTokenResponse.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SsoToken">
+      <MemberSignature Language="C#" Value="public string SsoToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SsoToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptTokenResponse.SsoToken" />
+      <MemberSignature Language="VB.NET" Value="Public Property SsoToken As String" />
+      <MemberSignature Language="F#" Value="member this.SsoToken : string with get, set" Usage="Microsoft.TeamsFx.Bot.TeamsBotSsoPromptTokenResponse.SsoToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SSO token for user
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SsoTokenExpiration">
+      <MemberSignature Language="C#" Value="public string SsoTokenExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SsoTokenExpiration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Bot.TeamsBotSsoPromptTokenResponse.SsoTokenExpiration" />
+      <MemberSignature Language="VB.NET" Value="Public Property SsoTokenExpiration As String" />
+      <MemberSignature Language="F#" Value="member this.SsoTokenExpiration : string with get, set" Usage="Microsoft.TeamsFx.Bot.TeamsBotSsoPromptTokenResponse.SsoTokenExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Expiration time of SSO token
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

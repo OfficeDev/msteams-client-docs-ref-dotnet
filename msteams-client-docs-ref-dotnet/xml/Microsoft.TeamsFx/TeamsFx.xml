@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,28 +23,6 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public TeamsFx (Microsoft.JSInterop.IJSRuntime jsRuntime);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.JSInterop.IJSRuntime jsRuntime) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.#ctor(Microsoft.JSInterop.IJSRuntime)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (jsRuntime As IJSRuntime)" />
-      <MemberSignature Language="F#" Value="new Microsoft.TeamsFx.TeamsFx : Microsoft.JSInterop.IJSRuntime -&gt; Microsoft.TeamsFx.TeamsFx" Usage="new Microsoft.TeamsFx.TeamsFx jsRuntime" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="jsRuntime" Type="Microsoft.JSInterop.IJSRuntime" />
-      </Parameters>
-      <Docs>
-        <param name="jsRuntime">To be added.</param>
-        <summary>
-            The constructor of TeamsFx.
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public TeamsFx (Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.TeamsFx&gt; logger, Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; authLogger);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.TeamsFx.TeamsFx&gt; logger, class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.TeamsFx.MsGraphAuthProvider&gt; authLogger) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.TeamsFx},Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
@@ -53,6 +32,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.TeamsFx&gt;" />
@@ -68,62 +48,6 @@
       </Docs>
     </Member>
     <Member MemberName="CreateMicrosoftGraphClient">
-      <MemberSignature Language="C#" Value="public static Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient (Azure.Core.TokenCredential credential, string scopes = &quot;.default&quot;);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient(class Azure.Core.TokenCredential credential, string scopes) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateMicrosoftGraphClient (credential As TokenCredential, Optional scopes As String = &quot;.default&quot;) As GraphServiceClient" />
-      <MemberSignature Language="F#" Value="static member CreateMicrosoftGraphClient : Azure.Core.TokenCredential * string -&gt; Microsoft.Graph.GraphServiceClient" Usage="Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient (credential, scopes)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Graph.GraphServiceClient</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
-        <Parameter Name="scopes" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="credential">Token credential instance.</param>
-        <param name="scopes">The string of Microsoft Token scopes of access separated by space. Default value is `.default`.</param>
-        <summary>
-            Get Microsoft graph client.
-            </summary>
-        <returns>Graph client with specified scopes.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CreateMicrosoftGraphClient">
-      <MemberSignature Language="C#" Value="public static Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient (Azure.Core.TokenCredential credential, string[] scopes);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient(class Azure.Core.TokenCredential credential, string[] scopes) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String[])" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateMicrosoftGraphClient (credential As TokenCredential, scopes As String()) As GraphServiceClient" />
-      <MemberSignature Language="F#" Value="static member CreateMicrosoftGraphClient : Azure.Core.TokenCredential * string[] -&gt; Microsoft.Graph.GraphServiceClient" Usage="Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient (credential, scopes)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Graph.GraphServiceClient</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
-        <Parameter Name="scopes" Type="System.String[]" />
-      </Parameters>
-      <Docs>
-        <param name="credential">Token credential instance.</param>
-        <param name="scopes">The array of Microsoft Token scopes of access. Default value is `[.default]`.</param>
-        <summary>
-            Get Microsoft graph client.
-            </summary>
-        <returns>Graph client with specified scopes.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CreateMicrosoftGraphClient">
       <MemberSignature Language="C#" Value="public Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient (Azure.Core.TokenCredential credential, string scopes = &quot;.default&quot;, Microsoft.Extensions.Logging.ILogger&lt;Microsoft.TeamsFx.MsGraphAuthProvider&gt; logger = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Graph.GraphServiceClient CreateMicrosoftGraphClient(class Azure.Core.TokenCredential credential, string scopes, class Microsoft.Extensions.Logging.ILogger`1&lt;class Microsoft.TeamsFx.MsGraphAuthProvider&gt; logger) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.CreateMicrosoftGraphClient(Azure.Core.TokenCredential,System.String,Microsoft.Extensions.Logging.ILogger{Microsoft.TeamsFx.MsGraphAuthProvider})" />
@@ -133,6 +57,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Graph.GraphServiceClient</ReturnType>
@@ -163,6 +88,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Graph.GraphServiceClient</ReturnType>
@@ -180,174 +106,6 @@
             Get Microsoft graph client.
             </summary>
         <returns>Graph client with specified scopes.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetAuthenticationConfigurationAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Model.AuthenticationConfiguration&gt; GetAuthenticationConfigurationAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Model.AuthenticationConfiguration&gt; GetAuthenticationConfigurationAsync() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.GetAuthenticationConfigurationAsync" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetAuthenticationConfigurationAsync () As Task(Of AuthenticationConfiguration)" />
-      <MemberSignature Language="F#" Value="member this.GetAuthenticationConfigurationAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Model.AuthenticationConfiguration&gt;" Usage="teamsFx.GetAuthenticationConfigurationAsync " />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Model.AuthenticationConfiguration&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-            Get configuration for authentication.
-            </summary>
-        <returns>Authentication configuration from global configuration instance, the value may be undefined if no authentication config exists in current environment.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="F:Microsoft.TeamsFx.ExceptionCode.InvalidConfiguration">When global configuration does not exist.</exception>
-      </Docs>
-    </Member>
-    <Member MemberName="GetLogLevelAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Model.LogLevel&gt; GetLogLevelAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.TeamsFx.Model.LogLevel&gt; GetLogLevelAsync() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.GetLogLevelAsync" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetLogLevelAsync () As Task(Of LogLevel)" />
-      <MemberSignature Language="F#" Value="member this.GetLogLevelAsync : unit -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Model.LogLevel&gt;" Usage="teamsFx.GetLogLevelAsync " />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Model.LogLevel&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>
-            Get log level.
-            </summary>
-        <returns>Log level</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetResourceConfigurationAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.Dictionary&lt;string,object&gt;&gt; GetResourceConfigurationAsync (Microsoft.TeamsFx.Model.ResourceType resourceType, string? resourceName = &quot;default&quot;);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.Dictionary`2&lt;string, object&gt;&gt; GetResourceConfigurationAsync(valuetype Microsoft.TeamsFx.Model.ResourceType resourceType, string resourceName) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.GetResourceConfigurationAsync(Microsoft.TeamsFx.Model.ResourceType,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetResourceConfigurationAsync (resourceType As ResourceType, Optional resourceName As String = &quot;default&quot;) As Task(Of Dictionary(Of String, Object))" />
-      <MemberSignature Language="F#" Value="member this.GetResourceConfigurationAsync : Microsoft.TeamsFx.Model.ResourceType * string -&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.Dictionary&lt;string, obj&gt;&gt;" Usage="teamsFx.GetResourceConfigurationAsync (resourceType, resourceName)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="resourceType" Type="Microsoft.TeamsFx.Model.ResourceType" />
-        <Parameter Name="resourceName" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="resourceType">The type of resource</param>
-        <param name="resourceName">The name of resource, default value is "default".</param>
-        <summary>
-            Get configuration for a specific resource.
-            </summary>
-        <returns>Resource configuration for target resource from global configuration instance.</returns>
-        <remarks>To be added.</remarks>
-        <exception cref="F:Microsoft.TeamsFx.ExceptionCode.InvalidConfiguration">When resource configuration with the specific type and name is not found.</exception>
-      </Docs>
-    </Member>
-    <Member MemberName="LoadConfigurationAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task LoadConfigurationAsync (Microsoft.TeamsFx.Model.Configuration configuration);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task LoadConfigurationAsync(class Microsoft.TeamsFx.Model.Configuration configuration) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.LoadConfigurationAsync(Microsoft.TeamsFx.Model.Configuration)" />
-      <MemberSignature Language="VB.NET" Value="Public Function LoadConfigurationAsync (configuration As Configuration) As Task" />
-      <MemberSignature Language="F#" Value="member this.LoadConfigurationAsync : Microsoft.TeamsFx.Model.Configuration -&gt; System.Threading.Tasks.Task" Usage="teamsFx.LoadConfigurationAsync configuration" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="configuration" Type="Microsoft.TeamsFx.Model.Configuration" />
-      </Parameters>
-      <Docs>
-        <param name="configuration">Optional configuration that overrides the default configuration values. The override depth is 1.</param>
-        <summary>
-            Initialize configuration from environment variables or configuration object and set the global instance.
-            <example>
-            For example:
-            <code>
-            AuthenticationConfiguration authentication = new AuthenticationConfiguration(clientId: _clientId, simpleAuthEndpoint: _endpoint, initiateLoginEndpoint: _endpoint + "auth-start.html");
-            Configuration configuration = new Configuration(authentication);
-            await teamsfx.LoadConfigurationAsync(configuration);
-            </code></example></summary>
-        <returns />
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SetLogFunctionAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SetLogFunctionAsync (Microsoft.TeamsFx.Model.LogFunction logFunction);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SetLogFunctionAsync(class Microsoft.TeamsFx.Model.LogFunction logFunction) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.SetLogFunctionAsync(Microsoft.TeamsFx.Model.LogFunction)" />
-      <MemberSignature Language="VB.NET" Value="Public Function SetLogFunctionAsync (logFunction As LogFunction) As Task" />
-      <MemberSignature Language="F#" Value="member this.SetLogFunctionAsync : Microsoft.TeamsFx.Model.LogFunction -&gt; System.Threading.Tasks.Task" Usage="teamsFx.SetLogFunctionAsync logFunction" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="logFunction" Type="Microsoft.TeamsFx.Model.LogFunction" />
-      </Parameters>
-      <Docs>
-        <param name="logFunction">Custom log function. If it's null, custom log function will be cleared.</param>
-        <summary>
-            Set custom log function to redirect logging output.
-            <example>
-            For example: Redirect the log messages to custom outputs like server console using SetLogLevelAsync. The messages can be found in Output panel from "{AppName} - ASP.NET Core Web Server".
-            <code>
-            private void log(LogLevel level, string message)
-            {
-               Console.WriteLine(message);
-            }
-            await teamsfx.SetLogFunctionAsync(log);
-            </code></example></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SetLogLevelAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SetLogLevelAsync (Microsoft.TeamsFx.Model.LogLevel logLevel);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SetLogLevelAsync(valuetype Microsoft.TeamsFx.Model.LogLevel logLevel) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.TeamsFx.SetLogLevelAsync(Microsoft.TeamsFx.Model.LogLevel)" />
-      <MemberSignature Language="VB.NET" Value="Public Function SetLogLevelAsync (logLevel As LogLevel) As Task" />
-      <MemberSignature Language="F#" Value="member this.SetLogLevelAsync : Microsoft.TeamsFx.Model.LogLevel -&gt; System.Threading.Tasks.Task" Usage="teamsFx.SetLogLevelAsync logLevel" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="logLevel" Type="Microsoft.TeamsFx.Model.LogLevel" />
-      </Parameters>
-      <Docs>
-        <param name="logLevel">log level in configuration</param>
-        <summary>
-            Update log level helper.
-            </summary>
-        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

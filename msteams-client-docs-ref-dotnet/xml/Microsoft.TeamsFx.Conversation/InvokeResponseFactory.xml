@@ -1,0 +1,132 @@
+<Type Name="InvokeResponseFactory" FullName="Microsoft.TeamsFx.Conversation.InvokeResponseFactory">
+  <TypeSignature Language="C#" Value="public static class InvokeResponseFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit InvokeResponseFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.InvokeResponseFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Class InvokeResponseFactory" />
+  <TypeSignature Language="F#" Value="type InvokeResponseFactory = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains utility methods for various invoke response types for an adaptiveCard/action invoke response.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdaptiveCard">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Builder.InvokeResponse AdaptiveCard (object card);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Builder.InvokeResponse AdaptiveCard(object card) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.InvokeResponseFactory.AdaptiveCard(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AdaptiveCard (card As Object) As InvokeResponse" />
+      <MemberSignature Language="F#" Value="static member AdaptiveCard : obj -&gt; Microsoft.Bot.Builder.InvokeResponse" Usage="Microsoft.TeamsFx.Conversation.InvokeResponseFactory.AdaptiveCard card" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.InvokeResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="card" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="card">The adaptive card included in the response body.</param>
+        <summary>
+            Creates invoke response with an adaptive card.
+            </summary>
+        <returns>An instance of <see cref="T:Microsoft.Bot.Builder.InvokeResponse" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInvokeResponse">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Builder.InvokeResponse CreateInvokeResponse (System.Net.HttpStatusCode statusCode, object response);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Builder.InvokeResponse CreateInvokeResponse(valuetype System.Net.HttpStatusCode statusCode, object response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.InvokeResponseFactory.CreateInvokeResponse(System.Net.HttpStatusCode,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateInvokeResponse (statusCode As HttpStatusCode, response As Object) As InvokeResponse" />
+      <MemberSignature Language="F#" Value="static member CreateInvokeResponse : System.Net.HttpStatusCode * obj -&gt; Microsoft.Bot.Builder.InvokeResponse" Usage="Microsoft.TeamsFx.Conversation.InvokeResponseFactory.CreateInvokeResponse (statusCode, response)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.InvokeResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.Net.HttpStatusCode" />
+        <Parameter Name="response" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">The status code.</param>
+        <param name="response">The response body.</param>
+        <summary>
+            Creates invoke response with status code and response body.
+            </summary>
+        <returns>An instance of <see cref="T:Microsoft.Bot.Builder.InvokeResponse" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorResponse">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Builder.InvokeResponse ErrorResponse (Microsoft.TeamsFx.Conversation.InvokeResponseErrorCode errorCode, string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Builder.InvokeResponse ErrorResponse(valuetype Microsoft.TeamsFx.Conversation.InvokeResponseErrorCode errorCode, string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.InvokeResponseFactory.ErrorResponse(Microsoft.TeamsFx.Conversation.InvokeResponseErrorCode,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ErrorResponse (errorCode As InvokeResponseErrorCode, errorMessage As String) As InvokeResponse" />
+      <MemberSignature Language="F#" Value="static member ErrorResponse : Microsoft.TeamsFx.Conversation.InvokeResponseErrorCode * string -&gt; Microsoft.Bot.Builder.InvokeResponse" Usage="Microsoft.TeamsFx.Conversation.InvokeResponseFactory.ErrorResponse (errorCode, errorMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.InvokeResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorCode" Type="Microsoft.TeamsFx.Conversation.InvokeResponseErrorCode" />
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">The status code indicates the bot processing error, available values:
+            <list type="bullet"><item><description> 400 (BadRequest): indicate the incoming request was invalid.</description></item><item><description> 500 (InternalServerError): indicate an unexpected error occurred.</description></item></list></param>
+        <param name="errorMessage">The error message.</param>
+        <summary>
+            Creates invoke response with error code and error message.
+            </summary>
+        <returns>An instance of <see cref="T:Microsoft.Bot.Builder.InvokeResponse" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextMessage">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Builder.InvokeResponse TextMessage (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Builder.InvokeResponse TextMessage(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.InvokeResponseFactory.TextMessage(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TextMessage (message As String) As InvokeResponse" />
+      <MemberSignature Language="F#" Value="static member TextMessage : string -&gt; Microsoft.Bot.Builder.InvokeResponse" Usage="Microsoft.TeamsFx.Conversation.InvokeResponseFactory.TextMessage message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.InvokeResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">The text message included in the response body.</param>
+        <summary>
+            Creates invoke response with a text message.
+            </summary>
+        <returns>An instance of <see cref="T:Microsoft.Bot.Builder.InvokeResponse" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

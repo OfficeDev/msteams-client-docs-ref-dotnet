@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,6 +30,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
@@ -45,6 +47,140 @@
         <exception cref="T:System.ArgumentException">Throws if provided parameter is invalid.</exception>
       </Docs>
     </Member>
+    <Member MemberName="FindAllChannelsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt; FindAllChannelsAsync (Func&lt;Microsoft.TeamsFx.Conversation.Channel,Microsoft.Bot.Schema.Teams.TeamDetails,System.Threading.Tasks.Task&lt;bool&gt;&gt; predicate, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.Channel[]&gt; FindAllChannelsAsync(class System.Func`3&lt;class Microsoft.TeamsFx.Conversation.Channel, class Microsoft.Bot.Schema.Teams.TeamDetails, class System.Threading.Tasks.Task`1&lt;bool&gt;&gt; predicate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.NotificationBot.FindAllChannelsAsync(System.Func{Microsoft.TeamsFx.Conversation.Channel,Microsoft.Bot.Schema.Teams.TeamDetails,System.Threading.Tasks.Task{System.Boolean}},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindAllChannelsAsync (predicate As Func(Of Channel, TeamDetails, Task(Of Boolean)), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Channel())" />
+      <MemberSignature Language="F#" Value="member this.FindAllChannelsAsync : Func&lt;Microsoft.TeamsFx.Conversation.Channel, Microsoft.Bot.Schema.Teams.TeamDetails, System.Threading.Tasks.Task&lt;bool&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt;" Usage="notificationBot.FindAllChannelsAsync (predicate, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.TeamsFx.Conversation.Channel,Microsoft.Bot.Schema.Teams.TeamDetails,System.Threading.Tasks.Task&lt;System.Boolean&gt;&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">Predicate find calls predicate for each channel of the installation.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Returns all <see cref="T:Microsoft.TeamsFx.Conversation.Channel" /> where predicate is true, and empty array otherwise.
+            (Ensure the bot app is installed into the `General` channel, otherwise empty array will be returned.)
+            </summary>
+        <returns>An array of <see cref="T:Microsoft.TeamsFx.Conversation.Channel" /> where predicate is true, and empty array otherwise.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Throws when predicate is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllMembersAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member[]&gt; FindAllMembersAsync (Func&lt;Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task&lt;bool&gt;&gt; predicate, Microsoft.TeamsFx.Conversation.SearchScope scope = Microsoft.TeamsFx.Conversation.SearchScope.All, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.Member[]&gt; FindAllMembersAsync(class System.Func`2&lt;class Microsoft.TeamsFx.Conversation.Member, class System.Threading.Tasks.Task`1&lt;bool&gt;&gt; predicate, valuetype Microsoft.TeamsFx.Conversation.SearchScope scope, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.NotificationBot.FindAllMembersAsync(System.Func{Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task{System.Boolean}},Microsoft.TeamsFx.Conversation.SearchScope,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindAllMembersAsync (predicate As Func(Of Member, Task(Of Boolean)), Optional scope As SearchScope = Microsoft.TeamsFx.Conversation.SearchScope.All, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Member())" />
+      <MemberSignature Language="F#" Value="member this.FindAllMembersAsync : Func&lt;Microsoft.TeamsFx.Conversation.Member, System.Threading.Tasks.Task&lt;bool&gt;&gt; * Microsoft.TeamsFx.Conversation.SearchScope * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member[]&gt;" Usage="notificationBot.FindAllMembersAsync (predicate, scope, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task&lt;System.Boolean&gt;&gt;" />
+        <Parameter Name="scope" Type="Microsoft.TeamsFx.Conversation.SearchScope" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">Find calls predicate for each member of the installation.</param>
+        <param name="scope">The scope to find members from the installations. 
+            (personal chat, group chat, Teams channel)
+            </param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Returns all <see cref="T:Microsoft.TeamsFx.Conversation.Member" /> where predicate is true, and empty array otherwise.
+            </summary>
+        <returns>An array of <see cref="T:Microsoft.TeamsFx.Conversation.Member" /> where predicate is true, and empty array otherwise.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Throws when predicate is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindChannelAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel&gt; FindChannelAsync (Func&lt;Microsoft.TeamsFx.Conversation.Channel,Microsoft.Bot.Schema.Teams.TeamDetails,System.Threading.Tasks.Task&lt;bool&gt;&gt; predicate, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.Channel&gt; FindChannelAsync(class System.Func`3&lt;class Microsoft.TeamsFx.Conversation.Channel, class Microsoft.Bot.Schema.Teams.TeamDetails, class System.Threading.Tasks.Task`1&lt;bool&gt;&gt; predicate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.NotificationBot.FindChannelAsync(System.Func{Microsoft.TeamsFx.Conversation.Channel,Microsoft.Bot.Schema.Teams.TeamDetails,System.Threading.Tasks.Task{System.Boolean}},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindChannelAsync (predicate As Func(Of Channel, TeamDetails, Task(Of Boolean)), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Channel)" />
+      <MemberSignature Language="F#" Value="member this.FindChannelAsync : Func&lt;Microsoft.TeamsFx.Conversation.Channel, Microsoft.Bot.Schema.Teams.TeamDetails, System.Threading.Tasks.Task&lt;bool&gt;&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel&gt;" Usage="notificationBot.FindChannelAsync (predicate, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.TeamsFx.Conversation.Channel,Microsoft.Bot.Schema.Teams.TeamDetails,System.Threading.Tasks.Task&lt;System.Boolean&gt;&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">
+            Find calls predicate once for each channel of the installation, 
+            until it finds one where predicate returns true. If such a channel is found, 
+            find immediately returns that channel.Otherwise, find returns null.
+            </param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Returns the first <see cref="T:Microsoft.TeamsFx.Conversation.Channel" /> where predicate is true, and null otherwise.
+            (Ensure the bot app is installed into the `General` channel, otherwise null will be returned.)
+            </summary>
+        <returns>The first <see cref="T:Microsoft.TeamsFx.Conversation.Channel" /> where predicate is true, and null otherwise.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Throws when predicate is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMemberAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member&gt; FindMemberAsync (Func&lt;Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task&lt;bool&gt;&gt; predicate, Microsoft.TeamsFx.Conversation.SearchScope scope = Microsoft.TeamsFx.Conversation.SearchScope.All, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.Member&gt; FindMemberAsync(class System.Func`2&lt;class Microsoft.TeamsFx.Conversation.Member, class System.Threading.Tasks.Task`1&lt;bool&gt;&gt; predicate, valuetype Microsoft.TeamsFx.Conversation.SearchScope scope, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.NotificationBot.FindMemberAsync(System.Func{Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task{System.Boolean}},Microsoft.TeamsFx.Conversation.SearchScope,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindMemberAsync (predicate As Func(Of Member, Task(Of Boolean)), Optional scope As SearchScope = Microsoft.TeamsFx.Conversation.SearchScope.All, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Member)" />
+      <MemberSignature Language="F#" Value="member this.FindMemberAsync : Func&lt;Microsoft.TeamsFx.Conversation.Member, System.Threading.Tasks.Task&lt;bool&gt;&gt; * Microsoft.TeamsFx.Conversation.SearchScope * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member&gt;" Usage="notificationBot.FindMemberAsync (predicate, scope, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task&lt;System.Boolean&gt;&gt;" />
+        <Parameter Name="scope" Type="Microsoft.TeamsFx.Conversation.SearchScope" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">
+            Find calls predicate once for each member of the installation, 
+            until it finds one where predicate returns true. If such a member is found, 
+            find immediately returns that member.Otherwise, find returns null.
+            </param>
+        <param name="scope">The scope to find members from the installations. 
+            (personal chat, group chat, Teams channel)
+            </param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Returns the first <see cref="T:Microsoft.TeamsFx.Conversation.Member" /> where predicate is true, and null otherwise.
+            </summary>
+        <returns>The first <see cref="T:Microsoft.TeamsFx.Conversation.Member" /> where predicate is true, and null otherwise.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Throws when predicate is null.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="GetInstallationsAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.TeamsBotInstallation[]&gt; GetInstallationsAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.TeamsBotInstallation[]&gt; GetInstallationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -55,6 +191,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.TeamsBotInstallation[]&gt;</ReturnType>
