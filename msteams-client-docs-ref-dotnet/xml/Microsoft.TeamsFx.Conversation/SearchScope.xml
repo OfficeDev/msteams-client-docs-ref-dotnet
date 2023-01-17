@@ -1,0 +1,114 @@
+<Type Name="SearchScope" FullName="Microsoft.TeamsFx.Conversation.SearchScope">
+  <TypeSignature Language="C#" Value="public enum SearchScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SearchScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.SearchScope" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SearchScope" />
+  <TypeSignature Language="F#" Value="type SearchScope = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Flags]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Flags&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            The search scope when calling <see cref="M:Microsoft.TeamsFx.Conversation.NotificationBot.FindMemberAsync(System.Func{Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task{System.Boolean}},Microsoft.TeamsFx.Conversation.SearchScope,System.Threading.CancellationToken)" /> and <see cref="M:Microsoft.TeamsFx.Conversation.NotificationBot.FindAllMembersAsync(System.Func{Microsoft.TeamsFx.Conversation.Member,System.Threading.Tasks.Task{System.Boolean}},Microsoft.TeamsFx.Conversation.SearchScope,System.Threading.CancellationToken)" />.
+            The search scope is a flagged enum and it can be combined with `|`.
+            For example, to search from personal chat and group chat, use `SearchScope.Person | SearchScope.Group`.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.SearchScope All = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.SearchScope.All" />
+      <MemberSignature Language="VB.NET" Value="All" />
+      <MemberSignature Language="F#" Value="All = 7" Usage="Microsoft.TeamsFx.Conversation.SearchScope.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.SearchScope</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            Search members from all installations including personal chat, group chat and Teams channel.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Channel">
+      <MemberSignature Language="C#" Value="Channel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.SearchScope Channel = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.SearchScope.Channel" />
+      <MemberSignature Language="VB.NET" Value="Channel" />
+      <MemberSignature Language="F#" Value="Channel = 4" Usage="Microsoft.TeamsFx.Conversation.SearchScope.Channel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.SearchScope</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Search members from the installations in Teams channel only.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="Group" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.SearchScope Group = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.SearchScope.Group" />
+      <MemberSignature Language="VB.NET" Value="Group" />
+      <MemberSignature Language="F#" Value="Group = 2" Usage="Microsoft.TeamsFx.Conversation.SearchScope.Group" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.SearchScope</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Search members from the installations in group chat only.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Person">
+      <MemberSignature Language="C#" Value="Person" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.SearchScope Person = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.SearchScope.Person" />
+      <MemberSignature Language="VB.NET" Value="Person" />
+      <MemberSignature Language="F#" Value="Person = 1" Usage="Microsoft.TeamsFx.Conversation.SearchScope.Person" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.SearchScope</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Search members from the installations in personal chat only.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

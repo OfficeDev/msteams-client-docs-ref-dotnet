@@ -1,0 +1,85 @@
+<Type Name="AdaptiveCardResponse" FullName="Microsoft.TeamsFx.Conversation.AdaptiveCardResponse">
+  <TypeSignature Language="C#" Value="public enum AdaptiveCardResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AdaptiveCardResponse extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.AdaptiveCardResponse" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AdaptiveCardResponse" />
+  <TypeSignature Language="F#" Value="type AdaptiveCardResponse = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Options used to control how the response card will be sent to users.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NewForAll">
+      <MemberSignature Language="C#" Value="NewForAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.AdaptiveCardResponse NewForAll = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.AdaptiveCardResponse.NewForAll" />
+      <MemberSignature Language="VB.NET" Value="NewForAll" />
+      <MemberSignature Language="F#" Value="NewForAll = 2" Usage="Microsoft.TeamsFx.Conversation.AdaptiveCardResponse.NewForAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.AdaptiveCardResponse</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The response card will be sent as a new message for all users in the chat.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceForAll">
+      <MemberSignature Language="C#" Value="ReplaceForAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.AdaptiveCardResponse ReplaceForAll = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.AdaptiveCardResponse.ReplaceForAll" />
+      <MemberSignature Language="VB.NET" Value="ReplaceForAll" />
+      <MemberSignature Language="F#" Value="ReplaceForAll = 1" Usage="Microsoft.TeamsFx.Conversation.AdaptiveCardResponse.ReplaceForAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.AdaptiveCardResponse</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The response card will be replaced the current one for all users in the chat.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceForInteractor">
+      <MemberSignature Language="C#" Value="ReplaceForInteractor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.TeamsFx.Conversation.AdaptiveCardResponse ReplaceForInteractor = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.TeamsFx.Conversation.AdaptiveCardResponse.ReplaceForInteractor" />
+      <MemberSignature Language="VB.NET" Value="ReplaceForInteractor" />
+      <MemberSignature Language="F#" Value="ReplaceForInteractor = 0" Usage="Microsoft.TeamsFx.Conversation.AdaptiveCardResponse.ReplaceForInteractor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.AdaptiveCardResponse</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The response card will be replaced the current one for the interactor who trigger the action.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

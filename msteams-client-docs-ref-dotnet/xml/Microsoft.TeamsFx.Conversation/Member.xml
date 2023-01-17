@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,6 +36,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="parent" Type="Microsoft.TeamsFx.Conversation.TeamsBotInstallation" />
@@ -62,6 +64,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.Teams.TeamsChannelAccount</ReturnType>
@@ -84,6 +87,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.TeamsFx.Conversation.TeamsBotInstallation</ReturnType>
@@ -97,11 +101,11 @@
       </Docs>
     </Member>
     <Member MemberName="SendAdaptiveCard">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendAdaptiveCard (object card, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SendAdaptiveCard(object card, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt; SendAdaptiveCard (object card, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.MessageResponse&gt; SendAdaptiveCard(object card, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.Member.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function SendAdaptiveCard (card As Object, Optional cancellationToken As CancellationToken = Nothing) As Task" />
-      <MemberSignature Language="F#" Value="abstract member SendAdaptiveCard : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.SendAdaptiveCard : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="member.SendAdaptiveCard (card, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendAdaptiveCard (card As Object, Optional cancellationToken As CancellationToken = Nothing) As Task(Of MessageResponse)" />
+      <MemberSignature Language="F#" Value="abstract member SendAdaptiveCard : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt;&#xA;override this.SendAdaptiveCard : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt;" Usage="member.SendAdaptiveCard (card, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendAdaptiveCard(System.Object,System.Threading.CancellationToken)</InterfaceMember>
@@ -109,9 +113,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="card" Type="System.Object" />
@@ -127,11 +132,11 @@
       </Docs>
     </Member>
     <Member MemberName="SendMessage">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SendMessage (string message, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SendMessage(string message, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt; SendMessage (string message, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.MessageResponse&gt; SendMessage(string message, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.Member.SendMessage(System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function SendMessage (message As String, Optional cancellationToken As CancellationToken = Nothing) As Task" />
-      <MemberSignature Language="F#" Value="abstract member SendMessage : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.SendMessage : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="member.SendMessage (message, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendMessage (message As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of MessageResponse)" />
+      <MemberSignature Language="F#" Value="abstract member SendMessage : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt;&#xA;override this.SendMessage : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt;" Usage="member.SendMessage (message, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.TeamsFx.Conversation.INotificationTarget.SendMessage(System.String,System.Threading.CancellationToken)</InterfaceMember>
@@ -139,9 +144,10 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.MessageResponse&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -169,6 +175,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.TeamsFx.Conversation.NotificationTargetType</ReturnType>

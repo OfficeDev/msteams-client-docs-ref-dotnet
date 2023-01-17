@@ -1,0 +1,67 @@
+<Type Name="BotAuthenticationConfigurations" FullName="Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations">
+  <TypeSignature Language="C#" Value="public class BotAuthenticationConfigurations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BotAuthenticationConfigurations extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations" />
+  <TypeSignature Language="VB.NET" Value="Public Class BotAuthenticationConfigurations" />
+  <TypeSignature Language="F#" Value="type BotAuthenticationConfigurations = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Bot specific authentication configurations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BotAuthenticationConfigurations ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitiateLoginEndpoint">
+      <MemberSignature Language="C#" Value="public string InitiateLoginEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitiateLoginEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations.InitiateLoginEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property InitiateLoginEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.InitiateLoginEndpoint : string with get, set" Usage="Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations.InitiateLoginEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.DataAnnotations.Required(ErrorMessage="login start page endpoint uri is required")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.DataAnnotations.Required(ErrorMessage="login start page endpoint uri is required")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Initiate login start page endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
