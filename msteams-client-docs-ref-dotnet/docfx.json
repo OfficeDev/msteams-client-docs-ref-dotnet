@@ -50,10 +50,10 @@
         "api/**.yml": "dotnet-bot"
       },
       "ms.service": {
-        "api/Microsoft.TeamsFx*.yml": "msteams"
+        "api/**.yml": "msteams"
       },
       "ms.author": {
-        "api/Microsoft.TeamsFx*.yml": "o365devx"
+        "api/**.yml": "o365devx"
       }
     },
     "template": [],
