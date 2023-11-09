@@ -505,8 +505,8 @@
              The meaning of an command activity is defined by the <see cref="P:Microsoft.Bot.Schema.ICommandActivity.Name" /> property,
              which is meaningful within the scope of a channel.
              </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnCommandActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.ICommandActivity},`0,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnCommandResultActivityAsync">
@@ -553,8 +553,8 @@
              The meaning of an CommandResult activity is defined by the <see cref="P:Microsoft.Bot.Schema.ICommandResultActivity.Name" /> property,
              which is meaningful within the scope of a channel.
              </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnCommandResultActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.ICommandResultActivity},`0,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnConversationUpdateActivityAsync">
@@ -605,9 +605,9 @@
              Add logic to apply after the member added or removed logic after the call to the base class
              <see cref="M:Microsoft.Teams.AI.Application`2.OnConversationUpdateActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},`0,System.Threading.CancellationToken)" /> method.
              </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMembersAddedAsync(System.Collections.Generic.IList{Microsoft.Bot.Schema.ChannelAccount},Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMembersRemovedAsync(System.Collections.Generic.IList{Microsoft.Bot.Schema.ChannelAccount},Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},`0,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnEndOfConversationActivityAsync">
@@ -697,9 +697,9 @@
              which is meaningful within the scope of a channel.
              A `tokens/response` event can be triggered by an <see cref="T:Microsoft.Bot.Schema.OAuthCard" /> or an OAuth prompt.
              </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnTokenResponseEventAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnEventAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnEventAsync">
@@ -738,8 +738,8 @@
             method receives an event with a <see cref="P:Microsoft.Bot.Schema.IEventActivity.Name" /> other than `tokens/response`,
             it calls this method.
             </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnEventActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnTokenResponseEventAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnEventActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnFileConsentAcceptAsync">
@@ -1451,9 +1451,9 @@
              <see cref="M:Microsoft.Teams.AI.Application`2.OnMessageReactionActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" /> method.
             
              </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnReactionsAddedAsync(System.Collections.Generic.IList{Microsoft.Bot.Schema.MessageReaction},Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnReactionsRemovedAsync(System.Collections.Generic.IList{Microsoft.Bot.Schema.MessageReaction},Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnMessageSoftDeleteAsync">
@@ -1960,10 +1960,10 @@
             of a previously sent activity. When the bot sends an activity, the channel assigns an ID to it,
             which is available in the <see cref="P:Microsoft.Bot.Schema.ResourceResponse.Id" /> of the result.
             </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageReactionActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="P:Microsoft.Bot.Schema.Activity.Id" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.SendActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="P:Microsoft.Bot.Schema.ResourceResponse.Id" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageReactionActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnReactionsRemovedAsync">
@@ -2005,10 +2005,10 @@
             of a previously sent activity. When the bot sends an activity, the channel assigns an ID to it,
             which is available in the <see cref="P:Microsoft.Bot.Schema.ResourceResponse.Id" /> of the result.
             </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageReactionActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="P:Microsoft.Bot.Schema.Activity.Id" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.SendActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="P:Microsoft.Bot.Schema.ResourceResponse.Id" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageReactionActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnReadReceiptAsync">
@@ -2562,8 +2562,8 @@
              If your bot uses the <c>OAuthPrompt</c>, forward the incoming <see cref="T:Microsoft.Bot.Schema.Activity" /> to
              the current dialog.
              </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnEventActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnEventAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnEventActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnTurnAsync">
@@ -2678,13 +2678,13 @@
             method receives an activity that is not a message, conversation update, message reaction,
             or event activity, it calls this method.
             </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnConversationUpdateActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageReactionActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageReactionActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnEventActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="P:Microsoft.Bot.Schema.Activity.Type" />
         <altmember cref="T:Microsoft.Bot.Schema.ActivityTypes" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.RunActivityHandlerAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="Options">
@@ -2749,7 +2749,6 @@
               To add logic to apply after the type-specific logic override the
              <see cref="M:Microsoft.Teams.AI.Application`2.OnAfterTurnAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" /> method.
              </remarks>
-        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageUpdateActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageUpdateActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageDeleteActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageDeleteActivity},`0,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnConversationUpdateActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},`0,System.Threading.CancellationToken)" />
@@ -2758,6 +2757,7 @@
         <altmember cref="M:Microsoft.Teams.AI.Application`2.OnUnrecognizedActivityTypeAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
         <altmember cref="P:Microsoft.Bot.Schema.Activity.Type" />
         <altmember cref="T:Microsoft.Bot.Schema.ActivityTypes" />
+        <altmember cref="M:Microsoft.Teams.AI.Application`2.OnMessageActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IMessageActivity},`0,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="StartTypingTimer">
