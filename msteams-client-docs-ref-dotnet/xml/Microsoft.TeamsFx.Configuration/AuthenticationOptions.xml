@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,8 +29,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,7 +46,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -68,8 +68,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -90,7 +89,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.TeamsFx.Configuration.BotAuthenticationConfigurations</ReturnType>
@@ -112,8 +111,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -141,8 +139,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -161,6 +158,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="InitiateLoginEndpoint">
+      <MemberSignature Language="C#" Value="public string InitiateLoginEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitiateLoginEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Configuration.AuthenticationOptions.InitiateLoginEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property InitiateLoginEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.InitiateLoginEndpoint : string with get, set" Usage="Microsoft.TeamsFx.Configuration.AuthenticationOptions.InitiateLoginEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.ComponentModel.DataAnnotations.RegularExpression("^http(s)?://[-a-zA-Z0-9@:%._\+~#=/]{1,256}$")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.DataAnnotations.RegularExpression("^http(s)?://[-a-zA-Z0-9@:%._\+~#=/]{1,256}$")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Login page for Teams to redirect to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="OAuthAuthority">
       <MemberSignature Language="C#" Value="public string OAuthAuthority { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string OAuthAuthority" />
@@ -170,8 +195,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

@@ -1,0 +1,59 @@
+<Type Name="AzureOpenAIPlanner&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlanner&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class AzureOpenAIPlanner&lt;TState&gt; : Microsoft.Teams.AI.AI.Planner.OpenAIPlanner&lt;TState,Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions&gt; where TState : ITurnState&lt;StateBase,StateBase,TempState&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureOpenAIPlanner`1&lt;(class Microsoft.Teams.AI.State.ITurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;) TState&gt; extends Microsoft.Teams.AI.AI.Planner.OpenAIPlanner`2&lt;!TState, class Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlanner`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureOpenAIPlanner(Of TState)&#xA;Inherits OpenAIPlanner(Of TState, AzureOpenAIPlannerOptions)" />
+  <TypeSignature Language="F#" Value="type AzureOpenAIPlanner&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt; = class&#xA;    inherit OpenAIPlanner&lt;'State, AzureOpenAIPlannerOptions (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <InterfaceName>Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Planner.OpenAIPlanner&lt;TState,Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TState">TState</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TOptions">Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">Type of the applications turn state</typeparam>
+    <summary>
+            Planner that uses the Azure OpenAI service.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureOpenAIPlanner (Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlanner`1.#ctor(Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions,Microsoft.Extensions.Logging.ILoggerFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As AzureOpenAIPlannerOptions, Optional loggerFactory As ILoggerFactory = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; : Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions * Microsoft.Extensions.Logging.ILoggerFactory -&gt; Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="new Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; (options, loggerFactory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+      </Parameters>
+      <Docs>
+        <param name="options">The options to configure the planner.</param>
+        <param name="loggerFactory">The logger factory instance.</param>
+        <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlanner`1" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,6 +1,6 @@
 <Type Name="MsGraphAuthProvider" FullName="Microsoft.TeamsFx.MsGraphAuthProvider">
-  <TypeSignature Language="C#" Value="public class MsGraphAuthProvider : Microsoft.Graph.IAuthenticationProvider" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MsGraphAuthProvider extends System.Object implements class Microsoft.Graph.IAuthenticationProvider" />
+  <TypeSignature Language="C#" Value="public class MsGraphAuthProvider : Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MsGraphAuthProvider extends System.Object implements class Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider" />
   <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.MsGraphAuthProvider" />
   <TypeSignature Language="VB.NET" Value="Public Class MsGraphAuthProvider&#xA;Implements IAuthenticationProvider" />
   <TypeSignature Language="F#" Value="type MsGraphAuthProvider = class&#xA;    interface IAuthenticationProvider" />
@@ -9,18 +9,25 @@
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
-      <InterfaceName>Microsoft.Graph.IAuthenticationProvider</InterfaceName>
+      <InterfaceName>Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("This class is deprecated. Please use TokenCredential to create Graph client instead. If auth provider is required, please use IAuthenticationProvider from Microsoft.Kiota.Abstractions.Authentication.", false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("This class is deprecated. Please use TokenCredential to create Graph client instead. If auth provider is required, please use IAuthenticationProvider from Microsoft.Kiota.Abstractions.Authentication.", false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Microsoft Graph auth provider for Teams Framework.
+            Microsoft Graph auth provider for Teams Framework. 
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -34,9 +41,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This class is deprecated. Please use TokenCredential to create Graph client instead, e.g. `new GraphServiceClient(tokenCredential, new string[] { _scope })`", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This class is deprecated. Please use TokenCredential to create Graph client instead, e.g. `new GraphServiceClient(tokenCredential, new string[] { _scope })`", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
         <Parameter Name="scopes" Type="System.String" />
@@ -51,7 +63,7 @@
             </summary>
         <returns>
             An instance of MsGraphAuthProvider.
-            </returns>
+            /// </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -64,9 +76,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This class is deprecated. Please use Token Credential to create Graph client instead, e.g. `new GraphServiceClient(tokenCredential, new string[] { _scope })`", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This class is deprecated. Please use Token Credential to create Graph client instead, e.g. `new GraphServiceClient(tokenCredential, new string[] { _scope })`", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="credential" Type="Azure.Core.TokenCredential" />
         <Parameter Name="scopes" Type="System.String[]" />
@@ -81,34 +98,42 @@
             </summary>
         <returns>
             An instance of MsGraphAuthProvider.
-            </returns>
+            /// </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="AuthenticateRequestAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AuthenticateRequestAsync (System.Net.Http.HttpRequestMessage request);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task AuthenticateRequestAsync(class System.Net.Http.HttpRequestMessage request) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.MsGraphAuthProvider.AuthenticateRequestAsync(System.Net.Http.HttpRequestMessage)" />
-      <MemberSignature Language="VB.NET" Value="Public Function AuthenticateRequestAsync (request As HttpRequestMessage) As Task" />
-      <MemberSignature Language="F#" Value="abstract member AuthenticateRequestAsync : System.Net.Http.HttpRequestMessage -&gt; System.Threading.Tasks.Task&#xA;override this.AuthenticateRequestAsync : System.Net.Http.HttpRequestMessage -&gt; System.Threading.Tasks.Task" Usage="msGraphAuthProvider.AuthenticateRequestAsync request" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task AuthenticateRequestAsync (Microsoft.Kiota.Abstractions.RequestInformation request, System.Collections.Generic.Dictionary&lt;string,object&gt;? additionalAuthenticationContext = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task AuthenticateRequestAsync(class Microsoft.Kiota.Abstractions.RequestInformation request, class System.Collections.Generic.Dictionary`2&lt;string, object&gt; additionalAuthenticationContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.MsGraphAuthProvider.AuthenticateRequestAsync(Microsoft.Kiota.Abstractions.RequestInformation,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AuthenticateRequestAsync (request As RequestInformation, Optional additionalAuthenticationContext As Dictionary(Of String, Object) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member AuthenticateRequestAsync : Microsoft.Kiota.Abstractions.RequestInformation * System.Collections.Generic.Dictionary&lt;string, obj&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.AuthenticateRequestAsync : Microsoft.Kiota.Abstractions.RequestInformation * System.Collections.Generic.Dictionary&lt;string, obj&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="msGraphAuthProvider.AuthenticateRequestAsync (request, additionalAuthenticationContext, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Graph.IAuthenticationProvider.AuthenticateRequestAsync(System.Net.Http.HttpRequestMessage)</InterfaceMember>
+        <InterfaceMember>M:Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider.AuthenticateRequestAsync(Microsoft.Kiota.Abstractions.RequestInformation,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This method is deprecated. Please manually add access token to request head instead.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This method is deprecated. Please manually add access token to request head instead.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="request" Type="Microsoft.Kiota.Abstractions.RequestInformation" />
+        <Parameter Name="additionalAuthenticationContext" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="request">The System.Net.Http.HttpRequestMessage to authenticate.</param>
+        <param name="request">The RequestInformation to authenticate.</param>
+        <param name="additionalAuthenticationContext" />
+        <param name="cancellationToken" />
         <summary>
             Authenticates the specified request message.
             </summary>
@@ -125,10 +150,14 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("This method is deprecated. Please use TokenCredential.GetTokenAsync instead.", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This method is deprecated. Please use TokenCredential.GetTokenAsync instead.", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
       </ReturnValue>

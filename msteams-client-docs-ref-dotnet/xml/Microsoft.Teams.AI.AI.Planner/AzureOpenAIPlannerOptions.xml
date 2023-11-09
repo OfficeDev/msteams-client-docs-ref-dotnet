@@ -1,0 +1,73 @@
+<Type Name="AzureOpenAIPlannerOptions" FullName="Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions">
+  <TypeSignature Language="C#" Value="public class AzureOpenAIPlannerOptions : Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureOpenAIPlannerOptions extends Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureOpenAIPlannerOptions&#xA;Inherits OpenAIPlannerOptions" />
+  <TypeSignature Language="F#" Value="type AzureOpenAIPlannerOptions = class&#xA;    inherit OpenAIPlannerOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Additional options needed to use the Azure OpenAI service.
+            </summary>
+    <remarks>
+            The Azure OpenAI API version is set to latest by default.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureOpenAIPlannerOptions (string apiKey, string defaultModel, string endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string defaultModel, string endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, defaultModel As String, endpoint As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions : string * string * string -&gt; Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions" Usage="new Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions (apiKey, defaultModel, endpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="defaultModel" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">OpenAI API key.</param>
+        <param name="defaultModel">The default model to use. This should be the model deployment name, not the model</param>
+        <param name="endpoint">Endpoint for your Azure OpenAI deployment.</param>
+        <summary>
+            Create an instance of the OpenAIPlannerOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public string Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Planner.AzureOpenAIPlannerOptions.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Endpoint for your Azure OpenAI deployment.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

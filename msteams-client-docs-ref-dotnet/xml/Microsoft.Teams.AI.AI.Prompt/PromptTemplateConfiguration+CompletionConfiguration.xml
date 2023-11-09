@@ -1,0 +1,237 @@
+<Type Name="PromptTemplateConfiguration+CompletionConfiguration" FullName="Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration+CompletionConfiguration">
+  <TypeSignature Language="C#" Value="public class PromptTemplateConfiguration.CompletionConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit PromptTemplateConfiguration/CompletionConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public Class PromptTemplateConfiguration.CompletionConfiguration" />
+  <TypeSignature Language="F#" Value="type PromptTemplateConfiguration.CompletionConfiguration = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Completion configuration parameters.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompletionConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrequencyPenalty">
+      <MemberSignature Language="C#" Value="public double FrequencyPenalty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FrequencyPenalty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.FrequencyPenalty" />
+      <MemberSignature Language="VB.NET" Value="Public Property FrequencyPenalty As Double" />
+      <MemberSignature Language="F#" Value="member this.FrequencyPenalty : double with get, set" Usage="Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.FrequencyPenalty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("frequency_penalty")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("frequency_penalty")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(4)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(4)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Controls the model’s tendency to repeat predictions. The frequency penalty reduces the probability
+            of words that have already been generated. The penalty depends on how many times a word has already
+            occurred in the prediction.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTokens">
+      <MemberSignature Language="C#" Value="public int MaxTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTokens" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.MaxTokens" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxTokens As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxTokens : int with get, set" Usage="Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.MaxTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("max_tokens")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("max_tokens")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(5)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(5)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum number of tokens that can be generated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresencePenalty">
+      <MemberSignature Language="C#" Value="public double PresencePenalty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PresencePenalty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.PresencePenalty" />
+      <MemberSignature Language="VB.NET" Value="Public Property PresencePenalty As Double" />
+      <MemberSignature Language="F#" Value="member this.PresencePenalty : double with get, set" Usage="Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.PresencePenalty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("presence_penalty")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("presence_penalty")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(3)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(3)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Lowers the probability of a word appearing if it already appeared in the predicted text.
+            Unlike the frequency penalty, the presence penalty does not depend on the frequency at which words
+            appear in past predictions.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopSequences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;string&gt; StopSequences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;string&gt; StopSequences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.StopSequences" />
+      <MemberSignature Language="VB.NET" Value="Public Property StopSequences As List(Of String)" />
+      <MemberSignature Language="F#" Value="member this.StopSequences : System.Collections.Generic.List&lt;string&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.StopSequences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("stop_sequences")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("stop_sequences")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(6)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(6)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Stop sequences are optional sequences that tells the backend when to stop generating tokens.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public double Temperature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Temperature" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public Property Temperature As Double" />
+      <MemberSignature Language="F#" Value="member this.Temperature : double with get, set" Usage="Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.Temperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("temperature")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("temperature")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sampling temperature to use, between 0 and 2. Higher values will make the output more random.
+            Lower values will make it more focused and deterministic.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopP">
+      <MemberSignature Language="C#" Value="public double TopP { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 TopP" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.TopP" />
+      <MemberSignature Language="VB.NET" Value="Public Property TopP As Double" />
+      <MemberSignature Language="F#" Value="member this.TopP : double with get, set" Usage="Microsoft.Teams.AI.AI.Prompt.PromptTemplateConfiguration.CompletionConfiguration.TopP" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("top_p")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("top_p")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Cut-off of top_p probability mass of tokens to consider.
+            For example, 0.1 means only the tokens comprising the top 10% probability mass are considered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

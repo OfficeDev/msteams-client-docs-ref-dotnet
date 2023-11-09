@@ -1,1 +1,1 @@
-{"msteams-client-dotnet-latest":{"Microsoft.TeamsFx":{"Name":"Microsoft.TeamsFx","Version":"1.2.1","Feed":"https://api.nuget.org/v3/index.json"}}}
+{"msteams-client-dotnet-latest":{"Microsoft.TeamsFx":{"Name":"Microsoft.TeamsFx","Version":"2.2.0","Feed":"https://api.nuget.org/v3/index.json"},"Microsoft.Teams.AI":{"Name":"Microsoft.Teams.AI","Version":"1.0.0-preview","Feed":"https://api.nuget.org/v3/index.json"}}}

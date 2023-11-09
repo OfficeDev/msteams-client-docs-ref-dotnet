@@ -1,0 +1,64 @@
+<Type Name="AssistantHistoryType" FullName="Microsoft.Teams.AI.AI.AssistantHistoryType">
+  <TypeSignature Language="C#" Value="public enum AssistantHistoryType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AssistantHistoryType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.AssistantHistoryType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AssistantHistoryType" />
+  <TypeSignature Language="F#" Value="type AssistantHistoryType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            The type of assistant history to include in the conversation history.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PlanObject">
+      <MemberSignature Language="C#" Value="PlanObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.AssistantHistoryType PlanObject = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AssistantHistoryType.PlanObject" />
+      <MemberSignature Language="VB.NET" Value="PlanObject" />
+      <MemberSignature Language="F#" Value="PlanObject = 1" Usage="Microsoft.Teams.AI.AI.AssistantHistoryType.PlanObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.AssistantHistoryType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The plan object returned by the model.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.AssistantHistoryType Text = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AssistantHistoryType.Text" />
+      <MemberSignature Language="VB.NET" Value="Text" />
+      <MemberSignature Language="F#" Value="Text = 0" Usage="Microsoft.Teams.AI.AI.AssistantHistoryType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.AssistantHistoryType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Text of any SAY commands.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

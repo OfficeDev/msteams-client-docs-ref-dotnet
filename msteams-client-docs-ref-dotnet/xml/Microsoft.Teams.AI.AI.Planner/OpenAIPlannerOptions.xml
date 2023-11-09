@@ -1,0 +1,214 @@
+<Type Name="OpenAIPlannerOptions" FullName="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions">
+  <TypeSignature Language="C#" Value="public class OpenAIPlannerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIPlannerOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenAIPlannerOptions" />
+  <TypeSignature Language="F#" Value="type OpenAIPlannerOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for the OpenAI planner.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenAIPlannerOptions (string apiKey, string defaultModel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string defaultModel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, defaultModel As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions : string * string -&gt; Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions" Usage="new Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions (apiKey, defaultModel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="defaultModel" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">OpenAI API key.</param>
+        <param name="defaultModel">The default model to use.</param>
+        <summary>
+            Create an instance of the OpenAIPlannerOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApiKey">
+      <MemberSignature Language="C#" Value="public string ApiKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApiKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.ApiKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApiKey As String" />
+      <MemberSignature Language="F#" Value="member this.ApiKey : string with get, set" Usage="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.ApiKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            OpenAI API key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultModel">
+      <MemberSignature Language="C#" Value="public string DefaultModel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultModel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.DefaultModel" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultModel As String" />
+      <MemberSignature Language="F#" Value="member this.DefaultModel : string with get, set" Usage="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.DefaultModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The default model to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Prompts can override this model.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public string? Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. OpenAI endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogRequests">
+      <MemberSignature Language="C#" Value="public bool LogRequests { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogRequests" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.LogRequests" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogRequests As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LogRequests : bool with get, set" Usage="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.LogRequests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A flag indicating if the planner should log requests with the provided logger.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Both the prompt text and the completion response will be logged.
+            If this is set to true, a logger must be provided to the planner.
+            Defaults to false.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneSayPerTurn">
+      <MemberSignature Language="C#" Value="public bool OneSayPerTurn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneSayPerTurn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.OneSayPerTurn" />
+      <MemberSignature Language="VB.NET" Value="Public Property OneSayPerTurn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.OneSayPerTurn : bool with get, set" Usage="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.OneSayPerTurn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A flag indicating if the planner should only say one thing per turn.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The planner will attempt to combine multiple SAY commands into a single SAY command when true.
+            Defaults to false.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Organization">
+      <MemberSignature Language="C#" Value="public string? Organization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Organization" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.Organization" />
+      <MemberSignature Language="VB.NET" Value="Public Property Organization As String" />
+      <MemberSignature Language="F#" Value="member this.Organization : string with get, set" Usage="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.Organization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. OpenAI organization.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSystemMessage">
+      <MemberSignature Language="C#" Value="public bool UseSystemMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSystemMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.UseSystemMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseSystemMessage As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseSystemMessage : bool with get, set" Usage="Microsoft.Teams.AI.AI.Planner.OpenAIPlannerOptions.UseSystemMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. A flag indicating if the planner should use the 'system' role when calling OpenAI's
+            chatCompletion API.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The planner currently uses the 'user' role by default as this tends to generate more reliable instruction following.
+            Defaults to false.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

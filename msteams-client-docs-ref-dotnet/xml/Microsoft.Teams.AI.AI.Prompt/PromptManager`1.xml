@@ -1,0 +1,269 @@
+<Type Name="PromptManager&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Prompt.PromptManager&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class PromptManager&lt;TState&gt; : Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt; where TState : ITurnState&lt;StateBase,StateBase,TempState&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PromptManager`1&lt;(class Microsoft.Teams.AI.State.ITurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;) TState&gt; extends System.Object implements class Microsoft.Teams.AI.AI.Prompt.IPromptManager`1&lt;!TState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompt.PromptManager`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class PromptManager(Of TState)&#xA;Implements IPromptManager(Of TState)" />
+  <TypeSignature Language="F#" Value="type PromptManager&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt; = class&#xA;    interface IPromptManager&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <InterfaceName>Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TState">The turn state class.</typeparam>
+    <summary>
+            The prompt manager.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptManager (string? promptsFolder = default, System.Collections.Generic.Dictionary&lt;string,string&gt;? promptVariables = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string promptsFolder, class System.Collections.Generic.Dictionary`2&lt;string, string&gt; promptVariables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional promptsFolder As String = Nothing, Optional promptVariables As Dictionary(Of String, String) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompt.PromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; : string * System.Collections.Generic.Dictionary&lt;string, string&gt; -&gt; Microsoft.Teams.AI.AI.Prompt.PromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="new Microsoft.Teams.AI.AI.Prompt.PromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; (promptsFolder, promptVariables)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="promptsFolder" Type="System.String" />
+        <Parameter Name="promptVariables" Type="System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="promptsFolder">The prompt folder. This should be the absolute path, for example, "C:\prompts".</param>
+        <param name="promptVariables">Mapping to resolve prompt template variables.</param>
+        <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Prompt.PromptManager`1" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFunction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt; AddFunction (string name, Microsoft.Teams.AI.AI.Prompt.PromptFunction&lt;TState&gt; promptFunction, bool allowOverrides = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompt.IPromptManager`1&lt;!TState&gt; AddFunction(string name, class Microsoft.Teams.AI.AI.Prompt.PromptFunction`1&lt;!TState&gt; promptFunction, bool allowOverrides) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.AddFunction(System.String,Microsoft.Teams.AI.AI.Prompt.PromptFunction{`0},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddFunction (name As String, promptFunction As PromptFunction(Of TState), Optional allowOverrides As Boolean = false) As IPromptManager(Of TState)" />
+      <MemberSignature Language="F#" Value="abstract member AddFunction : string * Microsoft.Teams.AI.AI.Prompt.PromptFunction&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * bool -&gt; Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;&#xA;override this.AddFunction : string * Microsoft.Teams.AI.AI.Prompt.PromptFunction&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * bool -&gt; Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="promptManager.AddFunction (name, promptFunction, allowOverrides)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompt.IPromptManager`1.AddFunction(System.String,Microsoft.Teams.AI.AI.Prompt.PromptFunction{`0},System.Boolean)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="promptFunction" Type="Microsoft.Teams.AI.AI.Prompt.PromptFunction&lt;TState&gt;" />
+        <Parameter Name="allowOverrides" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="promptFunction">To be added.</param>
+        <param name="allowOverrides">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="AddPromptTemplate">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt; AddPromptTemplate (string name, Microsoft.Teams.AI.AI.Prompt.PromptTemplate promptTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompt.IPromptManager`1&lt;!TState&gt; AddPromptTemplate(string name, class Microsoft.Teams.AI.AI.Prompt.PromptTemplate promptTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.AddPromptTemplate(System.String,Microsoft.Teams.AI.AI.Prompt.PromptTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddPromptTemplate (name As String, promptTemplate As PromptTemplate) As IPromptManager(Of TState)" />
+      <MemberSignature Language="F#" Value="abstract member AddPromptTemplate : string * Microsoft.Teams.AI.AI.Prompt.PromptTemplate -&gt; Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;&#xA;override this.AddPromptTemplate : string * Microsoft.Teams.AI.AI.Prompt.PromptTemplate -&gt; Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="promptManager.AddPromptTemplate (name, promptTemplate)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompt.IPromptManager`1.AddPromptTemplate(System.String,Microsoft.Teams.AI.AI.Prompt.PromptTemplate)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="promptTemplate" Type="Microsoft.Teams.AI.AI.Prompt.PromptTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="promptTemplate">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeFunction">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; InvokeFunction (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; InvokeFunction(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.InvokeFunction(Microsoft.Bot.Builder.ITurnContext,`0,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeFunction (turnContext As ITurnContext, turnState As TState, name As String) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="abstract member InvokeFunction : Microsoft.Bot.Builder.ITurnContext * 'State * string -&gt; System.Threading.Tasks.Task&lt;string&gt;&#xA;override this.InvokeFunction : Microsoft.Bot.Builder.ITurnContext * 'State * string -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="promptManager.InvokeFunction (turnContext, turnState, name)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompt.IPromptManager`1.InvokeFunction(Microsoft.Bot.Builder.ITurnContext,`0,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="turnState">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPromptTemplate">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompt.PromptTemplate LoadPromptTemplate (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompt.PromptTemplate LoadPromptTemplate(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.LoadPromptTemplate(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadPromptTemplate (name As String) As PromptTemplate" />
+      <MemberSignature Language="F#" Value="abstract member LoadPromptTemplate : string -&gt; Microsoft.Teams.AI.AI.Prompt.PromptTemplate&#xA;override this.LoadPromptTemplate : string -&gt; Microsoft.Teams.AI.AI.Prompt.PromptTemplate" Usage="promptManager.LoadPromptTemplate name" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompt.IPromptManager`1.LoadPromptTemplate(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompt.PromptTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt; RenderPromptAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Prompt.PromptTemplate promptTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt; RenderPromptAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Prompt.PromptTemplate promptTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.RenderPromptAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Prompt.PromptTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RenderPromptAsync (turnContext As ITurnContext, turnState As TState, promptTemplate As PromptTemplate) As Task(Of PromptTemplate)" />
+      <MemberSignature Language="F#" Value="abstract member RenderPromptAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Prompt.PromptTemplate -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt;&#xA;override this.RenderPromptAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Prompt.PromptTemplate -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt;" Usage="promptManager.RenderPromptAsync (turnContext, turnState, promptTemplate)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompt.IPromptManager`1.RenderPromptAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Prompt.PromptTemplate)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="promptTemplate" Type="Microsoft.Teams.AI.AI.Prompt.PromptTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="turnState">To be added.</param>
+        <param name="promptTemplate">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt; RenderPromptAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt; RenderPromptAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.RenderPromptAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RenderPromptAsync (turnContext As ITurnContext, turnState As TState, name As String) As Task(Of PromptTemplate)" />
+      <MemberSignature Language="F#" Value="abstract member RenderPromptAsync : Microsoft.Bot.Builder.ITurnContext * 'State * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt;&#xA;override this.RenderPromptAsync : Microsoft.Bot.Builder.ITurnContext * 'State * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt;" Usage="promptManager.RenderPromptAsync (turnContext, turnState, name)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompt.IPromptManager`1.RenderPromptAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompt.PromptTemplate&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="turnState">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Variables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Variables" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompt.PromptManager`1.Variables" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Variables As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.Variables : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Teams.AI.AI.Prompt.PromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Variables" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Prompt.IPromptManager`1.Variables</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,436 @@
+<Type Name="AI&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.AI&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class AI&lt;TState&gt; where TState : ITurnState&lt;StateBase,StateBase,TempState&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AI`1&lt;(class Microsoft.Teams.AI.State.ITurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.AI`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class AI(Of TState)" />
+  <TypeSignature Language="F#" Value="type AI&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <InterfaceName>Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">Optional. Type of the turn state.</typeparam>
+    <summary>
+            AI System.
+            </summary>
+    <remarks>
+            The AI system is responsible for generating plans, moderating input and output, and
+            generating prompts. It can be used free standing or routed to by the Application object.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AI (Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt; options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.#ctor(Microsoft.Teams.AI.AI.AIOptions{`0},Microsoft.Extensions.Logging.ILoggerFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As AIOptions(Of TState), Optional loggerFactory As ILoggerFactory = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; : Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * Microsoft.Extensions.Logging.ILoggerFactory -&gt; Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="new Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; (options, loggerFactory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+      </Parameters>
+      <Docs>
+        <param name="options">The options to configure.</param>
+        <param name="loggerFactory">Optional. The logger factory to use.</param>
+        <summary>
+            Creates an instance of the <see cref="T:Microsoft.Teams.AI.AI.AI`1" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; ChainAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Prompt.PromptTemplate prompt, Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;? options = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; ChainAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Prompt.PromptTemplate prompt, class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.ChainAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Prompt.PromptTemplate,Microsoft.Teams.AI.AI.AIOptions{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ChainAsync (turnContext As ITurnContext, turnState As TState, prompt As PromptTemplate, Optional options As AIOptions(Of TState) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ChainAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Prompt.PromptTemplate * Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="aI.ChainAsync (turnContext, turnState, prompt, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="prompt" Type="Microsoft.Teams.AI.AI.Prompt.PromptTemplate" />
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="turnState">Current turn state.</param>
+        <param name="prompt">Optional. Prompt template to use.</param>
+        <param name="options">Optional. Override options for the prompt. If omitted, the AI systems configured options will be used.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Chains into another prompt and executes the plan that is returned.
+            </summary>
+        <returns>True if the plan was completely executed, otherwise false.</returns>
+        <remarks>
+            This method is used to chain into another prompt. It will call the prompt manager to
+            get the plan for the prompt and then execute the plan. The return value indicates whether
+            that plan was completely executed or not, and can be used to make decisions about whether the
+            outer plan should continue executing.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">This exception is thrown when an unknown (not  DO or SAY) command is predicted.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; ChainAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, string? prompt = default, Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;? options = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; ChainAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, string prompt, class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.ChainAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.String,Microsoft.Teams.AI.AI.AIOptions{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ChainAsync (turnContext As ITurnContext, turnState As TState, Optional prompt As String = Nothing, Optional options As AIOptions(Of TState) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ChainAsync : Microsoft.Bot.Builder.ITurnContext * 'State * string * Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="aI.ChainAsync (turnContext, turnState, prompt, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="prompt" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="turnState">Current turn state.</param>
+        <param name="prompt">Optional. Prompt name or prompt template to use. If omitted, the AI systems default prompt will be used.</param>
+        <param name="options">Optional. Override options for the prompt. If omitted, the AI systems configured options will be used.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Chains into another prompt and executes the plan that is returned.
+            </summary>
+        <returns>True if the plan was completely executed, otherwise false.</returns>
+        <remarks>
+            This method is used to chain into another prompt. It will call the prompt manager to
+            get the plan for the prompt and then execute the plan. The return value indicates whether
+            that plan was completely executed or not, and can be used to make decisions about whether the
+            outer plan should continue executing.
+            </remarks>
+        <exception cref="T:System.InvalidOperationException">This exception is thrown when an unknown (not  DO or SAY) command is predicted.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletePromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; CompletePromptAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Prompt.PromptTemplate promptTemplate, Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;? options, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; CompletePromptAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Prompt.PromptTemplate promptTemplate, class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Prompt.PromptTemplate,Microsoft.Teams.AI.AI.AIOptions{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompletePromptAsync (turnContext As ITurnContext, turnState As TState, promptTemplate As PromptTemplate, options As AIOptions(Of TState), cancellationToken As CancellationToken) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.CompletePromptAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Prompt.PromptTemplate * Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="aI.CompletePromptAsync (turnContext, turnState, promptTemplate, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="promptTemplate" Type="Microsoft.Teams.AI.AI.Prompt.PromptTemplate" />
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="turnState">Current turn state.</param>
+        <param name="promptTemplate">Prompt template to use.</param>
+        <param name="options">Optional. Override options for the prompt. If omitted, the AI systems configured options will be used.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            A helper method to complete a prompt using the configured prompt manager.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletePromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; CompletePromptAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, string name, Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;? options, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; CompletePromptAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, string name, class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.String,Microsoft.Teams.AI.AI.AIOptions{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompletePromptAsync (turnContext As ITurnContext, turnState As TState, name As String, options As AIOptions(Of TState), cancellationToken As CancellationToken) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.CompletePromptAsync : Microsoft.Bot.Builder.ITurnContext * 'State * string * Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="aI.CompletePromptAsync (turnContext, turnState, name, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="turnState">Current turn state.</param>
+        <param name="name">Prompt name to use</param>
+        <param name="options">Optional. Override options for the prompt. If omitted, the AI systems configured options will be used.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            A helper method to complete a prompt using the configured prompt manager.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSemanticFunction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompt.PromptFunction&lt;TState&gt; CreateSemanticFunction (string name, Microsoft.Teams.AI.AI.Prompt.PromptTemplate? template, Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;? options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.AI.Prompt.PromptFunction`1&lt;!TState&gt; CreateSemanticFunction(string name, class Microsoft.Teams.AI.AI.Prompt.PromptTemplate template, class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.CreateSemanticFunction(System.String,Microsoft.Teams.AI.AI.Prompt.PromptTemplate,Microsoft.Teams.AI.AI.AIOptions{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateSemanticFunction (name As String, template As PromptTemplate, options As AIOptions(Of TState)) As PromptFunction(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.CreateSemanticFunction : string * Microsoft.Teams.AI.AI.Prompt.PromptTemplate * Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; -&gt; Microsoft.Teams.AI.AI.Prompt.PromptFunction&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="aI.CreateSemanticFunction (name, template, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompt.PromptFunction&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="template" Type="Microsoft.Teams.AI.AI.Prompt.PromptTemplate" />
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Prompt to use. If template is provided then this name will be assigned to it in the prompt manager.</param>
+        <param name="template">Optional. Prompt template to use.</param>
+        <param name="options">Optional. Override options for the prompt. If omitted, the AI systems configured options will be used.</param>
+        <summary>
+            Creates a semantic function that can be registered with the app's prompt manager.
+            </summary>
+        <returns>A prompt function.</returns>
+        <remarks>
+            Semantic functions are functions that make model calls and return their results as template
+            parameters to other prompts. For example, you could define a semantic function called
+            'translator' that first translates the user's input to English before calling your main prompt:
+            <br /><br /><c>
+            app.AI.Prompts.AddFunction('translator', app.AI.CreateSemanticFunction('translator-prompt'));
+            </c><br /><br />
+            You would then create a prompt called "translator-prompt" that does the translation and then in
+            your main prompt you can call it using the template expression `{{translator}}`.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportActions">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.AI&lt;TState&gt; ImportActions (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.AI.AI`1&lt;!TState&gt; ImportActions(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.ImportActions(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ImportActions (instance As Object) As AI(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.ImportActions : obj -&gt; Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="aI.ImportActions instance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.AI&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Instance of a class containing these functions.</param>
+        <summary>
+            Import a set of Actions from the given class instance. The functions must have the `Action` attribute.
+            Once these functions are imported, the AI module will have access to these functions.
+            </summary>
+        <returns>The current instance object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Moderator">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt; Moderator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Moderator.IModerator`1&lt;!TState&gt; Moderator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AI`1.Moderator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Moderator As IModerator(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.Moderator : Microsoft.Teams.AI.AI.Moderator.IModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Moderator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the moderator being used by the AI system.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default moderator simply allows all messages and plans through without intercepting them.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt; Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; Options" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AI`1.Options" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Options As AIOptions(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.Options : Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the options for the AI system.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Planner">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Planner.IPlanner&lt;TState&gt; Planner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Planner.IPlanner`1&lt;!TState&gt; Planner" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AI`1.Planner" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Planner As IPlanner(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.Planner : Microsoft.Teams.AI.AI.Planner.IPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Planner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Planner.IPlanner&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the planner being used by the AI system.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompts">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt; Prompts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompt.IPromptManager`1&lt;!TState&gt; Prompts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AI`1.Prompts" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Prompts As IPromptManager(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.Prompts : Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Prompts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the prompt manager being used by the AI system.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.AI&lt;TState&gt; RegisterAction (Microsoft.Teams.AI.AI.Action.ActionEntry&lt;TState&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.AI.AI`1&lt;!TState&gt; RegisterAction(class Microsoft.Teams.AI.AI.Action.ActionEntry`1&lt;!TState&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.RegisterAction(Microsoft.Teams.AI.AI.Action.ActionEntry{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function RegisterAction (action As ActionEntry(Of TState)) As AI(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.RegisterAction : Microsoft.Teams.AI.AI.Action.ActionEntry&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; -&gt; Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="aI.RegisterAction action" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.AI&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.Teams.AI.AI.Action.ActionEntry&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action" />
+        <summary>
+            Register an action into the AI module.
+            </summary>
+        <returns>The current instance object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.AI&lt;TState&gt; RegisterAction (string name, Microsoft.Teams.AI.AI.Action.IActionHandler&lt;TState&gt; handler, bool allowOverrides = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.AI.AI`1&lt;!TState&gt; RegisterAction(string name, class Microsoft.Teams.AI.AI.Action.IActionHandler`1&lt;!TState&gt; handler, bool allowOverrides) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AI`1.RegisterAction(System.String,Microsoft.Teams.AI.AI.Action.IActionHandler{`0},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RegisterAction (name As String, handler As IActionHandler(Of TState), Optional allowOverrides As Boolean = false) As AI(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.RegisterAction : string * Microsoft.Teams.AI.AI.Action.IActionHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * bool -&gt; Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="aI.RegisterAction (name, handler, allowOverrides)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.AI&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.AI.Action.IActionHandler&lt;TState&gt;" />
+        <Parameter Name="allowOverrides" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the action.</param>
+        <param name="handler">The action handler function.</param>
+        <param name="allowOverrides">Whether or not this action's properties can be overriden.</param>
+        <summary>
+            Registers a handler for a named action.
+            </summary>
+        <returns>The current instance object.</returns>
+        <remarks>
+            The AI systems planner returns plans that are made up of a series of commands or actions
+            that should be performed. Registering a handler lets you provide code that should be run in
+            response to one of the predicted actions.
+            
+            Plans support a DO command which specifies the name of an action to call and an optional
+            set of entities that should be passed to the action. The internal plan executor will call
+            the registered handler for the action passing in the current context, state, and entities.
+            
+            Additionally, the AI system itself uses actions to handle things like unknown actions,
+            flagged input, and flagged output. You can override these actions by registering your own
+            handler for them. The names of the built-in actions are available as static properties on
+            the AI class.
+            </remarks>
+        <exception cref="T:System.Exception" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

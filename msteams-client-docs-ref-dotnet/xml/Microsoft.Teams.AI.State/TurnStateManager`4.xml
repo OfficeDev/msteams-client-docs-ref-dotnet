@@ -1,0 +1,137 @@
+<Type Name="TurnStateManager&lt;TState,TConversationState,TUserState,TTempState&gt;" FullName="Microsoft.Teams.AI.State.TurnStateManager&lt;TState,TConversationState,TUserState,TTempState&gt;">
+  <TypeSignature Language="C#" Value="public class TurnStateManager&lt;TState,TConversationState,TUserState,TTempState&gt; : Microsoft.Teams.AI.State.ITurnStateManager&lt;TState&gt; where TState : TurnState&lt;TConversationState,TUserState,TTempState&gt;, new() where TConversationState : StateBase, new() where TUserState : StateBase, new() where TTempState : TempState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TurnStateManager`4&lt;.ctor (class Microsoft.Teams.AI.State.TurnState`3&lt;!TConversationState, !TUserState, !TTempState&gt;) TState, .ctor (class Microsoft.Teams.AI.State.StateBase) TConversationState, .ctor (class Microsoft.Teams.AI.State.StateBase) TUserState, .ctor (class Microsoft.Teams.AI.State.TempState) TTempState&gt; extends System.Object implements class Microsoft.Teams.AI.State.ITurnStateManager`1&lt;!TState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.State.TurnStateManager`4" />
+  <TypeSignature Language="VB.NET" Value="Public Class TurnStateManager(Of TState, TConversationState, TUserState, TTempState)&#xA;Implements ITurnStateManager(Of TState)" />
+  <TypeSignature Language="F#" Value="type TurnStateManager&lt;'State, 'ConversationState, 'UserState, 'empState (requires 'State :&gt; TurnState&lt;'ConversationState, 'UserState, 'empState&gt; and 'State : (new : unit -&gt; 'State) and 'ConversationState :&gt; StateBase and 'ConversationState : (new : unit -&gt; 'ConversationState) and 'UserState :&gt; StateBase and 'UserState : (new : unit -&gt; 'UserState) and 'empState :&gt; TempState and 'empState : (new : unit -&gt; 'empState))&gt; = class&#xA;    interface ITurnStateManager&lt;'State (requires 'State :&gt; TurnState&lt;'ConversationState, 'UserState, 'empState&gt; and 'State : (new : unit -&gt; 'State))&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState&lt;TConversationState,TUserState,TTempState&gt;</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TConversationState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.StateBase</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TUserState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.StateBase</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TTempState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TempState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.State.ITurnStateManager&lt;TState&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TState">Optional. Type of turn state that encompasses the conversation, user and temp state.</typeparam>
+    <typeparam name="TConversationState">Optional. Type of the conversation state object being persisted.</typeparam>
+    <typeparam name="TUserState">Optional. Type of the user state object being persisted.</typeparam>
+    <typeparam name="TTempState">Optional. Type of the temp state object being persisted.</typeparam>
+    <summary>
+            Handles loading and saving of the configured turn state class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TurnStateManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnStateManager`4.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.State.TurnStateManager`4" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadStateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;TState&gt; LoadStateAsync (Microsoft.Bot.Builder.IStorage? storage, Microsoft.Bot.Builder.ITurnContext turnContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;!TState&gt; LoadStateAsync(class Microsoft.Bot.Builder.IStorage storage, class Microsoft.Bot.Builder.ITurnContext turnContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnStateManager`4.LoadStateAsync(Microsoft.Bot.Builder.IStorage,Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadStateAsync (storage As IStorage, turnContext As ITurnContext) As Task(Of TState)" />
+      <MemberSignature Language="F#" Value="abstract member LoadStateAsync : Microsoft.Bot.Builder.IStorage * Microsoft.Bot.Builder.ITurnContext -&gt; System.Threading.Tasks.Task&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState&lt;'ConversationState, 'UserState, 'empState&gt; and 'State : (new : unit -&gt; 'State))&gt;&#xA;override this.LoadStateAsync : Microsoft.Bot.Builder.IStorage * Microsoft.Bot.Builder.ITurnContext -&gt; System.Threading.Tasks.Task&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState&lt;'ConversationState, 'UserState, 'empState&gt; and 'State : (new : unit -&gt; 'State))&gt;" Usage="turnStateManager.LoadStateAsync (storage, turnContext)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.State.ITurnStateManager`1.LoadStateAsync(Microsoft.Bot.Builder.IStorage,Microsoft.Bot.Builder.ITurnContext)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="storage">To be added.</param>
+        <param name="turnContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SaveStateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SaveStateAsync (Microsoft.Bot.Builder.IStorage? storage, Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SaveStateAsync(class Microsoft.Bot.Builder.IStorage storage, class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnStateManager`4.SaveStateAsync(Microsoft.Bot.Builder.IStorage,Microsoft.Bot.Builder.ITurnContext,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SaveStateAsync (storage As IStorage, turnContext As ITurnContext, turnState As TState) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SaveStateAsync : Microsoft.Bot.Builder.IStorage * Microsoft.Bot.Builder.ITurnContext * 'State -&gt; System.Threading.Tasks.Task&#xA;override this.SaveStateAsync : Microsoft.Bot.Builder.IStorage * Microsoft.Bot.Builder.ITurnContext * 'State -&gt; System.Threading.Tasks.Task" Usage="turnStateManager.SaveStateAsync (storage, turnContext, turnState)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.State.ITurnStateManager`1.SaveStateAsync(Microsoft.Bot.Builder.IStorage,Microsoft.Bot.Builder.ITurnContext,`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+      </Parameters>
+      <Docs>
+        <param name="storage">To be added.</param>
+        <param name="turnContext">To be added.</param>
+        <param name="turnState">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

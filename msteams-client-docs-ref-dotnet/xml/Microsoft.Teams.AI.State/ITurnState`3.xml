@@ -1,0 +1,109 @@
+<Type Name="ITurnState&lt;TConversationState,TUserState,TTempState&gt;" FullName="Microsoft.Teams.AI.State.ITurnState&lt;TConversationState,TUserState,TTempState&gt;">
+  <TypeSignature Language="C#" Value="public interface ITurnState&lt;out TConversationState,out TUserState,out TTempState&gt; where TConversationState : class where TUserState : class where TTempState : TempState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITurnState`3&lt;class + TConversationState, class + TUserState, (class Microsoft.Teams.AI.State.TempState) + TTempState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.State.ITurnState`3" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ITurnState(Of Out TConversationState, Out TUserState, Out TTempState)" />
+  <TypeSignature Language="F#" Value="type ITurnState&lt;'ConversationState, 'UserState, 'empState (requires 'ConversationState : null and 'UserState : null and 'empState :&gt; TempState)&gt; = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TConversationState">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TUserState">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TTempState">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TempState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TConversationState">The conversation state class.</typeparam>
+    <typeparam name="TUserState">The user state class.</typeparam>
+    <typeparam name="TTempState">The temp state class.</typeparam>
+    <summary>
+            The turn state interface.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Conversation">
+      <MemberSignature Language="C#" Value="public TConversationState? Conversation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TConversationState Conversation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.ITurnState`3.Conversation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversation As TConversationState" />
+      <MemberSignature Language="F#" Value="member this.Conversation : 'ConversationState" Usage="Microsoft.Teams.AI.State.ITurnState&lt;'ConversationState, 'UserState, 'empState (requires 'ConversationState : null and 'UserState : null and 'empState :&gt; Microsoft.Teams.AI.State.TempState)&gt;.Conversation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TConversationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conversation state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temp">
+      <MemberSignature Language="C#" Value="public TTempState? Temp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TTempState Temp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.ITurnState`3.Temp" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Temp As TTempState" />
+      <MemberSignature Language="F#" Value="member this.Temp : 'empState" Usage="Microsoft.Teams.AI.State.ITurnState&lt;'ConversationState, 'UserState, 'empState (requires 'ConversationState : null and 'UserState : null and 'empState :&gt; Microsoft.Teams.AI.State.TempState)&gt;.Temp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TTempState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the temp state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public TUserState? User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TUserState User" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.ITurnState`3.User" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property User As TUserState" />
+      <MemberSignature Language="F#" Value="member this.User : 'UserState" Usage="Microsoft.Teams.AI.State.ITurnState&lt;'ConversationState, 'UserState, 'empState (requires 'ConversationState : null and 'UserState : null and 'empState :&gt; Microsoft.Teams.AI.State.TempState)&gt;.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TUserState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the user state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

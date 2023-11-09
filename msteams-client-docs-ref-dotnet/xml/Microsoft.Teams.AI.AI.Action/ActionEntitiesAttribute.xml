@@ -1,0 +1,47 @@
+<Type Name="ActionEntitiesAttribute" FullName="Microsoft.Teams.AI.AI.Action.ActionEntitiesAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ActionEntitiesAttribute : Microsoft.Teams.AI.AI.Action.ActionParameterAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActionEntitiesAttribute extends Microsoft.Teams.AI.AI.Action.ActionParameterAttribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Action.ActionEntitiesAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ActionEntitiesAttribute&#xA;Inherits ActionParameterAttribute" />
+  <TypeSignature Language="F#" Value="type ActionEntitiesAttribute = class&#xA;    inherit ActionParameterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Action.ActionParameterAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Attribute to represent the action entities parameter of an action method.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionEntitiesAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Action.ActionEntitiesAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create new <see cref="T:Microsoft.Teams.AI.AI.Action.ActionEntitiesAttribute" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

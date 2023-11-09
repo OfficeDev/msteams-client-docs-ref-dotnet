@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,8 +30,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
@@ -47,6 +47,33 @@
         <exception cref="T:System.ArgumentException">Throws if provided parameter is invalid.</exception>
       </Docs>
     </Member>
+    <Member MemberName="BuildTeamsBotInstallation">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.TeamsBotInstallation BuildTeamsBotInstallation (Microsoft.Bot.Schema.ConversationReference reference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.TeamsFx.Conversation.TeamsBotInstallation BuildTeamsBotInstallation(class Microsoft.Bot.Schema.ConversationReference reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.NotificationBot.BuildTeamsBotInstallation(Microsoft.Bot.Schema.ConversationReference)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BuildTeamsBotInstallation (reference As ConversationReference) As TeamsBotInstallation" />
+      <MemberSignature Language="F#" Value="member this.BuildTeamsBotInstallation : Microsoft.Bot.Schema.ConversationReference -&gt; Microsoft.TeamsFx.Conversation.TeamsBotInstallation" Usage="notificationBot.BuildTeamsBotInstallation reference" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.TeamsBotInstallation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="Microsoft.Bot.Schema.ConversationReference" />
+      </Parameters>
+      <Docs>
+        <param name="reference">The <see cref="T:Microsoft.Bot.Schema.ConversationReference" /> of the bot installation.</param>
+        <summary>
+            Create a <see cref="T:Microsoft.TeamsFx.Conversation.TeamsBotInstallation" /> instance with conversation reference.
+            </summary>
+        <returns>The <see cref="T:Microsoft.TeamsFx.Conversation.TeamsBotInstallation" /> instance.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Throws if provided parameter is null.</exception>
+      </Docs>
+    </Member>
     <Member MemberName="FindAllChannelsAsync">
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt; FindAllChannelsAsync (Func&lt;Microsoft.TeamsFx.Conversation.Channel,Microsoft.Bot.Schema.Teams.TeamDetails,System.Threading.Tasks.Task&lt;bool&gt;&gt; predicate, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.Channel[]&gt; FindAllChannelsAsync(class System.Func`3&lt;class Microsoft.TeamsFx.Conversation.Channel, class Microsoft.Bot.Schema.Teams.TeamDetails, class System.Threading.Tasks.Task`1&lt;bool&gt;&gt; predicate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -56,7 +83,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel[]&gt;</ReturnType>
@@ -86,7 +113,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member[]&gt;</ReturnType>
@@ -119,7 +146,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Channel&gt;</ReturnType>
@@ -153,7 +180,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.Member&gt;</ReturnType>
@@ -190,9 +217,14 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use GetPagedInstallationsAsync instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetPagedInstallationsAsync instead.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.TeamsBotInstallation[]&gt;</ReturnType>
       </ReturnValue>
@@ -208,6 +240,68 @@
         <remarks>
             The result is retrieving from the persisted storage.
             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPagedInstallationsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.PagedData&lt;Microsoft.TeamsFx.Conversation.TeamsBotInstallation&gt;&gt; GetPagedInstallationsAsync (int? pageSize = default, string continuationToken = default, System.Threading.CancellationToken cancellationToken = default, bool validationEnabled = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.PagedData`1&lt;class Microsoft.TeamsFx.Conversation.TeamsBotInstallation&gt;&gt; GetPagedInstallationsAsync(valuetype System.Nullable`1&lt;int32&gt; pageSize, string continuationToken, valuetype System.Threading.CancellationToken cancellationToken, bool validationEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.NotificationBot.GetPagedInstallationsAsync(System.Nullable{System.Int32},System.String,System.Threading.CancellationToken,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPagedInstallationsAsync (Optional pageSize As Nullable(Of Integer) = Nothing, Optional continuationToken As String = Nothing, Optional cancellationToken As CancellationToken = Nothing, Optional validationEnabled As Boolean = true) As Task(Of PagedData(Of TeamsBotInstallation))" />
+      <MemberSignature Language="F#" Value="member this.GetPagedInstallationsAsync : Nullable&lt;int&gt; * string * System.Threading.CancellationToken * bool -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.PagedData&lt;Microsoft.TeamsFx.Conversation.TeamsBotInstallation&gt;&gt;" Usage="notificationBot.GetPagedInstallationsAsync (pageSize, continuationToken, cancellationToken, validationEnabled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.PagedData&lt;Microsoft.TeamsFx.Conversation.TeamsBotInstallation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageSize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="continuationToken" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="validationEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pageSize">Suggested number of entries on a page.</param>
+        <param name="continuationToken">The continuation token.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <param name="validationEnabled">The parameter to enable or disable installation validation.</param>
+        <summary>
+            Get a pagined list of targets where the bot is installed.
+            </summary>
+        <returns>A pagined list of <see cref="T:Microsoft.TeamsFx.Conversation.TeamsBotInstallation" />.</returns>
+        <remarks>
+            The result is retrieving from the persisted storage.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInstallationAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; ValidateInstallationAsync (Microsoft.Bot.Schema.ConversationReference reference, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; ValidateInstallationAsync(class Microsoft.Bot.Schema.ConversationReference reference, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.NotificationBot.ValidateInstallationAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateInstallationAsync (reference As ConversationReference, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ValidateInstallationAsync : Microsoft.Bot.Schema.ConversationReference * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="notificationBot.ValidateInstallationAsync (reference, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="Microsoft.Bot.Schema.ConversationReference" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="reference">The <see cref="T:Microsoft.Bot.Schema.ConversationReference" /> of the bot installation.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Validate the installation by getting paged memebers.
+            </summary>
+        <returns>Returns false if receives "BotNotInConversationRoster" error, otherwise returns true</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>
