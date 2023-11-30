@@ -1,0 +1,359 @@
+<Type Name="ApplicationBuilder&lt;TState&gt;" FullName="Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class ApplicationBuilder&lt;TState&gt; where TState : TurnState, IMemory, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationBuilder`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState, class Microsoft.Teams.AI.State.IMemory) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.ApplicationBuilder`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationBuilder(Of TState)" />
+  <TypeSignature Language="F#" Value="type ApplicationBuilder&lt;'State (requires 'State :&gt; TurnState and 'State :&gt; IMemory and 'State : (new : unit -&gt; 'State))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+        <InterfaceName>Microsoft.Teams.AI.State.IMemory</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">Optional. Type of the turn state. This allows for strongly typed access to the turn state.</typeparam>
+    <summary>
+            A builder class for simplifying the creation of an Application instance.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; Build ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; Build() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.Build" />
+      <MemberSignature Language="VB.NET" Value="Public Function Build () As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.Build : unit -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.Build " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Builds and returns a new Application instance.
+            </summary>
+        <returns>The Application instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationOptions&lt;TState&gt; Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.ApplicationOptions`1&lt;!TState&gt; Options" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationBuilder`1.Options" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Options As ApplicationOptions(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.Options : Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationOptions&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The application's configured options.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRemoveRecipientMention">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; SetRemoveRecipientMention (bool removeRecipientMention);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; SetRemoveRecipientMention(bool removeRecipientMention) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.SetRemoveRecipientMention(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetRemoveRecipientMention (removeRecipientMention As Boolean) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.SetRemoveRecipientMention : bool -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.SetRemoveRecipientMention removeRecipientMention" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="removeRecipientMention" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="removeRecipientMention">The boolean for removing recipient mentions.</param>
+        <summary>
+            Configures the removing of mentions of the bot's name from incoming messages.
+            Default state for removeRecipientMention is true
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStartTypingTimer">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; SetStartTypingTimer (bool startTypingTimer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; SetStartTypingTimer(bool startTypingTimer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.SetStartTypingTimer(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetStartTypingTimer (startTypingTimer As Boolean) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.SetStartTypingTimer : bool -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.SetStartTypingTimer startTypingTimer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startTypingTimer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="startTypingTimer">The boolean for starting the typing timer.</param>
+        <summary>
+            Configures the typing timer when messages are received.
+            Default state for startTypingTimer is true
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAdaptiveCardOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithAdaptiveCardOptions (Microsoft.Teams.AI.AdaptiveCardsOptions adaptiveCardOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithAdaptiveCardOptions(class Microsoft.Teams.AI.AdaptiveCardsOptions adaptiveCardOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAdaptiveCardOptions(Microsoft.Teams.AI.AdaptiveCardsOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithAdaptiveCardOptions (adaptiveCardOptions As AdaptiveCardsOptions) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithAdaptiveCardOptions : Microsoft.Teams.AI.AdaptiveCardsOptions -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithAdaptiveCardOptions adaptiveCardOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptiveCardOptions" Type="Microsoft.Teams.AI.AdaptiveCardsOptions" />
+      </Parameters>
+      <Docs>
+        <param name="adaptiveCardOptions">The options for Adaptive Cards.</param>
+        <summary>
+            Configures the processing of Adaptive Card requests.
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAIOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithAIOptions (Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt; aiOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithAIOptions(class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; aiOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAIOptions(Microsoft.Teams.AI.AI.AIOptions{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithAIOptions (aiOptions As AIOptions(Of TState)) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithAIOptions : Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithAIOptions aiOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aiOptions" Type="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="aiOptions">The options for the AI system.</param>
+        <summary>
+            Configures the AI system to use for processing incoming messages.
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAuthenticationOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithAuthenticationOptions (Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt; authenticationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithAuthenticationOptions(class Microsoft.Teams.AI.AuthenticationOptions`1&lt;!TState&gt; authenticationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAuthenticationOptions(Microsoft.Teams.AI.AuthenticationOptions{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithAuthenticationOptions (authenticationOptions As AuthenticationOptions(Of TState)) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithAuthenticationOptions : Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithAuthenticationOptions authenticationOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOptions" Type="Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOptions">The options for authentication.</param>
+        <summary>
+            Configures authentication for the application.
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithLoggerFactory">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithLoggerFactory (Microsoft.Extensions.Logging.ILoggerFactory loggerFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithLoggerFactory(class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithLoggerFactory (loggerFactory As ILoggerFactory) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithLoggerFactory : Microsoft.Extensions.Logging.ILoggerFactory -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithLoggerFactory loggerFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+      </Parameters>
+      <Docs>
+        <param name="loggerFactory">The Logger factory</param>
+        <summary>
+            Configures the Logger factory for the application
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithLongRunningMessages">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithLongRunningMessages (Microsoft.Bot.Builder.BotAdapter adapter, string botAppId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithLongRunningMessages(class Microsoft.Bot.Builder.BotAdapter adapter, string botAppId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithLongRunningMessages(Microsoft.Bot.Builder.BotAdapter,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithLongRunningMessages (adapter As BotAdapter, botAppId As String) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithLongRunningMessages : Microsoft.Bot.Builder.BotAdapter * string -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithLongRunningMessages (adapter, botAppId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
+        <Parameter Name="botAppId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="adapter">The adapter to use for routing incoming requests.</param>
+        <param name="botAppId">The Microsoft App ID for the bot.</param>
+        <summary>
+            Configures the application to use long running messages.
+            Default state for longRunningMessages is false
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithStorage">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithStorage (Microsoft.Bot.Builder.IStorage storage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithStorage(class Microsoft.Bot.Builder.IStorage storage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithStorage(Microsoft.Bot.Builder.IStorage)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithStorage (storage As IStorage) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithStorage : Microsoft.Bot.Builder.IStorage -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithStorage storage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+      </Parameters>
+      <Docs>
+        <param name="storage">The storage system to use.</param>
+        <summary>
+            Configures the storage system to use for storing the bot's state.
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithTaskModuleOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithTaskModuleOptions (Microsoft.Teams.AI.TaskModulesOptions taskModulesOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithTaskModuleOptions(class Microsoft.Teams.AI.TaskModulesOptions taskModulesOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithTaskModuleOptions(Microsoft.Teams.AI.TaskModulesOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithTaskModuleOptions (taskModulesOptions As TaskModulesOptions) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithTaskModuleOptions : Microsoft.Teams.AI.TaskModulesOptions -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithTaskModuleOptions taskModulesOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskModulesOptions" Type="Microsoft.Teams.AI.TaskModulesOptions" />
+      </Parameters>
+      <Docs>
+        <param name="taskModulesOptions">The options for Task Modules.</param>
+        <summary>
+            Configures the processing of Task Module requests.
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithTurnStateFactory">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithTurnStateFactory (Func&lt;TState&gt; turnStateFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithTurnStateFactory(class System.Func`1&lt;!TState&gt; turnStateFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithTurnStateFactory(System.Func{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithTurnStateFactory (turnStateFactory As Func(Of TState)) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithTurnStateFactory : Func&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithTurnStateFactory turnStateFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnStateFactory" Type="System.Func&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="turnStateFactory">The turn state factory to use.</param>
+        <summary>
+            Configures the turn state factory to use for managing the bot's turn state.
+            </summary>
+        <returns>The ApplicationBuilder instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

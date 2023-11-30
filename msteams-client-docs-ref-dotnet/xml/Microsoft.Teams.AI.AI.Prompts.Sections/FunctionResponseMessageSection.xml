@@ -1,0 +1,128 @@
+<Type Name="FunctionResponseMessageSection" FullName="Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection">
+  <TypeSignature Language="C#" Value="public class FunctionResponseMessageSection : Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FunctionResponseMessageSection extends Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection" />
+  <TypeSignature Language="VB.NET" Value="Public Class FunctionResponseMessageSection&#xA;Inherits PromptSection" />
+  <TypeSignature Language="F#" Value="type FunctionResponseMessageSection = class&#xA;    inherit PromptSection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Message containing the response to a function call.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FunctionResponseMessageSection (string name, dynamic response, int tokens = -1, string prefix = &quot;user: &quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object response, int32 tokens, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection.#ctor(System.String,System.Object,System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, response As Object, Optional tokens As Integer = -1, Optional prefix As String = &quot;user: &quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection : string * obj * int * string -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection" Usage="new Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection (name, response, tokens, prefix)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="response" Type="System.Object" />
+        <Parameter Name="tokens" Type="System.Int32" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of the function that was called.</param>
+        <param name="response">The response returned by the called function.</param>
+        <param name="tokens">Sizing strategy for this section. Defaults to `auto`.</param>
+        <param name="prefix">Prefix to use for function messages when rendering as text. Defaults to `user: ` to simulate the response coming from the user.</param>
+        <summary>
+            Creates instance of `FunctionResponseMessageSection`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public readonly string Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string Name" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Name As String " />
+      <MemberSignature Language="F#" Value="val mutable Name : string" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the function that was called.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsMessagesAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function RenderAsMessagesAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of List(Of ChatMessage)))" />
+      <MemberSignature Language="F#" Value="override this.RenderAsMessagesAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;" Usage="functionResponseMessageSection.RenderAsMessagesAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="functions">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="maxTokens">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public readonly dynamic Response;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly object Response" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection.Response" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Response As Object " />
+      <MemberSignature Language="F#" Value="val mutable Response : obj" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.FunctionResponseMessageSection.Response" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The response returned by the called function.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,9 +1,9 @@
 <Type Name="IActionHandler&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Action.IActionHandler&lt;TState&gt;">
-  <TypeSignature Language="C#" Value="public interface IActionHandler&lt;TState&gt; where TState : ITurnState&lt;StateBase,StateBase,TempState&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IActionHandler`1&lt;(class Microsoft.Teams.AI.State.ITurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;) TState&gt;" />
+  <TypeSignature Language="C#" Value="public interface IActionHandler&lt;TState&gt; where TState : TurnState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IActionHandler`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Action.IActionHandler`1" />
   <TypeSignature Language="VB.NET" Value="Public Interface IActionHandler(Of TState)" />
-  <TypeSignature Language="F#" Value="type IActionHandler&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt; = interface" />
+  <TypeSignature Language="F#" Value="type IActionHandler&lt;'State (requires 'State :&gt; TurnState)&gt; = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -11,7 +11,7 @@
   <TypeParameters>
     <TypeParameter Name="TState">
       <Constraints>
-        <InterfaceName>Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</InterfaceName>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
       </Constraints>
     </TypeParameter>
   </TypeParameters>
@@ -24,35 +24,38 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="PerformAction">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; PerformAction (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, object? entities = default, string? action = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; PerformAction(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, object entities, string action) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Action.IActionHandler`1.PerformAction(Microsoft.Bot.Builder.ITurnContext,`0,System.Object,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function PerformAction (turnContext As ITurnContext, turnState As TState, Optional entities As Object = Nothing, Optional action As String = Nothing) As Task(Of Boolean)" />
-      <MemberSignature Language="F#" Value="abstract member PerformAction : Microsoft.Bot.Builder.ITurnContext * 'State * obj * string -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="iActionHandler.PerformAction (turnContext, turnState, entities, action)" />
+    <Member MemberName="PerformActionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; PerformActionAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, object? entities = default, string? action = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; PerformActionAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, object entities, string action, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Action.IActionHandler`1.PerformActionAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Object,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PerformActionAsync (turnContext As ITurnContext, turnState As TState, Optional entities As Object = Nothing, Optional action As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="abstract member PerformActionAsync : Microsoft.Bot.Builder.ITurnContext * 'State * obj * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="iActionHandler.PerformActionAsync (turnContext, turnState, entities, action, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
         <Parameter Name="turnState" Type="TState" />
         <Parameter Name="entities" Type="System.Object" />
         <Parameter Name="action" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="turnContext">Current turn context.</param>
         <param name="turnState">Current turn state.</param>
-        <param name="entities">Optional enti to be used to perform the action.</param>
+        <param name="entities">Optional entities to be used to perform the action.</param>
         <param name="action">The actual action name.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
         <summary>
             Perform the action.
             </summary>
-        <returns>True if continue executing, otherwise false.</returns>
+        <returns>The result of the action handler.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

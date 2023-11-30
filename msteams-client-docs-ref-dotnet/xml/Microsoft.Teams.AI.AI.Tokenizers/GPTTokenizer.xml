@@ -1,0 +1,147 @@
+<Type Name="GPTTokenizer" FullName="Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer">
+  <TypeSignature Language="C#" Value="public class GPTTokenizer : Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GPTTokenizer extends System.Object implements class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer" />
+  <TypeSignature Language="VB.NET" Value="Public Class GPTTokenizer&#xA;Implements ITokenizer" />
+  <TypeSignature Language="F#" Value="type GPTTokenizer = class&#xA;    interface ITokenizer" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Tokenizers.ITokenizer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            GPT Tokenizer
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GPTTokenizer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of `GPTTokenizer` using the `cl100k_base` encoding by default
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GPTTokenizer (SharpToken.GptEncoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class SharpToken.GptEncoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.#ctor(SharpToken.GptEncoding)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (encoding As GptEncoding)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer : SharpToken.GptEncoding -&gt; Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer" Usage="new Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer encoding" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encoding" Type="SharpToken.GptEncoding" />
+      </Parameters>
+      <Docs>
+        <param name="encoding">encoding to use</param>
+        <summary>
+            Creates an instance of `GPTTokenizer`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GPTTokenizer (string model);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string model) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (model As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer : string -&gt; Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer" Usage="new Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer model" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="model" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="model">model to encode/decode for</param>
+        <summary>
+            Creates an instance of `GPTTokenizer`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public string Decode (System.Collections.Generic.List&lt;int&gt; tokens);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Decode(class System.Collections.Generic.List`1&lt;int32&gt; tokens) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.Decode(System.Collections.Generic.List{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Decode (tokens As List(Of Integer)) As String" />
+      <MemberSignature Language="F#" Value="abstract member Decode : System.Collections.Generic.List&lt;int&gt; -&gt; string&#xA;override this.Decode : System.Collections.Generic.List&lt;int&gt; -&gt; string" Usage="gPTTokenizer.Decode tokens" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer.Decode(System.Collections.Generic.List{System.Int32})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokens" Type="System.Collections.Generic.List&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tokens">tokens to decode</param>
+        <summary>
+            Decode
+            </summary>
+        <returns>decoded text</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; Encode (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; Encode(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.Encode(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Encode (text As String) As List(Of Integer)" />
+      <MemberSignature Language="F#" Value="abstract member Encode : string -&gt; System.Collections.Generic.List&lt;int&gt;&#xA;override this.Encode : string -&gt; System.Collections.Generic.List&lt;int&gt;" Usage="gPTTokenizer.Encode text" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer.Encode(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">text to encode</param>
+        <summary>
+            Encode
+            </summary>
+        <returns>encoded tokens</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,128 @@
+<Type Name="AuthenticationOptions&lt;TState&gt;" FullName="Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class AuthenticationOptions&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticationOptions`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AuthenticationOptions`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class AuthenticationOptions(Of TState)" />
+  <TypeSignature Language="F#" Value="type AuthenticationOptions&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">To be added.</typeparam>
+    <summary>
+            Options for authentication.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticationOptions (System.Collections.Generic.Dictionary&lt;string,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt; authentications, string? default = default, Microsoft.Teams.AI.SelectorAsync? autoSignIn = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Teams.AI.IAuthentication`1&lt;!TState&gt;&gt; authentications, string default, class Microsoft.Teams.AI.SelectorAsync autoSignIn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AuthenticationOptions`1.#ctor(System.Collections.Generic.Dictionary{System.String,Microsoft.Teams.AI.IAuthentication{`0}},System.String,Microsoft.Teams.AI.SelectorAsync)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (authentications As Dictionary(Of String, IAuthentication(Of TState)), Optional default As String = Nothing, Optional autoSignIn As SelectorAsync = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; : System.Collections.Generic.Dictionary&lt;string, Microsoft.Teams.AI.IAuthentication&lt;'State&gt;&gt; * string * Microsoft.Teams.AI.SelectorAsync -&gt; Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="new Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; (authentications, default, autoSignIn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="authentications" Type="System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt;" />
+        <Parameter Name="default" Type="System.String" />
+        <Parameter Name="autoSignIn" Type="Microsoft.Teams.AI.SelectorAsync" />
+      </Parameters>
+      <Docs>
+        <param name="authentications">The authentication classes to sign-in and sign-out users.</param>
+        <param name="default">Describes the authentication class the bot should use if the user does not specify a authentication class name.</param>
+        <param name="autoSignIn">Indicates whether the bot should start the sign in flow when the user sends a message to the bot or triggers a message extension.</param>
+        <summary>
+            Initializes a new instance of this class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentications">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt; Authentications { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Teams.AI.IAuthentication`1&lt;!TState&gt;&gt; Authentications" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AuthenticationOptions`1.Authentications" />
+      <MemberSignature Language="VB.NET" Value="Public Property Authentications As Dictionary(Of String, IAuthentication(Of TState))" />
+      <MemberSignature Language="F#" Value="member this.Authentications : System.Collections.Generic.Dictionary&lt;string, Microsoft.Teams.AI.IAuthentication&lt;'State&gt;&gt; with get, set" Usage="Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.Authentications" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The authentication classes to sign-in and sign-out users.
+            Key uniquely identifies each authentication.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSignIn">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.SelectorAsync? AutoSignIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.SelectorAsync AutoSignIn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AuthenticationOptions`1.AutoSignIn" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutoSignIn As SelectorAsync" />
+      <MemberSignature Language="F#" Value="member this.AutoSignIn : Microsoft.Teams.AI.SelectorAsync with get, set" Usage="Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.AutoSignIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.SelectorAsync</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates whether the bot should start the sign in flow when the user sends a message to the bot or triggers a message extension.
+            If the selector returns false, the bot will not start the sign in flow before routing the activity to the bot logic.
+            If the selector is not provided, the sign in will always happen for valid activities.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public string? Default { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AuthenticationOptions`1.Default" />
+      <MemberSignature Language="VB.NET" Value="Public Property Default As String" />
+      <MemberSignature Language="F#" Value="member this.Default : string with get, set" Usage="Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Describes the authentication class the bot should use if the user does not specify a authentication class name.
+            If the value is not provided, the first one in `Authentications` setting will be used as the default one.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

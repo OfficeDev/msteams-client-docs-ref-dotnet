@@ -1,25 +1,25 @@
 <Type Name="TurnState" FullName="Microsoft.Teams.AI.State.TurnState">
-  <TypeSignature Language="C#" Value="public class TurnState : Microsoft.Teams.AI.State.TurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TurnState extends Microsoft.Teams.AI.State.TurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;" />
+  <TypeSignature Language="C#" Value="public class TurnState : Microsoft.Teams.AI.State.IMemory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TurnState extends System.Object implements class Microsoft.Teams.AI.State.IMemory" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.State.TurnState" />
-  <TypeSignature Language="VB.NET" Value="Public Class TurnState&#xA;Inherits TurnState(Of StateBase, StateBase, TempState)" />
-  <TypeSignature Language="F#" Value="type TurnState = class&#xA;    inherit TurnState&lt;StateBase, StateBase, TempState&gt;" />
+  <TypeSignature Language="VB.NET" Value="Public Class TurnState&#xA;Implements IMemory" />
+  <TypeSignature Language="F#" Value="type TurnState = class&#xA;    interface IMemory" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>Microsoft.Teams.AI.State.TurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</BaseTypeName>
-    <BaseTypeArguments>
-      <BaseTypeArgument TypeParamName="TConversationState">Microsoft.Teams.AI.State.StateBase</BaseTypeArgument>
-      <BaseTypeArgument TypeParamName="TUserState">Microsoft.Teams.AI.State.StateBase</BaseTypeArgument>
-      <BaseTypeArgument TypeParamName="TTempState">Microsoft.Teams.AI.State.TempState</BaseTypeArgument>
-    </BaseTypeArguments>
+    <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.State.IMemory</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
-            Defines the default state scopes persisted by the <see cref="T:Microsoft.Teams.AI.State.TurnStateManager" />.
+            Base class defining a collection of turn state scopes.
+            Developers can create a derived class that extends `TurnState` to add additional state scopes.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -36,7 +36,478 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.State.TurnState" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conversation">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.State.Record Conversation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.State.Record Conversation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TurnState.Conversation" />
+      <MemberSignature Language="VB.NET" Value="Public Property Conversation As Record" />
+      <MemberSignature Language="F#" Value="member this.Conversation : Microsoft.Teams.AI.State.Record with get, set" Usage="Microsoft.Teams.AI.State.TurnState.Conversation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.State.Record</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Stores all the conversation-related state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CONVERSATION_SCOPE">
+      <MemberSignature Language="C#" Value="public const string CONVERSATION_SCOPE;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CONVERSATION_SCOPE" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TurnState.CONVERSATION_SCOPE" />
+      <MemberSignature Language="VB.NET" Value="Public Const CONVERSATION_SCOPE As String " />
+      <MemberSignature Language="F#" Value="val mutable CONVERSATION_SCOPE : string" Usage="Microsoft.Teams.AI.State.TurnState.CONVERSATION_SCOPE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the conversation scope.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteConversationState">
+      <MemberSignature Language="C#" Value="public void DeleteConversationState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteConversationState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.DeleteConversationState" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeleteConversationState ()" />
+      <MemberSignature Language="F#" Value="member this.DeleteConversationState : unit -&gt; unit" Usage="turnState.DeleteConversationState " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Deletes the conversation state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTempState">
+      <MemberSignature Language="C#" Value="public void DeleteTempState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteTempState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.DeleteTempState" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeleteTempState ()" />
+      <MemberSignature Language="F#" Value="member this.DeleteTempState : unit -&gt; unit" Usage="turnState.DeleteTempState " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Deletes the temporary state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteUserState">
+      <MemberSignature Language="C#" Value="public void DeleteUserState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteUserState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.DeleteUserState" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeleteUserState ()" />
+      <MemberSignature Language="F#" Value="member this.DeleteUserState : unit -&gt; unit" Usage="turnState.DeleteUserState " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Deletes the user state
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteValue">
+      <MemberSignature Language="C#" Value="public void DeleteValue (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteValue(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.DeleteValue(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeleteValue (path As String)" />
+      <MemberSignature Language="F#" Value="abstract member DeleteValue : string -&gt; unit&#xA;override this.DeleteValue : string -&gt; unit" Usage="turnState.DeleteValue path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.State.IMemory.DeleteValue(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Path to the value to delete in the form of `[scope].property`.
+            If scope is omitted, the value is deleted from the temporary scope.</param>
+        <summary>
+            Deletes a value from the memory.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScope">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.State.TurnStateEntry? GetScope (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.State.TurnStateEntry GetScope(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.GetScope(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetScope (name As String) As TurnStateEntry" />
+      <MemberSignature Language="F#" Value="member this.GetScope : string -&gt; Microsoft.Teams.AI.State.TurnStateEntry" Usage="turnState.GetScope name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.State.TurnStateEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The specified scope.</param>
+        <summary>
+            Returns the TurnStateEntry associated with the specified scope.
+            </summary>
+        <returns>The state saved for the scope.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object? GetValue (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.GetValue(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetValue (path As String) As Object" />
+      <MemberSignature Language="F#" Value="abstract member GetValue : string -&gt; obj&#xA;override this.GetValue : string -&gt; obj" Usage="turnState.GetValue path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.State.IMemory.GetValue(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Path to the value to retrieve in the form of `[scope].property`.
+            If scope is omitted, the value is retrieved from the temporary scope.</param>
+        <summary>
+            Retrieves a value from the memory.
+            </summary>
+        <returns>The value or undefined if not found.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValue">
+      <MemberSignature Language="C#" Value="public bool HasValue (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasValue(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.HasValue(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasValue (path As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member HasValue : string -&gt; bool&#xA;override this.HasValue : string -&gt; bool" Usage="turnState.HasValue path" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.State.IMemory.HasValue(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"> Path to the value to check in the form of `[scope].property`.
+            If scope is omitted, the value is checked in the temporary scope.</param>
+        <summary>
+            Checks if a value exists in the memory.
+            </summary>
+        <returns>True if the value exists, false otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoaded">
+      <MemberSignature Language="C#" Value="public bool IsLoaded ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsLoaded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.IsLoaded" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsLoaded () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsLoaded : unit -&gt; bool" Usage="turnState.IsLoaded " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Provides the current status of the load.
+            </summary>
+        <returns>Returns true if the scopes have been loaded, false otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadStateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; LoadStateAsync (Microsoft.Bot.Builder.IStorage? storage, Microsoft.Bot.Builder.ITurnContext turnContext, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; LoadStateAsync(class Microsoft.Bot.Builder.IStorage storage, class Microsoft.Bot.Builder.ITurnContext turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.LoadStateAsync(Microsoft.Bot.Builder.IStorage,Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadStateAsync (storage As IStorage, turnContext As ITurnContext, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.LoadStateAsync : Microsoft.Bot.Builder.IStorage * Microsoft.Bot.Builder.ITurnContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="turnState.LoadStateAsync (storage, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="storage">Optional. Storage provider to load state scopes from.</param>
+        <param name="turnContext">Context for the current turn of conversation with the user.</param>
+        <param name="cancellationToken">Optional. The cancellation token.</param>
+        <summary>
+            Loads all of the state scopes for the current turn.
+            </summary>
+        <returns>True if the states need to be loaded.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComputeStorageKeys">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.Dictionary&lt;string,string&gt; OnComputeStorageKeys (Microsoft.Bot.Builder.ITurnContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; OnComputeStorageKeys(class Microsoft.Bot.Builder.ITurnContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.OnComputeStorageKeys(Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnComputeStorageKeys (context As ITurnContext) As Dictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="abstract member OnComputeStorageKeys : Microsoft.Bot.Builder.ITurnContext -&gt; System.Collections.Generic.Dictionary&lt;string, string&gt;&#xA;override this.OnComputeStorageKeys : Microsoft.Bot.Builder.ITurnContext -&gt; System.Collections.Generic.Dictionary&lt;string, string&gt;" Usage="turnState.OnComputeStorageKeys context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Context for the current turn.</param>
+        <summary>
+            Computes the state keys
+            </summary>
+        <returns>Stored conversation and user scopes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveStateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SaveStateAsync (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.Bot.Builder.IStorage? storage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SaveStateAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.Bot.Builder.IStorage storage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.SaveStateAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.IStorage)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SaveStateAsync (turnContext As ITurnContext, storage As IStorage) As Task" />
+      <MemberSignature Language="F#" Value="member this.SaveStateAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Bot.Builder.IStorage -&gt; System.Threading.Tasks.Task" Usage="turnState.SaveStateAsync (turnContext, storage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Context for the current turn of conversation with the user.</param>
+        <param name="storage">Optional. Storage provider to save state scopes to.</param>
+        <summary>
+            Saves all of the state scopes for the current turn.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeDefaults">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;string,Microsoft.Teams.AI.State.Record&gt; ScopeDefaults;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Teams.AI.State.Record&gt; ScopeDefaults" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TurnState.ScopeDefaults" />
+      <MemberSignature Language="VB.NET" Value="Protected ScopeDefaults As Dictionary(Of String, Record) " />
+      <MemberSignature Language="F#" Value="val mutable ScopeDefaults : System.Collections.Generic.Dictionary&lt;string, Microsoft.Teams.AI.State.Record&gt;" Usage="Microsoft.Teams.AI.State.TurnState.ScopeDefaults" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Teams.AI.State.Record&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The default values to initial for each scope.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string path, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(string path, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TurnState.SetValue(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetValue (path As String, value As Object)" />
+      <MemberSignature Language="F#" Value="abstract member SetValue : string * obj -&gt; unit&#xA;override this.SetValue : string * obj -&gt; unit" Usage="turnState.SetValue (path, value)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.State.IMemory.SetValue(System.String,System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="path">Path to the value to assign in the form of `[scope].property`.
+            If scope is omitted, the value is assigned to the temporary scope.</param>
+        <param name="value">Value to assign.</param>
+        <summary>
+            Assigns a value to the memory.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temp">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.State.TempState Temp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.State.TempState Temp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TurnState.Temp" />
+      <MemberSignature Language="VB.NET" Value="Public Property Temp As TempState" />
+      <MemberSignature Language="F#" Value="member this.Temp : Microsoft.Teams.AI.State.TempState with get, set" Usage="Microsoft.Teams.AI.State.TurnState.Temp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.State.TempState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Stores all the temporary state for the current turn.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TEMP_SCOPE">
+      <MemberSignature Language="C#" Value="public const string TEMP_SCOPE;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TEMP_SCOPE" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TurnState.TEMP_SCOPE" />
+      <MemberSignature Language="VB.NET" Value="Public Const TEMP_SCOPE As String " />
+      <MemberSignature Language="F#" Value="val mutable TEMP_SCOPE : string" Usage="Microsoft.Teams.AI.State.TurnState.TEMP_SCOPE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the temp scope.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.State.Record User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.State.Record User" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TurnState.User" />
+      <MemberSignature Language="VB.NET" Value="Public Property User As Record" />
+      <MemberSignature Language="F#" Value="member this.User : Microsoft.Teams.AI.State.Record with get, set" Usage="Microsoft.Teams.AI.State.TurnState.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.State.Record</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Stores all the user related state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="USER_SCOPE">
+      <MemberSignature Language="C#" Value="public const string USER_SCOPE;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string USER_SCOPE" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TurnState.USER_SCOPE" />
+      <MemberSignature Language="VB.NET" Value="Public Const USER_SCOPE As String " />
+      <MemberSignature Language="F#" Value="val mutable USER_SCOPE : string" Usage="Microsoft.Teams.AI.State.TurnState.USER_SCOPE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the user scope.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

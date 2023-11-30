@@ -1,0 +1,39 @@
+<Type Name="TeamsSsoAdaptiveCardsAuthentication" FullName="Microsoft.Teams.AI.TeamsSsoAdaptiveCardsAuthentication">
+  <TypeSignature Language="C#" Value="public class TeamsSsoAdaptiveCardsAuthentication : Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsSsoAdaptiveCardsAuthentication extends Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.TeamsSsoAdaptiveCardsAuthentication" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsSsoAdaptiveCardsAuthentication&#xA;Inherits AdaptiveCardsAuthenticationBase" />
+  <TypeSignature Language="F#" Value="type TeamsSsoAdaptiveCardsAuthentication = class&#xA;    inherit AdaptiveCardsAuthenticationBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Handles authentication for Adaptive Cards in Teams based on Teams SSO.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsSsoAdaptiveCardsAuthentication ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TeamsSsoAdaptiveCardsAuthentication.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

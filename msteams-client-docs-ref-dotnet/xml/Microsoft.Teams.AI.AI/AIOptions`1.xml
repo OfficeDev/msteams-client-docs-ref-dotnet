@@ -1,9 +1,9 @@
 <Type Name="AIOptions&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;">
-  <TypeSignature Language="C#" Value="public sealed class AIOptions&lt;TState&gt; where TState : ITurnState&lt;StateBase,StateBase,TempState&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AIOptions`1&lt;(class Microsoft.Teams.AI.State.ITurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;) TState&gt; extends System.Object" />
+  <TypeSignature Language="C#" Value="public sealed class AIOptions&lt;TState&gt; where TState : TurnState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AIOptions`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.AIOptions`1" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AIOptions(Of TState)" />
-  <TypeSignature Language="F#" Value="type AIOptions&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt; = class" />
+  <TypeSignature Language="F#" Value="type AIOptions&lt;'State (requires 'State :&gt; TurnState)&gt; = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -11,7 +11,7 @@
   <TypeParameters>
     <TypeParameter Name="TState">
       <Constraints>
-        <InterfaceName>Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</InterfaceName>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
       </Constraints>
     </TypeParameter>
   </TypeParameters>
@@ -28,55 +28,103 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AIOptions (Microsoft.Teams.AI.AI.Planner.IPlanner&lt;TState&gt; planner, Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt; promptManager, Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt;? moderator = default, string? prompt = default, Microsoft.Teams.AI.AI.AIHistoryOptions? history = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Planner.IPlanner`1&lt;!TState&gt; planner, class Microsoft.Teams.AI.AI.Prompt.IPromptManager`1&lt;!TState&gt; promptManager, class Microsoft.Teams.AI.AI.Moderator.IModerator`1&lt;!TState&gt; moderator, string prompt, class Microsoft.Teams.AI.AI.AIHistoryOptions history) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AIOptions`1.#ctor(Microsoft.Teams.AI.AI.Planner.IPlanner{`0},Microsoft.Teams.AI.AI.Prompt.IPromptManager{`0},Microsoft.Teams.AI.AI.Moderator.IModerator{`0},System.String,Microsoft.Teams.AI.AI.AIHistoryOptions)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (planner As IPlanner(Of TState), promptManager As IPromptManager(Of TState), Optional moderator As IModerator(Of TState) = Nothing, Optional prompt As String = Nothing, Optional history As AIHistoryOptions = Nothing)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; : Microsoft.Teams.AI.AI.Planner.IPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * Microsoft.Teams.AI.AI.Moderator.IModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; * string * Microsoft.Teams.AI.AI.AIHistoryOptions -&gt; Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="new Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; (planner, promptManager, moderator, prompt, history)" />
+      <MemberSignature Language="C#" Value="public AIOptions (Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt; planner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Planners.IPlanner`1&lt;!TState&gt; planner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.AIOptions`1.#ctor(Microsoft.Teams.AI.AI.Planners.IPlanner{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (planner As IPlanner(Of TState))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; : Microsoft.Teams.AI.AI.Planners.IPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; -&gt; Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;" Usage="new Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; planner" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="planner" Type="Microsoft.Teams.AI.AI.Planner.IPlanner&lt;TState&gt;" />
-        <Parameter Name="promptManager" Type="Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt;" />
-        <Parameter Name="moderator" Type="Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt;" />
-        <Parameter Name="prompt" Type="System.String" />
-        <Parameter Name="history" Type="Microsoft.Teams.AI.AI.AIHistoryOptions" />
+        <Parameter Name="planner" Type="Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt;" />
       </Parameters>
       <Docs>
         <param name="planner">The planner to use for generating plans.</param>
-        <param name="promptManager">The prompt manager to use for generating prompts.</param>
-        <param name="moderator"> The moderator to use for moderating input passed to the model and the output</param>
-        <param name="prompt">Optional. The prompt to use for the current turn.</param>
-        <param name="history">Optional. The history options to use for the AI system.</param>
         <summary>
             Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.AIOptions`1" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="History">
-      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.AIHistoryOptions? History;" />
-      <MemberSignature Language="ILAsm" Value=".field public class Microsoft.Teams.AI.AI.AIHistoryOptions History" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AIOptions`1.History" />
-      <MemberSignature Language="VB.NET" Value="Public History As AIHistoryOptions " />
-      <MemberSignature Language="F#" Value="val mutable History : Microsoft.Teams.AI.AI.AIHistoryOptions" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.History" />
-      <MemberType>Field</MemberType>
+    <Member MemberName="AllowLooping">
+      <MemberSignature Language="C#" Value="public bool? AllowLooping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; AllowLooping" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.AllowLooping" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowLooping As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.AllowLooping : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.AllowLooping" />
+      <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Teams.AI.AI.AIHistoryOptions</ReturnType>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Optional. The history options to use for the AI system
-            </summary>
+             Optional. If true, the AI system will allow the planner to loop.
+             </summary>
+        <value>To be added.</value>
         <remarks>
-            Defaults to tracking history with a maximum of 3 turns and 1000 tokens per turn.
+             The default value is `true`.
+             
+             Looping is needed for augmentations like `functions` and `monologue` where the LLM needs to
+             see the result of the last action that was performed. The AI system will attempt to autodetect
+             if it needs to loop so you generally don't need to worry about this setting.
+            
+             If you're using an augmentation like `sequence` you can set this to `false` to guard against
+             any accidental looping.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSteps">
+      <MemberSignature Language="C#" Value="public int? MaxSteps { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaxSteps" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.MaxSteps" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxSteps As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.MaxSteps : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.MaxSteps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Maximum number of actions to execute in a single turn.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is 25.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTime">
+      <MemberSignature Language="C#" Value="public TimeSpan? MaxTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; MaxTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.MaxTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxTime As Nullable(Of TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.MaxTime : Nullable&lt;TimeSpan&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.MaxTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Maximum amount of time to spend executing a single turn in milliseconds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is 300000 or 5 minutes.
             </remarks>
       </Docs>
     </Member>
@@ -85,7 +133,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Moderator.IModerator`1&lt;!TState&gt; Moderator" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.Moderator" />
       <MemberSignature Language="VB.NET" Value="Public Property Moderator As IModerator(Of TState)" />
-      <MemberSignature Language="F#" Value="member this.Moderator : Microsoft.Teams.AI.AI.Moderator.IModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Moderator" />
+      <MemberSignature Language="F#" Value="member this.Moderator : Microsoft.Teams.AI.AI.Moderator.IModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.Moderator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -100,73 +148,27 @@
             returned by the model.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The default value is an instance of <see cref="T:Microsoft.Teams.AI.AI.Moderator.DefaultModerator`1" /></remarks>
       </Docs>
     </Member>
     <Member MemberName="Planner">
-      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Planner.IPlanner&lt;TState&gt; Planner { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Planner.IPlanner`1&lt;!TState&gt; Planner" />
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt; Planner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Planners.IPlanner`1&lt;!TState&gt; Planner" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.Planner" />
       <MemberSignature Language="VB.NET" Value="Public Property Planner As IPlanner(Of TState)" />
-      <MemberSignature Language="F#" Value="member this.Planner : Microsoft.Teams.AI.AI.Planner.IPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Planner" />
+      <MemberSignature Language="F#" Value="member this.Planner : Microsoft.Teams.AI.AI.Planners.IPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.Planner" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.Teams.AI.AI.Planner.IPlanner&lt;TState&gt;</ReturnType>
+        <ReturnType>Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
             The planner to use for generating plans.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Prompt">
-      <MemberSignature Language="C#" Value="public string? Prompt;" />
-      <MemberSignature Language="ILAsm" Value=".field public string Prompt" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AIOptions`1.Prompt" />
-      <MemberSignature Language="VB.NET" Value="Public Prompt As String " />
-      <MemberSignature Language="F#" Value="val mutable Prompt : string" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.Prompt" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Optional. The prompt to use for the current turn.
-            </summary>
-        <remarks>
-            This allows for the use of the AI system in a free standing mode. An exception will be
-            thrown if the AI system is routed to by the Application object and a prompt has not been
-            configured.
-            </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="PromptManager">
-      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt; PromptManager { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompt.IPromptManager`1&lt;!TState&gt; PromptManager" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.PromptManager" />
-      <MemberSignature Language="VB.NET" Value="Public Property PromptManager As IPromptManager(Of TState)" />
-      <MemberSignature Language="F#" Value="member this.PromptManager : Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;.PromptManager" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Teams.AI.AI.Prompt.IPromptManager&lt;TState&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            The prompt manager to use for generating prompts.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

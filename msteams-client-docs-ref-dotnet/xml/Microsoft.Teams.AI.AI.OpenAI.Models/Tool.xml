@@ -1,0 +1,141 @@
+<Type Name="Tool" FullName="Microsoft.Teams.AI.AI.OpenAI.Models.Tool">
+  <TypeSignature Language="C#" Value="public class Tool" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Tool extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.OpenAI.Models.Tool" />
+  <TypeSignature Language="VB.NET" Value="Public Class Tool" />
+  <TypeSignature Language="F#" Value="type Tool = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Model represents Assistant tool.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Tool ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.OpenAI.Models.Tool.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CODE_INTERPRETER_TYPE">
+      <MemberSignature Language="C#" Value="public const string CODE_INTERPRETER_TYPE;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CODE_INTERPRETER_TYPE" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.OpenAI.Models.Tool.CODE_INTERPRETER_TYPE" />
+      <MemberSignature Language="VB.NET" Value="Public Const CODE_INTERPRETER_TYPE As String " />
+      <MemberSignature Language="F#" Value="val mutable CODE_INTERPRETER_TYPE : string" Usage="Microsoft.Teams.AI.AI.OpenAI.Models.Tool.CODE_INTERPRETER_TYPE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of Code Interpreter tool.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Function">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.OpenAI.Models.Function? Function { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.OpenAI.Models.Function Function" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.OpenAI.Models.Tool.Function" />
+      <MemberSignature Language="VB.NET" Value="Public Property Function As Function" />
+      <MemberSignature Language="F#" Value="member this.Function : Microsoft.Teams.AI.AI.OpenAI.Models.Function with get, set" Usage="Microsoft.Teams.AI.AI.OpenAI.Models.Tool.Function" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("function")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("function")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.OpenAI.Models.Function</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For function tool, the function details.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FUNCTION_CALLING_TYPE">
+      <MemberSignature Language="C#" Value="public const string FUNCTION_CALLING_TYPE;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FUNCTION_CALLING_TYPE" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.OpenAI.Models.Tool.FUNCTION_CALLING_TYPE" />
+      <MemberSignature Language="VB.NET" Value="Public Const FUNCTION_CALLING_TYPE As String " />
+      <MemberSignature Language="F#" Value="val mutable FUNCTION_CALLING_TYPE : string" Usage="Microsoft.Teams.AI.AI.OpenAI.Models.Tool.FUNCTION_CALLING_TYPE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of Function Calling tool.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.OpenAI.Models.Tool.Type" />
+      <MemberSignature Language="VB.NET" Value="Public Property Type As String" />
+      <MemberSignature Language="F#" Value="member this.Type : string with get, set" Usage="Microsoft.Teams.AI.AI.OpenAI.Models.Tool.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("type")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Type of tool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -116,6 +116,27 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="HttpErrorActionName">
+      <MemberSignature Language="C#" Value="public const string HttpErrorActionName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string HttpErrorActionName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AIConstants.HttpErrorActionName" />
+      <MemberSignature Language="VB.NET" Value="Public Const HttpErrorActionName As String " />
+      <MemberSignature Language="F#" Value="val mutable HttpErrorActionName : string" Usage="Microsoft.Teams.AI.AI.AIConstants.HttpErrorActionName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An action that will be called anytime the planner experiences an http error.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Plan">
       <MemberSignature Language="C#" Value="public const string Plan;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal string Plan" />
@@ -162,27 +183,6 @@
             contains one or more commands. Returning false from this action can be used to prevent the plan
             from being executed.
             </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="RateLimitedActionName">
-      <MemberSignature Language="C#" Value="public const string RateLimitedActionName;" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal string RateLimitedActionName" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AIConstants.RateLimitedActionName" />
-      <MemberSignature Language="VB.NET" Value="Public Const RateLimitedActionName As String " />
-      <MemberSignature Language="F#" Value="val mutable RateLimitedActionName : string" Usage="Microsoft.Teams.AI.AI.AIConstants.RateLimitedActionName" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            An action that will be called anytime the planner is rate limited.
-            </summary>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SayCommand">
@@ -236,6 +236,48 @@
              If you override this action and want to automatically send Adaptive Cards as attachments you
              will need to handle that yourself.
              </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopCommand">
+      <MemberSignature Language="C#" Value="public const string StopCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string StopCommand" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AIConstants.StopCommand" />
+      <MemberSignature Language="VB.NET" Value="Public Const StopCommand As String " />
+      <MemberSignature Language="F#" Value="val mutable StopCommand : string" Usage="Microsoft.Teams.AI.AI.AIConstants.StopCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of command that will stop the running.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TooManyStepsActionName">
+      <MemberSignature Language="C#" Value="public const string TooManyStepsActionName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TooManyStepsActionName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.AIConstants.TooManyStepsActionName" />
+      <MemberSignature Language="VB.NET" Value="Public Const TooManyStepsActionName As String " />
+      <MemberSignature Language="F#" Value="val mutable TooManyStepsActionName : string" Usage="Microsoft.Teams.AI.AI.AIConstants.TooManyStepsActionName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The task either executed too many steps or timed out.
+            </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="UnknownActionName">

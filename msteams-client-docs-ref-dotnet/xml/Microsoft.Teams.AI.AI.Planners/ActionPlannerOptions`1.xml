@@ -1,0 +1,200 @@
+<Type Name="ActionPlannerOptions&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class ActionPlannerOptions&lt;TState&gt; where TState : TurnState, IMemory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActionPlannerOptions`1&lt;(class Microsoft.Teams.AI.State.TurnState, class Microsoft.Teams.AI.State.IMemory) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class ActionPlannerOptions(Of TState)" />
+  <TypeSignature Language="F#" Value="type ActionPlannerOptions&lt;'State (requires 'State :&gt; TurnState and 'State :&gt; IMemory)&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+        <InterfaceName>Microsoft.Teams.AI.State.IMemory</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">Type of application state.</typeparam>
+    <summary>
+            Options used to configure an `ActionPlanner` instance.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionPlannerOptions (Microsoft.Teams.AI.AI.Models.IPromptCompletionModel model, Microsoft.Teams.AI.AI.Prompts.PromptManager prompts, Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;.ActionPlannerPromptFactory defaultPrompt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel model, class Microsoft.Teams.AI.AI.Prompts.PromptManager prompts, class Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1/ActionPlannerPromptFactory&lt;!TState&gt; defaultPrompt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.#ctor(Microsoft.Teams.AI.AI.Models.IPromptCompletionModel,Microsoft.Teams.AI.AI.Prompts.PromptManager,Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.ActionPlannerPromptFactory{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (model As IPromptCompletionModel, prompts As PromptManager, defaultPrompt As ActionPlannerOptions(Of TState).ActionPlannerPromptFactory)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt; : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel * Microsoft.Teams.AI.AI.Prompts.PromptManager * Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.ActionPlannerPromptFactory -&gt; Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;" Usage="new Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt; (model, prompts, defaultPrompt)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="model" Type="Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+        <Parameter Name="prompts" Type="Microsoft.Teams.AI.AI.Prompts.PromptManager" />
+        <Parameter Name="defaultPrompt" Type="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;+ActionPlannerPromptFactory" />
+      </Parameters>
+      <Docs>
+        <param name="model">Model instance to use.</param>
+        <param name="prompts">Prompt manager used to manage prompts.</param>
+        <param name="defaultPrompt">The default prompt to use.</param>
+        <summary>
+            Creates an instance of `ActionPlannerOptions`.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPrompt">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;.ActionPlannerPromptFactory DefaultPrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1/ActionPlannerPromptFactory&lt;!TState&gt; DefaultPrompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.DefaultPrompt" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultPrompt As ActionPlannerOptions(Of TState).ActionPlannerPromptFactory" />
+      <MemberSignature Language="F#" Value="member this.DefaultPrompt : Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.ActionPlannerPromptFactory with get, set" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.DefaultPrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;+ActionPlannerPromptFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The default prompt to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This can either be the name of a prompt template or a function that returns a prompt template.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogRepairs">
+      <MemberSignature Language="C#" Value="public bool LogRepairs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogRepairs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.LogRepairs" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogRepairs As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LogRepairs : bool with get, set" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.LogRepairs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, repair attempts will be logged to the console.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is false.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRepairAttempts">
+      <MemberSignature Language="C#" Value="public int MaxRepairAttempts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRepairAttempts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.MaxRepairAttempts" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxRepairAttempts As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxRepairAttempts : int with get, set" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.MaxRepairAttempts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum number of repair attempts to make.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The ActionPlanner uses validators and a feedback loop to repair invalid responses returned
+            by the model.This value controls the maximum number of repair attempts that will be made
+            before returning an error.The default value is 3.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.IPromptCompletionModel Model { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel Model" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.Model" />
+      <MemberSignature Language="VB.NET" Value="Public Property Model As IPromptCompletionModel" />
+      <MemberSignature Language="F#" Value="member this.Model : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel with get, set" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model instance to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompts">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptManager Prompts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.PromptManager Prompts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.Prompts" />
+      <MemberSignature Language="VB.NET" Value="Public Property Prompts As PromptManager" />
+      <MemberSignature Language="F#" Value="member this.Prompts : Microsoft.Teams.AI.AI.Prompts.PromptManager with get, set" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.Prompts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prompt manager used to manage prompts.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tokenizer">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Tokenizers.ITokenizer Tokenizer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer Tokenizer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.Tokenizer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tokenizer As ITokenizer" />
+      <MemberSignature Language="F#" Value="member this.Tokenizer : Microsoft.Teams.AI.AI.Tokenizers.ITokenizer with get, set" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory)&gt;.Tokenizer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Tokenizers.ITokenizer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            tokenizer to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If not specified, a new `GPTTokenizer` instance will be created.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

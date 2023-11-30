@@ -1,0 +1,83 @@
+<Type Name="ValidatedChatCompletionAction" FullName="Microsoft.Teams.AI.AI.Validators.ValidatedChatCompletionAction">
+  <TypeSignature Language="C#" Value="public class ValidatedChatCompletionAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidatedChatCompletionAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Validators.ValidatedChatCompletionAction" />
+  <TypeSignature Language="VB.NET" Value="Public Class ValidatedChatCompletionAction" />
+  <TypeSignature Language="F#" Value="type ValidatedChatCompletionAction = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Validated Chat Completion Action
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidatedChatCompletionAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Validators.ValidatedChatCompletionAction.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Validators.ValidatedChatCompletionAction.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.Teams.AI.AI.Validators.ValidatedChatCompletionAction.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Text.Json.JsonElement&gt; Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, valuetype System.Text.Json.JsonElement&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Validators.ValidatedChatCompletionAction.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameters As Dictionary(Of String, JsonElement)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.Generic.Dictionary&lt;string, System.Text.Json.JsonElement&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Validators.ValidatedChatCompletionAction.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Text.Json.JsonElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Parameters
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

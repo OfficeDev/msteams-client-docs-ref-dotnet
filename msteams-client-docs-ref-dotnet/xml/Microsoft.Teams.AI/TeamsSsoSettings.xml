@@ -1,0 +1,169 @@
+<Type Name="TeamsSsoSettings" FullName="Microsoft.Teams.AI.TeamsSsoSettings">
+  <TypeSignature Language="C#" Value="public class TeamsSsoSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsSsoSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.TeamsSsoSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsSsoSettings" />
+  <TypeSignature Language="F#" Value="type TeamsSsoSettings = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Settings to initialize TeamsSsoAuthentication class
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsSsoSettings (string[] scopes, string signInLink, Microsoft.Identity.Client.IConfidentialClientApplication msal, int timeout = 900000, bool endOnInvalidMessage = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] scopes, string signInLink, class Microsoft.Identity.Client.IConfidentialClientApplication msal, int32 timeout, bool endOnInvalidMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TeamsSsoSettings.#ctor(System.String[],System.String,Microsoft.Identity.Client.IConfidentialClientApplication,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scopes As String(), signInLink As String, msal As IConfidentialClientApplication, Optional timeout As Integer = 900000, Optional endOnInvalidMessage As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.TeamsSsoSettings : string[] * string * Microsoft.Identity.Client.IConfidentialClientApplication * int * bool -&gt; Microsoft.Teams.AI.TeamsSsoSettings" Usage="new Microsoft.Teams.AI.TeamsSsoSettings (scopes, signInLink, msal, timeout, endOnInvalidMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scopes" Type="System.String[]" />
+        <Parameter Name="signInLink" Type="System.String" />
+        <Parameter Name="msal" Type="Microsoft.Identity.Client.IConfidentialClientApplication" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="endOnInvalidMessage" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scopes">The AAD scopes for authentication.</param>
+        <param name="signInLink">The sign in link for authentication.</param>
+        <param name="msal">The instance of ConfidentialClientApplication from Microsoft Authentication Library</param>
+        <param name="timeout">Number of milliseconds to wait for the user to authenticate.</param>
+        <param name="endOnInvalidMessage">Value indicating whether the authentication should end upon receiving an invalid message.</param>
+        <summary>
+            Initializes the class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOnInvalidMessage">
+      <MemberSignature Language="C#" Value="public bool EndOnInvalidMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EndOnInvalidMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.TeamsSsoSettings.EndOnInvalidMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndOnInvalidMessage As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EndOnInvalidMessage : bool with get, set" Usage="Microsoft.Teams.AI.TeamsSsoSettings.EndOnInvalidMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Value indicating whether the authentication should end upon receiving an invalid message.
+            Defaults to `true`.
+            Only works in conversional bot scenario.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSAL">
+      <MemberSignature Language="C#" Value="public Microsoft.Identity.Client.IConfidentialClientApplication MSAL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Identity.Client.IConfidentialClientApplication MSAL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.TeamsSsoSettings.MSAL" />
+      <MemberSignature Language="VB.NET" Value="Public Property MSAL As IConfidentialClientApplication" />
+      <MemberSignature Language="F#" Value="member this.MSAL : Microsoft.Identity.Client.IConfidentialClientApplication with get, set" Usage="Microsoft.Teams.AI.TeamsSsoSettings.MSAL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Identity.Client.IConfidentialClientApplication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The instance of ConfidentialClientApplication from Microsoft Authentication Library
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public string[] Scopes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Scopes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.TeamsSsoSettings.Scopes" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scopes As String()" />
+      <MemberSignature Language="F#" Value="member this.Scopes : string[] with get, set" Usage="Microsoft.Teams.AI.TeamsSsoSettings.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The AAD scopes for authentication. Only one resource is allowed in the scopes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignInLink">
+      <MemberSignature Language="C#" Value="public string SignInLink { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignInLink" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.TeamsSsoSettings.SignInLink" />
+      <MemberSignature Language="VB.NET" Value="Public Property SignInLink As String" />
+      <MemberSignature Language="F#" Value="member this.SignInLink : string with get, set" Usage="Microsoft.Teams.AI.TeamsSsoSettings.SignInLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The sign in link for authentication.
+            The library will pass `scope`, `clientId`, and `tenantId` to the link as query parameters.
+            Your sign in page can leverage these parameters to compose the AAD sign-in URL.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.TeamsSsoSettings.Timeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property Timeout As Integer" />
+      <MemberSignature Language="F#" Value="member this.Timeout : int with get, set" Usage="Microsoft.Teams.AI.TeamsSsoSettings.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of milliseconds to wait for the user to authenticate.
+            Defaults to a value `900,000` (15 minutes).
+            Only works in conversional bot scenario.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

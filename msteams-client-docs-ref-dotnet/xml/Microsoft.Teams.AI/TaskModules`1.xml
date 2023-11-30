@@ -1,0 +1,278 @@
+<Type Name="TaskModules&lt;TState&gt;" FullName="Microsoft.Teams.AI.TaskModules&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class TaskModules&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TaskModules`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.TaskModules`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class TaskModules(Of TState)" />
+  <TypeSignature Language="F#" Value="type TaskModules&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">The type of the turn state object used by the application.</typeparam>
+    <summary>
+            TaskModules class to enable fluent style registration of handlers related to Task Modules.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskModules (Microsoft.Teams.AI.Application&lt;TState&gt; app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.Application`1&lt;!TState&gt; app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.#ctor(Microsoft.Teams.AI.Application{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (app As Application(Of TState))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.TaskModules&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; : Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.TaskModules&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="new Microsoft.Teams.AI.TaskModules&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; app" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="app" Type="Microsoft.Teams.AI.Application&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="app"> The top level application class to register handlers with.</param>
+        <summary>
+            Creates a new instance of the TaskModules class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetch (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetch(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.FetchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnFetch(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.FetchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetch (routeSelectors As MultipleRouteSelector, handler As FetchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetch : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.FetchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnFetch (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+             Registers a handler to process the initial fetch of the task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetch (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetch(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.FetchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnFetch(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.FetchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetch (routeSelector As RouteSelectorAsync, handler As FetchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetch : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.FetchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnFetch (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+             Registers a handler to process the initial fetch of the task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetch (string verb, Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetch(string verb, class Microsoft.Teams.AI.FetchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnFetch(System.String,Microsoft.Teams.AI.FetchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetch (verb As String, handler As FetchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetch : string * Microsoft.Teams.AI.FetchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnFetch (verb, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verb">Name of the verb to register the handler for.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+             Registers a handler to process the initial fetch of the task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetch (System.Text.RegularExpressions.Regex verbPattern, Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetch(class System.Text.RegularExpressions.Regex verbPattern, class Microsoft.Teams.AI.FetchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnFetch(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.FetchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetch (verbPattern As Regex, handler As FetchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetch : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.FetchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnFetch (verbPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verbPattern">Regular expression to match against the verbs to register the handler for.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+             Registers a handler to process the initial fetch of the task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmit (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmit(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.SubmitHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnSubmit(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.SubmitHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmit (routeSelectors As MultipleRouteSelector, handler As SubmitHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmit : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.SubmitHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnSubmit (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync verb(s) to register the handler for.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the submission of a task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmit (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmit(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.SubmitHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnSubmit(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.SubmitHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmit (routeSelector As RouteSelectorAsync, handler As SubmitHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmit : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.SubmitHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnSubmit (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the submission of a task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmit (string verb, Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmit(string verb, class Microsoft.Teams.AI.SubmitHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnSubmit(System.String,Microsoft.Teams.AI.SubmitHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmit (verb As String, handler As SubmitHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmit : string * Microsoft.Teams.AI.SubmitHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnSubmit (verb, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verb">Name of the verb to register the handler for.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the submission of a task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmit (System.Text.RegularExpressions.Regex verbPattern, Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmit(class System.Text.RegularExpressions.Regex verbPattern, class Microsoft.Teams.AI.SubmitHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TaskModules`1.OnSubmit(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.SubmitHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmit (verbPattern As Regex, handler As SubmitHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmit : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.SubmitHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="taskModules.OnSubmit (verbPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verbPattern">Regular expression to match against the verbs to register the handler for</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the submission of a task module.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

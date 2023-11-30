@@ -1,0 +1,797 @@
+<Type Name="MessageExtensions&lt;TState&gt;" FullName="Microsoft.Teams.AI.MessageExtensions&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class MessageExtensions&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageExtensions`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.MessageExtensions`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class MessageExtensions(Of TState)" />
+  <TypeSignature Language="F#" Value="type MessageExtensions&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">The type of the turn state object used by the application.</typeparam>
+    <summary>
+            MessageExtensions class to enable fluent style registration of handlers related to Message Extensions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageExtensions (Microsoft.Teams.AI.Application&lt;TState&gt; app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.Application`1&lt;!TState&gt; app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.#ctor(Microsoft.Teams.AI.Application{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (app As Application(Of TState))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.MessageExtensions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; : Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.MessageExtensions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="new Microsoft.Teams.AI.MessageExtensions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; app" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="app" Type="Microsoft.Teams.AI.Application&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="app" />
+        <summary>
+            Creates a new instance of the MessageExtensions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAnonymousQueryLink">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnAnonymousQueryLink (Microsoft.Teams.AI.QueryLinkHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnAnonymousQueryLink(class Microsoft.Teams.AI.QueryLinkHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnAnonymousQueryLink(Microsoft.Teams.AI.QueryLinkHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnAnonymousQueryLink (handler As QueryLinkHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnAnonymousQueryLink : Microsoft.Teams.AI.QueryLinkHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnAnonymousQueryLink handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.QueryLinkHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when the event is triggered.</param>
+        <summary>
+            Registers a handler that implements the logic to handle anonymous link unfurling.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+            The `composeExtension/anonymousQueryLink` INVOKE activity does not contain any sort of command ID,
+            so only a single select item handler can be registered.
+            For more information visit https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/link-unfurling?#enable-zero-install-link-unfurling
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewEdit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewEdit (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewEdit(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewEdit(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewEdit (routeSelectors As MultipleRouteSelector, handler As BotMessagePreviewEditHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewEdit : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewEdit (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the 'edit' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewEdit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewEdit (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewEdit(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewEdit(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewEdit (routeSelector As RouteSelectorAsync, handler As BotMessagePreviewEditHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewEdit : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewEdit (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the 'edit' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewEdit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewEdit (string commandId, Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewEdit(string commandId, class Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewEdit(System.String,Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewEdit (commandId As String, handler As BotMessagePreviewEditHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewEdit : string * Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewEdit (commandId, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler to process the 'edit' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewEdit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewEdit (System.Text.RegularExpressions.Regex commandIdPattern, Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewEdit(class System.Text.RegularExpressions.Regex commandIdPattern, class Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewEdit(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewEdit (commandIdPattern As Regex, handler As BotMessagePreviewEditHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewEdit : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewEdit (commandIdPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandIdPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandIdPattern">Regular expression to match against the ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler to process the 'edit' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewSend">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewSend (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewSend(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.BotMessagePreviewSendHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewSend(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.BotMessagePreviewSendHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewSend (routeSelectors As MultipleRouteSelector, handler As BotMessagePreviewSendHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewSend : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewSend (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the 'send' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewSend">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewSend (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewSend(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.BotMessagePreviewSendHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewSend(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.BotMessagePreviewSendHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewSend (routeSelector As RouteSelectorAsync, handler As BotMessagePreviewSendHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewSend : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewSend (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the 'send' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewSend">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewSend (string commandId, Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewSend(string commandId, class Microsoft.Teams.AI.BotMessagePreviewSendHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewSend(System.String,Microsoft.Teams.AI.BotMessagePreviewSendHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewSend (commandId As String, handler As BotMessagePreviewSendHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewSend : string * Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewSend (commandId, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler to process the 'send' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBotMessagePreviewSend">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnBotMessagePreviewSend (System.Text.RegularExpressions.Regex commandIdPattern, Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnBotMessagePreviewSend(class System.Text.RegularExpressions.Regex commandIdPattern, class Microsoft.Teams.AI.BotMessagePreviewSendHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnBotMessagePreviewSend(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.BotMessagePreviewSendHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnBotMessagePreviewSend (commandIdPattern As Regex, handler As BotMessagePreviewSendHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnBotMessagePreviewSend : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnBotMessagePreviewSend (commandIdPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandIdPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.BotMessagePreviewSendHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandIdPattern">Regular expression to match against the ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler to process the 'send' action of a message that's being previewed by the
+            user prior to sending.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCardButtonClicked">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnCardButtonClicked (Microsoft.Teams.AI.CardButtonClickedHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnCardButtonClicked(class Microsoft.Teams.AI.CardButtonClickedHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnCardButtonClicked(Microsoft.Teams.AI.CardButtonClickedHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnCardButtonClicked (handler As CardButtonClickedHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnCardButtonClicked : Microsoft.Teams.AI.CardButtonClickedHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnCardButtonClicked handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.CardButtonClickedHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when the event is triggered.</param>
+        <summary>
+            Registers a handler that implements the logic when a user has clicked on a button in a Message Extension card.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+            The `composeExtension/onCardButtonClicked` INVOKE activity does not contain any sort of command ID,
+            so only a single select item handler can be registered. Developers will need to include a
+            type name of some sort in the preview item they return if they need to support multiple select item handlers.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnConfigureSettings">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnConfigureSettings (Microsoft.Teams.AI.ConfigureSettingsHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnConfigureSettings(class Microsoft.Teams.AI.ConfigureSettingsHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnConfigureSettings(Microsoft.Teams.AI.ConfigureSettingsHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnConfigureSettings (handler As ConfigureSettingsHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnConfigureSettings : Microsoft.Teams.AI.ConfigureSettingsHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnConfigureSettings handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ConfigureSettingsHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when the event is triggered.</param>
+        <summary>
+            Registers a handler that implements the logic to invoke configuring Message Extension settings.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+            The `composeExtension/setting` INVOKE activity does not contain a command ID, so only a single select item handler can be registered.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetchTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetchTask (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetchTask(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.FetchTaskHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnFetchTask(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.FetchTaskHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetchTask (routeSelectors As MultipleRouteSelector, handler As FetchTaskHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetchTask : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnFetchTask (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the initial fetch task for an Action based message extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetchTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetchTask (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetchTask(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.FetchTaskHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnFetchTask(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.FetchTaskHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetchTask (routeSelector As RouteSelectorAsync, handler As FetchTaskHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetchTask : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnFetchTask (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler to process the initial fetch task for an Action based message extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetchTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetchTask (string commandId, Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetchTask(string commandId, class Microsoft.Teams.AI.FetchTaskHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnFetchTask(System.String,Microsoft.Teams.AI.FetchTaskHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetchTask (commandId As String, handler As FetchTaskHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetchTask : string * Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnFetchTask (commandId, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">ID of the commands to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler to process the initial fetch task for an Action based message extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFetchTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnFetchTask (System.Text.RegularExpressions.Regex commandIdPattern, Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnFetchTask(class System.Text.RegularExpressions.Regex commandIdPattern, class Microsoft.Teams.AI.FetchTaskHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnFetchTask(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.FetchTaskHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnFetchTask (commandIdPattern As Regex, handler As FetchTaskHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnFetchTask : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnFetchTask (commandIdPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandIdPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.FetchTaskHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandIdPattern">Regular expression to match against the ID of the commands to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler to process the initial fetch task for an Action based message extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQuery">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnQuery (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnQuery(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.QueryHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnQuery(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.QueryHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnQuery (routeSelectors As MultipleRouteSelector, handler As QueryHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnQuery : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.QueryHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnQuery (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler that implements a Search based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQuery">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnQuery (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnQuery(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.QueryHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnQuery(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.QueryHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnQuery (routeSelector As RouteSelectorAsync, handler As QueryHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnQuery : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.QueryHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnQuery (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler that implements a Search based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQuery">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnQuery (string commandId, Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnQuery(string commandId, class Microsoft.Teams.AI.QueryHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnQuery(System.String,Microsoft.Teams.AI.QueryHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnQuery (commandId As String, handler As QueryHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnQuery : string * Microsoft.Teams.AI.QueryHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnQuery (commandId, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler that implements a Search based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQuery">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnQuery (System.Text.RegularExpressions.Regex commandIdPattern, Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnQuery(class System.Text.RegularExpressions.Regex commandIdPattern, class Microsoft.Teams.AI.QueryHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnQuery(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.QueryHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnQuery (commandIdPattern As Regex, handler As QueryHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnQuery : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.QueryHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnQuery (commandIdPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandIdPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.QueryHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandIdPattern">Regular expression to match against the ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler that implements a Search based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryLink">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnQueryLink (Microsoft.Teams.AI.QueryLinkHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnQueryLink(class Microsoft.Teams.AI.QueryLinkHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnQueryLink(Microsoft.Teams.AI.QueryLinkHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnQueryLink (handler As QueryLinkHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnQueryLink : Microsoft.Teams.AI.QueryLinkHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnQueryLink handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.QueryLinkHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when the event is triggered.</param>
+        <summary>
+            Registers a handler that implements a Link Unfurling based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryUrlSetting">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnQueryUrlSetting (Microsoft.Teams.AI.QueryUrlSettingHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnQueryUrlSetting(class Microsoft.Teams.AI.QueryUrlSettingHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnQueryUrlSetting(Microsoft.Teams.AI.QueryUrlSettingHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnQueryUrlSetting (handler As QueryUrlSettingHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnQueryUrlSetting : Microsoft.Teams.AI.QueryUrlSettingHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnQueryUrlSetting handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.QueryUrlSettingHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when the event is triggered.</param>
+        <summary>
+            Registers a handler that invokes the fetch of the configuration settings for a Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+            The `composeExtension/querySettingUrl` INVOKE activity does not contain a command ID, so only a single select item handler can be registered.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSelectItem (Microsoft.Teams.AI.SelectItemHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSelectItem(class Microsoft.Teams.AI.SelectItemHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnSelectItem(Microsoft.Teams.AI.SelectItemHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSelectItem (handler As SelectItemHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSelectItem : Microsoft.Teams.AI.SelectItemHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnSelectItem handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SelectItemHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when the event is triggered.</param>
+        <summary>
+            Registers a handler that implements the logic to handle the tap actions for items returned
+            by a Search based message extension.
+            <remarks>
+            The `composeExtension/selectItem` INVOKE activity does not contain any sort of command ID,
+            so only a single select item handler can be registered. Developers will need to include a
+            type name of some sort in the preview item they return if they need to support multiple
+            select item handlers.
+            </remarks>&gt;
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmitAction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmitAction (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmitAction(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.SubmitActionHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnSubmitAction(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.SubmitActionHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmitAction (routeSelectors As MultipleRouteSelector, handler As SubmitActionHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmitAction : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnSubmitAction (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler that implements the submit action for an Action based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmitAction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmitAction (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmitAction(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.SubmitActionHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnSubmitAction(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.SubmitActionHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmitAction (routeSelector As RouteSelectorAsync, handler As SubmitActionHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmitAction : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnSubmitAction (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Registers a handler that implements the submit action for an Action based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmitAction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmitAction (string commandId, Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmitAction(string commandId, class Microsoft.Teams.AI.SubmitActionHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnSubmitAction(System.String,Microsoft.Teams.AI.SubmitActionHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmitAction (commandId As String, handler As SubmitActionHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmitAction : string * Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnSubmitAction (commandId, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler that implements the submit action for an Action based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmitAction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSubmitAction (System.Text.RegularExpressions.Regex commandIdPattern, Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSubmitAction(class System.Text.RegularExpressions.Regex commandIdPattern, class Microsoft.Teams.AI.SubmitActionHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensions`1.OnSubmitAction(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.SubmitActionHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSubmitAction (commandIdPattern As Regex, handler As SubmitActionHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSubmitAction : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="messageExtensions.OnSubmitAction (commandIdPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandIdPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SubmitActionHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commandIdPattern">Regular expression to match against the ID of the command to register the handler for.</param>
+        <param name="handler">Function to call when the command is received.</param>
+        <summary>
+            Registers a handler that implements the submit action for an Action based Message Extension.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

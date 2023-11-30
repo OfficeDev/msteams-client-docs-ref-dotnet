@@ -1,0 +1,135 @@
+<Type Name="PredictedSayCommand" FullName="Microsoft.Teams.AI.AI.Planners.PredictedSayCommand">
+  <TypeSignature Language="C#" Value="public class PredictedSayCommand : Microsoft.Teams.AI.AI.Planners.IPredictedCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PredictedSayCommand extends System.Object implements class Microsoft.Teams.AI.AI.Planners.IPredictedCommand" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand" />
+  <TypeSignature Language="VB.NET" Value="Public Class PredictedSayCommand&#xA;Implements IPredictedCommand" />
+  <TypeSignature Language="F#" Value="type PredictedSayCommand = class&#xA;    interface IPredictedCommand" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Planners.IPredictedCommand</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A predicted SAY command is a response that the AI system should say.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PredictedSayCommand (string response);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (response As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.PredictedSayCommand : string -&gt; Microsoft.Teams.AI.AI.Planners.PredictedSayCommand" Usage="new Microsoft.Teams.AI.AI.Planners.PredictedSayCommand response" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonConstructor]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonConstructor&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="response" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="response">The response that the AI system should say.</param>
+        <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public string Response { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Response" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Response" />
+      <MemberSignature Language="VB.NET" Value="Public Property Response As String" />
+      <MemberSignature Language="F#" Value="member this.Response : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("response")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("response")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonRequired]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonRequired&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The response that the AI system should say.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public static Json.Schema.JsonSchema Schema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Json.Schema.JsonSchema Schema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Schema" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Schema () As JsonSchema" />
+      <MemberSignature Language="F#" Value="static member Schema : unit -&gt; Json.Schema.JsonSchema" Usage="Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Schema " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Json.Schema.JsonSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Schema
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As String" />
+      <MemberSignature Language="F#" Value="member this.Type : string" Usage="Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Type" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Planners.IPredictedCommand.Type</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type to indicate that a SAY command is being returned.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

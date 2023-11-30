@@ -61,6 +61,64 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="LoadStateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; LoadStateAsync (Microsoft.Bot.Builder.IStorage? storage, Microsoft.Bot.Builder.ITurnContext turnContext, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; LoadStateAsync(class Microsoft.Bot.Builder.IStorage storage, class Microsoft.Bot.Builder.ITurnContext turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.ITurnState`3.LoadStateAsync(Microsoft.Bot.Builder.IStorage,Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadStateAsync (storage As IStorage, turnContext As ITurnContext, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member LoadStateAsync : Microsoft.Bot.Builder.IStorage * Microsoft.Bot.Builder.ITurnContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="iTurnState.LoadStateAsync (storage, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="storage">Optional. Storage provider to load state scopes from.</param>
+        <param name="turnContext">Context for the current turn of conversation with the user.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Loads all of the state scopes for the current turn.
+            </summary>
+        <returns>True if the states need to be loaded.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveStateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SaveStateAsync (Microsoft.Bot.Builder.IStorage? storage, Microsoft.Bot.Builder.ITurnContext turnContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SaveStateAsync(class Microsoft.Bot.Builder.IStorage storage, class Microsoft.Bot.Builder.ITurnContext turnContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.ITurnState`3.SaveStateAsync(Microsoft.Bot.Builder.IStorage,Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SaveStateAsync (storage As IStorage, turnContext As ITurnContext) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SaveStateAsync : Microsoft.Bot.Builder.IStorage * Microsoft.Bot.Builder.ITurnContext -&gt; System.Threading.Tasks.Task" Usage="iTurnState.SaveStateAsync (storage, turnContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="storage">Optional. Storage provider to save state scopes to.</param>
+        <param name="turnContext">Context for the current turn of conversation with the user.</param>
+        <summary>
+            Saves all of the state scopes for the current turn.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Temp">
       <MemberSignature Language="C#" Value="public TTempState? Temp { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance !TTempState Temp" />

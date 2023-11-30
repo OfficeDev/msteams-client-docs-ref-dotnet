@@ -1,9 +1,9 @@
 <Type Name="IModerator&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt;">
-  <TypeSignature Language="C#" Value="public interface IModerator&lt;TState&gt; where TState : ITurnState&lt;StateBase,StateBase,TempState&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IModerator`1&lt;(class Microsoft.Teams.AI.State.ITurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;) TState&gt;" />
+  <TypeSignature Language="C#" Value="public interface IModerator&lt;TState&gt; where TState : TurnState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IModerator`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Moderator.IModerator`1" />
   <TypeSignature Language="VB.NET" Value="Public Interface IModerator(Of TState)" />
-  <TypeSignature Language="F#" Value="type IModerator&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt; = interface" />
+  <TypeSignature Language="F#" Value="type IModerator&lt;'State (requires 'State :&gt; TurnState)&gt; = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -11,7 +11,7 @@
   <TypeParameters>
     <TypeParameter Name="TState">
       <Constraints>
-        <InterfaceName>Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</InterfaceName>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
       </Constraints>
     </TypeParameter>
   </TypeParameters>
@@ -24,67 +24,30 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="ReviewPlan">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt; ReviewPlan (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Planner.Plan plan);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planner.Plan&gt; ReviewPlan(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Planner.Plan plan) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewPlan(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Planner.Plan)" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReviewPlan (turnContext As ITurnContext, turnState As TState, plan As Plan) As Task(Of Plan)" />
-      <MemberSignature Language="F#" Value="abstract member ReviewPlan : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Planner.Plan -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;" Usage="iModerator.ReviewPlan (turnContext, turnState, plan)" />
+    <Member MemberName="ReviewInputAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan?&gt; ReviewInputAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; ReviewInputAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewInputAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReviewInputAsync (turnContext As ITurnContext, turnState As TState, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member ReviewInputAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="iModerator.ReviewInputAsync (turnContext, turnState, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
         <Parameter Name="turnState" Type="TState" />
-        <Parameter Name="plan" Type="Microsoft.Teams.AI.AI.Planner.Plan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="turnContext">Context for the current turn of conversation.</param>
         <param name="turnState">Application state for the current turn of conversation.</param>
-        <param name="plan">Plan generated by the planner.</param>
-        <summary>
-             Reviews a plan generated by the planner before its executed.
-             </summary>
-        <returns>The plan to execute. Either the current plan passed in for review or a new plan.</returns>
-        <remarks>
-             The moderator can review the plan to ensure it's appropriate for the current conversation.
-            
-             To approve a plan simply return the plan that was passed in. A new plan can be returned to
-             redirect to a new set of actions. Typically the moderator will return a new plan with a
-             single DO command that calls <see cref="F:Microsoft.Teams.AI.AI.AIConstants.FlaggedOutputActionName" /> to flag the output for review.
-            
-             The moderator can pass any entities that make sense to the redirected action.
-             </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="ReviewPrompt">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan?&gt; ReviewPrompt (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Prompt.PromptTemplate prompt);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planner.Plan&gt; ReviewPrompt(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Prompt.PromptTemplate prompt) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewPrompt(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Prompt.PromptTemplate)" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReviewPrompt (turnContext As ITurnContext, turnState As TState, prompt As PromptTemplate) As Task(Of Plan)" />
-      <MemberSignature Language="F#" Value="abstract member ReviewPrompt : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Prompt.PromptTemplate -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;" Usage="iModerator.ReviewPrompt (turnContext, turnState, prompt)" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
-        <Parameter Name="turnState" Type="TState" />
-        <Parameter Name="prompt" Type="Microsoft.Teams.AI.AI.Prompt.PromptTemplate" />
-      </Parameters>
-      <Docs>
-        <param name="turnContext">Context for the current turn of conversation.</param>
-        <param name="turnState">Application state for the current turn of conversation.</param>
-        <param name="prompt">Generated prompt to be reviewed.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+             or threads to receive notice of cancellation.</param>
         <summary>
              Reviews an incoming utterance and generated prompt before it's sent to the planner.
              </summary>
@@ -98,7 +61,48 @@
              redirects to a new set of actions. Typically the moderator will return a new plan with a
              single DO command that calls <see cref="F:Microsoft.Teams.AI.AI.AIConstants.FlaggedInputActionName" /> to flag the input for review.
             
-             The moderator can pass any entities that make sense to the redirected action.
+             The moderator can pass any parameters that make sense to the redirected action.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReviewOutputAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt; ReviewOutputAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Planners.Plan plan, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; ReviewOutputAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Planners.Plan plan, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewOutputAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Planners.Plan,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReviewOutputAsync (turnContext As ITurnContext, turnState As TState, plan As Plan, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member ReviewOutputAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Planners.Plan * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="iModerator.ReviewOutputAsync (turnContext, turnState, plan, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="plan" Type="Microsoft.Teams.AI.AI.Planners.Plan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Context for the current turn of conversation.</param>
+        <param name="turnState">Application state for the current turn of conversation.</param>
+        <param name="plan">Plan generated by the planner.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+             or threads to receive notice of cancellation.</param>
+        <summary>
+             Reviews a plan generated by the planner before its executed.
+             </summary>
+        <returns>The plan to execute. Either the current plan passed in for review or a new plan.</returns>
+        <remarks>
+             The moderator can review the plan to ensure it's appropriate for the current conversation.
+            
+             To approve a plan simply return the plan that was passed in. A new plan can be returned to
+             redirect to a new set of actions. Typically the moderator will return a new plan with a
+             single DO command that calls <see cref="F:Microsoft.Teams.AI.AI.AIConstants.FlaggedOutputActionName" /> to flag the output for review.
+            
+             The moderator can pass any parameters that make sense to the redirected action.
              </remarks>
       </Docs>
     </Member>

@@ -1,0 +1,399 @@
+<Type Name="PromptManager" FullName="Microsoft.Teams.AI.AI.Prompts.PromptManager">
+  <TypeSignature Language="C#" Value="public class PromptManager : Microsoft.Teams.AI.AI.Prompts.IPromptDataSources, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt;, Microsoft.Teams.AI.AI.Prompts.IPromptTemplates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PromptManager extends System.Object implements class Microsoft.Teams.AI.AI.Prompts.IPromptDataSources, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt;, class Microsoft.Teams.AI.AI.Prompts.IPromptTemplates" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.PromptManager" />
+  <TypeSignature Language="VB.NET" Value="Public Class PromptManager&#xA;Implements IPromptDataSources, IPromptFunctions(Of List(Of String)), IPromptTemplates" />
+  <TypeSignature Language="F#" Value="type PromptManager = class&#xA;    interface IPromptFunctions&lt;List&lt;string&gt;&gt;&#xA;    interface IPromptDataSources&#xA;    interface IPromptTemplates" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Prompts.IPromptDataSources</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Prompts.IPromptTemplates</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             A filesystem based prompt manager.
+            
+             The default prompt manager uses the file system to define prompts that are compatible with
+             Microsoft's Semantic Kernel SDK (see: https://github.com/microsoft/semantic-kernel)
+            
+             Each prompt is a separate folder under a root prompts folder.The folder should contain 2 files:
+            
+             - "config.json": contains the prompts configuration and is a serialized instance of `PromptTemplateConfig`.
+             - "skprompt.txt": contains the text of the prompt and supports Semantic Kernels prompt template syntax.
+             - "functions.json": Optional.Contains a list of functions that can be invoked by the prompt.
+             
+             Prompts can be loaded and used by name and new dynamically defined prompt templates can be
+             registered with the prompt manager.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of `PromptManager`.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptManager (Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.#ctor(Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As PromptManagerOptions)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.PromptManager : Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions -&gt; Microsoft.Teams.AI.AI.Prompts.PromptManager" Usage="new Microsoft.Teams.AI.AI.Prompts.PromptManager options" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">PromptManagerOptions</param>
+        <summary>
+            Creates an instance of `PromptManager`.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDataSource">
+      <MemberSignature Language="C#" Value="public void AddDataSource (string name, Microsoft.Teams.AI.AI.DataSources.IDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddDataSource(string name, class Microsoft.Teams.AI.AI.DataSources.IDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.AddDataSource(System.String,Microsoft.Teams.AI.AI.DataSources.IDataSource)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddDataSource (name As String, dataSource As IDataSource)" />
+      <MemberSignature Language="F#" Value="abstract member AddDataSource : string * Microsoft.Teams.AI.AI.DataSources.IDataSource -&gt; unit&#xA;override this.AddDataSource : string * Microsoft.Teams.AI.AI.DataSources.IDataSource -&gt; unit" Usage="promptManager.AddDataSource (name, dataSource)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptDataSources.AddDataSource(System.String,Microsoft.Teams.AI.AI.DataSources.IDataSource)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dataSource" Type="Microsoft.Teams.AI.AI.DataSources.IDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="dataSource">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="AddFunction">
+      <MemberSignature Language="C#" Value="public void AddFunction (string name, Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;string&gt;&gt; func);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddFunction(string name, class Microsoft.Teams.AI.AI.Prompts.PromptFunction`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; func) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.AddFunction(System.String,Microsoft.Teams.AI.AI.Prompts.PromptFunction{System.Collections.Generic.List{System.String}})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFunction (name As String, func As PromptFunction(Of List(Of String)))" />
+      <MemberSignature Language="F#" Value="abstract member AddFunction : string * Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;string&gt;&gt; -&gt; unit&#xA;override this.AddFunction : string * Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;string&gt;&gt; -&gt; unit" Usage="promptManager.AddFunction (name, func)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.AddFunction(System.String,Microsoft.Teams.AI.AI.Prompts.PromptFunction{`0})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="func" Type="Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="func">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="AddPrompt">
+      <MemberSignature Language="C#" Value="public void AddPrompt (string name, Microsoft.Teams.AI.AI.Prompts.PromptTemplate prompt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddPrompt(string name, class Microsoft.Teams.AI.AI.Prompts.PromptTemplate prompt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.AddPrompt(System.String,Microsoft.Teams.AI.AI.Prompts.PromptTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddPrompt (name As String, prompt As PromptTemplate)" />
+      <MemberSignature Language="F#" Value="abstract member AddPrompt : string * Microsoft.Teams.AI.AI.Prompts.PromptTemplate -&gt; unit&#xA;override this.AddPrompt : string * Microsoft.Teams.AI.AI.Prompts.PromptTemplate -&gt; unit" Usage="promptManager.AddPrompt (name, prompt)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptTemplates.AddPrompt(System.String,Microsoft.Teams.AI.AI.Prompts.PromptTemplate)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="prompt" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="prompt">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.DataSources.IDataSource? GetDataSource (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.DataSources.IDataSource GetDataSource(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.GetDataSource(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDataSource (name As String) As IDataSource" />
+      <MemberSignature Language="F#" Value="abstract member GetDataSource : string -&gt; Microsoft.Teams.AI.AI.DataSources.IDataSource&#xA;override this.GetDataSource : string -&gt; Microsoft.Teams.AI.AI.DataSources.IDataSource" Usage="promptManager.GetDataSource name" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptDataSources.GetDataSource(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.DataSources.IDataSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetFunction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;string&gt;&gt;? GetFunction (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompts.PromptFunction`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; GetFunction(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.GetFunction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFunction (name As String) As PromptFunction(Of List(Of String))" />
+      <MemberSignature Language="F#" Value="abstract member GetFunction : string -&gt; Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;string&gt;&gt;&#xA;override this.GetFunction : string -&gt; Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;string&gt;&gt;" Usage="promptManager.GetFunction name" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.GetFunction(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrompt">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptTemplate GetPrompt (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompts.PromptTemplate GetPrompt(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.GetPrompt(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPrompt (name As String) As PromptTemplate" />
+      <MemberSignature Language="F#" Value="abstract member GetPrompt : string -&gt; Microsoft.Teams.AI.AI.Prompts.PromptTemplate&#xA;override this.GetPrompt : string -&gt; Microsoft.Teams.AI.AI.Prompts.PromptTemplate" Usage="promptManager.GetPrompt name" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptTemplates.GetPrompt(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="HasDataSource">
+      <MemberSignature Language="C#" Value="public bool HasDataSource (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasDataSource(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.HasDataSource(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasDataSource (name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member HasDataSource : string -&gt; bool&#xA;override this.HasDataSource : string -&gt; bool" Usage="promptManager.HasDataSource name" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptDataSources.HasDataSource(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="HasFunction">
+      <MemberSignature Language="C#" Value="public bool HasFunction (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasFunction(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.HasFunction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasFunction (name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member HasFunction : string -&gt; bool&#xA;override this.HasFunction : string -&gt; bool" Usage="promptManager.HasFunction name" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.HasFunction(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="HasPrompt">
+      <MemberSignature Language="C#" Value="public bool HasPrompt (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasPrompt(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.HasPrompt(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasPrompt (name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member HasPrompt : string -&gt; bool&#xA;override this.HasPrompt : string -&gt; bool" Usage="promptManager.HasPrompt name" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptTemplates.HasPrompt(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeFunctionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;dynamic?&gt; InvokeFunctionAsync (string name, Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, System.Collections.Generic.List&lt;string&gt; args, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;object&gt; InvokeFunctionAsync(string name, class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, class System.Collections.Generic.List`1&lt;string&gt; args, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManager.InvokeFunctionAsync(System.String,Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Collections.Generic.List{System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeFunctionAsync (name As String, context As ITurnContext, memory As IMemory, tokenizer As ITokenizer, args As List(Of String), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Object)" />
+      <MemberSignature Language="F#" Value="abstract member InvokeFunctionAsync : string * Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * System.Collections.Generic.List&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;obj&gt;&#xA;override this.InvokeFunctionAsync : string * Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * System.Collections.Generic.List&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;obj&gt;" Usage="promptManager.InvokeFunctionAsync (name, context, memory, tokenizer, args, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.InvokeFunctionAsync(System.String,Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,`0,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="args" Type="System.Collections.Generic.List&lt;System.String&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="args">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public readonly Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions Options;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly class Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions Options" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.PromptManager.Options" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Options As PromptManagerOptions " />
+      <MemberSignature Language="F#" Value="val mutable Options : Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions" Usage="Microsoft.Teams.AI.AI.Prompts.PromptManager.Options" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prompt Manager Options
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

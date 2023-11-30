@@ -1,0 +1,454 @@
+<Type Name="AdaptiveCards&lt;TState&gt;" FullName="Microsoft.Teams.AI.AdaptiveCards&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class AdaptiveCards&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdaptiveCards`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AdaptiveCards`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class AdaptiveCards(Of TState)" />
+  <TypeSignature Language="F#" Value="type AdaptiveCards&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">The type of the turn state object used by the application.</typeparam>
+    <summary>
+            AdaptiveCards class to enable fluent style registration of handlers related to Adaptive Cards.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdaptiveCards (Microsoft.Teams.AI.Application&lt;TState&gt; app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.Application`1&lt;!TState&gt; app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.#ctor(Microsoft.Teams.AI.Application{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (app As Application(Of TState))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AdaptiveCards&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; : Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.AdaptiveCards&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="new Microsoft.Teams.AI.AdaptiveCards&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; app" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="app" Type="Microsoft.Teams.AI.Application&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="app" />
+        <summary>
+            Creates a new instance of the AdaptiveCards class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionExecute">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionExecute (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionExecute(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.ActionExecuteHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionExecute(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.ActionExecuteHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionExecute (routeSelectors As MultipleRouteSelector, handler As ActionExecuteHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionExecute : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionExecute (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card Action.Execute events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionExecute">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionExecute (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionExecute(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.ActionExecuteHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionExecute(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.ActionExecuteHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionExecute (routeSelector As RouteSelectorAsync, handler As ActionExecuteHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionExecute : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionExecute (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card Action.Execute events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionExecute">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionExecute (string verb, Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionExecute(string verb, class Microsoft.Teams.AI.ActionExecuteHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionExecute(System.String,Microsoft.Teams.AI.ActionExecuteHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionExecute (verb As String, handler As ActionExecuteHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionExecute : string * Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionExecute (verb, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verb">The named action to be handled.</param>
+        <param name="handler">Function to call when the action is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card Action.Execute events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionExecute">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionExecute (System.Text.RegularExpressions.Regex verbPattern, Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionExecute(class System.Text.RegularExpressions.Regex verbPattern, class Microsoft.Teams.AI.ActionExecuteHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionExecute(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.ActionExecuteHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionExecute (verbPattern As Regex, handler As ActionExecuteHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionExecute : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionExecute (verbPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionExecuteHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verbPattern">Regular expression to match against the named action to be handled.</param>
+        <param name="handler">Function to call when the action is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card Action.Execute events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionSubmit (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionSubmit(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.ActionSubmitHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionSubmit(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.ActionSubmitHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionSubmit (routeSelectors As MultipleRouteSelector, handler As ActionSubmitHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionSubmit : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.ActionSubmitHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionSubmit (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+             Adds a route to the application for handling Adaptive Card Action.Submit events.
+             </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+             The route will be added for the specified verb(s) and will be filtered using the
+             `actionSubmitFilter` option. The default filter is to use the `verb` field.
+             
+             For outgoing AdaptiveCards you will need to include the verb's name in the cards Action.Submit.
+             For example:
+            
+             ```JSON
+             {
+               "type": "Action.Submit",
+               "title": "OK",
+               "data": {
+                 "verb": "ok"
+               }
+             }
+             ```
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionSubmit (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionSubmit(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.ActionSubmitHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionSubmit(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.ActionSubmitHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionSubmit (routeSelector As RouteSelectorAsync, handler As ActionSubmitHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionSubmit : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.ActionSubmitHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionSubmit (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+             Adds a route to the application for handling Adaptive Card Action.Submit events.
+             </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+             The route will be added for the specified verb(s) and will be filtered using the
+             `actionSubmitFilter` option. The default filter is to use the `verb` field.
+             
+             For outgoing AdaptiveCards you will need to include the verb's name in the cards Action.Submit.
+             For example:
+            
+             ```JSON
+             {
+               "type": "Action.Submit",
+               "title": "OK",
+               "data": {
+                 "verb": "ok"
+               }
+             }
+             ```
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionSubmit (string verb, Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionSubmit(string verb, class Microsoft.Teams.AI.ActionSubmitHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionSubmit(System.String,Microsoft.Teams.AI.ActionSubmitHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionSubmit (verb As String, handler As ActionSubmitHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionSubmit : string * Microsoft.Teams.AI.ActionSubmitHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionSubmit (verb, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verb">The named action to be handled.</param>
+        <param name="handler">Function to call when the action is triggered.</param>
+        <summary>
+             Adds a route to the application for handling Adaptive Card Action.Submit events.
+             </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+             The route will be added for the specified verb(s) and will be filtered using the
+             `actionSubmitFilter` option. The default filter is to use the `verb` field.
+             
+             For outgoing AdaptiveCards you will need to include the verb's name in the cards Action.Submit.
+             For example:
+            
+             ```JSON
+             {
+               "type": "Action.Submit",
+               "title": "OK",
+               "data": {
+                 "verb": "ok"
+               }
+             }
+             ```
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActionSubmit">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnActionSubmit (System.Text.RegularExpressions.Regex verbPattern, Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnActionSubmit(class System.Text.RegularExpressions.Regex verbPattern, class Microsoft.Teams.AI.ActionSubmitHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnActionSubmit(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.ActionSubmitHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnActionSubmit (verbPattern As Regex, handler As ActionSubmitHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnActionSubmit : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.ActionSubmitHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnActionSubmit (verbPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.ActionSubmitHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="verbPattern">Regular expression to match against the named action to be handled.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+             Adds a route to the application for handling Adaptive Card Action.Submit events.
+             </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>
+             The route will be added for the specified verb(s) and will be filtered using the
+             `actionSubmitFilter` option. The default filter is to use the `verb` field.
+             
+             For outgoing AdaptiveCards you will need to include the verb's name in the cards Action.Submit.
+             For example:
+            
+             ```JSON
+             {
+               "type": "Action.Submit",
+               "title": "OK",
+               "data": {
+                 "verb": "ok"
+               }
+             }
+             ```
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSearch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSearch (Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSearch(class Microsoft.Teams.AI.MultipleRouteSelector routeSelectors, class Microsoft.Teams.AI.SearchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnSearch(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.SearchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSearch (routeSelectors As MultipleRouteSelector, handler As SearchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSearch : Microsoft.Teams.AI.MultipleRouteSelector * Microsoft.Teams.AI.SearchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnSearch (routeSelectors, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelectors" Type="Microsoft.Teams.AI.MultipleRouteSelector" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelectors">Combination of String, Regex, and RouteSelectorAsync selectors.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card dynamic search events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSearch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSearch (Microsoft.Teams.AI.RouteSelectorAsync routeSelector, Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSearch(class Microsoft.Teams.AI.RouteSelectorAsync routeSelector, class Microsoft.Teams.AI.SearchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnSearch(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.SearchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSearch (routeSelector As RouteSelectorAsync, handler As SearchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSearch : Microsoft.Teams.AI.RouteSelectorAsync * Microsoft.Teams.AI.SearchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnSearch (routeSelector, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSelector" Type="Microsoft.Teams.AI.RouteSelectorAsync" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeSelector">Function that's used to select a route. The function returning true triggers the route.</param>
+        <param name="handler">Function to call when the route is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card dynamic search events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSearch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSearch (string dataset, Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSearch(string dataset, class Microsoft.Teams.AI.SearchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnSearch(System.String,Microsoft.Teams.AI.SearchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSearch (dataset As String, handler As SearchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSearch : string * Microsoft.Teams.AI.SearchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnSearch (dataset, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataset" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dataset">The dataset to be searched.</param>
+        <param name="handler">Function to call when the search is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card dynamic search events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSearch">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnSearch (System.Text.RegularExpressions.Regex datasetPattern, Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnSearch(class System.Text.RegularExpressions.Regex datasetPattern, class Microsoft.Teams.AI.SearchHandlerAsync`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCards`1.OnSearch(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.SearchHandlerAsync{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnSearch (datasetPattern As Regex, handler As SearchHandlerAsync(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnSearch : System.Text.RegularExpressions.Regex * Microsoft.Teams.AI.SearchHandlerAsync&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="adaptiveCards.OnSearch (datasetPattern, handler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="datasetPattern" Type="System.Text.RegularExpressions.Regex" />
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.SearchHandlerAsync&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="datasetPattern">Regular expression to match against the dataset to be searched.</param>
+        <param name="handler">Function to call when the search is triggered.</param>
+        <summary>
+            Adds a route to the application for handling Adaptive Card dynamic search events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

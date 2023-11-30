@@ -1,0 +1,143 @@
+<Type Name="TemplateSection" FullName="Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection">
+  <TypeSignature Language="C#" Value="public class TemplateSection : Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateSection extends Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection" />
+  <TypeSignature Language="VB.NET" Value="Public Class TemplateSection&#xA;Inherits PromptSection" />
+  <TypeSignature Language="F#" Value="type TemplateSection = class&#xA;    inherit PromptSection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             A template section that will be rendered as a message.
+            
+             This section type is used to render a template as a message. The template can contain
+             parameters that will be replaced with values from memory or call functions to generate
+             dynamic content.
+            
+             Template syntax:
+              - `{{$memoryKey}}` - Renders the value of the specified memory key.
+             - `{{functionName}}` -Calls the specified function and renders the result.
+             - `{{functionName arg1 arg2 ...}}` -Calls the specified function with the provided list of arguments.
+            
+             Function arguments are optional and separated by spaces. They can be quoted using `'`, `"`, or `\`` delimiters.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateSection (string template, Microsoft.Teams.AI.AI.Models.ChatRole role, int tokens = -1, bool required = false, string separator = &quot;\n&quot;, string prefix = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string template, valuetype Microsoft.Teams.AI.AI.Models.ChatRole role, int32 tokens, bool required, string separator, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection.#ctor(System.String,Microsoft.Teams.AI.AI.Models.ChatRole,System.Int32,System.Boolean,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (template As String, role As ChatRole, Optional tokens As Integer = -1, Optional required As Boolean = false, Optional separator As String = &quot;\n&quot;, Optional prefix As String = &quot;&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection : string * Microsoft.Teams.AI.AI.Models.ChatRole * int * bool * string * string -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection" Usage="new Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection (template, role, tokens, required, separator, prefix)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="template" Type="System.String" />
+        <Parameter Name="role" Type="Microsoft.Teams.AI.AI.Models.ChatRole" />
+        <Parameter Name="tokens" Type="System.Int32" />
+        <Parameter Name="required" Type="System.Boolean" />
+        <Parameter Name="separator" Type="System.String" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="template">template to render</param>
+        <param name="role">message role</param>
+        <param name="tokens">tokens</param>
+        <param name="required">required</param>
+        <param name="separator">separator</param>
+        <param name="prefix">prefix</param>
+        <summary>
+            Creates instance of `TemplateSection`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsMessagesAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function RenderAsMessagesAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of List(Of ChatMessage)))" />
+      <MemberSignature Language="F#" Value="override this.RenderAsMessagesAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;" Usage="templateSection.RenderAsMessagesAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="functions">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="maxTokens">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="role">
+      <MemberSignature Language="C#" Value="public readonly Microsoft.Teams.AI.AI.Models.ChatRole role;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly valuetype Microsoft.Teams.AI.AI.Models.ChatRole role" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection.role" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly role As ChatRole " />
+      <MemberSignature Language="F#" Value="val mutable role : Microsoft.Teams.AI.AI.Models.ChatRole" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection.role" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.ChatRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            message role
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="template">
+      <MemberSignature Language="C#" Value="public readonly string template;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string template" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection.template" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly template As String " />
+      <MemberSignature Language="F#" Value="val mutable template : string" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection.template" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            template to be rendered
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

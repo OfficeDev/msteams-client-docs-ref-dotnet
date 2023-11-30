@@ -1,0 +1,83 @@
+<Type Name="DefaultResponseValidator" FullName="Microsoft.Teams.AI.AI.Validators.DefaultResponseValidator">
+  <TypeSignature Language="C#" Value="public class DefaultResponseValidator : Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultResponseValidator extends System.Object implements class Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Validators.DefaultResponseValidator" />
+  <TypeSignature Language="VB.NET" Value="Public Class DefaultResponseValidator&#xA;Implements IPromptResponseValidator" />
+  <TypeSignature Language="F#" Value="type DefaultResponseValidator = class&#xA;    interface IPromptResponseValidator" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Default response validator that always returns true.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultResponseValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Validators.DefaultResponseValidator.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates instance of `DefaultResponseValidator`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateResponseAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt; ValidateResponseAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, Microsoft.Teams.AI.AI.Prompts.PromptResponse response, int remainingAttempts, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Validators.Validation&gt; ValidateResponseAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, class Microsoft.Teams.AI.AI.Prompts.PromptResponse response, int32 remainingAttempts, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Validators.DefaultResponseValidator.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateResponseAsync (context As ITurnContext, memory As IMemory, tokenizer As ITokenizer, response As PromptResponse, remainingAttempts As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Validation)" />
+      <MemberSignature Language="F#" Value="abstract member ValidateResponseAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptResponse * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt;&#xA;override this.ValidateResponseAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptResponse * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt;" Usage="defaultResponseValidator.ValidateResponseAsync (context, memory, tokenizer, response, remainingAttempts, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="response" Type="Microsoft.Teams.AI.AI.Prompts.PromptResponse" />
+        <Parameter Name="remainingAttempts" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="response">To be added.</param>
+        <param name="remainingAttempts">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

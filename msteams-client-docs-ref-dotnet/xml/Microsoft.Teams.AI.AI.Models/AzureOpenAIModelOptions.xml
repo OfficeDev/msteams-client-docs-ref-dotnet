@@ -1,0 +1,138 @@
+<Type Name="AzureOpenAIModelOptions" FullName="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions">
+  <TypeSignature Language="C#" Value="public class AzureOpenAIModelOptions : Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureOpenAIModelOptions extends Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureOpenAIModelOptions&#xA;Inherits BaseOpenAIModelOptions" />
+  <TypeSignature Language="F#" Value="type AzureOpenAIModelOptions = class&#xA;    inherit BaseOpenAIModelOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for configuring an `OpenAIModel` to call an Azure OpenAI hosted model.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureOpenAIModelOptions (string azureApiKey, string azureDefaultDeployment, string azureEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string azureApiKey, string azureDefaultDeployment, string azureEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (azureApiKey As String, azureDefaultDeployment As String, azureEndpoint As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions : string * string * string -&gt; Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" Usage="new Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions (azureApiKey, azureDefaultDeployment, azureEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="azureApiKey" Type="System.String" />
+        <Parameter Name="azureDefaultDeployment" Type="System.String" />
+        <Parameter Name="azureEndpoint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="azureApiKey">API key to use when making requests to Azure OpenAI.</param>
+        <param name="azureDefaultDeployment">Default name of the Azure OpenAI deployment (model) to use.</param>
+        <param name="azureEndpoint">Deployment endpoint to use.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException" />
+      </Docs>
+    </Member>
+    <Member MemberName="AzureApiKey">
+      <MemberSignature Language="C#" Value="public string AzureApiKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureApiKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureApiKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureApiKey As String" />
+      <MemberSignature Language="F#" Value="member this.AzureApiKey : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureApiKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            API key to use when making requests to Azure OpenAI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureApiVersion">
+      <MemberSignature Language="C#" Value="public string? AzureApiVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureApiVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureApiVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureApiVersion As String" />
+      <MemberSignature Language="F#" Value="member this.AzureApiVersion : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureApiVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Version of the API being called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureDefaultDeployment">
+      <MemberSignature Language="C#" Value="public string AzureDefaultDeployment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureDefaultDeployment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureDefaultDeployment" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureDefaultDeployment As String" />
+      <MemberSignature Language="F#" Value="member this.AzureDefaultDeployment : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureDefaultDeployment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default name of the Azure OpenAI deployment (model) to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureEndpoint">
+      <MemberSignature Language="C#" Value="public string AzureEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.AzureEndpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Deployment endpoint to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

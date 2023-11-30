@@ -26,11 +26,11 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ActionAttribute (string name, bool allowOverrides = true);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, bool allowOverrides) cil managed" />
+      <MemberSignature Language="C#" Value="public ActionAttribute (string name, bool isDefault = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, bool isDefault) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Action.ActionAttribute.#ctor(System.String,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, Optional allowOverrides As Boolean = true)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Action.ActionAttribute : string * bool -&gt; Microsoft.Teams.AI.AI.Action.ActionAttribute" Usage="new Microsoft.Teams.AI.AI.Action.ActionAttribute (name, allowOverrides)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, Optional isDefault As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Action.ActionAttribute : string * bool -&gt; Microsoft.Teams.AI.AI.Action.ActionAttribute" Usage="new Microsoft.Teams.AI.AI.Action.ActionAttribute (name, isDefault)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -38,23 +38,23 @@
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
-        <Parameter Name="allowOverrides" Type="System.Boolean" />
+        <Parameter Name="isDefault" Type="System.Boolean" />
       </Parameters>
       <Docs>
         <param name="name">The name of the action.</param>
-        <param name="allowOverrides">Whether this action can override an existing one.</param>
+        <param name="isDefault">Whether this action is default.</param>
         <summary>
             Creates a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Action.ActionAttribute" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="AllowOverrides">
-      <MemberSignature Language="C#" Value="public bool AllowOverrides { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool AllowOverrides" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Action.ActionAttribute.AllowOverrides" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowOverrides As Boolean" />
-      <MemberSignature Language="F#" Value="member this.AllowOverrides : bool" Usage="Microsoft.Teams.AI.AI.Action.ActionAttribute.AllowOverrides" />
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public bool IsDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Action.ActionAttribute.IsDefault" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDefault As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDefault : bool" Usage="Microsoft.Teams.AI.AI.Action.ActionAttribute.IsDefault" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -65,7 +65,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            Whether or not this action's properties can be overridden.
+            Whether this action is default.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

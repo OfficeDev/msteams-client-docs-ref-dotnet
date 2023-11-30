@@ -1,0 +1,171 @@
+<Type Name="MessageExtensionsAuthenticationBase" FullName="Microsoft.Teams.AI.MessageExtensionsAuthenticationBase">
+  <TypeSignature Language="C#" Value="public abstract class MessageExtensionsAuthenticationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageExtensionsAuthenticationBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MessageExtensionsAuthenticationBase" />
+  <TypeSignature Language="F#" Value="type MessageExtensionsAuthenticationBase = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for message extension authentication that handles common logic
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageExtensionsAuthenticationBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticateAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.SignInResponse&gt; AuthenticateAsync (Microsoft.Bot.Builder.ITurnContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.SignInResponse&gt; AuthenticateAsync(class Microsoft.Bot.Builder.ITurnContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.AuthenticateAsync(Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AuthenticateAsync (context As ITurnContext) As Task(Of SignInResponse)" />
+      <MemberSignature Language="F#" Value="member this.AuthenticateAsync : Microsoft.Bot.Builder.ITurnContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.SignInResponse&gt;" Usage="messageExtensionsAuthenticationBase.AuthenticateAsync context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.SignInResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">The turn context</param>
+        <summary>
+            Authenticate current user
+            </summary>
+        <returns>The sign in response</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignInLink">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;string&gt; GetSignInLink (Microsoft.Bot.Builder.ITurnContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; GetSignInLink(class Microsoft.Bot.Builder.ITurnContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.GetSignInLink(Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetSignInLink (context As ITurnContext) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="abstract member GetSignInLink : Microsoft.Bot.Builder.ITurnContext -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="messageExtensionsAuthenticationBase.GetSignInLink context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">The turn context</param>
+        <summary>
+            Gets the sign in link for the user.
+            </summary>
+        <returns>The sign in link</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleSsoTokenExchange">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt; HandleSsoTokenExchange (Microsoft.Bot.Builder.ITurnContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Schema.TokenResponse&gt; HandleSsoTokenExchange(class Microsoft.Bot.Builder.ITurnContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.HandleSsoTokenExchange(Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function HandleSsoTokenExchange (context As ITurnContext) As Task(Of TokenResponse)" />
+      <MemberSignature Language="F#" Value="abstract member HandleSsoTokenExchange : Microsoft.Bot.Builder.ITurnContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;" Usage="messageExtensionsAuthenticationBase.HandleSsoTokenExchange context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">The turn context</param>
+        <summary>
+            Handles the SSO token exchange.
+            </summary>
+        <returns>The token response if token exchange success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleUserSignIn">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt; HandleUserSignIn (Microsoft.Bot.Builder.ITurnContext context, string magicCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Schema.TokenResponse&gt; HandleUserSignIn(class Microsoft.Bot.Builder.ITurnContext context, string magicCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.HandleUserSignIn(Microsoft.Bot.Builder.ITurnContext,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function HandleUserSignIn (context As ITurnContext, magicCode As String) As Task(Of TokenResponse)" />
+      <MemberSignature Language="F#" Value="abstract member HandleUserSignIn : Microsoft.Bot.Builder.ITurnContext * string -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;" Usage="messageExtensionsAuthenticationBase.HandleUserSignIn (context, magicCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="magicCode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">The turn context</param>
+        <param name="magicCode">The magic code from user sign-in.</param>
+        <summary>
+            Handles the user sign in.
+            </summary>
+        <returns>The token response if successfully verified the magic code</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidActivity">
+      <MemberSignature Language="C#" Value="public virtual bool IsValidActivity (Microsoft.Bot.Builder.ITurnContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValidActivity(class Microsoft.Bot.Builder.ITurnContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsValidActivity (context As ITurnContext) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsValidActivity : Microsoft.Bot.Builder.ITurnContext -&gt; bool&#xA;override this.IsValidActivity : Microsoft.Bot.Builder.ITurnContext -&gt; bool" Usage="messageExtensionsAuthenticationBase.IsValidActivity context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">The turn context</param>
+        <summary>
+            Whether the current activity is a valid activity that supports authentication
+            </summary>
+        <returns>True if valid. Otherwise, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

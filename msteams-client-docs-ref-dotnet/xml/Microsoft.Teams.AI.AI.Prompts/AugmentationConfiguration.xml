@@ -1,0 +1,113 @@
+<Type Name="AugmentationConfiguration" FullName="Microsoft.Teams.AI.AI.Prompts.AugmentationConfiguration">
+  <TypeSignature Language="C#" Value="public class AugmentationConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AugmentationConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.AugmentationConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public Class AugmentationConfiguration" />
+  <TypeSignature Language="F#" Value="type AugmentationConfiguration = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            augmentation configuration portion of a prompt template.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AugmentationConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.AugmentationConfiguration.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSources">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,int&gt; DataSources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, int32&gt; DataSources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.AugmentationConfiguration.DataSources" />
+      <MemberSignature Language="VB.NET" Value="Public Property DataSources As Dictionary(Of String, Integer)" />
+      <MemberSignature Language="F#" Value="member this.DataSources : System.Collections.Generic.Dictionary&lt;string, int&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.AugmentationConfiguration.DataSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonIgnore(Condition=System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("data_sources")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("data_sources")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             List of named data sources to augment the prompt with.
+            
+             For each data source, the value is the max number of tokens to use from the data source.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Augmentations.AugmentationType Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.AI.Augmentations.AugmentationType Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.AugmentationConfiguration.Type" />
+      <MemberSignature Language="VB.NET" Value="Public Property Type As AugmentationType" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Teams.AI.AI.Augmentations.AugmentationType with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.AugmentationConfiguration.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumConverter))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumConverter))&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("augmentation_type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("augmentation_type")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyOrder(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyOrder(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Augmentations.AugmentationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of augmentation to use. Default: None
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

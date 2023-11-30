@@ -1,0 +1,222 @@
+<Type Name="ActionPlanner&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class ActionPlanner&lt;TState&gt; : Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt; where TState : TurnState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActionPlanner`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object implements class Microsoft.Teams.AI.AI.Planners.IPlanner`1&lt;!TState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class ActionPlanner(Of TState)&#xA;Implements IPlanner(Of TState)" />
+  <TypeSignature Language="F#" Value="type ActionPlanner&lt;'State (requires 'State :&gt; TurnState)&gt; = class&#xA;    interface IPlanner&lt;'State (requires 'State :&gt; TurnState)&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TState">Type of application state.</typeparam>
+    <summary>
+            A planner that uses a Large Language Model (LLM) to generate plans.
+            </summary>
+    <remarks>
+            The ActionPlanner is a powerful planner that uses a LLM to generate plans. The planner can
+            trigger parameterized actions and send text based responses to the user. The ActionPlanner
+            supports the following advanced features:
+            - //////Augmentations:////// Augmentations virtually eliminate the need for prompt engineering. Prompts
+              can be configured to use a named augmentation which will be automatically appended to the outgoing
+              prompt. Augmentations let the developer specify whether they want to support multi-step plans (sequence),
+              use OpenAI's functions support (functions), or create an AutoGPT style agent (monologue).
+            - //////Validations:////// Validators are used to validate the response returned by the LLM and can guarantee
+              that the parameters passed to an action match a supplied schema. The validator used is automatically
+              selected based on the augmentation being used. Validators also prevent hallucinated action names
+              making it impossible for the LLM to trigger an action that doesn't exist.
+            - //////Repair:////// The ActionPlanner will automatically attempt to repair invalid responses returned by the
+              LLM using a feedback loop. When a validation fails, the ActionPlanner sends the error back to the
+              model, along with an instruction asking it to fix its mistake. This feedback technique leads to a
+              dramatic reduction in the number of invalid responses returned by the model.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionPlanner (Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt; options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1&lt;!TState&gt; options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.#ctor(Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions{`0},Microsoft.Extensions.Logging.ILoggerFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As ActionPlannerOptions(Of TState), Optional loggerFactory As ILoggerFactory = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; : Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; * Microsoft.Extensions.Logging.ILoggerFactory -&gt; Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;" Usage="new Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; (options, loggerFactory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options used to configure the planner.</param>
+        <param name="loggerFactory" />
+        <summary>
+            Creates a new `ActionPlanner` instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTaskAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt; BeginTaskAsync (Microsoft.Bot.Builder.ITurnContext context, TState state, Microsoft.Teams.AI.AI.AI&lt;TState&gt; ai, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; BeginTaskAsync(class Microsoft.Bot.Builder.ITurnContext context, !TState state, class Microsoft.Teams.AI.AI.AI`1&lt;!TState&gt; ai, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.BeginTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTaskAsync (context As ITurnContext, state As TState, ai As AI(Of TState), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member BeginTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;&#xA;override this.BeginTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="actionPlanner.BeginTaskAsync (context, state, ai, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Planners.IPlanner`1.BeginTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="state" Type="TState" />
+        <Parameter Name="ai" Type="Microsoft.Teams.AI.AI.AI&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">Context for the current turn of conversation.</param>
+        <param name="state">Application state for the current turn of conversation.</param>
+        <param name="ai">The AI system that is generating the plan.</param>
+        <param name="cancellationToken" />
+        <summary>
+             Starts a new task.
+             </summary>
+        <returns>The plan that was generated.</returns>
+        <remarks>
+             This method is called when the AI system is ready to start a new task. The planner should
+             generate a plan that the AI system will execute. Returning an empty plan signals that
+             there is no work to be performed.
+            
+             The planner should take the users input from `state.temp.input`.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletePromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.PromptTemplate template, Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator? validator, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.PromptTemplate template, class Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator validator, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompletePromptAsync (context As ITurnContext, memory As IMemory, template As PromptTemplate, validator As IPromptResponseValidator, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PromptResponse)" />
+      <MemberSignature Language="F#" Value="member this.CompletePromptAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.PromptTemplate * Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;" Usage="actionPlanner.CompletePromptAsync (context, memory, template, validator, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="template" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+        <Parameter Name="validator" Type="Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">Context for the current turn of conversation.</param>
+        <param name="memory">A memory interface used to access state variables (the turn state object implements this interface.)</param>
+        <param name="template">prompt template</param>
+        <param name="validator">A validator to use to validate the response returned by the model.</param>
+        <param name="cancellationToken" />
+        <summary>
+             Completes a prompt using an optional validator.
+             </summary>
+        <returns>The result of the LLM call.</returns>
+        <remarks>
+             This method allows the developer to manually complete a prompt and access the models
+             response. If a validator is specified, the response will be validated and repaired if
+             necessary. If no validator is specified, the response will be returned as-is.
+            
+             If a validator like the `JsonResponseValidator` is used, the response returned will be
+             a message containing a JSON object. If no validator is used, the response will be a
+             message containing the response text as a string.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueTaskAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt; ContinueTaskAsync (Microsoft.Bot.Builder.ITurnContext context, TState state, Microsoft.Teams.AI.AI.AI&lt;TState&gt; ai, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; ContinueTaskAsync(class Microsoft.Bot.Builder.ITurnContext context, !TState state, class Microsoft.Teams.AI.AI.AI`1&lt;!TState&gt; ai, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.ContinueTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContinueTaskAsync (context As ITurnContext, state As TState, ai As AI(Of TState), Optional cancellationToken As CancellationToken = Nothing) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member ContinueTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;&#xA;override this.ContinueTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="actionPlanner.ContinueTaskAsync (context, state, ai, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Planners.IPlanner`1.ContinueTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="state" Type="TState" />
+        <Parameter Name="ai" Type="Microsoft.Teams.AI.AI.AI&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">Context for the current turn of conversation.</param>
+        <param name="state">Application state for the current turn of conversation.</param>
+        <param name="ai">The AI system that is generating the plan.</param>
+        <param name="cancellationToken" />
+        <summary>
+             Continues the current task.
+             </summary>
+        <returns>The plan that was generated.</returns>
+        <remarks>
+             This method is called when the AI system has finished executing the previous plan and is
+             ready to continue the current task. The planner should generate a plan that the AI system
+             will execute. Returning an empty plan signals that the task is completed and there is no work
+             to be performed.
+            
+             The output from the last plan step that was executed is passed to the planner via `state.temp.input`.
+             </remarks>
+        <exception cref="T:System.Exception">thrown when there was an issue generating a plan</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public readonly Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt; Options;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly class Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1&lt;!TState&gt; Options" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.Options" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Options As ActionPlannerOptions(Of TState) " />
+      <MemberSignature Language="F#" Value="val mutable Options : Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.Options" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Options used to configure the planner.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

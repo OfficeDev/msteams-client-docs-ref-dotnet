@@ -1,0 +1,127 @@
+<Type Name="PromptResponseStatus" FullName="Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus">
+  <TypeSignature Language="C#" Value="public enum PromptResponseStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PromptResponseStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum PromptResponseStatus" />
+  <TypeSignature Language="F#" Value="type PromptResponseStatus = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Status of the prompt response.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus Error = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.Error" />
+      <MemberSignature Language="VB.NET" Value="Error" />
+      <MemberSignature Language="F#" Value="Error = 1" Usage="Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Error - An error occurred while completing the prompt.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidResponse">
+      <MemberSignature Language="C#" Value="InvalidResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus InvalidResponse = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.InvalidResponse" />
+      <MemberSignature Language="VB.NET" Value="InvalidResponse" />
+      <MemberSignature Language="F#" Value="InvalidResponse = 3" Usage="Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.InvalidResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            InvalidResponse - The response was invalid.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RateLimited">
+      <MemberSignature Language="C#" Value="RateLimited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus RateLimited = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.RateLimited" />
+      <MemberSignature Language="VB.NET" Value="RateLimited" />
+      <MemberSignature Language="F#" Value="RateLimited = 2" Usage="Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.RateLimited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            RateLimited - The request was rate limited.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.Success" />
+      <MemberSignature Language="VB.NET" Value="Success" />
+      <MemberSignature Language="F#" Value="Success = 0" Usage="Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Success - The prompt was successfully completed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TooLong">
+      <MemberSignature Language="C#" Value="TooLong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus TooLong = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.TooLong" />
+      <MemberSignature Language="VB.NET" Value="TooLong" />
+      <MemberSignature Language="F#" Value="TooLong = 4" Usage="Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus.TooLong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            TooLong - The rendered prompt exceeded the `max_input_tokens` limit.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

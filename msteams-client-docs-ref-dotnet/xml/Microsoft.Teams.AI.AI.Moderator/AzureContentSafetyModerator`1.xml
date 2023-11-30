@@ -1,9 +1,9 @@
 <Type Name="AzureContentSafetyModerator&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator&lt;TState&gt;">
-  <TypeSignature Language="C#" Value="public class AzureContentSafetyModerator&lt;TState&gt; : Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt; where TState : ITurnState&lt;StateBase,StateBase,TempState&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureContentSafetyModerator`1&lt;(class Microsoft.Teams.AI.State.ITurnState`3&lt;class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.StateBase, class Microsoft.Teams.AI.State.TempState&gt;) TState&gt; extends System.Object implements class Microsoft.Teams.AI.AI.Moderator.IModerator`1&lt;!TState&gt;" />
+  <TypeSignature Language="C#" Value="public class AzureContentSafetyModerator&lt;TState&gt; : Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt; where TState : TurnState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureContentSafetyModerator`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object implements class Microsoft.Teams.AI.AI.Moderator.IModerator`1&lt;!TState&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator`1" />
   <TypeSignature Language="VB.NET" Value="Public Class AzureContentSafetyModerator(Of TState)&#xA;Implements IModerator(Of TState)" />
-  <TypeSignature Language="F#" Value="type AzureContentSafetyModerator&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt; = class&#xA;    interface IModerator&lt;'State (requires 'State :&gt; ITurnState&lt;StateBase, StateBase, TempState&gt;)&gt;" />
+  <TypeSignature Language="F#" Value="type AzureContentSafetyModerator&lt;'State (requires 'State :&gt; TurnState)&gt; = class&#xA;    interface IModerator&lt;'State (requires 'State :&gt; TurnState)&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -11,7 +11,7 @@
   <TypeParameters>
     <TypeParameter Name="TState">
       <Constraints>
-        <InterfaceName>Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.StateBase,Microsoft.Teams.AI.State.TempState&gt;</InterfaceName>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
       </Constraints>
     </TypeParameter>
   </TypeParameters>
@@ -36,7 +36,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator`1.#ctor(Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (options As AzureContentSafetyModeratorOptions)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; : Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions -&gt; Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt;" Usage="new Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.ITurnState&lt;Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.StateBase, Microsoft.Teams.AI.State.TempState&gt;)&gt; options" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; : Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions -&gt; Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;" Usage="new Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt; options" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -53,64 +53,66 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="ReviewPlan">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt; ReviewPlan (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Planner.Plan plan);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planner.Plan&gt; ReviewPlan(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Planner.Plan plan) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator`1.ReviewPlan(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Planner.Plan)" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReviewPlan (turnContext As ITurnContext, turnState As TState, plan As Plan) As Task(Of Plan)" />
-      <MemberSignature Language="F#" Value="abstract member ReviewPlan : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Planner.Plan -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;&#xA;override this.ReviewPlan : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Planner.Plan -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;" Usage="azureContentSafetyModerator.ReviewPlan (turnContext, turnState, plan)" />
+    <Member MemberName="ReviewInputAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan?&gt; ReviewInputAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; ReviewInputAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator`1.ReviewInputAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReviewInputAsync (turnContext As ITurnContext, turnState As TState, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member ReviewInputAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;&#xA;override this.ReviewInputAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="azureContentSafetyModerator.ReviewInputAsync (turnContext, turnState, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewPlan(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Planner.Plan)</InterfaceMember>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewInputAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
         <Parameter Name="turnState" Type="TState" />
-        <Parameter Name="plan" Type="Microsoft.Teams.AI.AI.Planner.Plan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="turnContext">To be added.</param>
         <param name="turnState">To be added.</param>
-        <param name="plan">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
       </Docs>
     </Member>
-    <Member MemberName="ReviewPrompt">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan?&gt; ReviewPrompt (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Prompt.PromptTemplate prompt);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planner.Plan&gt; ReviewPrompt(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Prompt.PromptTemplate prompt) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator`1.ReviewPrompt(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Prompt.PromptTemplate)" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReviewPrompt (turnContext As ITurnContext, turnState As TState, prompt As PromptTemplate) As Task(Of Plan)" />
-      <MemberSignature Language="F#" Value="abstract member ReviewPrompt : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Prompt.PromptTemplate -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;&#xA;override this.ReviewPrompt : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Prompt.PromptTemplate -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;" Usage="azureContentSafetyModerator.ReviewPrompt (turnContext, turnState, prompt)" />
+    <Member MemberName="ReviewOutputAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt; ReviewOutputAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.Planners.Plan plan, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; ReviewOutputAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.Planners.Plan plan, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModerator`1.ReviewOutputAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Planners.Plan,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReviewOutputAsync (turnContext As ITurnContext, turnState As TState, plan As Plan, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member ReviewOutputAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Planners.Plan * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;&#xA;override this.ReviewOutputAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.Planners.Plan * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="azureContentSafetyModerator.ReviewOutputAsync (turnContext, turnState, plan, cancellationToken)" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember>M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewPrompt(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Prompt.PromptTemplate)</InterfaceMember>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Moderator.IModerator`1.ReviewOutputAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.Planners.Plan,System.Threading.CancellationToken)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planner.Plan&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
         <Parameter Name="turnState" Type="TState" />
-        <Parameter Name="prompt" Type="Microsoft.Teams.AI.AI.Prompt.PromptTemplate" />
+        <Parameter Name="plan" Type="Microsoft.Teams.AI.AI.Planners.Plan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="turnContext">To be added.</param>
         <param name="turnState">To be added.</param>
-        <param name="prompt">To be added.</param>
+        <param name="plan">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

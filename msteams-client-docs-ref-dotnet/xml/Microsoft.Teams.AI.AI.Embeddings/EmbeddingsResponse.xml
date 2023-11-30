@@ -1,0 +1,105 @@
+<Type Name="EmbeddingsResponse" FullName="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse">
+  <TypeSignature Language="C#" Value="public class EmbeddingsResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EmbeddingsResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse" />
+  <TypeSignature Language="VB.NET" Value="Public Class EmbeddingsResponse" />
+  <TypeSignature Language="F#" Value="type EmbeddingsResponse = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Response returned by a `EmbeddingsClient`.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmbeddingsResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string? Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.Message" />
+      <MemberSignature Language="VB.NET" Value="Public Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Message when status is not equal to `success`.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;ReadOnlyMemory&lt;float&gt;&gt;? Output { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.ReadOnlyMemory`1&lt;float32&gt;&gt; Output" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.Output" />
+      <MemberSignature Language="VB.NET" Value="Public Property Output As IList(Of ReadOnlyMemory(Of Single))" />
+      <MemberSignature Language="F#" Value="member this.Output : System.Collections.Generic.IList&lt;ReadOnlyMemory&lt;single&gt;&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.ReadOnlyMemory&lt;System.Single&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Embeddings for the given inputs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus Status" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.Status" />
+      <MemberSignature Language="VB.NET" Value="Public Property Status As EmbeddingsResponseStatus" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Status of the embeddings response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

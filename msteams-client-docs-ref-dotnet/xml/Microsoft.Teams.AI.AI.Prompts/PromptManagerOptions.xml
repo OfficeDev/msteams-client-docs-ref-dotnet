@@ -1,0 +1,166 @@
+<Type Name="PromptManagerOptions" FullName="Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions">
+  <TypeSignature Language="C#" Value="public class PromptManagerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PromptManagerOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class PromptManagerOptions" />
+  <TypeSignature Language="F#" Value="type PromptManagerOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options used to configure the prompt manager.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptManagerOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConversationHistoryTokens">
+      <MemberSignature Language="C#" Value="public int MaxConversationHistoryTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConversationHistoryTokens" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.MaxConversationHistoryTokens" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxConversationHistoryTokens As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxConversationHistoryTokens : int with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.MaxConversationHistoryTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Maximum number of tokens to of conversation history to include in prompts.
+            
+             The default is to let conversation history consume the remainder of the prompts
+             `max_input_tokens` budget. Setting this a value greater then 1 will override that and
+             all prompts will use a fixed token budget.
+            
+             Default: 1
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHistoryMessages">
+      <MemberSignature Language="C#" Value="public int MaxHistoryMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxHistoryMessages" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.MaxHistoryMessages" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxHistoryMessages As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxHistoryMessages : int with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.MaxHistoryMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Maximum number of messages to use when rendering conversation_history.
+            
+             This controls the automatic pruning of the conversation history that's done by the planners
+             LLMClient instance. This helps keep your memory from getting too big.
+            
+             Default: 10
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxInputTokens">
+      <MemberSignature Language="C#" Value="public int MaxInputTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxInputTokens" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.MaxInputTokens" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxInputTokens As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxInputTokens : int with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.MaxInputTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Maximum number of tokens user input to include in prompts.
+            
+             This defaults to unlimited but can set to a value greater then `1` to limit the length of
+             user input included in prompts. For example, if set to `100` then the any user input over
+             100 tokens in length will be truncated.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromptFolder">
+      <MemberSignature Language="C#" Value="public string PromptFolder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PromptFolder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.PromptFolder" />
+      <MemberSignature Language="VB.NET" Value="Public Property PromptFolder As String" />
+      <MemberSignature Language="F#" Value="member this.PromptFolder : string with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.PromptFolder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path to the filesystem folder containing all the applications prompts.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.ChatRole Role { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.AI.Models.ChatRole Role" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.Role" />
+      <MemberSignature Language="VB.NET" Value="Public Property Role As ChatRole" />
+      <MemberSignature Language="F#" Value="member this.Role : Microsoft.Teams.AI.AI.Models.ChatRole with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptManagerOptions.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.ChatRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Message role to use for loaded prompts.
+            
+             Default: ChatRole.System
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

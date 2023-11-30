@@ -1,0 +1,43 @@
+<Type Name="ConfigureSettingsHandler&lt;TState&gt;" FullName="Microsoft.Teams.AI.ConfigureSettingsHandler&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task ConfigureSettingsHandler&lt;TState&gt;(ITurnContext turnContext, TState turnState, object settings, CancellationToken cancellationToken) where TState : TurnState;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConfigureSettingsHandler`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.ConfigureSettingsHandler`1" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function ConfigureSettingsHandler(Of TState)(turnContext As ITurnContext, turnState As TState, settings As Object, cancellationToken As CancellationToken) As Task " />
+  <TypeSignature Language="F#" Value="type ConfigureSettingsHandler&lt;'State (requires 'State :&gt; TurnState)&gt; = delegate of ITurnContext * 'State * obj * CancellationToken -&gt; Task" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+    <Parameter Name="turnState" Type="TState" />
+    <Parameter Name="settings" Type="System.Object" />
+    <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TState">Type of the turn state. This allows for strongly typed access to the turn state.</typeparam>
+    <param name="turnContext">A strongly-typed context object for this turn.</param>
+    <param name="turnState">The turn state object that stores arbitrary data for this turn.</param>
+    <param name="settings">The configuration settings that was submitted.</param>
+    <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+    <summary>
+            Function for handling Message Extension configuring settings events.
+            </summary>
+    <returns>A task that represents the work queued to execute.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
