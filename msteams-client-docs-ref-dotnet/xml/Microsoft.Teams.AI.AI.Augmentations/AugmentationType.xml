@@ -18,33 +18,12 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="Functions">
-      <MemberSignature Language="C#" Value="Functions" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Augmentations.AugmentationType Functions = int32(1)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Functions" />
-      <MemberSignature Language="VB.NET" Value="Functions" />
-      <MemberSignature Language="F#" Value="Functions = 1" Usage="Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Functions" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.Teams.AI.AI.Augmentations.AugmentationType</ReturnType>
-      </ReturnValue>
-      <MemberValue>1</MemberValue>
-      <Docs>
-        <summary>
-            Functions
-            </summary>
-      </Docs>
-    </Member>
     <Member MemberName="Monologue">
       <MemberSignature Language="C#" Value="Monologue" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Augmentations.AugmentationType Monologue = int32(3)" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Augmentations.AugmentationType Monologue = int32(2)" />
       <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Monologue" />
       <MemberSignature Language="VB.NET" Value="Monologue" />
-      <MemberSignature Language="F#" Value="Monologue = 3" Usage="Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Monologue" />
+      <MemberSignature Language="F#" Value="Monologue = 2" Usage="Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Monologue" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -53,7 +32,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Augmentations.AugmentationType</ReturnType>
       </ReturnValue>
-      <MemberValue>3</MemberValue>
+      <MemberValue>2</MemberValue>
       <Docs>
         <summary>
             Monologue
@@ -83,10 +62,10 @@
     </Member>
     <Member MemberName="Sequence">
       <MemberSignature Language="C#" Value="Sequence" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Augmentations.AugmentationType Sequence = int32(2)" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Augmentations.AugmentationType Sequence = int32(1)" />
       <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Sequence" />
       <MemberSignature Language="VB.NET" Value="Sequence" />
-      <MemberSignature Language="F#" Value="Sequence = 2" Usage="Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Sequence" />
+      <MemberSignature Language="F#" Value="Sequence = 1" Usage="Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Sequence" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -95,7 +74,7 @@
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Augmentations.AugmentationType</ReturnType>
       </ReturnValue>
-      <MemberValue>2</MemberValue>
+      <MemberValue>1</MemberValue>
       <Docs>
         <summary>
             Sequence

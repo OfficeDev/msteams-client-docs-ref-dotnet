@@ -29,51 +29,76 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AuthenticationOptions (System.Collections.Generic.Dictionary&lt;string,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt; authentications, string? default = default, Microsoft.Teams.AI.SelectorAsync? autoSignIn = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Teams.AI.IAuthentication`1&lt;!TState&gt;&gt; authentications, string default, class Microsoft.Teams.AI.SelectorAsync autoSignIn) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AuthenticationOptions`1.#ctor(System.Collections.Generic.Dictionary{System.String,Microsoft.Teams.AI.IAuthentication{`0}},System.String,Microsoft.Teams.AI.SelectorAsync)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (authentications As Dictionary(Of String, IAuthentication(Of TState)), Optional default As String = Nothing, Optional autoSignIn As SelectorAsync = Nothing)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; : System.Collections.Generic.Dictionary&lt;string, Microsoft.Teams.AI.IAuthentication&lt;'State&gt;&gt; * string * Microsoft.Teams.AI.SelectorAsync -&gt; Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="new Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; (authentications, default, autoSignIn)" />
+      <MemberSignature Language="C#" Value="public AuthenticationOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AuthenticationOptions`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="authentications" Type="System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt;" />
-        <Parameter Name="default" Type="System.String" />
-        <Parameter Name="autoSignIn" Type="Microsoft.Teams.AI.SelectorAsync" />
-      </Parameters>
+      <Parameters />
       <Docs>
-        <param name="authentications">The authentication classes to sign-in and sign-out users.</param>
-        <param name="default">Describes the authentication class the bot should use if the user does not specify a authentication class name.</param>
-        <param name="autoSignIn">Indicates whether the bot should start the sign in flow when the user sends a message to the bot or triggers a message extension.</param>
         <summary>
-            Initializes a new instance of this class.
+            The authentication options constructor.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Authentications">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt; Authentications { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Teams.AI.IAuthentication`1&lt;!TState&gt;&gt; Authentications" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AuthenticationOptions`1.Authentications" />
-      <MemberSignature Language="VB.NET" Value="Public Property Authentications As Dictionary(Of String, IAuthentication(Of TState))" />
-      <MemberSignature Language="F#" Value="member this.Authentications : System.Collections.Generic.Dictionary&lt;string, Microsoft.Teams.AI.IAuthentication&lt;'State&gt;&gt; with get, set" Usage="Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.Authentications" />
-      <MemberType>Property</MemberType>
+    <Member MemberName="AddAuthentication">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt; AddAuthentication (string name, Microsoft.Teams.AI.OAuthSettings oauthSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.AuthenticationOptions`1&lt;!TState&gt; AddAuthentication(string name, class Microsoft.Teams.AI.OAuthSettings oauthSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AuthenticationOptions`1.AddAuthentication(System.String,Microsoft.Teams.AI.OAuthSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddAuthentication (name As String, oauthSettings As OAuthSettings) As AuthenticationOptions(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.AddAuthentication : string * Microsoft.Teams.AI.OAuthSettings -&gt; Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="authenticationOptions.AddAuthentication (name, oauthSettings)" />
+      <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Teams.AI.IAuthentication&lt;TState&gt;&gt;</ReturnType>
+        <ReturnType>Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt;</ReturnType>
       </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="oauthSettings" Type="Microsoft.Teams.AI.OAuthSettings" />
+      </Parameters>
       <Docs>
+        <param name="name">The authentication name.</param>
+        <param name="oauthSettings">The OAuth settings</param>
         <summary>
-            The authentication classes to sign-in and sign-out users.
-            Key uniquely identifies each authentication.
+            Configures the options to add an OAuth authentication setting.
             </summary>
-        <value>To be added.</value>
+        <returns>The object for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuthentication">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt; AddAuthentication (string name, Microsoft.Teams.AI.TeamsSsoSettings teamsSsoSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.AuthenticationOptions`1&lt;!TState&gt; AddAuthentication(string name, class Microsoft.Teams.AI.TeamsSsoSettings teamsSsoSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AuthenticationOptions`1.AddAuthentication(System.String,Microsoft.Teams.AI.TeamsSsoSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddAuthentication (name As String, teamsSsoSettings As TeamsSsoSettings) As AuthenticationOptions(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.AddAuthentication : string * Microsoft.Teams.AI.TeamsSsoSettings -&gt; Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="authenticationOptions.AddAuthentication (name, teamsSsoSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="teamsSsoSettings" Type="Microsoft.Teams.AI.TeamsSsoSettings" />
+      </Parameters>
+      <Docs>
+        <param name="name">The authentication name.</param>
+        <param name="teamsSsoSettings">The OAuth settings</param>
+        <summary>
+            Configures the options to add an teams sso authentication setting.
+            </summary>
+        <returns>The object for chaining purposes.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

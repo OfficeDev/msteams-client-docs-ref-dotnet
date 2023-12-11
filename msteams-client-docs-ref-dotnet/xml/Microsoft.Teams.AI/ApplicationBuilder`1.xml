@@ -196,12 +196,12 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="WithAuthenticationOptions">
-      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithAuthenticationOptions (Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt; authenticationOptions);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithAuthenticationOptions(class Microsoft.Teams.AI.AuthenticationOptions`1&lt;!TState&gt; authenticationOptions) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAuthenticationOptions(Microsoft.Teams.AI.AuthenticationOptions{`0})" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithAuthenticationOptions (authenticationOptions As AuthenticationOptions(Of TState)) As ApplicationBuilder(Of TState)" />
-      <MemberSignature Language="F#" Value="member this.WithAuthenticationOptions : Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithAuthenticationOptions authenticationOptions" />
+    <Member MemberName="WithAuthentication">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt; WithAuthentication (Microsoft.Bot.Builder.BotAdapter adapter, Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt; authenticationOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.ApplicationBuilder`1&lt;!TState&gt; WithAuthentication(class Microsoft.Bot.Builder.BotAdapter adapter, class Microsoft.Teams.AI.AuthenticationOptions`1&lt;!TState&gt; authenticationOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAuthentication(Microsoft.Bot.Builder.BotAdapter,Microsoft.Teams.AI.AuthenticationOptions{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithAuthentication (adapter As BotAdapter, authenticationOptions As AuthenticationOptions(Of TState)) As ApplicationBuilder(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.WithAuthentication : Microsoft.Bot.Builder.BotAdapter * Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.ApplicationBuilder&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.State.IMemory and 'State : (new : unit -&gt; 'State))&gt;" Usage="applicationBuilder.WithAuthentication (adapter, authenticationOptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -211,9 +211,11 @@
         <ReturnType>Microsoft.Teams.AI.ApplicationBuilder&lt;TState&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
+        <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
         <Parameter Name="authenticationOptions" Type="Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt;" />
       </Parameters>
       <Docs>
+        <param name="adapter">The bot adapter.</param>
         <param name="authenticationOptions">The options for authentication.</param>
         <summary>
             Configures authentication for the application.

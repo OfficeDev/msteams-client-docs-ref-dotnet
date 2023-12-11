@@ -1,0 +1,61 @@
+<Type Name="OAuthSettings" FullName="Microsoft.Teams.AI.OAuthSettings">
+  <TypeSignature Language="C#" Value="public class OAuthSettings : Microsoft.Bot.Builder.Dialogs.OAuthPromptSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OAuthSettings extends Microsoft.Bot.Builder.Dialogs.OAuthPromptSettings" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.OAuthSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class OAuthSettings&#xA;Inherits OAuthPromptSettings" />
+  <TypeSignature Language="F#" Value="type OAuthSettings = class&#xA;    inherit OAuthPromptSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Bot.Builder.Dialogs.OAuthPromptSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The settings for OAuthAuthentication.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OAuthSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.OAuthSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenExchangeUri">
+      <MemberSignature Language="C#" Value="public string? TokenExchangeUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenExchangeUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.OAuthSettings.TokenExchangeUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenExchangeUri As String" />
+      <MemberSignature Language="F#" Value="member this.TokenExchangeUri : string with get, set" Usage="Microsoft.Teams.AI.OAuthSettings.TokenExchangeUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The token exchange uri for SSO in adaptive card auth scenario.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

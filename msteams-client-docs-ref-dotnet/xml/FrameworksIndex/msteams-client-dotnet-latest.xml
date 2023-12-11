@@ -33,11 +33,6 @@
       <Member Id="M:Microsoft.Teams.AI.AdaptiveCards`1.OnSearch(System.String,Microsoft.Teams.AI.SearchHandlerAsync{`0})" />
       <Member Id="M:Microsoft.Teams.AI.AdaptiveCards`1.OnSearch(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.SearchHandlerAsync{`0})" />
     </Type>
-    <Type Name="Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase" Id="T:Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase">
-      <Member Id="M:Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase.#ctor" />
-      <Member Id="M:Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase.AuthenticateAsync(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.AdaptiveCardsAuthenticationBase.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
-    </Type>
     <Type Name="Microsoft.Teams.AI.AdaptiveCardsInvokeNames" Id="T:Microsoft.Teams.AI.AdaptiveCardsInvokeNames">
       <Member Id="F:Microsoft.Teams.AI.AdaptiveCardsInvokeNames.ACTION_INVOKE_NAME" />
       <Member Id="M:Microsoft.Teams.AI.AdaptiveCardsInvokeNames.#ctor" />
@@ -59,6 +54,7 @@
     <Type Name="Microsoft.Teams.AI.Application`1" Id="T:Microsoft.Teams.AI.Application`1">
       <Member Id="M:Microsoft.Teams.AI.Application`1.#ctor(Microsoft.Teams.AI.ApplicationOptions{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.AddRoute(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.RouteHandler{`0},System.Boolean)" />
+      <Member Id="M:Microsoft.Teams.AI.Application`1.GetTokenOrStartSignInAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.String,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnActivity(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.RouteHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnActivity(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.RouteHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnActivity(System.String,Microsoft.Teams.AI.RouteHandler{`0})" />
@@ -85,6 +81,7 @@
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnTurnAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.StartTypingTimer(Microsoft.Bot.Builder.ITurnContext)" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.StopTypingTimer" />
+      <Member Id="P:Microsoft.Teams.AI.Application`1.Adapter" />
       <Member Id="P:Microsoft.Teams.AI.Application`1.AdaptiveCards" />
       <Member Id="P:Microsoft.Teams.AI.Application`1.AI" />
       <Member Id="P:Microsoft.Teams.AI.Application`1.Authentication" />
@@ -100,7 +97,7 @@
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.SetStartTypingTimer(System.Boolean)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAdaptiveCardOptions(Microsoft.Teams.AI.AdaptiveCardsOptions)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAIOptions(Microsoft.Teams.AI.AI.AIOptions{`0})" />
-      <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAuthenticationOptions(Microsoft.Teams.AI.AuthenticationOptions{`0})" />
+      <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAuthentication(Microsoft.Bot.Builder.BotAdapter,Microsoft.Teams.AI.AuthenticationOptions{`0})" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithLongRunningMessages(Microsoft.Bot.Builder.BotAdapter,System.String)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithStorage(Microsoft.Bot.Builder.IStorage)" />
@@ -124,33 +121,18 @@
       <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.TurnStateFactory" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AuthenticationManager`1" Id="T:Microsoft.Teams.AI.AuthenticationManager`1">
-      <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.#ctor(Microsoft.Teams.AI.AuthenticationOptions{`0})" />
+      <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.#ctor(Microsoft.Teams.AI.Application{`0},Microsoft.Teams.AI.AuthenticationOptions{`0},Microsoft.Bot.Builder.IStorage)" />
       <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.Get(System.String)" />
-      <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.IsValidActivity(Microsoft.Bot.Builder.ITurnContext,System.String)" />
-      <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.SignOutUser(Microsoft.Bot.Builder.ITurnContext,`0,System.String)" />
-      <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.SignUserIn(Microsoft.Bot.Builder.ITurnContext,`0,System.String)" />
+      <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.SignOutUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.AuthenticationManager`1.SignUserInAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.String,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.Teams.AI.AuthenticationManager`1.Default" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AuthenticationOptions`1" Id="T:Microsoft.Teams.AI.AuthenticationOptions`1">
-      <Member Id="M:Microsoft.Teams.AI.AuthenticationOptions`1.#ctor(System.Collections.Generic.Dictionary{System.String,Microsoft.Teams.AI.IAuthentication{`0}},System.String,Microsoft.Teams.AI.SelectorAsync)" />
-      <Member Id="P:Microsoft.Teams.AI.AuthenticationOptions`1.Authentications" />
+      <Member Id="M:Microsoft.Teams.AI.AuthenticationOptions`1.#ctor" />
+      <Member Id="M:Microsoft.Teams.AI.AuthenticationOptions`1.AddAuthentication(System.String,Microsoft.Teams.AI.OAuthSettings)" />
+      <Member Id="M:Microsoft.Teams.AI.AuthenticationOptions`1.AddAuthentication(System.String,Microsoft.Teams.AI.TeamsSsoSettings)" />
       <Member Id="P:Microsoft.Teams.AI.AuthenticationOptions`1.AutoSignIn" />
       <Member Id="P:Microsoft.Teams.AI.AuthenticationOptions`1.Default" />
-    </Type>
-    <Type Name="Microsoft.Teams.AI.BotAuthenticationBase`1" Id="T:Microsoft.Teams.AI.BotAuthenticationBase`1">
-      <Member Id="F:Microsoft.Teams.AI.BotAuthenticationBase`1._name" />
-      <Member Id="F:Microsoft.Teams.AI.BotAuthenticationBase`1._storage" />
-      <Member Id="F:Microsoft.Teams.AI.BotAuthenticationBase`1._userSignInFailureHandler" />
-      <Member Id="F:Microsoft.Teams.AI.BotAuthenticationBase`1._userSignInSuccessHandler" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.#ctor(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Bot.Builder.IStorage)" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.AuthenticateAsync(Microsoft.Bot.Builder.ITurnContext,`0)" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.ContinueDialog(Microsoft.Bot.Builder.ITurnContext,`0,System.String)" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.HandleSignInActivity(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.TeamsAIAuthException,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.OnUserSignInSuccess(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.RunDialog(Microsoft.Bot.Builder.ITurnContext,`0,System.String)" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.TokenExchangeRouteSelector(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Teams.AI.BotAuthenticationBase`1.VerifyStateRouteSelector(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync`1" Id="T:Microsoft.Teams.AI.BotMessagePreviewEditHandlerAsync`1" />
     <Type Name="Microsoft.Teams.AI.BotMessagePreviewSendHandler`1" Id="T:Microsoft.Teams.AI.BotMessagePreviewSendHandler`1" />
@@ -177,12 +159,11 @@
     <Type Name="Microsoft.Teams.AI.FetchTaskHandlerAsync`1" Id="T:Microsoft.Teams.AI.FetchTaskHandlerAsync`1" />
     <Type Name="Microsoft.Teams.AI.FileConsentHandler`1" Id="T:Microsoft.Teams.AI.FileConsentHandler`1" />
     <Type Name="Microsoft.Teams.AI.IAuthentication`1" Id="T:Microsoft.Teams.AI.IAuthentication`1">
-      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.Initialize(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Bot.Builder.IStorage)" />
-      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.TeamsAIAuthException,System.Threading.Tasks.Task})" />
+      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.IsUserSignedInAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.AuthException,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.OnUserSignInSuccess(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.SignInUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
-      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.SignOutUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
+      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.SignInUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.IAuthentication`1.SignOutUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.MeetingEndHandler`1" Id="T:Microsoft.Teams.AI.MeetingEndHandler`1" />
     <Type Name="Microsoft.Teams.AI.MeetingParticipantsEventHandler`1" Id="T:Microsoft.Teams.AI.MeetingParticipantsEventHandler`1" />
@@ -223,14 +204,6 @@
       <Member Id="M:Microsoft.Teams.AI.MessageExtensions`1.OnSubmitAction(System.String,Microsoft.Teams.AI.SubmitActionHandlerAsync{`0})" />
       <Member Id="M:Microsoft.Teams.AI.MessageExtensions`1.OnSubmitAction(System.Text.RegularExpressions.Regex,Microsoft.Teams.AI.SubmitActionHandlerAsync{`0})" />
     </Type>
-    <Type Name="Microsoft.Teams.AI.MessageExtensionsAuthenticationBase" Id="T:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase">
-      <Member Id="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.#ctor" />
-      <Member Id="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.AuthenticateAsync(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.GetSignInLink(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.HandleSsoTokenExchange(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.HandleUserSignIn(Microsoft.Bot.Builder.ITurnContext,System.String)" />
-      <Member Id="M:Microsoft.Teams.AI.MessageExtensionsAuthenticationBase.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
-    </Type>
     <Type Name="Microsoft.Teams.AI.MessageExtensionsInvokeNames" Id="T:Microsoft.Teams.AI.MessageExtensionsInvokeNames">
       <Member Id="F:Microsoft.Teams.AI.MessageExtensionsInvokeNames.ANONYMOUS_QUERY_LINK_INVOKE_NAME" />
       <Member Id="F:Microsoft.Teams.AI.MessageExtensionsInvokeNames.FETCH_TASK_INVOKE_NAME" />
@@ -245,17 +218,17 @@
       <Member Id="P:Microsoft.Teams.AI.MultipleRouteSelector.Strings" />
     </Type>
     <Type Name="Microsoft.Teams.AI.O365ConnectorCardActionHandler`1" Id="T:Microsoft.Teams.AI.O365ConnectorCardActionHandler`1" />
-    <Type Name="Microsoft.Teams.AI.OAuthAdaptiveCardsAuthentication" Id="T:Microsoft.Teams.AI.OAuthAdaptiveCardsAuthentication">
-      <Member Id="M:Microsoft.Teams.AI.OAuthAdaptiveCardsAuthentication.#ctor" />
-    </Type>
     <Type Name="Microsoft.Teams.AI.OAuthAuthentication`1" Id="T:Microsoft.Teams.AI.OAuthAuthentication`1">
-      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.#ctor" />
-      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.Initialize(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Bot.Builder.IStorage)" />
-      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.TeamsAIAuthException,System.Threading.Tasks.Task})" />
+      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.#ctor(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Teams.AI.OAuthSettings,Microsoft.Bot.Builder.IStorage)" />
+      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.IsUserSignedInAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.AuthException,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.OnUserSignInSuccess(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.SignInUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
-      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.SignOutUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
+      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.SignInUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.SignOutUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.OAuthSettings" Id="T:Microsoft.Teams.AI.OAuthSettings">
+      <Member Id="M:Microsoft.Teams.AI.OAuthSettings.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.OAuthSettings.TokenExchangeUri" />
     </Type>
     <Type Name="Microsoft.Teams.AI.Query`1" Id="T:Microsoft.Teams.AI.Query`1">
       <Member Id="M:Microsoft.Teams.AI.Query`1.#ctor(System.Int32,System.Int32,`0)" />
@@ -274,11 +247,13 @@
     <Type Name="Microsoft.Teams.AI.SelectorAsync" Id="T:Microsoft.Teams.AI.SelectorAsync" />
     <Type Name="Microsoft.Teams.AI.SignInResponse" Id="T:Microsoft.Teams.AI.SignInResponse">
       <Member Id="M:Microsoft.Teams.AI.SignInResponse.#ctor(Microsoft.Teams.AI.SignInStatus)" />
+      <Member Id="P:Microsoft.Teams.AI.SignInResponse.Cause" />
+      <Member Id="P:Microsoft.Teams.AI.SignInResponse.Error" />
       <Member Id="P:Microsoft.Teams.AI.SignInResponse.Status" />
-      <Member Id="P:Microsoft.Teams.AI.SignInResponse.Token" />
     </Type>
     <Type Name="Microsoft.Teams.AI.SignInStatus" Id="T:Microsoft.Teams.AI.SignInStatus">
       <Member Id="F:Microsoft.Teams.AI.SignInStatus.Complete" />
+      <Member Id="F:Microsoft.Teams.AI.SignInStatus.Error" />
       <Member Id="F:Microsoft.Teams.AI.SignInStatus.Pending" />
     </Type>
     <Type Name="Microsoft.Teams.AI.SubmitActionHandlerAsync`1" Id="T:Microsoft.Teams.AI.SubmitActionHandlerAsync`1" />
@@ -298,17 +273,13 @@
       <Member Id="M:Microsoft.Teams.AI.TaskModulesOptions.#ctor" />
       <Member Id="P:Microsoft.Teams.AI.TaskModulesOptions.TaskDataFilter" />
     </Type>
-    <Type Name="Microsoft.Teams.AI.TeamsSsoAdaptiveCardsAuthentication" Id="T:Microsoft.Teams.AI.TeamsSsoAdaptiveCardsAuthentication">
-      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAdaptiveCardsAuthentication.#ctor" />
-    </Type>
     <Type Name="Microsoft.Teams.AI.TeamsSsoAuthentication`1" Id="T:Microsoft.Teams.AI.TeamsSsoAuthentication`1">
-      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.#ctor(Microsoft.Teams.AI.TeamsSsoSettings)" />
-      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.Initialize(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Bot.Builder.IStorage)" />
-      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
-      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.TeamsAIAuthException,System.Threading.Tasks.Task})" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.#ctor(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Teams.AI.TeamsSsoSettings,Microsoft.Bot.Builder.IStorage)" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.IsUserSignedInAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.AuthException,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.OnUserSignInSuccess(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.Tasks.Task})" />
-      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.SignInUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
-      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.SignOutUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.SignInUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.SignOutUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.TeamsSsoSettings" Id="T:Microsoft.Teams.AI.TeamsSsoSettings">
       <Member Id="M:Microsoft.Teams.AI.TeamsSsoSettings.#ctor(System.String[],System.String,Microsoft.Identity.Client.IConfidentialClientApplication,System.Int32,System.Boolean)" />
@@ -387,7 +358,6 @@
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.AI.Augmentations">
     <Type Name="Microsoft.Teams.AI.AI.Augmentations.AugmentationType" Id="T:Microsoft.Teams.AI.AI.Augmentations.AugmentationType">
-      <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Functions" />
       <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Monologue" />
       <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.None" />
       <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Sequence" />
@@ -397,12 +367,6 @@
       <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.DefaultAugmentation.CreatePlanFromResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.DefaultAugmentation.CreatePromptSection" />
       <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.DefaultAugmentation.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)" />
-    </Type>
-    <Type Name="Microsoft.Teams.AI.AI.Augmentations.FunctionsAugmentation" Id="T:Microsoft.Teams.AI.AI.Augmentations.FunctionsAugmentation">
-      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.FunctionsAugmentation.#ctor" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.FunctionsAugmentation.CreatePlanFromResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.FunctionsAugmentation.CreatePromptSection" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.FunctionsAugmentation.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Augmentations.IAugmentation" Id="T:Microsoft.Teams.AI.AI.Augmentations.IAugmentation">
       <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.IAugmentation.CreatePlanFromResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Threading.CancellationToken)" />
@@ -996,18 +960,19 @@
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.Exceptions">
+    <Type Name="Microsoft.Teams.AI.Exceptions.AuthException" Id="T:Microsoft.Teams.AI.Exceptions.AuthException">
+      <Member Id="M:Microsoft.Teams.AI.Exceptions.AuthException.#ctor(System.String,Microsoft.Teams.AI.Exceptions.AuthExceptionReason)" />
+      <Member Id="P:Microsoft.Teams.AI.Exceptions.AuthException.Cause" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Exceptions.AuthExceptionReason" Id="T:Microsoft.Teams.AI.Exceptions.AuthExceptionReason">
+      <Member Id="F:Microsoft.Teams.AI.Exceptions.AuthExceptionReason.CompletionWithoutToken" />
+      <Member Id="F:Microsoft.Teams.AI.Exceptions.AuthExceptionReason.InvalidActivity" />
+      <Member Id="F:Microsoft.Teams.AI.Exceptions.AuthExceptionReason.Other" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.Exceptions.HttpOperationException" Id="T:Microsoft.Teams.AI.Exceptions.HttpOperationException">
       <Member Id="F:Microsoft.Teams.AI.Exceptions.HttpOperationException.ResponseContent" />
       <Member Id="F:Microsoft.Teams.AI.Exceptions.HttpOperationException.StatusCode" />
       <Member Id="M:Microsoft.Teams.AI.Exceptions.HttpOperationException.#ctor(System.String,System.Nullable{System.Net.HttpStatusCode},System.String)" />
-    </Type>
-    <Type Name="Microsoft.Teams.AI.Exceptions.TeamsAIAuthException" Id="T:Microsoft.Teams.AI.Exceptions.TeamsAIAuthException">
-      <Member Id="M:Microsoft.Teams.AI.Exceptions.TeamsAIAuthException.#ctor(System.String,Microsoft.Teams.AI.Exceptions.TeamsAIAuthExceptionReason)" />
-      <Member Id="P:Microsoft.Teams.AI.Exceptions.TeamsAIAuthException.Cause" />
-    </Type>
-    <Type Name="Microsoft.Teams.AI.Exceptions.TeamsAIAuthExceptionReason" Id="T:Microsoft.Teams.AI.Exceptions.TeamsAIAuthExceptionReason">
-      <Member Id="F:Microsoft.Teams.AI.Exceptions.TeamsAIAuthExceptionReason.CompletionWithoutToken" />
-      <Member Id="F:Microsoft.Teams.AI.Exceptions.TeamsAIAuthExceptionReason.Other" />
     </Type>
     <Type Name="Microsoft.Teams.AI.Exceptions.TeamsAIException" Id="T:Microsoft.Teams.AI.Exceptions.TeamsAIException">
       <Member Id="M:Microsoft.Teams.AI.Exceptions.TeamsAIException.#ctor(System.String)" />
@@ -1045,14 +1010,12 @@
       <Member Id="F:Microsoft.Teams.AI.State.TempState.ActionOutputsKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.AuthTokenKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.DuplicateTokenExchangeKey" />
-      <Member Id="F:Microsoft.Teams.AI.State.TempState.HistoryKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.InputKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.OutputKey" />
       <Member Id="M:Microsoft.Teams.AI.State.TempState.#ctor" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.ActionOutputs" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.AuthTokens" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.DuplicateTokenExchange" />
-      <Member Id="P:Microsoft.Teams.AI.State.TempState.History" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.Input" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.Output" />
     </Type>

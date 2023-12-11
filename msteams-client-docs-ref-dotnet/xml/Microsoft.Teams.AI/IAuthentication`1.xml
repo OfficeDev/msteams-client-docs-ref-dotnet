@@ -25,67 +25,40 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
-    <Member MemberName="Initialize">
-      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Teams.AI.Application&lt;TState&gt; app, string name, Microsoft.Bot.Builder.IStorage? storage = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Teams.AI.Application`1&lt;!TState&gt; app, string name, class Microsoft.Bot.Builder.IStorage storage) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.Initialize(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Bot.Builder.IStorage)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (app As Application(Of TState), name As String, Optional storage As IStorage = Nothing)" />
-      <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; * string * Microsoft.Bot.Builder.IStorage -&gt; unit" Usage="iAuthentication.Initialize (app, name, storage)" />
+    <Member MemberName="IsUserSignedInAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string?&gt; IsUserSignedInAsync (Microsoft.Bot.Builder.ITurnContext turnContext, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; IsUserSignedInAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.IsUserSignedInAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsUserSignedInAsync (turnContext As ITurnContext, Optional cancellationToken As CancellationToken = Nothing) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="abstract member IsUserSignedInAsync : Microsoft.Bot.Builder.ITurnContext * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="iAuthentication.IsUserSignedInAsync (turnContext, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="app" Type="Microsoft.Teams.AI.Application&lt;TState&gt;" />
-        <Parameter Name="name" Type="System.String" />
-        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="app">The application object</param>
-        <param name="name">The name of the authentication handler</param>
-        <param name="storage">The storage to save turn state</param>
+        <param name="turnContext">The turn context.</param>
+        <param name="cancellationToken">The cancellation token</param>
         <summary>
-            Initialize the authentication class
+            Check if the user is signed, if they are then return the token.
             </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="IsValidActivity">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; IsValidActivity (Microsoft.Bot.Builder.ITurnContext context);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; IsValidActivity(class Microsoft.Bot.Builder.ITurnContext context) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.IsValidActivity(Microsoft.Bot.Builder.ITurnContext)" />
-      <MemberSignature Language="VB.NET" Value="Public Function IsValidActivity (context As ITurnContext) As Task(Of Boolean)" />
-      <MemberSignature Language="F#" Value="abstract member IsValidActivity : Microsoft.Bot.Builder.ITurnContext -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="iAuthentication.IsValidActivity context" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
-      </Parameters>
-      <Docs>
-        <param name="context">Current turn context.</param>
-        <summary>
-            Check whether current activity supports authentication.
-            </summary>
-        <returns>True if current activity supports authentication. Otherwise, false.</returns>
+        <returns>The token if the user is signed. Otherwise null.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="OnUserSignInFailure">
-      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.IAuthentication&lt;TState&gt; OnUserSignInFailure (Func&lt;Microsoft.Bot.Builder.ITurnContext,TState,Microsoft.Teams.AI.Exceptions.TeamsAIAuthException,System.Threading.Tasks.Task&gt; handler);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.IAuthentication`1&lt;!TState&gt; OnUserSignInFailure(class System.Func`4&lt;class Microsoft.Bot.Builder.ITurnContext, !TState, class Microsoft.Teams.AI.Exceptions.TeamsAIAuthException, class System.Threading.Tasks.Task&gt; handler) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.TeamsAIAuthException,System.Threading.Tasks.Task})" />
-      <MemberSignature Language="VB.NET" Value="Public Function OnUserSignInFailure (handler As Func(Of ITurnContext, TState, TeamsAIAuthException, Task)) As IAuthentication(Of TState)" />
-      <MemberSignature Language="F#" Value="abstract member OnUserSignInFailure : Func&lt;Microsoft.Bot.Builder.ITurnContext, 'State, Microsoft.Teams.AI.Exceptions.TeamsAIAuthException, System.Threading.Tasks.Task (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.IAuthentication&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="iAuthentication.OnUserSignInFailure handler" />
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.IAuthentication&lt;TState&gt; OnUserSignInFailure (Func&lt;Microsoft.Bot.Builder.ITurnContext,TState,Microsoft.Teams.AI.Exceptions.AuthException,System.Threading.Tasks.Task&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.IAuthentication`1&lt;!TState&gt; OnUserSignInFailure(class System.Func`4&lt;class Microsoft.Bot.Builder.ITurnContext, !TState, class Microsoft.Teams.AI.Exceptions.AuthException, class System.Threading.Tasks.Task&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.AuthException,System.Threading.Tasks.Task})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnUserSignInFailure (handler As Func(Of ITurnContext, TState, AuthException, Task)) As IAuthentication(Of TState)" />
+      <MemberSignature Language="F#" Value="abstract member OnUserSignInFailure : Func&lt;Microsoft.Bot.Builder.ITurnContext, 'State, Microsoft.Teams.AI.Exceptions.AuthException, System.Threading.Tasks.Task (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.IAuthentication&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="iAuthentication.OnUserSignInFailure handler" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -95,7 +68,7 @@
         <ReturnType>Microsoft.Teams.AI.IAuthentication&lt;TState&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="handler" Type="System.Func&lt;Microsoft.Bot.Builder.ITurnContext,TState,Microsoft.Teams.AI.Exceptions.TeamsAIAuthException,System.Threading.Tasks.Task&gt;" />
+        <Parameter Name="handler" Type="System.Func&lt;Microsoft.Bot.Builder.ITurnContext,TState,Microsoft.Teams.AI.Exceptions.AuthException,System.Threading.Tasks.Task&gt;" />
       </Parameters>
       <Docs>
         <param name="handler">The handler function to call when the user failed to signed in</param>
@@ -132,41 +105,43 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SignInUser">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.SignInResponse&gt; SignInUser (Microsoft.Bot.Builder.ITurnContext context, TState state);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.SignInResponse&gt; SignInUser(class Microsoft.Bot.Builder.ITurnContext context, !TState state) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.SignInUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
-      <MemberSignature Language="VB.NET" Value="Public Function SignInUser (context As ITurnContext, state As TState) As Task(Of SignInResponse)" />
-      <MemberSignature Language="F#" Value="abstract member SignInUser : Microsoft.Bot.Builder.ITurnContext * 'State -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.SignInResponse&gt;" Usage="iAuthentication.SignInUser (context, state)" />
+    <Member MemberName="SignInUserAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string?&gt; SignInUserAsync (Microsoft.Bot.Builder.ITurnContext context, TState state, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; SignInUserAsync(class Microsoft.Bot.Builder.ITurnContext context, !TState state, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.SignInUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SignInUserAsync (context As ITurnContext, state As TState, Optional cancellationToken As CancellationToken = Nothing) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="abstract member SignInUserAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="iAuthentication.SignInUserAsync (context, state, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.SignInResponse&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
         <Parameter Name="state" Type="TState" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="context">Current turn context.</param>
         <param name="state">Application state.</param>
+        <param name="cancellationToken">The cancellation token</param>
         <summary>
             Signs in a user.
             This method will be called automatically by the Application class.
             </summary>
-        <returns>The authentication token if user is signed in.</returns>
+        <returns>The authentication token if user is signed in. Otherwise returns null. In that case the bot will attempt to sign the user in.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SignOutUser">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SignOutUser (Microsoft.Bot.Builder.ITurnContext context, TState state);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SignOutUser(class Microsoft.Bot.Builder.ITurnContext context, !TState state) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.SignOutUser(Microsoft.Bot.Builder.ITurnContext,`0)" />
-      <MemberSignature Language="VB.NET" Value="Public Function SignOutUser (context As ITurnContext, state As TState) As Task" />
-      <MemberSignature Language="F#" Value="abstract member SignOutUser : Microsoft.Bot.Builder.ITurnContext * 'State -&gt; System.Threading.Tasks.Task" Usage="iAuthentication.SignOutUser (context, state)" />
+    <Member MemberName="SignOutUserAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SignOutUserAsync (Microsoft.Bot.Builder.ITurnContext context, TState state, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task SignOutUserAsync(class Microsoft.Bot.Builder.ITurnContext context, !TState state, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.IAuthentication`1.SignOutUserAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SignOutUserAsync (context As ITurnContext, state As TState, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member SignOutUserAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iAuthentication.SignOutUserAsync (context, state, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
@@ -178,10 +153,12 @@
       <Parameters>
         <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
         <Parameter Name="state" Type="TState" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
         <param name="context">Current turn context.</param>
         <param name="state">Application state.</param>
+        <param name="cancellationToken">The cancellation token</param>
         <summary>
             Signs out a user.
             </summary>

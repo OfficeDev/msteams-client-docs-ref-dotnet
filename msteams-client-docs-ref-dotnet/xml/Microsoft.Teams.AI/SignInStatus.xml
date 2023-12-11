@@ -39,6 +39,27 @@
             </summary>
       </Docs>
     </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.SignInStatus Error = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.SignInStatus.Error" />
+      <MemberSignature Language="VB.NET" Value="Error" />
+      <MemberSignature Language="F#" Value="Error = 2" Usage="Microsoft.Teams.AI.SignInStatus.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.SignInStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Error occurred during sign-in
+            </summary>
+      </Docs>
+    </Member>
     <Member MemberName="Pending">
       <MemberSignature Language="C#" Value="Pending" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.SignInStatus Pending = int32(0)" />
