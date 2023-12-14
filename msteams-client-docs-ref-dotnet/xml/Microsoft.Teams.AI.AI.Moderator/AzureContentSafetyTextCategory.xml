@@ -1,0 +1,106 @@
+<Type Name="AzureContentSafetyTextCategory" FullName="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory">
+  <TypeSignature Language="C#" Value="public enum AzureContentSafetyTextCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AzureContentSafetyTextCategory extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AzureContentSafetyTextCategory" />
+  <TypeSignature Language="F#" Value="type AzureContentSafetyTextCategory = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Text analyze category for <see cref="T:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hate">
+      <MemberSignature Language="C#" Value="Hate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory Hate = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.Hate" />
+      <MemberSignature Language="VB.NET" Value="Hate" />
+      <MemberSignature Language="F#" Value="Hate = 0" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.Hate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Hate.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfHarm">
+      <MemberSignature Language="C#" Value="SelfHarm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory SelfHarm = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.SelfHarm" />
+      <MemberSignature Language="VB.NET" Value="SelfHarm" />
+      <MemberSignature Language="F#" Value="SelfHarm = 2" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.SelfHarm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            SelfHarm.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sexual">
+      <MemberSignature Language="C#" Value="Sexual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory Sexual = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.Sexual" />
+      <MemberSignature Language="VB.NET" Value="Sexual" />
+      <MemberSignature Language="F#" Value="Sexual = 1" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.Sexual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Sexual.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Violence">
+      <MemberSignature Language="C#" Value="Violence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory Violence = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.Violence" />
+      <MemberSignature Language="VB.NET" Value="Violence" />
+      <MemberSignature Language="F#" Value="Violence = 3" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory.Violence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Violence.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

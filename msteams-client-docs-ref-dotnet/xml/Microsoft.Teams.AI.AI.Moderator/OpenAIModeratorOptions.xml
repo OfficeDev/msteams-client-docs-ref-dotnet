@@ -1,0 +1,157 @@
+<Type Name="OpenAIModeratorOptions" FullName="Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions">
+  <TypeSignature Language="C#" Value="public class OpenAIModeratorOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIModeratorOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenAIModeratorOptions" />
+  <TypeSignature Language="F#" Value="type OpenAIModeratorOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for the OpenAI Moderator.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenAIModeratorOptions (string apiKey, Microsoft.Teams.AI.AI.Moderator.ModerationType moderate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, valuetype Microsoft.Teams.AI.AI.Moderator.ModerationType moderate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.#ctor(System.String,Microsoft.Teams.AI.AI.Moderator.ModerationType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, moderate As ModerationType)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions : string * Microsoft.Teams.AI.AI.Moderator.ModerationType -&gt; Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions" Usage="new Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions (apiKey, moderate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="moderate" Type="Microsoft.Teams.AI.AI.Moderator.ModerationType" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">OpenAI API key.</param>
+        <param name="moderate">Which parts of the conversation to moderate.</param>
+        <summary>
+            Create an instance of the OpenAIModeratorOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApiKey">
+      <MemberSignature Language="C#" Value="public string ApiKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApiKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.ApiKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApiKey As String" />
+      <MemberSignature Language="F#" Value="member this.ApiKey : string with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.ApiKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            OpenAI API key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public string? Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. OpenAI endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public string? Model { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Model" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Model" />
+      <MemberSignature Language="VB.NET" Value="Public Property Model As String" />
+      <MemberSignature Language="F#" Value="member this.Model : string with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The moderation model to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Moderate">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Moderator.ModerationType Moderate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.AI.Moderator.ModerationType Moderate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Moderate" />
+      <MemberSignature Language="VB.NET" Value="Public Property Moderate As ModerationType" />
+      <MemberSignature Language="F#" Value="member this.Moderate : Microsoft.Teams.AI.AI.Moderator.ModerationType with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Moderate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.ModerationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Which parts of the conversation to moderate.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Organization">
+      <MemberSignature Language="C#" Value="public string? Organization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Organization" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Organization" />
+      <MemberSignature Language="VB.NET" Value="Public Property Organization As String" />
+      <MemberSignature Language="F#" Value="member this.Organization : string with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.OpenAIModeratorOptions.Organization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. OpenAI organization.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

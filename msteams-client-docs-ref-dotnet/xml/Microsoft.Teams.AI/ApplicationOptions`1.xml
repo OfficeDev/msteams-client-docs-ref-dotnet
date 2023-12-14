@@ -1,0 +1,324 @@
+<Type Name="ApplicationOptions&lt;TState&gt;" FullName="Microsoft.Teams.AI.ApplicationOptions&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class ApplicationOptions&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationOptions`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.ApplicationOptions`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationOptions(Of TState)" />
+  <TypeSignature Language="F#" Value="type ApplicationOptions&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">Type of the turn state.</typeparam>
+    <summary>
+            Options for the <see cref="T:Microsoft.Teams.AI.Application`1" /> class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.ApplicationOptions`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.BotAdapter? Adapter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.BotAdapter Adapter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.Adapter" />
+      <MemberSignature Language="VB.NET" Value="Public Property Adapter As BotAdapter" />
+      <MemberSignature Language="F#" Value="member this.Adapter : Microsoft.Bot.Builder.BotAdapter with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.Adapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.BotAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Bot adapter being used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If using the LongRunningMessages option or calling the ContinueConversationAsync method, this property is required.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdaptiveCards">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AdaptiveCardsOptions? AdaptiveCards { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AdaptiveCardsOptions AdaptiveCards" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.AdaptiveCards" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdaptiveCards As AdaptiveCardsOptions" />
+      <MemberSignature Language="F#" Value="member this.AdaptiveCards : Microsoft.Teams.AI.AdaptiveCardsOptions with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.AdaptiveCards" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AdaptiveCardsOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Options used to customize the processing of Adaptive Card requests.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AI">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;? AI { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.AIOptions`1&lt;!TState&gt; AI" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.AI" />
+      <MemberSignature Language="VB.NET" Value="Public Property AI As AIOptions(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.AI : Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.AI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.AIOptions&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. AI options to use. When provided, a new instance of the AI system will be created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt;? Authentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AuthenticationOptions`1&lt;!TState&gt; Authentication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.Authentication" />
+      <MemberSignature Language="VB.NET" Value="Public Property Authentication As AuthenticationOptions(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.Authentication : Microsoft.Teams.AI.AuthenticationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.Authentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AuthenticationOptions&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Options used to enable authentication for the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BotAppId">
+      <MemberSignature Language="C#" Value="public string? BotAppId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BotAppId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.BotAppId" />
+      <MemberSignature Language="VB.NET" Value="Public Property BotAppId As String" />
+      <MemberSignature Language="F#" Value="member this.BotAppId : string with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.BotAppId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Application ID of the bot.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If using the <see cref="P:Microsoft.Teams.AI.ApplicationOptions`1.LongRunningMessages" /> option or calling the <see cref="M:Microsoft.Bot.Builder.CloudAdapterBase.ContinueConversationAsync(System.String,Microsoft.Bot.Schema.Activity,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" /> method, this property is required.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggerFactory">
+      <MemberSignature Language="C#" Value="public Microsoft.Extensions.Logging.ILoggerFactory? LoggerFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Extensions.Logging.ILoggerFactory LoggerFactory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.LoggerFactory" />
+      <MemberSignature Language="VB.NET" Value="Public Property LoggerFactory As ILoggerFactory" />
+      <MemberSignature Language="F#" Value="member this.LoggerFactory : Microsoft.Extensions.Logging.ILoggerFactory with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.LoggerFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.Logging.ILoggerFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Logger factory that will be used in this application.
+            </summary>
+        <value>To be added.</value>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="LongRunningMessages">
+      <MemberSignature Language="C#" Value="public bool LongRunningMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LongRunningMessages" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.LongRunningMessages" />
+      <MemberSignature Language="VB.NET" Value="Public Property LongRunningMessages As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LongRunningMessages : bool with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.LongRunningMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. If true, the bot supports long running messages that can take longer then the 10 - 15
+            second timeout imposed by most channels. Defaults to false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This works by immediately converting the incoming request to a proactive conversation. Care should
+            be used for bots that operate in a shared hosting environment. The incoming request is immediately
+            completed and many shared hosting environments will mark the bot's process as idle and shut it down.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRecipientMention">
+      <MemberSignature Language="C#" Value="public bool RemoveRecipientMention { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RemoveRecipientMention" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.RemoveRecipientMention" />
+      <MemberSignature Language="VB.NET" Value="Public Property RemoveRecipientMention As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RemoveRecipientMention : bool with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.RemoveRecipientMention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. If true, the bot will automatically remove mentions of the bot's name from incoming
+            messages. Defaults to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTypingTimer">
+      <MemberSignature Language="C#" Value="public bool StartTypingTimer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StartTypingTimer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.StartTypingTimer" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartTypingTimer As Boolean" />
+      <MemberSignature Language="F#" Value="member this.StartTypingTimer : bool with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.StartTypingTimer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. If true, the bot will automatically start a typing timer when messages are received.
+            This allows the bot to automatically indicate that it's received the message and is processing
+            the request. Defaults to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Storage">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.IStorage? Storage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.IStorage Storage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.Storage" />
+      <MemberSignature Language="VB.NET" Value="Public Property Storage As IStorage" />
+      <MemberSignature Language="F#" Value="member this.Storage : Microsoft.Bot.Builder.IStorage with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.Storage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.IStorage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Storage provider to use for the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskModules">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.TaskModulesOptions? TaskModules { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.TaskModulesOptions TaskModules" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.TaskModules" />
+      <MemberSignature Language="VB.NET" Value="Public Property TaskModules As TaskModulesOptions" />
+      <MemberSignature Language="F#" Value="member this.TaskModules : Microsoft.Teams.AI.TaskModulesOptions with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.TaskModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.TaskModulesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Options used to customize the processing of Task Modules requests.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnStateFactory">
+      <MemberSignature Language="C#" Value="public Func&lt;TState&gt;? TurnStateFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`1&lt;!TState&gt; TurnStateFactory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.ApplicationOptions`1.TurnStateFactory" />
+      <MemberSignature Language="VB.NET" Value="Public Property TurnStateFactory As Func(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.TurnStateFactory : Func&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; with get, set" Usage="Microsoft.Teams.AI.ApplicationOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;.TurnStateFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Factory used to create a custom turn state instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

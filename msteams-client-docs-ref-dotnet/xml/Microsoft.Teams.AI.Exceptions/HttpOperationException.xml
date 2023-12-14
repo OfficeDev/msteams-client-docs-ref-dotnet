@@ -1,0 +1,91 @@
+<Type Name="HttpOperationException" FullName="Microsoft.Teams.AI.Exceptions.HttpOperationException">
+  <TypeSignature Language="C#" Value="public sealed class HttpOperationException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpOperationException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Exceptions.HttpOperationException" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class HttpOperationException&#xA;Inherits Exception" />
+  <TypeSignature Language="F#" Value="type HttpOperationException = class&#xA;    inherit Exception" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exception thrown when an HTTP operation fails.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpOperationException (string message, System.Net.HttpStatusCode? httpStatusCode = default, string? responseContent = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Nullable`1&lt;valuetype System.Net.HttpStatusCode&gt; httpStatusCode, string responseContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Exceptions.HttpOperationException.#ctor(System.String,System.Nullable{System.Net.HttpStatusCode},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, Optional httpStatusCode As Nullable(Of HttpStatusCode) = Nothing, Optional responseContent As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Exceptions.HttpOperationException : string * Nullable&lt;System.Net.HttpStatusCode&gt; * string -&gt; Microsoft.Teams.AI.Exceptions.HttpOperationException" Usage="new Microsoft.Teams.AI.Exceptions.HttpOperationException (message, httpStatusCode, responseContent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="httpStatusCode" Type="System.Nullable&lt;System.Net.HttpStatusCode&gt;" />
+        <Parameter Name="responseContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">The exception message.</param>
+        <param name="httpStatusCode">The HTTP status code.</param>
+        <param name="responseContent">The HTTP response content.</param>
+        <summary>
+            Create an instance of the HttpOperationException class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseContent">
+      <MemberSignature Language="C#" Value="public readonly string? ResponseContent;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string ResponseContent" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.Exceptions.HttpOperationException.ResponseContent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly ResponseContent As String " />
+      <MemberSignature Language="F#" Value="val mutable ResponseContent : string" Usage="Microsoft.Teams.AI.Exceptions.HttpOperationException.ResponseContent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HTTP response content.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public readonly System.Net.HttpStatusCode? StatusCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly valuetype System.Nullable`1&lt;valuetype System.Net.HttpStatusCode&gt; StatusCode" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.Exceptions.HttpOperationException.StatusCode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly StatusCode As Nullable(Of HttpStatusCode) " />
+      <MemberSignature Language="F#" Value="val mutable StatusCode : Nullable&lt;System.Net.HttpStatusCode&gt;" Usage="Microsoft.Teams.AI.Exceptions.HttpOperationException.StatusCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.HttpStatusCode&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HTTP status code.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

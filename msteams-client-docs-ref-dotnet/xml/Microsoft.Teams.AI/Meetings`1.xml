@@ -1,0 +1,158 @@
+<Type Name="Meetings&lt;TState&gt;" FullName="Microsoft.Teams.AI.Meetings&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class Meetings&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Meetings`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Meetings`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class Meetings(Of TState)" />
+  <TypeSignature Language="F#" Value="type Meetings&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">The type of the turn state object used by the application.</typeparam>
+    <summary>
+            Meetings class to enable fluent style registration of handlers related to Microsoft Teams Meetings.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Meetings (Microsoft.Teams.AI.Application&lt;TState&gt; app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.Application`1&lt;!TState&gt; app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Meetings`1.#ctor(Microsoft.Teams.AI.Application{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (app As Application(Of TState))" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Meetings&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; : Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Meetings&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="new Microsoft.Teams.AI.Meetings&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; app" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="app" Type="Microsoft.Teams.AI.Application&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="app" />
+        <summary>
+            Creates a new instance of the Meetings class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnd">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnEnd (Microsoft.Teams.AI.MeetingEndHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnEnd(class Microsoft.Teams.AI.MeetingEndHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Meetings`1.OnEnd(Microsoft.Teams.AI.MeetingEndHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnEnd (handler As MeetingEndHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnEnd : Microsoft.Teams.AI.MeetingEndHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="meetings.OnEnd handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.MeetingEndHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when a Microsoft Teams meeting end event activity is received from the connector.</param>
+        <summary>
+            Handles Microsoft Teams meeting end events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParticipantsJoin">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnParticipantsJoin (Microsoft.Teams.AI.MeetingParticipantsEventHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnParticipantsJoin(class Microsoft.Teams.AI.MeetingParticipantsEventHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Meetings`1.OnParticipantsJoin(Microsoft.Teams.AI.MeetingParticipantsEventHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnParticipantsJoin (handler As MeetingParticipantsEventHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnParticipantsJoin : Microsoft.Teams.AI.MeetingParticipantsEventHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="meetings.OnParticipantsJoin handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.MeetingParticipantsEventHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when a Microsoft Teams meeting participants join event activity is received from the connector.</param>
+        <summary>
+            Handles Microsoft Teams meeting participants join events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParticipantsLeave">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnParticipantsLeave (Microsoft.Teams.AI.MeetingParticipantsEventHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnParticipantsLeave(class Microsoft.Teams.AI.MeetingParticipantsEventHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Meetings`1.OnParticipantsLeave(Microsoft.Teams.AI.MeetingParticipantsEventHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnParticipantsLeave (handler As MeetingParticipantsEventHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnParticipantsLeave : Microsoft.Teams.AI.MeetingParticipantsEventHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="meetings.OnParticipantsLeave handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.MeetingParticipantsEventHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when a Microsoft Teams meeting participants leave event activity is received from the connector.</param>
+        <summary>
+            Handles Microsoft Teams meeting participants leave events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStart">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application&lt;TState&gt; OnStart (Microsoft.Teams.AI.MeetingStartHandler&lt;TState&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Teams.AI.Application`1&lt;!TState&gt; OnStart(class Microsoft.Teams.AI.MeetingStartHandler`1&lt;!TState&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Meetings`1.OnStart(Microsoft.Teams.AI.MeetingStartHandler{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnStart (handler As MeetingStartHandler(Of TState)) As Application(Of TState)" />
+      <MemberSignature Language="F#" Value="member this.OnStart : Microsoft.Teams.AI.MeetingStartHandler&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; -&gt; Microsoft.Teams.AI.Application&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="meetings.OnStart handler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application&lt;TState&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="Microsoft.Teams.AI.MeetingStartHandler&lt;TState&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Function to call when a Microsoft Teams meeting start event activity is received from the connector.</param>
+        <summary>
+            Handles Microsoft Teams meeting start events.
+            </summary>
+        <returns>The application instance for chaining purposes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

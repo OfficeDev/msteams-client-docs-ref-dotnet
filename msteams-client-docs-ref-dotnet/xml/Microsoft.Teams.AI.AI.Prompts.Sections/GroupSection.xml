@@ -1,0 +1,146 @@
+<Type Name="GroupSection" FullName="Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection">
+  <TypeSignature Language="C#" Value="public class GroupSection : Microsoft.Teams.AI.AI.Prompts.Sections.LayoutSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GroupSection extends Microsoft.Teams.AI.AI.Prompts.Sections.LayoutSection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection" />
+  <TypeSignature Language="VB.NET" Value="Public Class GroupSection&#xA;Inherits LayoutSection" />
+  <TypeSignature Language="F#" Value="type GroupSection = class&#xA;    inherit LayoutSection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Prompts.Sections.LayoutSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A group of sections that will be rendered as a single message
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GroupSection (Microsoft.Teams.AI.AI.Models.ChatRole role, System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt; sections, int tokens = -1, bool required = false, string separator = &quot;\n&quot;, string prefix = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Teams.AI.AI.Models.ChatRole role, class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt; sections, int32 tokens, bool required, string separator, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection.#ctor(Microsoft.Teams.AI.AI.Models.ChatRole,System.Collections.Generic.List{Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection},System.Int32,System.Boolean,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (role As ChatRole, sections As List(Of PromptSection), Optional tokens As Integer = -1, Optional required As Boolean = false, Optional separator As String = &quot;\n&quot;, Optional prefix As String = &quot;&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection : Microsoft.Teams.AI.AI.Models.ChatRole * System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt; * int * bool * string * string -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection" Usage="new Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection (role, sections, tokens, required, separator, prefix)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="role" Type="Microsoft.Teams.AI.AI.Models.ChatRole" />
+        <Parameter Name="sections" Type="System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt;" />
+        <Parameter Name="tokens" Type="System.Int32" />
+        <Parameter Name="required" Type="System.Boolean" />
+        <Parameter Name="separator" Type="System.String" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">message role</param>
+        <param name="sections">sections</param>
+        <param name="tokens">tokens</param>
+        <param name="required">required</param>
+        <param name="separator">separator</param>
+        <param name="prefix">prefix</param>
+        <summary>
+            Creates instance of `GroupSection`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsMessagesAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function RenderAsMessagesAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of List(Of ChatMessage)))" />
+      <MemberSignature Language="F#" Value="override this.RenderAsMessagesAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;" Usage="groupSection.RenderAsMessagesAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="functions">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="maxTokens">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsTextAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;string&gt;&gt; RenderAsTextAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;string&gt;&gt; RenderAsTextAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection.RenderAsTextAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function RenderAsTextAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of String))" />
+      <MemberSignature Language="F#" Value="override this.RenderAsTextAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;string&gt;&gt;" Usage="groupSection.RenderAsTextAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="functions">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="maxTokens">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public readonly Microsoft.Teams.AI.AI.Models.ChatRole Role;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly valuetype Microsoft.Teams.AI.AI.Models.ChatRole Role" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection.Role" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Role As ChatRole " />
+      <MemberSignature Language="F#" Value="val mutable Role : Microsoft.Teams.AI.AI.Models.ChatRole" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.GroupSection.Role" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.ChatRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Message Role
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

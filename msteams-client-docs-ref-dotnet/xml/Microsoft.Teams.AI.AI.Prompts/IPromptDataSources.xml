@@ -1,0 +1,99 @@
+<Type Name="IPromptDataSources" FullName="Microsoft.Teams.AI.AI.Prompts.IPromptDataSources">
+  <TypeSignature Language="C#" Value="public interface IPromptDataSources" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPromptDataSources" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.IPromptDataSources" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPromptDataSources" />
+  <TypeSignature Language="F#" Value="type IPromptDataSources = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Prompt Data Sources
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDataSource">
+      <MemberSignature Language="C#" Value="public void AddDataSource (string name, Microsoft.Teams.AI.AI.DataSources.IDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddDataSource(string name, class Microsoft.Teams.AI.AI.DataSources.IDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptDataSources.AddDataSource(System.String,Microsoft.Teams.AI.AI.DataSources.IDataSource)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddDataSource (name As String, dataSource As IDataSource)" />
+      <MemberSignature Language="F#" Value="abstract member AddDataSource : string * Microsoft.Teams.AI.AI.DataSources.IDataSource -&gt; unit" Usage="iPromptDataSources.AddDataSource (name, dataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dataSource" Type="Microsoft.Teams.AI.AI.DataSources.IDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="name">name</param>
+        <param name="dataSource">DataSource to add</param>
+        <summary>
+            Add A DataSource
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.DataSources.IDataSource? GetDataSource (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.DataSources.IDataSource GetDataSource(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptDataSources.GetDataSource(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDataSource (name As String) As IDataSource" />
+      <MemberSignature Language="F#" Value="abstract member GetDataSource : string -&gt; Microsoft.Teams.AI.AI.DataSources.IDataSource" Usage="iPromptDataSources.GetDataSource name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.DataSources.IDataSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">datasource name</param>
+        <summary>
+            Get DataSource
+            </summary>
+        <returns>the datasource if it exists, otherwise null</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDataSource">
+      <MemberSignature Language="C#" Value="public bool HasDataSource (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasDataSource(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptDataSources.HasDataSource(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasDataSource (name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member HasDataSource : string -&gt; bool" Usage="iPromptDataSources.HasDataSource name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">datasource name</param>
+        <summary>
+            Check If Has DataSource
+            </summary>
+        <returns>true if has datasource, otherwise false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

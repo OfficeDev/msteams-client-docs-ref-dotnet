@@ -1,0 +1,99 @@
+<Type Name="IPromptTemplates" FullName="Microsoft.Teams.AI.AI.Prompts.IPromptTemplates">
+  <TypeSignature Language="C#" Value="public interface IPromptTemplates" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPromptTemplates" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.IPromptTemplates" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPromptTemplates" />
+  <TypeSignature Language="F#" Value="type IPromptTemplates = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Prompt Templates
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPrompt">
+      <MemberSignature Language="C#" Value="public void AddPrompt (string name, Microsoft.Teams.AI.AI.Prompts.PromptTemplate prompt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddPrompt(string name, class Microsoft.Teams.AI.AI.Prompts.PromptTemplate prompt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptTemplates.AddPrompt(System.String,Microsoft.Teams.AI.AI.Prompts.PromptTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddPrompt (name As String, prompt As PromptTemplate)" />
+      <MemberSignature Language="F#" Value="abstract member AddPrompt : string * Microsoft.Teams.AI.AI.Prompts.PromptTemplate -&gt; unit" Usage="iPromptTemplates.AddPrompt (name, prompt)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="prompt" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="name">prompt name</param>
+        <param name="prompt">prompt template to add</param>
+        <summary>
+            Add A Prompt Template
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrompt">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptTemplate GetPrompt (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompts.PromptTemplate GetPrompt(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptTemplates.GetPrompt(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPrompt (name As String) As PromptTemplate" />
+      <MemberSignature Language="F#" Value="abstract member GetPrompt : string -&gt; Microsoft.Teams.AI.AI.Prompts.PromptTemplate" Usage="iPromptTemplates.GetPrompt name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">function name</param>
+        <summary>
+            Get Prompt Template
+            </summary>
+        <returns>the prompt template</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPrompt">
+      <MemberSignature Language="C#" Value="public bool HasPrompt (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasPrompt(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptTemplates.HasPrompt(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasPrompt (name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member HasPrompt : string -&gt; bool" Usage="iPromptTemplates.HasPrompt name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">prompt name</param>
+        <summary>
+            Check If Has Prompt Template
+            </summary>
+        <returns>true if has prompt, otherwise false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

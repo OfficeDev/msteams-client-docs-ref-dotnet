@@ -1,0 +1,265 @@
+<Type Name="PromptSection" FullName="Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection">
+  <TypeSignature Language="C#" Value="public abstract class PromptSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PromptSection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PromptSection" />
+  <TypeSignature Language="F#" Value="type PromptSection = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for most prompt sections.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptSection (int tokens = -1, bool required = true, string separator = &quot;\n&quot;, string prefix = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 tokens, bool required, string separator, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.#ctor(System.Int32,System.Boolean,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional tokens As Integer = -1, Optional required As Boolean = true, Optional separator As String = &quot;\n&quot;, Optional prefix As String = &quot;&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection : int * bool * string * string -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" Usage="new Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection (tokens, required, separator, prefix)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokens" Type="System.Int32" />
+        <Parameter Name="required" Type="System.Boolean" />
+        <Parameter Name="separator" Type="System.String" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokens">Sizing strategy for this section. Defaults to auto.</param>
+        <param name="required">Indicates if this section is required. Defaults to true.</param>
+        <param name="separator">Separator to use between sections when rendering as text. Defaults to `\n`.</param>
+        <param name="prefix">Prefix to use for text output. Defaults to ``.</param>
+        <summary>
+            Creates a new 'PromptSection' instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessageText">
+      <MemberSignature Language="C#" Value="protected string GetMessageText (Microsoft.Teams.AI.AI.Models.ChatMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetMessageText(class Microsoft.Teams.AI.AI.Models.ChatMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.GetMessageText(Microsoft.Teams.AI.AI.Models.ChatMessage)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetMessageText (message As ChatMessage) As String" />
+      <MemberSignature Language="F#" Value="member this.GetMessageText : Microsoft.Teams.AI.AI.Models.ChatMessage -&gt; string" Usage="promptSection.GetMessageText message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="Microsoft.Teams.AI.AI.Models.ChatMessage" />
+      </Parameters>
+      <Docs>
+        <param name="message">the message to parse</param>
+        <summary>
+            Parse Text Content Of Message
+            </summary>
+        <returns>the parsed message text</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public readonly string Prefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string Prefix" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Prefix" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Prefix As String " />
+      <MemberSignature Language="F#" Value="val mutable Prefix : string" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prefix to use for text output. Defaults to ``.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsMessagesAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function RenderAsMessagesAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of List(Of ChatMessage)))" />
+      <MemberSignature Language="F#" Value="abstract member RenderAsMessagesAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;" Usage="promptSection.RenderAsMessagesAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">context</param>
+        <param name="memory">memory</param>
+        <param name="functions">functions</param>
+        <param name="tokenizer">tokenizer</param>
+        <param name="maxTokens">max tokens</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Render As Messages
+            </summary>
+        <returns>prompt rendered as a list of messages</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsTextAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;string&gt;&gt; RenderAsTextAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;string&gt;&gt; RenderAsTextAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.RenderAsTextAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RenderAsTextAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of String))" />
+      <MemberSignature Language="F#" Value="abstract member RenderAsTextAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;string&gt;&gt;&#xA;override this.RenderAsTextAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;string&gt;&gt;" Usage="promptSection.RenderAsTextAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">context</param>
+        <param name="memory">memory</param>
+        <param name="functions">functions</param>
+        <param name="tokenizer">tokenizer</param>
+        <param name="maxTokens">max tokens</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Render As Text
+            </summary>
+        <returns>prompt rendered as text</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="public readonly bool Required;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly bool Required" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Required" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Required As Boolean " />
+      <MemberSignature Language="F#" Value="val mutable Required : bool" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true the section is mandatory otherwise it can be safely dropped.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Separator">
+      <MemberSignature Language="C#" Value="public readonly string Separator;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string Separator" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Separator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Separator As String " />
+      <MemberSignature Language="F#" Value="val mutable Separator : string" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Separator to use between sections when rendering as text. Defaults to `\n`.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tokens">
+      <MemberSignature Language="C#" Value="public readonly int Tokens;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly int32 Tokens" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Tokens" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Tokens As Integer " />
+      <MemberSignature Language="F#" Value="val mutable Tokens : int" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.Tokens" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The requested token budget for this section.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TruncateMessages">
+      <MemberSignature Language="C#" Value="protected Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt; TruncateMessages (System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt; messages, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt; TruncateMessages(class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt; messages, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection.TruncateMessages(System.Collections.Generic.List{Microsoft.Teams.AI.AI.Models.ChatMessage},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function TruncateMessages (messages As List(Of ChatMessage), tokenizer As ITokenizer, maxTokens As Integer) As RenderedPromptSection(Of List(Of ChatMessage))" />
+      <MemberSignature Language="F#" Value="member this.TruncateMessages : System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;" Usage="promptSection.TruncateMessages (messages, tokenizer, maxTokens)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messages" Type="System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="messages">messages to be truncated</param>
+        <param name="tokenizer">tokenizer</param>
+        <param name="maxTokens">max tokens</param>
+        <summary>
+            Truncate Messages
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,75 @@
+<Type Name="AdaptiveCardInvokeResponseFactory" FullName="Microsoft.Teams.AI.AdaptiveCardInvokeResponseFactory">
+  <TypeSignature Language="C#" Value="public static class AdaptiveCardInvokeResponseFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AdaptiveCardInvokeResponseFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AdaptiveCardInvokeResponseFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Class AdaptiveCardInvokeResponseFactory" />
+  <TypeSignature Language="F#" Value="type AdaptiveCardInvokeResponseFactory = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains utility methods for creating various types of <see cref="T:Microsoft.Bot.Schema.AdaptiveCardInvokeResponse" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdaptiveCard">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Schema.AdaptiveCardInvokeResponse AdaptiveCard (AdaptiveCards.AdaptiveCard adaptiveCard);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Schema.AdaptiveCardInvokeResponse AdaptiveCard(class AdaptiveCards.AdaptiveCard adaptiveCard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCardInvokeResponseFactory.AdaptiveCard(AdaptiveCards.AdaptiveCard)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AdaptiveCard (adaptiveCard As AdaptiveCard) As AdaptiveCardInvokeResponse" />
+      <MemberSignature Language="F#" Value="static member AdaptiveCard : AdaptiveCards.AdaptiveCard -&gt; Microsoft.Bot.Schema.AdaptiveCardInvokeResponse" Usage="Microsoft.Teams.AI.AdaptiveCardInvokeResponseFactory.AdaptiveCard adaptiveCard" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Schema.AdaptiveCardInvokeResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adaptiveCard" Type="AdaptiveCards.AdaptiveCard" />
+      </Parameters>
+      <Docs>
+        <param name="adaptiveCard">An Adaptive Card.</param>
+        <summary>
+            Returns response with type "application/vnd.microsoft.card.adaptive".
+            </summary>
+        <returns>The response that includes an Adaptive Card that the client should display.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Schema.AdaptiveCardInvokeResponse Message (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Schema.AdaptiveCardInvokeResponse Message(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCardInvokeResponseFactory.Message(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Message (message As String) As AdaptiveCardInvokeResponse" />
+      <MemberSignature Language="F#" Value="static member Message : string -&gt; Microsoft.Bot.Schema.AdaptiveCardInvokeResponse" Usage="Microsoft.Teams.AI.AdaptiveCardInvokeResponseFactory.Message message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Schema.AdaptiveCardInvokeResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A message.</param>
+        <summary>
+            Returns response with type "application/vnd.microsoft.activity.message".
+            </summary>
+        <returns>The response that includes a message that the client should display.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

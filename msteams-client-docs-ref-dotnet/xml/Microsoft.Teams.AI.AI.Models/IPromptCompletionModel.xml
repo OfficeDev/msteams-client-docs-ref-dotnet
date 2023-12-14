@@ -1,0 +1,57 @@
+<Type Name="IPromptCompletionModel" FullName="Microsoft.Teams.AI.AI.Models.IPromptCompletionModel">
+  <TypeSignature Language="C#" Value="public interface IPromptCompletionModel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPromptCompletionModel" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPromptCompletionModel" />
+  <TypeSignature Language="F#" Value="type IPromptCompletionModel = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An AI model that can be used to complete prompts.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompletePromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; promptFunctions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, Microsoft.Teams.AI.AI.Prompts.PromptTemplate promptTemplate, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; promptFunctions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, class Microsoft.Teams.AI.AI.Prompts.PromptTemplate promptTemplate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.IPromptCompletionModel.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompletePromptAsync (turnContext As ITurnContext, memory As IMemory, promptFunctions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, promptTemplate As PromptTemplate, cancellationToken As CancellationToken) As Task(Of PromptResponse)" />
+      <MemberSignature Language="F#" Value="abstract member CompletePromptAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptTemplate * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;" Usage="iPromptCompletionModel.CompletePromptAsync (turnContext, memory, promptFunctions, tokenizer, promptTemplate, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="promptFunctions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="promptTemplate" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="memory">An interface for accessing state values.</param>
+        <param name="promptFunctions">Functions to use when rendering the prompt.</param>
+        <param name="tokenizer">Tokenizer to use when rendering the prompt.</param>
+        <param name="promptTemplate">Prompt template to complete.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Completes a prompt.
+            </summary>
+        <returns>A `PromptResponse` with the status and message.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,57 @@
+<Type Name="IEmbeddings&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Embeddings.IEmbeddings&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public interface IEmbeddings&lt;TState&gt; where TState : TurnState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEmbeddings`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.IEmbeddings`1" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IEmbeddings(Of TState)" />
+  <TypeSignature Language="F#" Value="type IEmbeddings&lt;'State (requires 'State :&gt; TurnState)&gt; = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">To be added.</typeparam>
+    <summary>
+            Interface for Embeddings.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateEmbeddingsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt; CreateEmbeddingsAsync (System.Collections.Generic.IList&lt;string&gt; inputs, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt; CreateEmbeddingsAsync(class System.Collections.Generic.IList`1&lt;string&gt; inputs, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.IEmbeddings`1.CreateEmbeddingsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateEmbeddingsAsync (inputs As IList(Of String), Optional cancellationToken As CancellationToken = Nothing) As Task(Of EmbeddingsResponse)" />
+      <MemberSignature Language="F#" Value="abstract member CreateEmbeddingsAsync : System.Collections.Generic.IList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt;" Usage="iEmbeddings.CreateEmbeddingsAsync (inputs, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Text inputs to create embeddings for.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+             or threads to receive notice of cancellation.</param>
+        <summary>
+             Creates embeddings for the given inputs using the OpenAI API.
+             </summary>
+        <returns>A `EmbeddingsResponse` with a status and the generated embeddings or a message when an error occurs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

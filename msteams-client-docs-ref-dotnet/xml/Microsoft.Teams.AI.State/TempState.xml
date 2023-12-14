@@ -1,0 +1,258 @@
+<Type Name="TempState" FullName="Microsoft.Teams.AI.State.TempState">
+  <TypeSignature Language="C#" Value="public class TempState : Microsoft.Teams.AI.State.Record" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TempState extends Microsoft.Teams.AI.State.Record" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.State.TempState" />
+  <TypeSignature Language="VB.NET" Value="Public Class TempState&#xA;Inherits Record" />
+  <TypeSignature Language="F#" Value="type TempState = class&#xA;    inherit Record" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.State.Record</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Temporary state.
+            </summary>
+    <remarks>
+            Inherit a new class from this base abstract class to strongly type the applications temp state.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TempState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.State.TempState.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Teams.AI.State.TempState" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionOutputs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; ActionOutputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; ActionOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TempState.ActionOutputs" />
+      <MemberSignature Language="VB.NET" Value="Public Property ActionOutputs As Dictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.ActionOutputs : System.Collections.Generic.Dictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Teams.AI.State.TempState.ActionOutputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            All outputs returned from the action sequence that was executed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionOutputsKey">
+      <MemberSignature Language="C#" Value="public const string ActionOutputsKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ActionOutputsKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TempState.ActionOutputsKey" />
+      <MemberSignature Language="VB.NET" Value="Public Const ActionOutputsKey As String " />
+      <MemberSignature Language="F#" Value="val mutable ActionOutputsKey : string" Usage="Microsoft.Teams.AI.State.TempState.ActionOutputsKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the action outputs property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthTokenKey">
+      <MemberSignature Language="C#" Value="public const string AuthTokenKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AuthTokenKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TempState.AuthTokenKey" />
+      <MemberSignature Language="VB.NET" Value="Public Const AuthTokenKey As String " />
+      <MemberSignature Language="F#" Value="val mutable AuthTokenKey : string" Usage="Microsoft.Teams.AI.State.TempState.AuthTokenKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the auth tokens property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthTokens">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; AuthTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; AuthTokens" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TempState.AuthTokens" />
+      <MemberSignature Language="VB.NET" Value="Public Property AuthTokens As Dictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.AuthTokens : System.Collections.Generic.Dictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Teams.AI.State.TempState.AuthTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            All tokens acquired after sign-in for current activity
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplicateTokenExchange">
+      <MemberSignature Language="C#" Value="public bool DuplicateTokenExchange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DuplicateTokenExchange" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TempState.DuplicateTokenExchange" />
+      <MemberSignature Language="VB.NET" Value="Public Property DuplicateTokenExchange As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DuplicateTokenExchange : bool with get, set" Usage="Microsoft.Teams.AI.State.TempState.DuplicateTokenExchange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether current token exchange is a duplicate one
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplicateTokenExchangeKey">
+      <MemberSignature Language="C#" Value="public const string DuplicateTokenExchangeKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DuplicateTokenExchangeKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TempState.DuplicateTokenExchangeKey" />
+      <MemberSignature Language="VB.NET" Value="Public Const DuplicateTokenExchangeKey As String " />
+      <MemberSignature Language="F#" Value="val mutable DuplicateTokenExchangeKey : string" Usage="Microsoft.Teams.AI.State.TempState.DuplicateTokenExchangeKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the duplicate token exchange property
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public string Input { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Input" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TempState.Input" />
+      <MemberSignature Language="VB.NET" Value="Public Property Input As String" />
+      <MemberSignature Language="F#" Value="member this.Input : string with get, set" Usage="Microsoft.Teams.AI.State.TempState.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Input passed to an AI prompt
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputKey">
+      <MemberSignature Language="C#" Value="public const string InputKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string InputKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TempState.InputKey" />
+      <MemberSignature Language="VB.NET" Value="Public Const InputKey As String " />
+      <MemberSignature Language="F#" Value="val mutable InputKey : string" Usage="Microsoft.Teams.AI.State.TempState.InputKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the input property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public string Output { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Output" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.State.TempState.Output" />
+      <MemberSignature Language="VB.NET" Value="Public Property Output As String" />
+      <MemberSignature Language="F#" Value="member this.Output : string with get, set" Usage="Microsoft.Teams.AI.State.TempState.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Output returned from an AI prompt or function
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputKey">
+      <MemberSignature Language="C#" Value="public const string OutputKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string OutputKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.State.TempState.OutputKey" />
+      <MemberSignature Language="VB.NET" Value="Public Const OutputKey As String " />
+      <MemberSignature Language="F#" Value="val mutable OutputKey : string" Usage="Microsoft.Teams.AI.State.TempState.OutputKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the output property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

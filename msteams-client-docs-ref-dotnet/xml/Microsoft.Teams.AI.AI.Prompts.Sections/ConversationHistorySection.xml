@@ -1,0 +1,188 @@
+<Type Name="ConversationHistorySection" FullName="Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection">
+  <TypeSignature Language="C#" Value="public class ConversationHistorySection : Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConversationHistorySection extends Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationHistorySection&#xA;Inherits PromptSection" />
+  <TypeSignature Language="F#" Value="type ConversationHistorySection = class&#xA;    inherit PromptSection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A section that renders the conversation history.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationHistorySection (string variable, int tokens = 1, bool required = false, string userPrefix = &quot;user: &quot;, string assistantPrefix = &quot;assistant: &quot;, string separator = &quot;\n&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string variable, int32 tokens, bool required, string userPrefix, string assistantPrefix, string separator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.#ctor(System.String,System.Int32,System.Boolean,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (variable As String, Optional tokens As Integer = 1, Optional required As Boolean = false, Optional userPrefix As String = &quot;user: &quot;, Optional assistantPrefix As String = &quot;assistant: &quot;, Optional separator As String = &quot;\n&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection : string * int * bool * string * string * string -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection" Usage="new Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection (variable, tokens, required, userPrefix, assistantPrefix, separator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="tokens" Type="System.Int32" />
+        <Parameter Name="required" Type="System.Boolean" />
+        <Parameter Name="userPrefix" Type="System.String" />
+        <Parameter Name="assistantPrefix" Type="System.String" />
+        <Parameter Name="separator" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variable">Name of memory variable used to store the histories.</param>
+        <param name="tokens">Sizing strategy for this section. Defaults to `proportional` with a value of `1.0`.</param>
+        <param name="required">Indicates if this section is required. Defaults to `false`.</param>
+        <param name="userPrefix">Prefix to use for user messages when rendering as text. Defaults to `user: `.</param>
+        <param name="assistantPrefix">Prefix to use for assistant messages when rendering as text. Defaults to `assistant: `.</param>
+        <param name="separator">Separator to use between sections when rendering as text. Defaults to `\n`.</param>
+        <summary>
+            Creates a new 'ConversationHistorySection' instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssistantPrefix">
+      <MemberSignature Language="C#" Value="public readonly string AssistantPrefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string AssistantPrefix" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.AssistantPrefix" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly AssistantPrefix As String " />
+      <MemberSignature Language="F#" Value="val mutable AssistantPrefix : string" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.AssistantPrefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prefix to use for assistant messages when rendering as text. Defaults to `assistant: `.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsMessagesAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt; RenderAsMessagesAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function RenderAsMessagesAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of List(Of ChatMessage)))" />
+      <MemberSignature Language="F#" Value="override this.RenderAsMessagesAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;" Usage="conversationHistorySection.RenderAsMessagesAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="functions">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="maxTokens">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsTextAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;string&gt;&gt; RenderAsTextAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int maxTokens, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection`1&lt;string&gt;&gt; RenderAsTextAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, int32 maxTokens, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.RenderAsTextAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function RenderAsTextAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, maxTokens As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of RenderedPromptSection(Of String))" />
+      <MemberSignature Language="F#" Value="override this.RenderAsTextAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;string&gt;&gt;" Usage="conversationHistorySection.RenderAsTextAsync (context, memory, functions, tokenizer, maxTokens, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.Sections.RenderedPromptSection&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="maxTokens" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="functions">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="maxTokens">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="UserPrefix">
+      <MemberSignature Language="C#" Value="public readonly string UserPrefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string UserPrefix" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.UserPrefix" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly UserPrefix As String " />
+      <MemberSignature Language="F#" Value="val mutable UserPrefix : string" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.UserPrefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prefix to use for user messages when rendering as text. Defaults to `user: `.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variable">
+      <MemberSignature Language="C#" Value="public readonly string Variable;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string Variable" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.Variable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Variable As String " />
+      <MemberSignature Language="F#" Value="val mutable Variable : string" Usage="Microsoft.Teams.AI.AI.Prompts.Sections.ConversationHistorySection.Variable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of memory variable used to store the histories.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

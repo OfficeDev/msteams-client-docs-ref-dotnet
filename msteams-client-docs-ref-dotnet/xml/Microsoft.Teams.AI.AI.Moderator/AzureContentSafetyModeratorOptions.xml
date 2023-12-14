@@ -1,0 +1,203 @@
+<Type Name="AzureContentSafetyModeratorOptions" FullName="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions">
+  <TypeSignature Language="C#" Value="public class AzureContentSafetyModeratorOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureContentSafetyModeratorOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureContentSafetyModeratorOptions" />
+  <TypeSignature Language="F#" Value="type AzureContentSafetyModeratorOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for the Azure Content Safety moderator.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureContentSafetyModeratorOptions (string apiKey, string endpoint, Microsoft.Teams.AI.AI.Moderator.ModerationType moderate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string endpoint, valuetype Microsoft.Teams.AI.AI.Moderator.ModerationType moderate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.#ctor(System.String,System.String,Microsoft.Teams.AI.AI.Moderator.ModerationType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, endpoint As String, moderate As ModerationType)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions : string * string * Microsoft.Teams.AI.AI.Moderator.ModerationType -&gt; Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions" Usage="new Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions (apiKey, endpoint, moderate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.String" />
+        <Parameter Name="moderate" Type="Microsoft.Teams.AI.AI.Moderator.ModerationType" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">Azure Content Safety API key.</param>
+        <param name="endpoint">Azure Content Safety endpoint.</param>
+        <param name="moderate">Which parts of the conversation to moderate.</param>
+        <summary>
+            Create an instance of the AzureContentSafetyModeratorOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApiKey">
+      <MemberSignature Language="C#" Value="public string ApiKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApiKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.ApiKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApiKey As String" />
+      <MemberSignature Language="F#" Value="member this.ApiKey : string with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.ApiKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Azure Content Safety API key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlocklistNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt;? BlocklistNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; BlocklistNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.BlocklistNames" />
+      <MemberSignature Language="VB.NET" Value="Public Property BlocklistNames As IList(Of String)" />
+      <MemberSignature Language="F#" Value="member this.BlocklistNames : System.Collections.Generic.IList&lt;string&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.BlocklistNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The names of blocklists.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakByBlocklists">
+      <MemberSignature Language="C#" Value="public bool? BreakByBlocklists { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; BreakByBlocklists" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.BreakByBlocklists" />
+      <MemberSignature Language="VB.NET" Value="Public Property BreakByBlocklists As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.BreakByBlocklists : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.BreakByBlocklists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set to true, further analyses of harmful content will not be performed in cases where blocklists are hit. When set to false, all analyses of harmful content will be performed, whether or not blocklists are hit.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Categories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory&gt;? Categories { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory&gt; Categories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Categories" />
+      <MemberSignature Language="VB.NET" Value="Public Property Categories As IList(Of AzureContentSafetyTextCategory)" />
+      <MemberSignature Language="F#" Value="member this.Categories : System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Categories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyTextCategory&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The categories will be analyzed. If not assigned, a default set of the categories' analysis results will be returned.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public string Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Azure Content Safety API endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Moderate">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Moderator.ModerationType Moderate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.AI.Moderator.ModerationType Moderate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Moderate" />
+      <MemberSignature Language="VB.NET" Value="Public Property Moderate As ModerationType" />
+      <MemberSignature Language="F#" Value="member this.Moderate : Microsoft.Teams.AI.AI.Moderator.ModerationType with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Moderate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.ModerationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Which parts of the conversation to moderate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeverityLevel">
+      <MemberSignature Language="C#" Value="public int SeverityLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SeverityLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.SeverityLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property SeverityLevel As Integer" />
+      <MemberSignature Language="F#" Value="member this.SeverityLevel : int with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.SeverityLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The severity level that triggers a flagged response. Default value is 2.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

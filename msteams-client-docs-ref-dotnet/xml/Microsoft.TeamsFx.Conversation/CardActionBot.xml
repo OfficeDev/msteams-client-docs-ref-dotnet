@@ -7,6 +7,8 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>2.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,7 +30,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
@@ -52,7 +54,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.TeamsFx.Conversation.IAdaptiveCardActionHandler&gt;</ReturnType>
@@ -74,7 +76,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -101,7 +103,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

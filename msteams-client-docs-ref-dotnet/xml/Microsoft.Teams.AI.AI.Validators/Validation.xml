@@ -1,0 +1,108 @@
+<Type Name="Validation" FullName="Microsoft.Teams.AI.AI.Validators.Validation">
+  <TypeSignature Language="C#" Value="public class Validation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Validation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Validators.Validation" />
+  <TypeSignature Language="VB.NET" Value="Public Class Validation" />
+  <TypeSignature Language="F#" Value="type Validation = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Response returned by a `PromptResponseValidator`
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Validation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Validators.Validation.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Feedback">
+      <MemberSignature Language="C#" Value="public string? Feedback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Feedback" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Validators.Validation.Feedback" />
+      <MemberSignature Language="VB.NET" Value="Public Property Feedback As String" />
+      <MemberSignature Language="F#" Value="member this.Feedback : string with get, set" Usage="Microsoft.Teams.AI.AI.Validators.Validation.Feedback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Repair instructions to send to the model.
+            Should be set if the validation fails.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Valid">
+      <MemberSignature Language="C#" Value="public bool Valid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Valid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Validators.Validation.Valid" />
+      <MemberSignature Language="VB.NET" Value="Public Property Valid As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Valid : bool with get, set" Usage="Microsoft.Teams.AI.AI.Validators.Validation.Valid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether the validation is valid.
+            If this is `false` the `Feedback` property will be set, otherwise the `Value` property MAY be set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object? Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Validators.Validation.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="Microsoft.Teams.AI.AI.Validators.Validation.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Replacement value to use for the response.
+            Can be set if the validation succeeds. If set, the value will replace the responses `message.content` property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,133 @@
+<Type Name="ActionResponseValidator" FullName="Microsoft.Teams.AI.AI.Validators.ActionResponseValidator">
+  <TypeSignature Language="C#" Value="public class ActionResponseValidator : Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActionResponseValidator extends System.Object implements class Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Validators.ActionResponseValidator" />
+  <TypeSignature Language="VB.NET" Value="Public Class ActionResponseValidator&#xA;Implements IPromptResponseValidator" />
+  <TypeSignature Language="F#" Value="type ActionResponseValidator = class&#xA;    interface IPromptResponseValidator" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Validates action calls returned by the model.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionResponseValidator (System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; actions, bool required = false, string noun = &quot;action&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; actions, bool required, string noun) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Validators.ActionResponseValidator.#ctor(System.Collections.Generic.List{Microsoft.Teams.AI.AI.Models.ChatCompletionAction},System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (actions As List(Of ChatCompletionAction), Optional required As Boolean = false, Optional noun As String = &quot;action&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Validators.ActionResponseValidator : System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; * bool * string -&gt; Microsoft.Teams.AI.AI.Validators.ActionResponseValidator" Usage="new Microsoft.Teams.AI.AI.Validators.ActionResponseValidator (actions, required, noun)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="actions" Type="System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt;" />
+        <Parameter Name="required" Type="System.Boolean" />
+        <Parameter Name="noun" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="actions">List of supported actions.</param>
+        <param name="required">Whether the response is required to call an action.</param>
+        <param name="noun">Name of the action to use in feedback messages. Defaults to `action`.</param>
+        <summary>
+            Creates a new `ActionResponseValidator` instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actions">
+      <MemberSignature Language="C#" Value="public readonly System.Collections.Generic.Dictionary&lt;string,Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; Actions;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; Actions" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Validators.ActionResponseValidator.Actions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Actions As Dictionary(Of String, ChatCompletionAction) " />
+      <MemberSignature Language="F#" Value="val mutable Actions : System.Collections.Generic.Dictionary&lt;string, Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt;" Usage="Microsoft.Teams.AI.AI.Validators.ActionResponseValidator.Actions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of supported actions.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Noun">
+      <MemberSignature Language="C#" Value="public readonly string Noun;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly string Noun" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Validators.ActionResponseValidator.Noun" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Noun As String " />
+      <MemberSignature Language="F#" Value="val mutable Noun : string" Usage="Microsoft.Teams.AI.AI.Validators.ActionResponseValidator.Noun" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the action to use in feedback messages. Defaults to `action`.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateResponseAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt; ValidateResponseAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, Microsoft.Teams.AI.AI.Prompts.PromptResponse response, int remainingAttempts, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Validators.Validation&gt; ValidateResponseAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, class Microsoft.Teams.AI.AI.Prompts.PromptResponse response, int32 remainingAttempts, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Validators.ActionResponseValidator.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ValidateResponseAsync (context As ITurnContext, memory As IMemory, tokenizer As ITokenizer, response As PromptResponse, remainingAttempts As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Validation)" />
+      <MemberSignature Language="F#" Value="abstract member ValidateResponseAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptResponse * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt;&#xA;override this.ValidateResponseAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptResponse * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt;" Usage="actionResponseValidator.ValidateResponseAsync (context, memory, tokenizer, response, remainingAttempts, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Validators.Validation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="response" Type="Microsoft.Teams.AI.AI.Prompts.PromptResponse" />
+        <Parameter Name="remainingAttempts" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="response">To be added.</param>
+        <param name="remainingAttempts">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

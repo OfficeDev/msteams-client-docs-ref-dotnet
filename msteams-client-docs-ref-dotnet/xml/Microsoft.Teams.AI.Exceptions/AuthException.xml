@@ -1,0 +1,69 @@
+<Type Name="AuthException" FullName="Microsoft.Teams.AI.Exceptions.AuthException">
+  <TypeSignature Language="C#" Value="public class AuthException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Exceptions.AuthException" />
+  <TypeSignature Language="VB.NET" Value="Public Class AuthException&#xA;Inherits Exception" />
+  <TypeSignature Language="F#" Value="type AuthException = class&#xA;    inherit Exception" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An exception thrown when user authentication error occurs.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthException (string message, Microsoft.Teams.AI.Exceptions.AuthExceptionReason reason = Microsoft.Teams.AI.Exceptions.AuthExceptionReason.Other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype Microsoft.Teams.AI.Exceptions.AuthExceptionReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Exceptions.AuthException.#ctor(System.String,Microsoft.Teams.AI.Exceptions.AuthExceptionReason)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, Optional reason As AuthExceptionReason = Microsoft.Teams.AI.Exceptions.AuthExceptionReason.Other)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Exceptions.AuthException : string * Microsoft.Teams.AI.Exceptions.AuthExceptionReason -&gt; Microsoft.Teams.AI.Exceptions.AuthException" Usage="new Microsoft.Teams.AI.Exceptions.AuthException (message, reason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="reason" Type="Microsoft.Teams.AI.Exceptions.AuthExceptionReason" />
+      </Parameters>
+      <Docs>
+        <param name="message">The exception message</param>
+        <param name="reason">The cause of the exception</param>
+        <summary>
+            Initializes the class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cause">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Exceptions.AuthExceptionReason Cause { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.Exceptions.AuthExceptionReason Cause" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Exceptions.AuthException.Cause" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Cause As AuthExceptionReason" />
+      <MemberSignature Language="F#" Value="member this.Cause : Microsoft.Teams.AI.Exceptions.AuthExceptionReason" Usage="Microsoft.Teams.AI.Exceptions.AuthException.Cause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Exceptions.AuthExceptionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The cause of the exception.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

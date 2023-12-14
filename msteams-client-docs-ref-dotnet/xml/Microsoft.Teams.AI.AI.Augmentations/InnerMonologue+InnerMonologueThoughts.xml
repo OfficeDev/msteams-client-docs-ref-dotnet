@@ -1,0 +1,126 @@
+<Type Name="InnerMonologue+InnerMonologueThoughts" FullName="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue+InnerMonologueThoughts">
+  <TypeSignature Language="C#" Value="public class InnerMonologue.InnerMonologueThoughts" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit InnerMonologue/InnerMonologueThoughts extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts" />
+  <TypeSignature Language="VB.NET" Value="Public Class InnerMonologue.InnerMonologueThoughts" />
+  <TypeSignature Language="F#" Value="type InnerMonologue.InnerMonologueThoughts = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            InnerMonologueThoughts
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InnerMonologueThoughts (string thought, string reasoning);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string thought, string reasoning) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (thought As String, reasoning As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts : string * string -&gt; Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts" Usage="new Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts (thought, reasoning)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="thought" Type="System.String" />
+        <Parameter Name="reasoning" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="thought">The LLM's current thought.</param>
+        <param name="reasoning">The LLM's reasoning for the current thought.</param>
+        <summary>
+            Creates an instance of `InnerMonologueThoughts`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reasoning">
+      <MemberSignature Language="C#" Value="public string Reasoning { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reasoning" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts.Reasoning" />
+      <MemberSignature Language="VB.NET" Value="Public Property Reasoning As String" />
+      <MemberSignature Language="F#" Value="member this.Reasoning : string with get, set" Usage="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts.Reasoning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("reasoning")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("reasoning")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The LLM's reasoning for the current thought.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public static Json.Schema.JsonSchema Schema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Json.Schema.JsonSchema Schema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts.Schema" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Schema () As JsonSchema" />
+      <MemberSignature Language="F#" Value="static member Schema : unit -&gt; Json.Schema.JsonSchema" Usage="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts.Schema " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Json.Schema.JsonSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Schema
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thought">
+      <MemberSignature Language="C#" Value="public string Thought { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Thought" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts.Thought" />
+      <MemberSignature Language="VB.NET" Value="Public Property Thought As String" />
+      <MemberSignature Language="F#" Value="member this.Thought : string with get, set" Usage="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts.Thought" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("thought")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("thought")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The LLM's current thought.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,136 @@
+<Type Name="AssistantsPlannerOptions" FullName="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions">
+  <TypeSignature Language="C#" Value="public class AssistantsPlannerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssistantsPlannerOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AssistantsPlannerOptions" />
+  <TypeSignature Language="F#" Value="type AssistantsPlannerOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for the Assistants planner.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssistantsPlannerOptions (string apiKey, string assistantId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string assistantId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, assistantId As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions : string * string -&gt; Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" Usage="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions (apiKey, assistantId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="assistantId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">OpenAI API key.</param>
+        <param name="assistantId">The Assistant ID.</param>
+        <summary>
+            Create an instance of the AssistantsPlannerOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApiKey">
+      <MemberSignature Language="C#" Value="public string ApiKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApiKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.ApiKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApiKey As String" />
+      <MemberSignature Language="F#" Value="member this.ApiKey : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.ApiKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            OpenAI API key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssistantId">
+      <MemberSignature Language="C#" Value="public string AssistantId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssistantId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.AssistantId" />
+      <MemberSignature Language="VB.NET" Value="Public Property AssistantId As String" />
+      <MemberSignature Language="F#" Value="member this.AssistantId : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.AssistantId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Assistant ID.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Organization">
+      <MemberSignature Language="C#" Value="public string? Organization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Organization" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.Organization" />
+      <MemberSignature Language="VB.NET" Value="Public Property Organization As String" />
+      <MemberSignature Language="F#" Value="member this.Organization : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.Organization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. OpenAI organization.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PollingInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan? PollingInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; PollingInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.PollingInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property PollingInterval As Nullable(Of TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.PollingInterval : Nullable&lt;TimeSpan&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.PollingInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. The polling interval while waiting for the run to complete.
+            If not provide, the default value is 1 second.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

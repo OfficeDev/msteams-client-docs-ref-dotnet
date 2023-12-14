@@ -1,0 +1,80 @@
+<Type Name="IAugmentation" FullName="Microsoft.Teams.AI.AI.Augmentations.IAugmentation">
+  <TypeSignature Language="C#" Value="public interface IAugmentation : Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAugmentation implements class Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Augmentations.IAugmentation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IAugmentation&#xA;Implements IPromptResponseValidator" />
+  <TypeSignature Language="F#" Value="type IAugmentation = interface&#xA;    interface IPromptResponseValidator" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Creates an optional prompt section for the augmentation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreatePlanFromResponseAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan?&gt; CreatePlanFromResponseAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.PromptResponse response, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; CreatePlanFromResponseAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.PromptResponse response, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Augmentations.IAugmentation.CreatePlanFromResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreatePlanFromResponseAsync (context As ITurnContext, memory As IMemory, response As PromptResponse, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member CreatePlanFromResponseAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.PromptResponse * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="iAugmentation.CreatePlanFromResponseAsync (context, memory, response, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="response" Type="Microsoft.Teams.AI.AI.Prompts.PromptResponse" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">Context for the current turn of conversation.</param>
+        <param name="memory">An interface for accessing state variables.</param>
+        <param name="response">The validated and transformed response for the prompt.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Creates a plan given validated response value.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePromptSection">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection? CreatePromptSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection CreatePromptSection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Augmentations.IAugmentation.CreatePromptSection" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreatePromptSection () As PromptSection" />
+      <MemberSignature Language="F#" Value="abstract member CreatePromptSection : unit -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" Usage="iAugmentation.CreatePromptSection " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an optional prompt section for the augmentation.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

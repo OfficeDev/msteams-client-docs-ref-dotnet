@@ -1,0 +1,126 @@
+<Type Name="InnerMonologue" FullName="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue">
+  <TypeSignature Language="C#" Value="public class InnerMonologue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InnerMonologue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue" />
+  <TypeSignature Language="VB.NET" Value="Public Class InnerMonologue" />
+  <TypeSignature Language="F#" Value="type InnerMonologue = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Inner Monologue
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InnerMonologue (Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts thoughts, Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Augmentations.InnerMonologue/InnerMonologueThoughts thoughts, class Microsoft.Teams.AI.AI.Augmentations.InnerMonologue/InnerMonologueAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.#ctor(Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts,Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueAction)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (thoughts As InnerMonologue.InnerMonologueThoughts, action As InnerMonologue.InnerMonologueAction)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Augmentations.InnerMonologue : Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts * Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueAction -&gt; Microsoft.Teams.AI.AI.Augmentations.InnerMonologue" Usage="new Microsoft.Teams.AI.AI.Augmentations.InnerMonologue (thoughts, action)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="thoughts" Type="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue+InnerMonologueThoughts" />
+        <Parameter Name="action" Type="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue+InnerMonologueAction" />
+      </Parameters>
+      <Docs>
+        <param name="thoughts">Thoughts</param>
+        <param name="action">Action</param>
+        <summary>
+            Creates an instance of `InnerMonologue`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueAction Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Augmentations.InnerMonologue/InnerMonologueAction Action" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.Action" />
+      <MemberSignature Language="VB.NET" Value="Public Property Action As InnerMonologue.InnerMonologueAction" />
+      <MemberSignature Language="F#" Value="member this.Action : Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueAction with get, set" Usage="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("action")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("action")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Augmentations.InnerMonologue+InnerMonologueAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Action
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public static Json.Schema.JsonSchema Schema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Json.Schema.JsonSchema Schema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.Schema" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Schema () As JsonSchema" />
+      <MemberSignature Language="F#" Value="static member Schema : unit -&gt; Json.Schema.JsonSchema" Usage="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.Schema " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Json.Schema.JsonSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Schema
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thoughts">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts Thoughts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Augmentations.InnerMonologue/InnerMonologueThoughts Thoughts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.Thoughts" />
+      <MemberSignature Language="VB.NET" Value="Public Property Thoughts As InnerMonologue.InnerMonologueThoughts" />
+      <MemberSignature Language="F#" Value="member this.Thoughts : Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.InnerMonologueThoughts with get, set" Usage="Microsoft.Teams.AI.AI.Augmentations.InnerMonologue.Thoughts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("thoughts")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("thoughts")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Augmentations.InnerMonologue+InnerMonologueThoughts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Thoughts
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

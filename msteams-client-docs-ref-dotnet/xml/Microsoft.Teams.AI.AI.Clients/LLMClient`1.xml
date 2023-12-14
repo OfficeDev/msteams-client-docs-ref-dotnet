@@ -1,0 +1,207 @@
+<Type Name="LLMClient&lt;TContent&gt;" FullName="Microsoft.Teams.AI.AI.Clients.LLMClient&lt;TContent&gt;">
+  <TypeSignature Language="C#" Value="public class LLMClient&lt;TContent&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LLMClient`1&lt;TContent&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Clients.LLMClient`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class LLMClient(Of TContent)" />
+  <TypeSignature Language="F#" Value="type LLMClient&lt;'Content&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TContent" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TContent">
+             Type of message content returned for a 'success' response. The `response.message.content` field will be of type TContent.
+             </typeparam>
+    <summary>
+             LLMClient class that's used to complete prompts.
+             </summary>
+    <remarks>
+             Each wave, at a minimum needs to be configured with a `client`, `prompt`, and `prompt_options`.
+            
+             Configuring the wave to use a `validator` is optional but recommended. The primary benefit to
+             using LLMClient is it's response validation and automatic response repair features. The
+             validator acts as guard and guarantees that you never get an malformed response back from the
+             model. At least not without it being flagged as an `invalid_response`.
+            
+             Using the `JsonResponseValidator`, for example, guarantees that you only ever get a valid
+             object back from `CompletePromptAsync()`. In fact, you'll get back a fully parsed object and any
+             additional response text from the model will be dropped. If you give the `JsonResponseValidator`
+             a JSON Schema, you will get back a strongly typed and validated instance of an object in
+             the returned `response.message.content`.
+            
+             When a validator detects a bad response from the model, it gives the model "feedback" as to the
+             problem it detected with its response and more importantly an instruction that tells the model
+             how it should repair the problem. This puts the wave into a special repair mode where it first
+             forks the memory for the conversation and then has a side conversation with the model in an
+             effort to get it to repair its response. By forking the conversation, this isolates the bad
+             response and prevents it from contaminating the main conversation history. If the response can
+             be repaired, the wave will un-fork the memory and use the repaired response in place of the
+             original bad response. To the model it's as if it never made a mistake which is important for
+             future turns with the model. If the response can't be repaired, a response status of
+             `invalid_response` will be returned.
+            
+             When using a well designed validator, like the `JsonResponseValidator`, the wave can typically
+             repair a bad response in a single additional model call. Sometimes it takes a couple of calls
+             to effect a repair and occasionally it won't be able to repair it at all. If your prompt is
+             well designed and you only occasionally see failed repair attempts, I'd recommend just calling
+             the wave a second time. Given the stochastic nature of these models, there's a decent chance
+             it won't make the same mistake on the second call. A well designed prompt coupled with a well
+             designed validator should get the reliability of calling these models somewhere close to 99%
+             reliable.
+            
+             This "feedback" technique works with all the GPT-3 generation of models and I've tested it with
+             `text-davinci-003`, `gpt-3.5-turbo`, and `gpt-4`. There's a good chance it will work with other
+             open source models like `LLaMA` and Googles `Bard` but I have yet to test it with those models.
+            
+             LLMClient supports OpenAI's functions feature and can validate the models response against the
+             schema for the supported functions. When an LLMClient is configured with both a `OpenAIModel`
+             and a `FunctionResponseValidator`, the model will be cloned and configured to send the
+             validators configured list of functions with the request. There's no need to separately
+             configure the models `functions` list, but if you do, the models functions list will be sent
+             instead.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LLMClient (Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;TContent&gt; options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1&lt;!TContent&gt; options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Clients.LLMClient`1.#ctor(Microsoft.Teams.AI.AI.Clients.LLMClientOptions{`0},Microsoft.Extensions.Logging.ILoggerFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As LLMClientOptions(Of TContent), Optional loggerFactory As ILoggerFactory = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Clients.LLMClient&lt;'Content&gt; : Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt; * Microsoft.Extensions.Logging.ILoggerFactory -&gt; Microsoft.Teams.AI.AI.Clients.LLMClient&lt;'Content&gt;" Usage="new Microsoft.Teams.AI.AI.Clients.LLMClient&lt;'Content&gt; (options, loggerFactory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;TContent&gt;" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options for this LLMClient instance.</param>
+        <param name="loggerFactory">logger</param>
+        <summary>
+            Creates a new `LLMClient` instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFunctionResultToHistory">
+      <MemberSignature Language="C#" Value="public void AddFunctionResultToHistory (Microsoft.Teams.AI.State.IMemory memory, string name, object results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFunctionResultToHistory(class Microsoft.Teams.AI.State.IMemory memory, string name, object results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Clients.LLMClient`1.AddFunctionResultToHistory(Microsoft.Teams.AI.State.IMemory,System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFunctionResultToHistory (memory As IMemory, name As String, results As Object)" />
+      <MemberSignature Language="F#" Value="member this.AddFunctionResultToHistory : Microsoft.Teams.AI.State.IMemory * string * obj -&gt; unit" Usage="lLMClient.AddFunctionResultToHistory (memory, name, results)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="results" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="memory">An interface for accessing state values.</param>
+        <param name="name">Name of the function that was called.</param>
+        <param name="results">Results returned by the function.</param>
+        <summary>
+            Adds a result from a `function_call` to the history.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletePromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync (Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; functions, string? input = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync(class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; functions, string input, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Clients.LLMClient`1.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompletePromptAsync (context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of List(Of String)), Optional input As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PromptResponse)" />
+      <MemberSignature Language="F#" Value="member this.CompletePromptAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;" Usage="lLMClient.CompletePromptAsync (context, memory, functions, input, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="context">Current turn context.</param>
+        <param name="memory">An interface for accessing state values.</param>
+        <param name="functions">Functions to use when rendering the prompt.</param>
+        <param name="input">Input to use when completing the prompt.</param>
+        <param name="cancellationToken" />
+        <summary>
+             Completes a prompt.
+             </summary>
+        <returns>A `PromptResponse` with the status and message.</returns>
+        <remarks>
+             The `input` parameter is optional but if passed in, will be assigned to memory using the
+             configured `InputVariable`. If it's not passed in an attempt will be made to read it
+             from memory so passing it in or assigning to memory works. In either case, the `input`
+             variable is only used when constructing a user message that, will be added to the
+             conversation history and formatted like `{ role: 'user', content: input }`.
+            
+             It's important to note that if you want the users input sent to the model as part of the
+             prompt, you will need to add a `UserMessageSection` to your prompt. The wave does not do
+             anything to modify your prompt, except when performing repairs and those changes are
+             temporary.
+            
+             When the model successfully returns a valid (or repaired) response, a 'user' message (if
+             input was detected) and 'assistant' message will be automatically added to the conversation
+             history. You can disable that behavior by setting `MaxHistoryMessages` to `0`.
+            
+             The response returned by `CompletePromptAsync()` will be strongly typed by the validator you're
+             using. The `DefaultResponseValidator` returns a `string` and the `JsonResponseValidator`
+             will return either an `object` or if a JSON Schema is provided, an instance of `TContent`.
+             When using a custom validator, the validator is return any type of content it likes.
+            
+             A successful response is indicated by `response.status == 'success'` and the content can be
+             accessed via `response.message.content`.  If a response is invalid it will have a
+             `response.status == 'invalid_response'` and the `response.message` will be a string containing
+             the validator feedback message.  There are other status codes for various errors and in all
+             cases except `success` the `response.message` will be of type `string`.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public readonly Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;TContent&gt; Options;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly class Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1&lt;!TContent&gt; Options" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Clients.LLMClient`1.Options" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Options As LLMClientOptions(Of TContent) " />
+      <MemberSignature Language="F#" Value="val mutable Options : Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;" Usage="Microsoft.Teams.AI.AI.Clients.LLMClient&lt;'Content&gt;.Options" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;TContent&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Options for this LLMClient instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

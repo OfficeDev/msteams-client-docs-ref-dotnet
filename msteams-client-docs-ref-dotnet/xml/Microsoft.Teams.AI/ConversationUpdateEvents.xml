@@ -1,0 +1,317 @@
+<Type Name="ConversationUpdateEvents" FullName="Microsoft.Teams.AI.ConversationUpdateEvents">
+  <TypeSignature Language="C#" Value="public static class ConversationUpdateEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConversationUpdateEvents extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.ConversationUpdateEvents" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationUpdateEvents" />
+  <TypeSignature Language="F#" Value="type ConversationUpdateEvents = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Conversation update events.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChannelCreated">
+      <MemberSignature Language="C#" Value="public const string ChannelCreated;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ChannelCreated" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.ChannelCreated" />
+      <MemberSignature Language="VB.NET" Value="Public Const ChannelCreated As String " />
+      <MemberSignature Language="F#" Value="val mutable ChannelCreated : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.ChannelCreated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ChannelCreated event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelDeleted">
+      <MemberSignature Language="C#" Value="public const string ChannelDeleted;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ChannelDeleted" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.ChannelDeleted" />
+      <MemberSignature Language="VB.NET" Value="Public Const ChannelDeleted As String " />
+      <MemberSignature Language="F#" Value="val mutable ChannelDeleted : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.ChannelDeleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ChannelDeleted event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelRenamed">
+      <MemberSignature Language="C#" Value="public const string ChannelRenamed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ChannelRenamed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.ChannelRenamed" />
+      <MemberSignature Language="VB.NET" Value="Public Const ChannelRenamed As String " />
+      <MemberSignature Language="F#" Value="val mutable ChannelRenamed : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.ChannelRenamed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ChannelRenamed event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelRestored">
+      <MemberSignature Language="C#" Value="public const string ChannelRestored;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ChannelRestored" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.ChannelRestored" />
+      <MemberSignature Language="VB.NET" Value="Public Const ChannelRestored As String " />
+      <MemberSignature Language="F#" Value="val mutable ChannelRestored : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.ChannelRestored" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ChannelRestored event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoryDisclosed">
+      <MemberSignature Language="C#" Value="public const string HistoryDisclosed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string HistoryDisclosed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.HistoryDisclosed" />
+      <MemberSignature Language="VB.NET" Value="Public Const HistoryDisclosed As String " />
+      <MemberSignature Language="F#" Value="val mutable HistoryDisclosed : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.HistoryDisclosed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HistoryDisclosed event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembersAdded">
+      <MemberSignature Language="C#" Value="public const string MembersAdded;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string MembersAdded" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.MembersAdded" />
+      <MemberSignature Language="VB.NET" Value="Public Const MembersAdded As String " />
+      <MemberSignature Language="F#" Value="val mutable MembersAdded : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.MembersAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MembersAdded event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembersRemoved">
+      <MemberSignature Language="C#" Value="public const string MembersRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string MembersRemoved" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.MembersRemoved" />
+      <MemberSignature Language="VB.NET" Value="Public Const MembersRemoved As String " />
+      <MemberSignature Language="F#" Value="val mutable MembersRemoved : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.MembersRemoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MembersRemoved event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeamArchived">
+      <MemberSignature Language="C#" Value="public const string TeamArchived;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TeamArchived" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.TeamArchived" />
+      <MemberSignature Language="VB.NET" Value="Public Const TeamArchived As String " />
+      <MemberSignature Language="F#" Value="val mutable TeamArchived : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.TeamArchived" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TeamArchived event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeamDeleted">
+      <MemberSignature Language="C#" Value="public const string TeamDeleted;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TeamDeleted" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.TeamDeleted" />
+      <MemberSignature Language="VB.NET" Value="Public Const TeamDeleted As String " />
+      <MemberSignature Language="F#" Value="val mutable TeamDeleted : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.TeamDeleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TeamDeleted event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeamHardDeleted">
+      <MemberSignature Language="C#" Value="public const string TeamHardDeleted;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TeamHardDeleted" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.TeamHardDeleted" />
+      <MemberSignature Language="VB.NET" Value="Public Const TeamHardDeleted As String " />
+      <MemberSignature Language="F#" Value="val mutable TeamHardDeleted : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.TeamHardDeleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TeamHardDeleted event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeamRenamed">
+      <MemberSignature Language="C#" Value="public const string TeamRenamed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TeamRenamed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.TeamRenamed" />
+      <MemberSignature Language="VB.NET" Value="Public Const TeamRenamed As String " />
+      <MemberSignature Language="F#" Value="val mutable TeamRenamed : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.TeamRenamed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TeamRenamed event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeamRestored">
+      <MemberSignature Language="C#" Value="public const string TeamRestored;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TeamRestored" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.TeamRestored" />
+      <MemberSignature Language="VB.NET" Value="Public Const TeamRestored As String " />
+      <MemberSignature Language="F#" Value="val mutable TeamRestored : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.TeamRestored" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TeamRestored event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TeamUnarchived">
+      <MemberSignature Language="C#" Value="public const string TeamUnarchived;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TeamUnarchived" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.TeamUnarchived" />
+      <MemberSignature Language="VB.NET" Value="Public Const TeamUnarchived As String " />
+      <MemberSignature Language="F#" Value="val mutable TeamUnarchived : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.TeamUnarchived" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TeamUnarchived event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopicName">
+      <MemberSignature Language="C#" Value="public const string TopicName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string TopicName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.ConversationUpdateEvents.TopicName" />
+      <MemberSignature Language="VB.NET" Value="Public Const TopicName As String " />
+      <MemberSignature Language="F#" Value="val mutable TopicName : string" Usage="Microsoft.Teams.AI.ConversationUpdateEvents.TopicName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TopicName event 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
