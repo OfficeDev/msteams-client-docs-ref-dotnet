@@ -1,0 +1,42 @@
+<Type Name="FetchHandlerAsync&lt;TState&gt;" FullName="Microsoft.Teams.AI.FetchHandlerAsync&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt; FetchHandlerAsync&lt;TState&gt;(ITurnContext turnContext, TState turnState, object data, CancellationToken cancellationToken) where TState : TurnState;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FetchHandlerAsync`1&lt;(class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.FetchHandlerAsync`1" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function FetchHandlerAsync(Of TState)(turnContext As ITurnContext, turnState As TState, data As Object, cancellationToken As CancellationToken) As Task(Of TaskModuleResponse) " />
+  <TypeSignature Language="F#" Value="type FetchHandlerAsync&lt;'State (requires 'State :&gt; TurnState)&gt; = delegate of ITurnContext * 'State * obj * CancellationToken -&gt; Task&lt;TaskModuleResponse&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+    <Parameter Name="turnState" Type="TState" />
+    <Parameter Name="data" Type="System.Object" />
+    <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt;</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TState">Type of the turn state. This allows for strongly typed access to the turn state.</typeparam>
+    <param name="turnContext">A strongly-typed context object for this turn.</param>
+    <param name="turnState">The turn state object that stores arbitrary data for this turn.</param>
+    <param name="data">The data associated with the fetch.</param>
+    <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+    <summary>
+            Function for handling Task Module fetch events.
+            </summary>
+    <returns>An instance of TaskModuleResponse.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

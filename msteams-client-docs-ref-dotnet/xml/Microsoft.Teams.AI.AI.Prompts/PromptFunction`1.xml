@@ -1,0 +1,40 @@
+<Type Name="PromptFunction&lt;TArgs&gt;" FullName="Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;TArgs&gt;">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task&lt;dynamic&gt; PromptFunction&lt;TArgs&gt;(ITurnContext context, IMemory memory, IPromptFunctions&lt;TArgs&gt; functions, ITokenizer tokenizer, TArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PromptFunction`1&lt;TArgs&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.PromptFunction`1" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function PromptFunction(Of TArgs)(context As ITurnContext, memory As IMemory, functions As IPromptFunctions(Of TArgs), tokenizer As ITokenizer, args As TArgs) As Task(Of Object) " />
+  <TypeSignature Language="F#" Value="type PromptFunction&lt;'Args&gt; = delegate of ITurnContext * IMemory * IPromptFunctions&lt;'Args&gt; * ITokenizer * 'Args -&gt; Task&lt;obj&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TArgs" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+    <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+    <Parameter Name="functions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;TArgs&gt;" />
+    <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+    <Parameter Name="args" Type="TArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TArgs">To be added.</typeparam>
+    <param name="context">context</param>
+    <param name="memory">memory</param>
+    <param name="functions">functions</param>
+    <param name="tokenizer">tokenizer</param>
+    <param name="args">args</param>
+    <summary>
+            Prompt Function
+            </summary>
+    <returns />
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

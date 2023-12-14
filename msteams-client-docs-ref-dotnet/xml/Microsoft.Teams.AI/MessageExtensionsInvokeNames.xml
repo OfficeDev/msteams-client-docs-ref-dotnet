@@ -1,0 +1,123 @@
+<Type Name="MessageExtensionsInvokeNames" FullName="Microsoft.Teams.AI.MessageExtensionsInvokeNames">
+  <TypeSignature Language="C#" Value="public class MessageExtensionsInvokeNames" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageExtensionsInvokeNames extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.MessageExtensionsInvokeNames" />
+  <TypeSignature Language="VB.NET" Value="Public Class MessageExtensionsInvokeNames" />
+  <TypeSignature Language="F#" Value="type MessageExtensionsInvokeNames = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Constants for message extension invoke names
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageExtensionsInvokeNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.MessageExtensionsInvokeNames.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ANONYMOUS_QUERY_LINK_INVOKE_NAME">
+      <MemberSignature Language="C#" Value="public static readonly string ANONYMOUS_QUERY_LINK_INVOKE_NAME;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ANONYMOUS_QUERY_LINK_INVOKE_NAME" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.MessageExtensionsInvokeNames.ANONYMOUS_QUERY_LINK_INVOKE_NAME" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ANONYMOUS_QUERY_LINK_INVOKE_NAME As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable ANONYMOUS_QUERY_LINK_INVOKE_NAME : string" Usage="Microsoft.Teams.AI.MessageExtensionsInvokeNames.ANONYMOUS_QUERY_LINK_INVOKE_NAME" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Anonymous query link invoke name
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FETCH_TASK_INVOKE_NAME">
+      <MemberSignature Language="C#" Value="public static readonly string FETCH_TASK_INVOKE_NAME;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FETCH_TASK_INVOKE_NAME" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.MessageExtensionsInvokeNames.FETCH_TASK_INVOKE_NAME" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly FETCH_TASK_INVOKE_NAME As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable FETCH_TASK_INVOKE_NAME : string" Usage="Microsoft.Teams.AI.MessageExtensionsInvokeNames.FETCH_TASK_INVOKE_NAME" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Fetch task invoke name
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QUERY_INVOKE_NAME">
+      <MemberSignature Language="C#" Value="public static readonly string QUERY_INVOKE_NAME;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string QUERY_INVOKE_NAME" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.MessageExtensionsInvokeNames.QUERY_INVOKE_NAME" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly QUERY_INVOKE_NAME As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable QUERY_INVOKE_NAME : string" Usage="Microsoft.Teams.AI.MessageExtensionsInvokeNames.QUERY_INVOKE_NAME" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Query invoke name
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QUERY_LINK_INVOKE_NAME">
+      <MemberSignature Language="C#" Value="public static readonly string QUERY_LINK_INVOKE_NAME;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string QUERY_LINK_INVOKE_NAME" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.MessageExtensionsInvokeNames.QUERY_LINK_INVOKE_NAME" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly QUERY_LINK_INVOKE_NAME As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable QUERY_LINK_INVOKE_NAME : string" Usage="Microsoft.Teams.AI.MessageExtensionsInvokeNames.QUERY_LINK_INVOKE_NAME" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Query link invoke name
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

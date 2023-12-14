@@ -1,0 +1,173 @@
+<Type Name="AssistantsState" FullName="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState">
+  <TypeSignature Language="C#" Value="public class AssistantsState : Microsoft.Teams.AI.State.TurnState, Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssistantsState extends Microsoft.Teams.AI.State.TurnState implements class Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState" />
+  <TypeSignature Language="VB.NET" Value="Public Class AssistantsState&#xA;Inherits TurnState&#xA;Implements IAssistantsState" />
+  <TypeSignature Language="F#" Value="type AssistantsState = class&#xA;    inherit TurnState&#xA;    interface IAssistantsState" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The default implementation of <see cref="T:Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssistantsState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastMessageId">
+      <MemberSignature Language="C#" Value="public string? LastMessageId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastMessageId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.LastMessageId" />
+      <MemberSignature Language="VB.NET" Value="Public Property LastMessageId As String" />
+      <MemberSignature Language="F#" Value="member this.LastMessageId : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.LastMessageId" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState.LastMessageId</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the last message ID.
+            Stored in ConversationState with key "assistants_state_last_message_id".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunId">
+      <MemberSignature Language="C#" Value="public string? RunId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RunId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.RunId" />
+      <MemberSignature Language="VB.NET" Value="Public Property RunId As String" />
+      <MemberSignature Language="F#" Value="member this.RunId : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.RunId" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState.RunId</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the run ID.
+            Stored in ConversationState with key "assistants_state_run_id".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmitToolMap">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; SubmitToolMap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; SubmitToolMap" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.SubmitToolMap" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubmitToolMap As Dictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.SubmitToolMap : System.Collections.Generic.Dictionary&lt;string, string&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.SubmitToolMap" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState.SubmitToolMap</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the submit tool map.
+            Stored in TempState with key "assistants_state_submit_tool_map".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmitToolOutputs">
+      <MemberSignature Language="C#" Value="public bool SubmitToolOutputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SubmitToolOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.SubmitToolOutputs" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubmitToolOutputs As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SubmitToolOutputs : bool with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.SubmitToolOutputs" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState.SubmitToolOutputs</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set whether need to submit tool outputs.
+            Stored in TempState with key "assistants_state_submit_tool_outputs".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadId">
+      <MemberSignature Language="C#" Value="public string? ThreadId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreadId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.ThreadId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ThreadId As String" />
+      <MemberSignature Language="F#" Value="member this.ThreadId : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.ThreadId" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState.ThreadId</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the thread ID.
+            Stored in ConversationState with key "assistants_state_thread_id".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

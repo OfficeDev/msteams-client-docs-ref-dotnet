@@ -1,0 +1,78 @@
+<Type Name="Prompt" FullName="Microsoft.Teams.AI.AI.Prompts.Prompt">
+  <TypeSignature Language="C#" Value="public class Prompt : Microsoft.Teams.AI.AI.Prompts.Sections.LayoutSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Prompt extends Microsoft.Teams.AI.AI.Prompts.Sections.LayoutSection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.Prompt" />
+  <TypeSignature Language="VB.NET" Value="Public Class Prompt&#xA;Inherits LayoutSection" />
+  <TypeSignature Language="F#" Value="type Prompt = class&#xA;    inherit LayoutSection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Prompts.Sections.LayoutSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Top level prompt section.
+            
+             Prompts are compositional such that they can be nested to create complex prompt hierarchies.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Prompt (System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt; sections, int tokens = -1, bool required = true, string separator = &quot;\n\n&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt; sections, int32 tokens, bool required, string separator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Prompt.#ctor(System.Collections.Generic.List{Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection},System.Int32,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sections As List(Of PromptSection), Optional tokens As Integer = -1, Optional required As Boolean = true, Optional separator As String = &quot;\n\n&quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.Prompt : System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt; * int * bool * string -&gt; Microsoft.Teams.AI.AI.Prompts.Prompt" Usage="new Microsoft.Teams.AI.AI.Prompts.Prompt (sections, tokens, required, separator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sections" Type="System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection&gt;" />
+        <Parameter Name="tokens" Type="System.Int32" />
+        <Parameter Name="required" Type="System.Boolean" />
+        <Parameter Name="separator" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sections">sections to be rendered</param>
+        <param name="tokens">Sizing strategy for this section. Defaults to `auto`</param>
+        <param name="required">Indicates if this section is required. Defaults to `true`</param>
+        <param name="separator">Separator to use between sections when rendering as text. Defaults to `\n\n`</param>
+        <summary>
+            Creates an instance of `Prompt`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSection">
+      <MemberSignature Language="C#" Value="public void AddSection (Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSection(class Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Prompt.AddSection(Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddSection (section As PromptSection)" />
+      <MemberSignature Language="F#" Value="member this.AddSection : Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection -&gt; unit" Usage="prompt.AddSection section" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="section" Type="Microsoft.Teams.AI.AI.Prompts.Sections.PromptSection" />
+      </Parameters>
+      <Docs>
+        <param name="section">section to add</param>
+        <summary>
+            Add Section
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

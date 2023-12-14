@@ -1,0 +1,111 @@
+<Type Name="SignInResponse" FullName="Microsoft.Teams.AI.SignInResponse">
+  <TypeSignature Language="C#" Value="public class SignInResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignInResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.SignInResponse" />
+  <TypeSignature Language="VB.NET" Value="Public Class SignInResponse" />
+  <TypeSignature Language="F#" Value="type SignInResponse = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The sign-in response
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignInResponse (Microsoft.Teams.AI.SignInStatus status);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Teams.AI.SignInStatus status) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.SignInResponse.#ctor(Microsoft.Teams.AI.SignInStatus)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (status As SignInStatus)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.SignInResponse : Microsoft.Teams.AI.SignInStatus -&gt; Microsoft.Teams.AI.SignInResponse" Usage="new Microsoft.Teams.AI.SignInResponse status" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="status" Type="Microsoft.Teams.AI.SignInStatus" />
+      </Parameters>
+      <Docs>
+        <param name="status">The sign in status</param>
+        <summary>
+            Initialize an instance of current class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cause">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Exceptions.AuthExceptionReason? Cause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Teams.AI.Exceptions.AuthExceptionReason&gt; Cause" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.SignInResponse.Cause" />
+      <MemberSignature Language="VB.NET" Value="Public Property Cause As Nullable(Of AuthExceptionReason)" />
+      <MemberSignature Language="F#" Value="member this.Cause : Nullable&lt;Microsoft.Teams.AI.Exceptions.AuthExceptionReason&gt; with get, set" Usage="Microsoft.Teams.AI.SignInResponse.Cause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Teams.AI.Exceptions.AuthExceptionReason&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The cause of error. Only available when sign-in status is Error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public Exception? Error { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Error" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.SignInResponse.Error" />
+      <MemberSignature Language="VB.NET" Value="Public Property Error As Exception" />
+      <MemberSignature Language="F#" Value="member this.Error : Exception with get, set" Usage="Microsoft.Teams.AI.SignInResponse.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The exception object. Only available when sign-in status is Error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.SignInStatus Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.SignInStatus Status" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.SignInResponse.Status" />
+      <MemberSignature Language="VB.NET" Value="Public Property Status As SignInStatus" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Teams.AI.SignInStatus with get, set" Usage="Microsoft.Teams.AI.SignInResponse.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.SignInStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The sign-in status
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

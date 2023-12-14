@@ -1,0 +1,65 @@
+<Type Name="AdaptiveCardsOptions" FullName="Microsoft.Teams.AI.AdaptiveCardsOptions">
+  <TypeSignature Language="C#" Value="public class AdaptiveCardsOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdaptiveCardsOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AdaptiveCardsOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AdaptiveCardsOptions" />
+  <TypeSignature Language="F#" Value="type AdaptiveCardsOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Options for AdaptiveCards class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdaptiveCardsOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AdaptiveCardsOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionSubmitFilter">
+      <MemberSignature Language="C#" Value="public string? ActionSubmitFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActionSubmitFilter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AdaptiveCardsOptions.ActionSubmitFilter" />
+      <MemberSignature Language="VB.NET" Value="Public Property ActionSubmitFilter As String" />
+      <MemberSignature Language="F#" Value="member this.ActionSubmitFilter : string with get, set" Usage="Microsoft.Teams.AI.AdaptiveCardsOptions.ActionSubmitFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Data field used to identify the Action.Submit handler to trigger.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When an Action.Submit is triggered, the field name specified here will be used to determine
+            the handler to route the request to.
+            Defaults to a value of "verb".
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

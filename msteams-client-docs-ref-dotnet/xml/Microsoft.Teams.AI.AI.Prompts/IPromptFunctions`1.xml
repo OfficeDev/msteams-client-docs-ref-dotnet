@@ -1,0 +1,140 @@
+<Type Name="IPromptFunctions&lt;TArgs&gt;" FullName="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;TArgs&gt;">
+  <TypeSignature Language="C#" Value="public interface IPromptFunctions&lt;TArgs&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPromptFunctions`1&lt;TArgs&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPromptFunctions(Of TArgs)" />
+  <TypeSignature Language="F#" Value="type IPromptFunctions&lt;'Args&gt; = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TArgs" />
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TArgs">To be added.</typeparam>
+    <summary>
+            Prompt Functions
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddFunction">
+      <MemberSignature Language="C#" Value="public void AddFunction (string name, Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;TArgs&gt; func);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddFunction(string name, class Microsoft.Teams.AI.AI.Prompts.PromptFunction`1&lt;!TArgs&gt; func) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.AddFunction(System.String,Microsoft.Teams.AI.AI.Prompts.PromptFunction{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFunction (name As String, func As PromptFunction(Of TArgs))" />
+      <MemberSignature Language="F#" Value="abstract member AddFunction : string * Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;'Args&gt; -&gt; unit" Usage="iPromptFunctions.AddFunction (name, func)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="func" Type="Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;TArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">function name</param>
+        <param name="func">function to add</param>
+        <summary>
+            Add A Function
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFunction">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;TArgs&gt;? GetFunction (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Teams.AI.AI.Prompts.PromptFunction`1&lt;!TArgs&gt; GetFunction(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.GetFunction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFunction (name As String) As PromptFunction(Of TArgs)" />
+      <MemberSignature Language="F#" Value="abstract member GetFunction : string -&gt; Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;'Args&gt;" Usage="iPromptFunctions.GetFunction name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptFunction&lt;TArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">function name</param>
+        <summary>
+            Get Function
+            </summary>
+        <returns>the function if it exists, otherwise null</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFunction">
+      <MemberSignature Language="C#" Value="public bool HasFunction (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasFunction(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.HasFunction(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasFunction (name As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member HasFunction : string -&gt; bool" Usage="iPromptFunctions.HasFunction name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">function name</param>
+        <summary>
+            Check If Has Function
+            </summary>
+        <returns>true if has function, otherwise false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeFunctionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;dynamic?&gt; InvokeFunctionAsync (string name, Microsoft.Bot.Builder.ITurnContext context, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, TArgs args, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;object&gt; InvokeFunctionAsync(string name, class Microsoft.Bot.Builder.ITurnContext context, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, !TArgs args, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1.InvokeFunctionAsync(System.String,Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,`0,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function InvokeFunctionAsync (name As String, context As ITurnContext, memory As IMemory, tokenizer As ITokenizer, args As TArgs, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Object)" />
+      <MemberSignature Language="F#" Value="abstract member InvokeFunctionAsync : string * Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * 'Args * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;obj&gt;" Usage="iPromptFunctions.InvokeFunctionAsync (name, context, memory, tokenizer, args, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="args" Type="TArgs" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="name">function name</param>
+        <param name="context">context</param>
+        <param name="memory">memory</param>
+        <param name="tokenizer">tokenizer</param>
+        <param name="args">args</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoke A Function
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

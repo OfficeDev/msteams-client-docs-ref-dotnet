@@ -1,0 +1,117 @@
+<Type Name="OpenAIModel" FullName="Microsoft.Teams.AI.AI.Models.OpenAIModel">
+  <TypeSignature Language="C#" Value="public class OpenAIModel : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIModel extends System.Object implements class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.OpenAIModel" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenAIModel&#xA;Implements IPromptCompletionModel" />
+  <TypeSignature Language="F#" Value="type OpenAIModel = class&#xA;    interface IPromptCompletionModel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Models.IPromptCompletionModel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A `PromptCompletionModel` for calling OpenAI and Azure OpenAI hosted models.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenAIModel (Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default, System.Net.Http.HttpClient? httpClient = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory, class System.Net.Http.HttpClient httpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.OpenAIModel.#ctor(Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As AzureOpenAIModelOptions, Optional loggerFactory As ILoggerFactory = Nothing, Optional httpClient As HttpClient = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.OpenAIModel : Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions * Microsoft.Extensions.Logging.ILoggerFactory * System.Net.Http.HttpClient -&gt; Microsoft.Teams.AI.AI.Models.OpenAIModel" Usage="new Microsoft.Teams.AI.AI.Models.OpenAIModel (options, loggerFactory, httpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options for configuring an `OpenAIModel` to call an Azure OpenAI hosted model.</param>
+        <param name="loggerFactory">The logger factory instance.</param>
+        <param name="httpClient">HTTP client.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Models.OpenAIModel" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenAIModel (Microsoft.Teams.AI.AI.Models.OpenAIModelOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default, System.Net.Http.HttpClient? httpClient = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Models.OpenAIModelOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory, class System.Net.Http.HttpClient httpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.OpenAIModel.#ctor(Microsoft.Teams.AI.AI.Models.OpenAIModelOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As OpenAIModelOptions, Optional loggerFactory As ILoggerFactory = Nothing, Optional httpClient As HttpClient = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.OpenAIModel : Microsoft.Teams.AI.AI.Models.OpenAIModelOptions * Microsoft.Extensions.Logging.ILoggerFactory * System.Net.Http.HttpClient -&gt; Microsoft.Teams.AI.AI.Models.OpenAIModel" Usage="new Microsoft.Teams.AI.AI.Models.OpenAIModel (options, loggerFactory, httpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Models.OpenAIModelOptions" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options for configuring an `OpenAIModel` to call an OpenAI hosted model.</param>
+        <param name="loggerFactory">The logger factory instance.</param>
+        <param name="httpClient">HTTP client.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Models.OpenAIModel" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletePromptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; promptFunctions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, Microsoft.Teams.AI.AI.Prompts.PromptTemplate promptTemplate, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt; CompletePromptAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; promptFunctions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, class Microsoft.Teams.AI.AI.Prompts.PromptTemplate promptTemplate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.OpenAIModel.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompletePromptAsync (turnContext As ITurnContext, memory As IMemory, promptFunctions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, promptTemplate As PromptTemplate, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PromptResponse)" />
+      <MemberSignature Language="F#" Value="abstract member CompletePromptAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptTemplate * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;&#xA;override this.CompletePromptAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptTemplate * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;" Usage="openAIModel.CompletePromptAsync (turnContext, memory, promptFunctions, tokenizer, promptTemplate, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Models.IPromptCompletionModel.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="promptFunctions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="promptTemplate" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="memory">To be added.</param>
+        <param name="promptFunctions">To be added.</param>
+        <param name="tokenizer">To be added.</param>
+        <param name="promptTemplate">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

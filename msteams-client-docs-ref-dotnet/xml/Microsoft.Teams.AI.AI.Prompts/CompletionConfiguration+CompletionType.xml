@@ -1,0 +1,64 @@
+<Type Name="CompletionConfiguration+CompletionType" FullName="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration+CompletionType">
+  <TypeSignature Language="C#" Value="public enum CompletionConfiguration.CompletionType" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed CompletionConfiguration/CompletionType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.CompletionType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CompletionConfiguration.CompletionType" />
+  <TypeSignature Language="F#" Value="type CompletionConfiguration.CompletionType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Completion Type
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Chat">
+      <MemberSignature Language="C#" Value="Chat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration/CompletionType Chat = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.CompletionType.Chat" />
+      <MemberSignature Language="VB.NET" Value="Chat" />
+      <MemberSignature Language="F#" Value="Chat = 0" Usage="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.CompletionType.Chat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration+CompletionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Chat
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration/CompletionType Text = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.CompletionType.Text" />
+      <MemberSignature Language="VB.NET" Value="Text" />
+      <MemberSignature Language="F#" Value="Text = 1" Usage="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.CompletionType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration+CompletionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Text
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

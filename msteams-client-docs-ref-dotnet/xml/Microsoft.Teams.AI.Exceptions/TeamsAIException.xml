@@ -1,0 +1,69 @@
+<Type Name="TeamsAIException" FullName="Microsoft.Teams.AI.Exceptions.TeamsAIException">
+  <TypeSignature Language="C#" Value="public class TeamsAIException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsAIException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Exceptions.TeamsAIException" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsAIException&#xA;Inherits Exception" />
+  <TypeSignature Language="F#" Value="type TeamsAIException = class&#xA;    inherit Exception" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base exception for the TeamsAI library.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsAIException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Exceptions.TeamsAIException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Exceptions.TeamsAIException : string -&gt; Microsoft.Teams.AI.Exceptions.TeamsAIException" Usage="new Microsoft.Teams.AI.Exceptions.TeamsAIException message" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Exception message.</param>
+        <summary>
+            Create an instance of the <see cref="T:Microsoft.Teams.AI.Exceptions.TeamsAIException" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsAIException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Exceptions.TeamsAIException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Exceptions.TeamsAIException : string * Exception -&gt; Microsoft.Teams.AI.Exceptions.TeamsAIException" Usage="new Microsoft.Teams.AI.Exceptions.TeamsAIException (message, innerException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Exception message.</param>
+        <param name="innerException">Inner exception.</param>
+        <summary>
+            Create an instance of the <see cref="T:Microsoft.Teams.AI.Exceptions.TeamsAIException" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

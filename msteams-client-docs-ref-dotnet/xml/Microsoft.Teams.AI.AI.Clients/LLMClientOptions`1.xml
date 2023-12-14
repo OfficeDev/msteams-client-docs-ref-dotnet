@@ -1,0 +1,255 @@
+<Type Name="LLMClientOptions&lt;TContent&gt;" FullName="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;TContent&gt;">
+  <TypeSignature Language="C#" Value="public class LLMClientOptions&lt;TContent&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LLMClientOptions`1&lt;TContent&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class LLMClientOptions(Of TContent)" />
+  <TypeSignature Language="F#" Value="type LLMClientOptions&lt;'Content&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TContent" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TContent">
+            Type of message content returned for a 'success' response. The `response.message.content` field will be of type TContent.
+            </typeparam>
+    <summary>
+            Options for an LLMClient instance.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LLMClientOptions (Microsoft.Teams.AI.AI.Models.IPromptCompletionModel model, Microsoft.Teams.AI.AI.Prompts.PromptTemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel model, class Microsoft.Teams.AI.AI.Prompts.PromptTemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.#ctor(Microsoft.Teams.AI.AI.Models.IPromptCompletionModel,Microsoft.Teams.AI.AI.Prompts.PromptTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (model As IPromptCompletionModel, template As PromptTemplate)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt; : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel * Microsoft.Teams.AI.AI.Prompts.PromptTemplate -&gt; Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;" Usage="new Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt; (model, template)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="model" Type="Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+        <Parameter Name="template" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="model">AI model to use for completing prompts.</param>
+        <param name="template">Prompt to use for the conversation.</param>
+        <summary>
+            Creates an instance of `LLMClientOptions`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoryVariable">
+      <MemberSignature Language="C#" Value="public string HistoryVariable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HistoryVariable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.HistoryVariable" />
+      <MemberSignature Language="VB.NET" Value="Public Property HistoryVariable As String" />
+      <MemberSignature Language="F#" Value="member this.HistoryVariable : string with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.HistoryVariable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Memory variable used for storing conversation history.
+            
+             The history will be stored as a `Message[]` and the variable defaults to `conversation.history`.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputVariable">
+      <MemberSignature Language="C#" Value="public string InputVariable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InputVariable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.InputVariable" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputVariable As String" />
+      <MemberSignature Language="F#" Value="member this.InputVariable : string with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.InputVariable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Memory variable used for storing the users input message.
+            
+             The users input is expected to be a `string` but it's optional and defaults to `temp.input`.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogRepairs">
+      <MemberSignature Language="C#" Value="public bool LogRepairs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogRepairs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.LogRepairs" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogRepairs As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LogRepairs : bool with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.LogRepairs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If true, any repair attempts will be logged to the console.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHistoryMessages">
+      <MemberSignature Language="C#" Value="public int MaxHistoryMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxHistoryMessages" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.MaxHistoryMessages" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxHistoryMessages As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxHistoryMessages : int with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.MaxHistoryMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum number of conversation history messages that will be persisted to memory.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRepairAttempts">
+      <MemberSignature Language="C#" Value="public int MaxRepairAttempts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRepairAttempts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.MaxRepairAttempts" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxRepairAttempts As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxRepairAttempts : int with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.MaxRepairAttempts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum number of automatic repair attempts that will be made.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.IPromptCompletionModel Model { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel Model" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Model" />
+      <MemberSignature Language="VB.NET" Value="Public Property Model As IPromptCompletionModel" />
+      <MemberSignature Language="F#" Value="member this.Model : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            AI model to use for completing prompts.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Template">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptTemplate Template { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.PromptTemplate Template" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Template" />
+      <MemberSignature Language="VB.NET" Value="Public Property Template As PromptTemplate" />
+      <MemberSignature Language="F#" Value="member this.Template : Microsoft.Teams.AI.AI.Prompts.PromptTemplate with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.Template" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prompt to use for the conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tokenizer">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Tokenizers.ITokenizer Tokenizer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer Tokenizer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Tokenizer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tokenizer As ITokenizer" />
+      <MemberSignature Language="F#" Value="member this.Tokenizer : Microsoft.Teams.AI.AI.Tokenizers.ITokenizer with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.Tokenizer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Tokenizers.ITokenizer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Tokenizer used when rendering the prompt or counting tokens.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validator">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator Validator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator Validator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Validator" />
+      <MemberSignature Language="VB.NET" Value="Public Property Validator As IPromptResponseValidator" />
+      <MemberSignature Language="F#" Value="member this.Validator : Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.Validator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Response validator used when completing prompts.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

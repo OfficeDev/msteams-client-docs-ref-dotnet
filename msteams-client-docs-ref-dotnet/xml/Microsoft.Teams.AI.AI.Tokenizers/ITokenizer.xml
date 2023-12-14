@@ -1,0 +1,72 @@
+<Type Name="ITokenizer" FullName="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer">
+  <TypeSignature Language="C#" Value="public interface ITokenizer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITokenizer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ITokenizer" />
+  <TypeSignature Language="F#" Value="type ITokenizer = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Tokenizer
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public string Decode (System.Collections.Generic.List&lt;int&gt; tokens);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Decode(class System.Collections.Generic.List`1&lt;int32&gt; tokens) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer.Decode(System.Collections.Generic.List{System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Decode (tokens As List(Of Integer)) As String" />
+      <MemberSignature Language="F#" Value="abstract member Decode : System.Collections.Generic.List&lt;int&gt; -&gt; string" Usage="iTokenizer.Decode tokens" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokens" Type="System.Collections.Generic.List&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tokens">tokens to decode</param>
+        <summary>
+            Decode
+            </summary>
+        <returns>decoded string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;int&gt; Encode (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;int32&gt; Encode(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer.Encode(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Encode (text As String) As List(Of Integer)" />
+      <MemberSignature Language="F#" Value="abstract member Encode : string -&gt; System.Collections.Generic.List&lt;int&gt;" Usage="iTokenizer.Encode text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">text to encode</param>
+        <summary>
+            Encode
+            </summary>
+        <returns>encoded bytes</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

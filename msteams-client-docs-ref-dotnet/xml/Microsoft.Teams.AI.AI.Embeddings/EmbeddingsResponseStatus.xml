@@ -1,0 +1,85 @@
+<Type Name="EmbeddingsResponseStatus" FullName="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus">
+  <TypeSignature Language="C#" Value="public enum EmbeddingsResponseStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EmbeddingsResponseStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum EmbeddingsResponseStatus" />
+  <TypeSignature Language="F#" Value="type EmbeddingsResponseStatus = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Status of the embeddings response.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Failure">
+      <MemberSignature Language="C#" Value="Failure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus Failure = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.Failure" />
+      <MemberSignature Language="VB.NET" Value="Failure" />
+      <MemberSignature Language="F#" Value="Failure = 1" Usage="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.Failure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            An error occurred while creating the embeddings.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RateLimited">
+      <MemberSignature Language="C#" Value="RateLimited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus RateLimited = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.RateLimited" />
+      <MemberSignature Language="VB.NET" Value="RateLimited" />
+      <MemberSignature Language="F#" Value="RateLimited = 2" Usage="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.RateLimited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The request was rate limited.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.Success" />
+      <MemberSignature Language="VB.NET" Value="Success" />
+      <MemberSignature Language="F#" Value="Success = 0" Usage="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The embeddings were successfully created.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

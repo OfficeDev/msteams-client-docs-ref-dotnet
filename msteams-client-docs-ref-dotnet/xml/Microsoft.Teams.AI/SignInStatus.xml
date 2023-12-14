@@ -1,0 +1,85 @@
+<Type Name="SignInStatus" FullName="Microsoft.Teams.AI.SignInStatus">
+  <TypeSignature Language="C#" Value="public enum SignInStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SignInStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.SignInStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SignInStatus" />
+  <TypeSignature Language="F#" Value="type SignInStatus = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            The sign-in status
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="Complete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.SignInStatus Complete = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.SignInStatus.Complete" />
+      <MemberSignature Language="VB.NET" Value="Complete" />
+      <MemberSignature Language="F#" Value="Complete = 1" Usage="Microsoft.Teams.AI.SignInStatus.Complete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.SignInStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Sign-in complete
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.SignInStatus Error = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.SignInStatus.Error" />
+      <MemberSignature Language="VB.NET" Value="Error" />
+      <MemberSignature Language="F#" Value="Error = 2" Usage="Microsoft.Teams.AI.SignInStatus.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.SignInStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Error occurred during sign-in
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pending">
+      <MemberSignature Language="C#" Value="Pending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.SignInStatus Pending = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.SignInStatus.Pending" />
+      <MemberSignature Language="VB.NET" Value="Pending" />
+      <MemberSignature Language="F#" Value="Pending = 0" Usage="Microsoft.Teams.AI.SignInStatus.Pending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.SignInStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Sign-in not complete and requires user interaction
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

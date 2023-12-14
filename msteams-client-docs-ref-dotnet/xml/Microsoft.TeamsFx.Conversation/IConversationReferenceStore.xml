@@ -1,0 +1,113 @@
+<Type Name="IConversationReferenceStore" FullName="Microsoft.TeamsFx.Conversation.IConversationReferenceStore">
+  <TypeSignature Language="C#" Value="public interface IConversationReferenceStore" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConversationReferenceStore" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.TeamsFx.Conversation.IConversationReferenceStore" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IConversationReferenceStore" />
+  <TypeSignature Language="F#" Value="type IConversationReferenceStore = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>2.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interface for a store provider that manages notification target references.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; Add (string key, Microsoft.Bot.Schema.ConversationReference reference, Microsoft.TeamsFx.Conversation.ConversationReferenceStoreAddOptions options, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; Add(string key, class Microsoft.Bot.Schema.ConversationReference reference, class Microsoft.TeamsFx.Conversation.ConversationReferenceStoreAddOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.IConversationReferenceStore.Add(System.String,Microsoft.Bot.Schema.ConversationReference,Microsoft.TeamsFx.Conversation.ConversationReferenceStoreAddOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Add (key As String, reference As ConversationReference, options As ConversationReferenceStoreAddOptions, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * Microsoft.Bot.Schema.ConversationReference * Microsoft.TeamsFx.Conversation.ConversationReferenceStoreAddOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="iConversationReferenceStore.Add (key, reference, options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="reference" Type="Microsoft.Bot.Schema.ConversationReference" />
+        <Parameter Name="options" Type="Microsoft.TeamsFx.Conversation.ConversationReferenceStoreAddOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="key">The target key.</param>
+        <param name="reference">The conversation reference to be added.</param>
+        <param name="options">The options to add the conversation reference.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Add a conversation reference to the store. If overwrite, update the existing one, otherwise add when not exist.
+            </summary>
+        <returns>true if added or updated, false if not changed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.PagedData&lt;Microsoft.Bot.Schema.ConversationReference&gt;&gt; List (int? pageSize = default, string continuationToken = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.TeamsFx.Conversation.PagedData`1&lt;class Microsoft.Bot.Schema.ConversationReference&gt;&gt; List(valuetype System.Nullable`1&lt;int32&gt; pageSize, string continuationToken, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.IConversationReferenceStore.List(System.Nullable{System.Int32},System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function List (Optional pageSize As Nullable(Of Integer) = Nothing, Optional continuationToken As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of PagedData(Of ConversationReference))" />
+      <MemberSignature Language="F#" Value="abstract member List : Nullable&lt;int&gt; * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.PagedData&lt;Microsoft.Bot.Schema.ConversationReference&gt;&gt;" Usage="iConversationReferenceStore.List (pageSize, continuationToken, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.TeamsFx.Conversation.PagedData&lt;Microsoft.Bot.Schema.ConversationReference&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageSize" Type="System.Nullable&lt;System.Int32&gt;" />
+        <Parameter Name="continuationToken" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pageSize">The page size.</param>
+        <param name="continuationToken">The continuation token.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            List stored conversation reference by page.
+            </summary>
+        <returns>A paged list of conversation references.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; Remove (string key, Microsoft.Bot.Schema.ConversationReference reference, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;bool&gt; Remove(string key, class Microsoft.Bot.Schema.ConversationReference reference, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.TeamsFx.Conversation.IConversationReferenceStore.Remove(System.String,Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Remove (key As String, reference As ConversationReference, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Remove : string * Microsoft.Bot.Schema.ConversationReference * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="iConversationReferenceStore.Remove (key, reference, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="reference" Type="Microsoft.Bot.Schema.ConversationReference" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="key">The target key.</param>
+        <param name="reference">The conversation reference to be removed.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Remove a conversation reference from the store.
+            </summary>
+        <returns>true if exist and removed, false if not changed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

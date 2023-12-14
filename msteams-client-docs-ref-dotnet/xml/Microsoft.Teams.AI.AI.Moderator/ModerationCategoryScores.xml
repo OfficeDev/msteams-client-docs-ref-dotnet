@@ -1,0 +1,251 @@
+<Type Name="ModerationCategoryScores" FullName="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores">
+  <TypeSignature Language="C#" Value="public class ModerationCategoryScores" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModerationCategoryScores extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores" />
+  <TypeSignature Language="VB.NET" Value="Public Class ModerationCategoryScores" />
+  <TypeSignature Language="F#" Value="type ModerationCategoryScores = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Per category scores denoting model's confidence that input violates OpenAI's policy for the category.
+            </summary>
+    <remarks>
+            Higher score means higher confidence that input violates the policy.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModerationCategoryScores ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hate">
+      <MemberSignature Language="C#" Value="public double Hate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Hate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.Hate" />
+      <MemberSignature Language="VB.NET" Value="Public Property Hate As Double" />
+      <MemberSignature Language="F#" Value="member this.Hate : double with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.Hate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("hate")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("hate")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model's confidence that the input violates the OpenAI's policy for the category. Higher score denotes greater confidence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Content that expresses, incites, or promotes hate based on race, gender, ethnicity, religion, nationality, sexual orientation, disability status, or caste. Hateful content aimed at non-protected groups (e.g., chess players) is not covered by this category.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HateThreatening">
+      <MemberSignature Language="C#" Value="public double HateThreatening { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HateThreatening" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.HateThreatening" />
+      <MemberSignature Language="VB.NET" Value="Public Property HateThreatening As Double" />
+      <MemberSignature Language="F#" Value="member this.HateThreatening : double with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.HateThreatening" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("hate/threatening")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("hate/threatening")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model's confidence that the input violates the OpenAI's policy for the category. Higher score denotes greater confidence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Hateful content that also includes violence or serious harm towards the targeted group.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfHarm">
+      <MemberSignature Language="C#" Value="public double SelfHarm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelfHarm" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.SelfHarm" />
+      <MemberSignature Language="VB.NET" Value="Public Property SelfHarm As Double" />
+      <MemberSignature Language="F#" Value="member this.SelfHarm : double with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.SelfHarm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("self-harm")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("self-harm")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model's confidence that the input violates the OpenAI's policy for the category. Higher score denotes greater confidence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Content that promotes, encourages, or depicts acts of self-harm, such as suicide, cutting, and eating disorders.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sexual">
+      <MemberSignature Language="C#" Value="public double Sexual { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Sexual" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.Sexual" />
+      <MemberSignature Language="VB.NET" Value="Public Property Sexual As Double" />
+      <MemberSignature Language="F#" Value="member this.Sexual : double with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.Sexual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("sexual")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("sexual")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model's confidence that the input violates the OpenAI's policy for the category. Higher score denotes greater confidence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Content meant to arouse sexual excitement, such as the description of sexual activity, or that promotes sexual services (excluding sex education and wellness).
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SexualMinors">
+      <MemberSignature Language="C#" Value="public double SexualMinors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SexualMinors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.SexualMinors" />
+      <MemberSignature Language="VB.NET" Value="Public Property SexualMinors As Double" />
+      <MemberSignature Language="F#" Value="member this.SexualMinors : double with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.SexualMinors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("sexual/minors")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("sexual/minors")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model's confidence that the input violates the OpenAI's policy for the category. Higher score denotes greater confidence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Sexual content that includes an individual who is under 18 years old.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Violence">
+      <MemberSignature Language="C#" Value="public double Violence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Violence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.Violence" />
+      <MemberSignature Language="VB.NET" Value="Public Property Violence As Double" />
+      <MemberSignature Language="F#" Value="member this.Violence : double with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.Violence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("violence")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("violence")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model's confidence that the input violates the OpenAI's policy for the category. Higher score denotes greater confidence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Content that promotes or glorifies violence or celebrates the suffering or humiliation of others.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViolenceGraphic">
+      <MemberSignature Language="C#" Value="public double ViolenceGraphic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViolenceGraphic" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.ViolenceGraphic" />
+      <MemberSignature Language="VB.NET" Value="Public Property ViolenceGraphic As Double" />
+      <MemberSignature Language="F#" Value="member this.ViolenceGraphic : double with get, set" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationCategoryScores.ViolenceGraphic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("violence/graphic")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("violence/graphic")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Model's confidence that the input violates the OpenAI's policy for the category. Higher score denotes greater confidence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Violent content that depicts death, violence, or serious physical injury in extreme graphic detail.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

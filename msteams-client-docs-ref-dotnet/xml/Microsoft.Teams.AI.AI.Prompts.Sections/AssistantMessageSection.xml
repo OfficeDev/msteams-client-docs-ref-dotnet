@@ -1,0 +1,49 @@
+<Type Name="AssistantMessageSection" FullName="Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection">
+  <TypeSignature Language="C#" Value="public class AssistantMessageSection : Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssistantMessageSection extends Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection" />
+  <TypeSignature Language="VB.NET" Value="Public Class AssistantMessageSection&#xA;Inherits TemplateSection" />
+  <TypeSignature Language="F#" Value="type AssistantMessageSection = class&#xA;    inherit TemplateSection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Prompts.Sections.TemplateSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An assistant message section.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssistantMessageSection (string template, int tokens = -1, string prefix = &quot;assistant: &quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string template, int32 tokens, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection.#ctor(System.String,System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (template As String, Optional tokens As Integer = -1, Optional prefix As String = &quot;assistant: &quot;)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection : string * int * string -&gt; Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection" Usage="new Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection (template, tokens, prefix)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="template" Type="System.String" />
+        <Parameter Name="tokens" Type="System.Int32" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="template">Template to use for this section.</param>
+        <param name="tokens">Sizing strategy for this section. Defaults to `auto`.</param>
+        <param name="prefix">Prefix to use for user messages when rendering as text. Defaults to `user: `.</param>
+        <summary>
+            Creates an instance of `AssistantMessageSection`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,205 @@
+<Type Name="PromptTemplate" FullName="Microsoft.Teams.AI.AI.Prompts.PromptTemplate">
+  <TypeSignature Language="C#" Value="public class PromptTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PromptTemplate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public Class PromptTemplate" />
+  <TypeSignature Language="F#" Value="type PromptTemplate = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Prompt template cached by the prompt manager.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptTemplate (Microsoft.Teams.AI.AI.Prompts.PromptTemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Prompts.PromptTemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.#ctor(Microsoft.Teams.AI.AI.Prompts.PromptTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (template As PromptTemplate)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.PromptTemplate : Microsoft.Teams.AI.AI.Prompts.PromptTemplate -&gt; Microsoft.Teams.AI.AI.Prompts.PromptTemplate" Usage="new Microsoft.Teams.AI.AI.Prompts.PromptTemplate template" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="template" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="template" />
+        <summary>
+            Creates an instance of `PromptTemplate`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptTemplate (string name, Microsoft.Teams.AI.AI.Prompts.Prompt prompt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class Microsoft.Teams.AI.AI.Prompts.Prompt prompt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.#ctor(System.String,Microsoft.Teams.AI.AI.Prompts.Prompt)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, prompt As Prompt)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.PromptTemplate : string * Microsoft.Teams.AI.AI.Prompts.Prompt -&gt; Microsoft.Teams.AI.AI.Prompts.PromptTemplate" Usage="new Microsoft.Teams.AI.AI.Prompts.PromptTemplate (name, prompt)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="prompt" Type="Microsoft.Teams.AI.AI.Prompts.Prompt" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of the prompt template.</param>
+        <param name="prompt">Prompt that should be rendered</param>
+        <summary>
+            Creates an instance of `PromptTemplate`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptTemplate (string name, Microsoft.Teams.AI.AI.Prompts.Prompt prompt, Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class Microsoft.Teams.AI.AI.Prompts.Prompt prompt, class Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.#ctor(System.String,Microsoft.Teams.AI.AI.Prompts.Prompt,Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, prompt As Prompt, configuration As PromptTemplateConfiguration)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Prompts.PromptTemplate : string * Microsoft.Teams.AI.AI.Prompts.Prompt * Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration -&gt; Microsoft.Teams.AI.AI.Prompts.PromptTemplate" Usage="new Microsoft.Teams.AI.AI.Prompts.PromptTemplate (name, prompt, configuration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="prompt" Type="Microsoft.Teams.AI.AI.Prompts.Prompt" />
+        <Parameter Name="configuration" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of the prompt template.</param>
+        <param name="prompt">Prompt that should be rendered</param>
+        <param name="configuration">Configuration settings for the prompt template.</param>
+        <summary>
+            Creates an instance of `PromptTemplate`
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; Actions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; Actions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Actions" />
+      <MemberSignature Language="VB.NET" Value="Public Property Actions As List(Of ChatCompletionAction)" />
+      <MemberSignature Language="F#" Value="member this.Actions : System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Actions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionAction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional list of actions the model may generate JSON inputs for.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Augmentation">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Augmentations.IAugmentation Augmentation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Augmentations.IAugmentation Augmentation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Augmentation" />
+      <MemberSignature Language="VB.NET" Value="Public Property Augmentation As IAugmentation" />
+      <MemberSignature Language="F#" Value="member this.Augmentation : Microsoft.Teams.AI.AI.Augmentations.IAugmentation with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Augmentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Augmentations.IAugmentation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional augmentation for the prompt template.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration Configuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration Configuration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Configuration" />
+      <MemberSignature Language="VB.NET" Value="Public Property Configuration As PromptTemplateConfiguration" />
+      <MemberSignature Language="F#" Value="member this.Configuration : Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Configuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptTemplateConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Configuration settings for the prompt template.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the prompt template.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompt">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.Prompt Prompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.Prompt Prompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Prompt" />
+      <MemberSignature Language="VB.NET" Value="Public Property Prompt As Prompt" />
+      <MemberSignature Language="F#" Value="member this.Prompt : Microsoft.Teams.AI.AI.Prompts.Prompt with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptTemplate.Prompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.Prompt</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prompt that should be rendered
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,32 @@
+<Type Name="ActionPlannerOptions&lt;TState&gt;+ActionPlannerPromptFactory" FullName="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;+ActionPlannerPromptFactory">
+  <TypeSignature Language="C#" Value="public delegate System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptTemplate&gt; ActionPlannerOptions&lt;TState&gt;.ActionPlannerPromptFactory(ITurnContext context, TState state, ActionPlanner&lt;TState&gt; planner) where TState : TurnState, IMemory;" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ActionPlannerOptions`1/ActionPlannerPromptFactory&lt;(class Microsoft.Teams.AI.State.TurnState, class Microsoft.Teams.AI.State.IMemory) TState&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.ActionPlannerPromptFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function ActionPlannerOptions(Of TState).ActionPlannerPromptFactory(context As ITurnContext, state As TState, planner As ActionPlanner(Of TState)) As Task(Of PromptTemplate) " />
+  <TypeSignature Language="F#" Value="type ActionPlannerOptions&lt;'State (requires 'State :&gt; TurnState and 'State :&gt; IMemory)&gt;.ActionPlannerPromptFactory = delegate of ITurnContext * 'State * ActionPlanner&lt;'State (requires 'State :&gt; TurnState and 'State :&gt; IMemory)&gt; -&gt; Task&lt;PromptTemplate&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+    <Parameter Name="state" Type="TState" />
+    <Parameter Name="planner" Type="Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;TState&gt;" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptTemplate&gt;</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context" />
+    <param name="state" />
+    <param name="planner" />
+    <summary>
+            Factory function used to create a prompt template.
+            </summary>
+    <returns />
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

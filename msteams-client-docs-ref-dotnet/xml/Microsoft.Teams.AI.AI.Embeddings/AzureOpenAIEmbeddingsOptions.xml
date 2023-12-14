@@ -1,0 +1,73 @@
+<Type Name="AzureOpenAIEmbeddingsOptions" FullName="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions">
+  <TypeSignature Language="C#" Value="public class AzureOpenAIEmbeddingsOptions : Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureOpenAIEmbeddingsOptions extends Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureOpenAIEmbeddingsOptions&#xA;Inherits OpenAIEmbeddingsOptions" />
+  <TypeSignature Language="F#" Value="type AzureOpenAIEmbeddingsOptions = class&#xA;    inherit OpenAIEmbeddingsOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Additional options needed to use the Azure OpenAI service.
+            </summary>
+    <remarks>
+            The Azure OpenAI API version is set to latest by default.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureOpenAIEmbeddingsOptions (string apiKey, string model, string endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string model, string endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, model As String, endpoint As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions : string * string * string -&gt; Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" Usage="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions (apiKey, model, endpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="model" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">OpenAI API key.</param>
+        <param name="model">The model to use for embeddings. This should be the model deployment name, not the model</param>
+        <param name="endpoint">Endpoint for your Azure OpenAI deployment.</param>
+        <summary>
+            Create an instance of the AzureOpenAIEmbeddingsOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public string Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Endpoint for your Azure OpenAI deployment.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

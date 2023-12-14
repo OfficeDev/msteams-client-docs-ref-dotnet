@@ -1,0 +1,163 @@
+<Type Name="AssistantsPlanner&lt;TState&gt;" FullName="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class AssistantsPlanner&lt;TState&gt; : Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt; where TState : TurnState, IAssistantsState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssistantsPlanner`1&lt;(class Microsoft.Teams.AI.State.TurnState, class Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState) TState&gt; extends System.Object implements class Microsoft.Teams.AI.AI.Planners.IPlanner`1&lt;!TState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class AssistantsPlanner(Of TState)&#xA;Implements IPlanner(Of TState)" />
+  <TypeSignature Language="F#" Value="type AssistantsPlanner&lt;'State (requires 'State :&gt; TurnState and 'State :&gt; IAssistantsState)&gt; = class&#xA;    interface IPlanner&lt;'State (requires 'State :&gt; TurnState and 'State :&gt; IAssistantsState)&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+        <InterfaceName>Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TState">To be added.</typeparam>
+    <summary>
+            A planner that uses OpenAI's Assistants APIs to generate plans.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssistantsPlanner (Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default, System.Net.Http.HttpClient? httpClient = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory, class System.Net.Http.HttpClient httpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.#ctor(Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As AssistantsPlannerOptions, Optional loggerFactory As ILoggerFactory = Nothing, Optional httpClient As HttpClient = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; : Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions * Microsoft.Extensions.Logging.ILoggerFactory * System.Net.Http.HttpClient -&gt; Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt;" Usage="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; (options, loggerFactory, httpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options for configuring the AssistantsPlanner.</param>
+        <param name="loggerFactory">The logger factory instance.</param>
+        <param name="httpClient">HTTP client.</param>
+        <summary>
+            Create new AssistantsPlanner.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTaskAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt; BeginTaskAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.AI&lt;TState&gt; ai, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; BeginTaskAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.AI`1&lt;!TState&gt; ai, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.BeginTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTaskAsync (turnContext As ITurnContext, turnState As TState, ai As AI(Of TState), cancellationToken As CancellationToken) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member BeginTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;&#xA;override this.BeginTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="assistantsPlanner.BeginTaskAsync (turnContext, turnState, ai, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Planners.IPlanner`1.BeginTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="ai" Type="Microsoft.Teams.AI.AI.AI&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="turnState">To be added.</param>
+        <param name="ai">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueTaskAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt; ContinueTaskAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, Microsoft.Teams.AI.AI.AI&lt;TState&gt; ai, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Planners.Plan&gt; ContinueTaskAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, class Microsoft.Teams.AI.AI.AI`1&lt;!TState&gt; ai, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.ContinueTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContinueTaskAsync (turnContext As ITurnContext, turnState As TState, ai As AI(Of TState), cancellationToken As CancellationToken) As Task(Of Plan)" />
+      <MemberSignature Language="F#" Value="abstract member ContinueTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;&#xA;override this.ContinueTaskAsync : Microsoft.Bot.Builder.ITurnContext * 'State * Microsoft.Teams.AI.AI.AI&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;" Usage="assistantsPlanner.ContinueTaskAsync (turnContext, turnState, ai, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Planners.IPlanner`1.ContinueTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="ai" Type="Microsoft.Teams.AI.AI.AI&lt;TState&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="turnState">To be added.</param>
+        <param name="ai">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAssistantAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt; CreateAssistantAsync (string apiKey, string? organization, Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams request, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt; CreateAssistantAsync(string apiKey, string organization, class Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.CreateAssistantAsync(System.String,System.String,Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateAssistantAsync (apiKey As String, organization As String, request As AssistantCreateParams, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Assistant)" />
+      <MemberSignature Language="F#" Value="static member CreateAssistantAsync : string * string * Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt;" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt;.CreateAssistantAsync (apiKey, organization, request, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="organization" Type="System.String" />
+        <Parameter Name="request" Type="Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">OpenAI API key.</param>
+        <param name="organization">OpenAI organization.</param>
+        <param name="request">Definition of the assistant to create.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Static helper method for programmatically creating an assistant.
+            </summary>
+        <returns>The created assistant.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

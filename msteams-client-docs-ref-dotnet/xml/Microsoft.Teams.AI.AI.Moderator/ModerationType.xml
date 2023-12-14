@@ -1,0 +1,85 @@
+<Type Name="ModerationType" FullName="Microsoft.Teams.AI.AI.Moderator.ModerationType">
+  <TypeSignature Language="C#" Value="public enum ModerationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ModerationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Moderator.ModerationType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ModerationType" />
+  <TypeSignature Language="F#" Value="type ModerationType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Which parts of the conversation to moderate.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Moderator.ModerationType Both = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Moderator.ModerationType.Both" />
+      <MemberSignature Language="VB.NET" Value="Both" />
+      <MemberSignature Language="F#" Value="Both = 2" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationType.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.ModerationType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Moderate both input and output.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="Input" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Moderator.ModerationType Input = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Moderator.ModerationType.Input" />
+      <MemberSignature Language="VB.NET" Value="Input" />
+      <MemberSignature Language="F#" Value="Input = 0" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationType.Input" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.ModerationType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Only moderate input.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="Output" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Moderator.ModerationType Output = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Moderator.ModerationType.Output" />
+      <MemberSignature Language="VB.NET" Value="Output" />
+      <MemberSignature Language="F#" Value="Output = 1" Usage="Microsoft.Teams.AI.AI.Moderator.ModerationType.Output" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Moderator.ModerationType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Only moderate output.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

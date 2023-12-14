@@ -8,6 +8,8 @@
     <AssemblyName>Microsoft.TeamsFx</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>2.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,8 +30,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -46,8 +47,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -69,20 +69,25 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.TeamsFx</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use Store to customize the way to persist bot notification target references instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use Store to customize the way to persist bot notification target references instead.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.TeamsFx.Conversation.INotificationTargetStorage</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            An optional storage to persist bot notification connections.
+            An optional storage to persist bot notification target references.
             </summary>
         <value>To be added.</value>
         <remarks>
           <para>
-            If <c>Storage</c> is not provided, a default local file storage will be used, which stores notification connections into:
+            If <c>Storage</c> is not provided, a default local file storage will be used, which stores notification target references into:
             </para>
           <list type="bullet">
             <item>
@@ -97,6 +102,46 @@
           </list>
           <para>
             It's recommended to use your own shared storage for production environment.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Store">
+      <MemberSignature Language="C#" Value="public Microsoft.TeamsFx.Conversation.IConversationReferenceStore Store { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.TeamsFx.Conversation.IConversationReferenceStore Store" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.TeamsFx.Conversation.NotificationOptions.Store" />
+      <MemberSignature Language="VB.NET" Value="Public Property Store As IConversationReferenceStore" />
+      <MemberSignature Language="F#" Value="member this.Store : Microsoft.TeamsFx.Conversation.IConversationReferenceStore with get, set" Usage="Microsoft.TeamsFx.Conversation.NotificationOptions.Store" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.TeamsFx</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.TeamsFx.Conversation.IConversationReferenceStore</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An optional store to persist bot notification target references.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If <c>Store</c> is not provided, a default local store will be used, which stores notification target references into:
+            </para>
+          <list type="bullet">
+            <item>
+              <description>"{$env:TEAMSFX_NOTIFICATION_LOCALSTORE_DIR}/.notification.localstore.json" if running locally.</description>
+            </item>
+            <item>
+              <description>"{$env:TEMP}/.notification.localstore.json" if {$env:RUNNING_ON_AZURE} is set to "1".</description>
+            </item>
+            <item>
+              <description>"{<see cref="P:System.Environment.CurrentDirectory" />}/.notification.localstore.json" if all above environment variables are not set.</description>
+            </item>
+          </list>
+          <para>
+            It's recommended to use your own shared store for production environment.
             </para>
         </remarks>
       </Docs>
