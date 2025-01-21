@@ -1,0 +1,112 @@
+<Type Name="OpenAIFile" FullName="Microsoft.Teams.AI.AI.Models.OpenAIFile">
+  <TypeSignature Language="C#" Value="public class OpenAIFile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIFile extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.OpenAIFile" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenAIFile" />
+  <TypeSignature Language="F#" Value="type OpenAIFile = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an OpenAI File.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenAIFile (OpenAI.Files.OpenAIFile fileInfo, BinaryData fileContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class OpenAI.Files.OpenAIFile fileInfo, class System.BinaryData fileContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.OpenAIFile.#ctor(OpenAI.Files.OpenAIFile,System.BinaryData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (fileInfo As OpenAIFile, fileContent As BinaryData)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.OpenAIFile : OpenAI.Files.OpenAIFile * BinaryData -&gt; Microsoft.Teams.AI.AI.Models.OpenAIFile" Usage="new Microsoft.Teams.AI.AI.Models.OpenAIFile (fileInfo, fileContent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileInfo" Type="OpenAI.Files.OpenAIFile" />
+        <Parameter Name="fileContent" Type="System.BinaryData" />
+      </Parameters>
+      <Docs>
+        <param name="fileInfo">The OpenAI File</param>
+        <param name="fileContent">The OpenAI File contents</param>
+        <summary>
+            Initializes an instance of OpenAIFile
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileContent">
+      <MemberSignature Language="C#" Value="public BinaryData FileContent;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.BinaryData FileContent" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Models.OpenAIFile.FileContent" />
+      <MemberSignature Language="VB.NET" Value="Public FileContent As BinaryData " />
+      <MemberSignature Language="F#" Value="val mutable FileContent : BinaryData" Usage="Microsoft.Teams.AI.AI.Models.OpenAIFile.FileContent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the contents of an OpenAI File
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileInfo">
+      <MemberSignature Language="C#" Value="public OpenAI.Files.OpenAIFile FileInfo;" />
+      <MemberSignature Language="ILAsm" Value=".field public class OpenAI.Files.OpenAIFile FileInfo" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Models.OpenAIFile.FileInfo" />
+      <MemberSignature Language="VB.NET" Value="Public FileInfo As OpenAIFile " />
+      <MemberSignature Language="F#" Value="val mutable FileInfo : OpenAI.Files.OpenAIFile" Usage="Microsoft.Teams.AI.AI.Models.OpenAIFile.FileInfo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenAI.Files.OpenAIFile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents an OpenAI File information
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMimeType">
+      <MemberSignature Language="C#" Value="public string? GetMimeType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetMimeType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.OpenAIFile.GetMimeType" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMimeType () As String" />
+      <MemberSignature Language="F#" Value="member this.GetMimeType : unit -&gt; string" Usage="openAIFile.GetMimeType " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the file's mime type
+            </summary>
+        <returns>The file's mime type</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

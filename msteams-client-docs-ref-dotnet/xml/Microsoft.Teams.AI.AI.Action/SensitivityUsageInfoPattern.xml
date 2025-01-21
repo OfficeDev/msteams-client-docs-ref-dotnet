@@ -1,0 +1,150 @@
+<Type Name="SensitivityUsageInfoPattern" FullName="Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern">
+  <TypeSignature Language="C#" Value="public class SensitivityUsageInfoPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SensitivityUsageInfoPattern extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern" />
+  <TypeSignature Language="VB.NET" Value="Public Class SensitivityUsageInfoPattern" />
+  <TypeSignature Language="F#" Value="type SensitivityUsageInfoPattern = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The sensitivity usage info pattern.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SensitivityUsageInfoPattern ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AtType">
+      <MemberSignature Language="C#" Value="public string AtType;" />
+      <MemberSignature Language="ILAsm" Value=".field public string AtType" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.AtType" />
+      <MemberSignature Language="VB.NET" Value="Public AtType As String " />
+      <MemberSignature Language="F#" Value="val mutable AtType : string" Usage="Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.AtType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="@type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="@type")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set to "DefinedTerm".
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="inDefinedTermSet">
+      <MemberSignature Language="C#" Value="public string? inDefinedTermSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string inDefinedTermSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.inDefinedTermSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property inDefinedTermSet As String" />
+      <MemberSignature Language="F#" Value="member this.inDefinedTermSet : string with get, set" Usage="Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.inDefinedTermSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="inDefinedTermSet")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="inDefinedTermSet")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether it's in a defined term set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string? Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="name")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="name")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The color.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TermCode">
+      <MemberSignature Language="C#" Value="public string? TermCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TermCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.TermCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property TermCode As String" />
+      <MemberSignature Language="F#" Value="member this.TermCode : string with get, set" Usage="Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.TermCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="termCode")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="termCode")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For example `#454545`.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

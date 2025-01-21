@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="msteams-client-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Microsoft.Teams.AI" Version="1.0.0.0" />
-    <Assembly Name="Microsoft.TeamsFx" Version="2.3.0.0" />
+    <Assembly Name="Microsoft.Teams.AI" Version="1.9.0.0" />
+    <Assembly Name="Microsoft.TeamsFx" Version="2.5.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.Extensions.DependencyInjection">
     <Type Name="Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods" Id="T:Microsoft.Extensions.DependencyInjection.TeamsFxConfigurationMethods">
@@ -65,8 +65,10 @@
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnConfigSubmit(Microsoft.Teams.AI.ConfigHandlerAsync{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnConversationUpdate(System.String,Microsoft.Teams.AI.RouteHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnConversationUpdate(System.String[],Microsoft.Teams.AI.RouteHandler{`0})" />
+      <Member Id="M:Microsoft.Teams.AI.Application`1.OnFeedbackLoop(Microsoft.Teams.AI.Application.FeedbackLoopHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnFileConsentAccept(Microsoft.Teams.AI.FileConsentHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnFileConsentDecline(Microsoft.Teams.AI.FileConsentHandler{`0})" />
+      <Member Id="M:Microsoft.Teams.AI.Application`1.OnHandoff(Microsoft.Teams.AI.Application.HandoffHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnMessage(Microsoft.Teams.AI.MultipleRouteSelector,Microsoft.Teams.AI.RouteHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnMessage(Microsoft.Teams.AI.RouteSelectorAsync,Microsoft.Teams.AI.RouteHandler{`0})" />
       <Member Id="M:Microsoft.Teams.AI.Application`1.OnMessage(System.String,Microsoft.Teams.AI.RouteHandler{`0})" />
@@ -97,9 +99,9 @@
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.SetStartTypingTimer(System.Boolean)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAdaptiveCardOptions(Microsoft.Teams.AI.AdaptiveCardsOptions)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAIOptions(Microsoft.Teams.AI.AI.AIOptions{`0})" />
-      <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAuthentication(Microsoft.Bot.Builder.BotAdapter,Microsoft.Teams.AI.AuthenticationOptions{`0})" />
+      <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithAuthentication(Microsoft.Teams.AI.TeamsAdapter,Microsoft.Teams.AI.AuthenticationOptions{`0})" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)" />
-      <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithLongRunningMessages(Microsoft.Bot.Builder.BotAdapter,System.String)" />
+      <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithLongRunningMessages(Microsoft.Teams.AI.TeamsAdapter,System.String)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithStorage(Microsoft.Bot.Builder.IStorage)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithTaskModuleOptions(Microsoft.Teams.AI.TaskModulesOptions)" />
       <Member Id="M:Microsoft.Teams.AI.ApplicationBuilder`1.WithTurnStateFactory(System.Func{`0})" />
@@ -112,6 +114,7 @@
       <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.AI" />
       <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.Authentication" />
       <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.BotAppId" />
+      <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.FileDownloaders" />
       <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.LoggerFactory" />
       <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.LongRunningMessages" />
       <Member Id="P:Microsoft.Teams.AI.ApplicationOptions`1.RemoveRecipientMention" />
@@ -220,6 +223,7 @@
     <Type Name="Microsoft.Teams.AI.O365ConnectorCardActionHandler`1" Id="T:Microsoft.Teams.AI.O365ConnectorCardActionHandler`1" />
     <Type Name="Microsoft.Teams.AI.OAuthAuthentication`1" Id="T:Microsoft.Teams.AI.OAuthAuthentication`1">
       <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.#ctor(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Teams.AI.OAuthSettings,Microsoft.Bot.Builder.IStorage)" />
+      <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.GetUserToken(Microsoft.Bot.Builder.ITurnContext,System.String,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.IsUserSignedInAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.OnUserSignInFailure(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.Exceptions.AuthException,System.Threading.Tasks.Task})" />
       <Member Id="M:Microsoft.Teams.AI.OAuthAuthentication`1.OnUserSignInSuccess(System.Func{Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.Tasks.Task})" />
@@ -228,6 +232,7 @@
     </Type>
     <Type Name="Microsoft.Teams.AI.OAuthSettings" Id="T:Microsoft.Teams.AI.OAuthSettings">
       <Member Id="M:Microsoft.Teams.AI.OAuthSettings.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.OAuthSettings.EnableSso" />
       <Member Id="P:Microsoft.Teams.AI.OAuthSettings.TokenExchangeUri" />
     </Type>
     <Type Name="Microsoft.Teams.AI.Query`1" Id="T:Microsoft.Teams.AI.Query`1">
@@ -273,6 +278,13 @@
       <Member Id="M:Microsoft.Teams.AI.TaskModulesOptions.#ctor" />
       <Member Id="P:Microsoft.Teams.AI.TaskModulesOptions.TaskDataFilter" />
     </Type>
+    <Type Name="Microsoft.Teams.AI.TeamsAdapter" Id="T:Microsoft.Teams.AI.TeamsAdapter">
+      <Member Id="M:Microsoft.Teams.AI.TeamsAdapter.#ctor" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsAdapter.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger)" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsAdapter.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger)" />
+      <Member Id="M:Microsoft.Teams.AI.TeamsAdapter.ProcessAsync(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.AspNetCore.Http.HttpResponse,Microsoft.Bot.Builder.IBot,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.Teams.AI.TeamsAdapter.HttpClientFactory" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.TeamsSsoAuthentication`1" Id="T:Microsoft.Teams.AI.TeamsSsoAuthentication`1">
       <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.#ctor(Microsoft.Teams.AI.Application{`0},System.String,Microsoft.Teams.AI.TeamsSsoSettings,Microsoft.Bot.Builder.IStorage)" />
       <Member Id="M:Microsoft.Teams.AI.TeamsSsoAuthentication`1.IsUserSignedInAsync(Microsoft.Bot.Builder.ITurnContext,System.Threading.CancellationToken)" />
@@ -310,8 +322,52 @@
     <Type Name="Microsoft.Teams.AI.AI.Action.ActionTurnStateAttribute" Id="T:Microsoft.Teams.AI.AI.Action.ActionTurnStateAttribute">
       <Member Id="M:Microsoft.Teams.AI.AI.Action.ActionTurnStateAttribute.#ctor" />
     </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Action.AIEntity" Id="T:Microsoft.Teams.AI.AI.Action.AIEntity">
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.AIEntity.AdditionalType" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.AIEntity.AtContext" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.AIEntity.AtId" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.AIEntity.AtType" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.AIEntity.Type" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Action.AIEntity.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.AIEntity.Citation" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.AIEntity.UsageInfo" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Action.ClientCitation" Id="T:Microsoft.Teams.AI.AI.Action.ClientCitation">
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.ClientCitation.AtType" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Action.ClientCitation.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitation.Appearance" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitation.Position" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Action.ClientCitationAppearance" Id="T:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance">
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.AtType" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.Abstract" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.EncodingFormat" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.Image" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.Keywords" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.Name" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.Text" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.Url" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.ClientCitationAppearance.UsageInfo" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.AI.Action.IActionHandler`1" Id="T:Microsoft.Teams.AI.AI.Action.IActionHandler`1">
       <Member Id="M:Microsoft.Teams.AI.AI.Action.IActionHandler`1.PerformActionAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Object,System.String,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo" Id="T:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo">
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo.AtType" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo.Pattern" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo.Type" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo.Description" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo.Name" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo.Position" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern" Id="T:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern">
+      <Member Id="F:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.AtType" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.inDefinedTermSet" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.Name" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Action.SensitivityUsageInfoPattern.TermCode" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.AI">
@@ -343,6 +399,7 @@
     <Type Name="Microsoft.Teams.AI.AI.AIOptions`1" Id="T:Microsoft.Teams.AI.AI.AIOptions`1">
       <Member Id="M:Microsoft.Teams.AI.AI.AIOptions`1.#ctor(Microsoft.Teams.AI.AI.Planners.IPlanner{`0})" />
       <Member Id="P:Microsoft.Teams.AI.AI.AIOptions`1.AllowLooping" />
+      <Member Id="P:Microsoft.Teams.AI.AI.AIOptions`1.EnableFeedbackLoop" />
       <Member Id="P:Microsoft.Teams.AI.AI.AIOptions`1.MaxSteps" />
       <Member Id="P:Microsoft.Teams.AI.AI.AIOptions`1.MaxTime" />
       <Member Id="P:Microsoft.Teams.AI.AI.AIOptions`1.Moderator" />
@@ -361,6 +418,7 @@
       <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Monologue" />
       <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.None" />
       <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Sequence" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Augmentations.AugmentationType.Tools" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Augmentations.DefaultAugmentation" Id="T:Microsoft.Teams.AI.AI.Augmentations.DefaultAugmentation">
       <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.DefaultAugmentation.#ctor" />
@@ -402,22 +460,31 @@
       <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.SequenceAugmentation.CreatePromptSection" />
       <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.SequenceAugmentation.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)" />
     </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Augmentations.ToolsAugmentation" Id="T:Microsoft.Teams.AI.AI.Augmentations.ToolsAugmentation">
+      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.ToolsAugmentation.#ctor" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.ToolsAugmentation.CreatePlanFromResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.ToolsAugmentation.CreatePromptSection" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Augmentations.ToolsAugmentation.ValidateResponseAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptResponse,System.Int32,System.Threading.CancellationToken)" />
+    </Type>
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.AI.Clients">
     <Type Name="Microsoft.Teams.AI.AI.Clients.LLMClient`1" Id="T:Microsoft.Teams.AI.AI.Clients.LLMClient`1">
       <Member Id="F:Microsoft.Teams.AI.AI.Clients.LLMClient`1.Options" />
       <Member Id="M:Microsoft.Teams.AI.AI.Clients.LLMClient`1.#ctor(Microsoft.Teams.AI.AI.Clients.LLMClientOptions{`0},Microsoft.Extensions.Logging.ILoggerFactory)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Clients.LLMClient`1.AddFunctionResultToHistory(Microsoft.Teams.AI.State.IMemory,System.String,System.Object)" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Clients.LLMClient`1.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Clients.LLMClient`1.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1" Id="T:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1">
+      <Member Id="F:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.EndStreamHandler" />
       <Member Id="M:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.#ctor(Microsoft.Teams.AI.AI.Models.IPromptCompletionModel,Microsoft.Teams.AI.AI.Prompts.PromptTemplate)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.EnableFeedbackLoop" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.HistoryVariable" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.InputVariable" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.LogRepairs" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.MaxHistoryMessages" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.MaxRepairAttempts" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Model" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.StartStreamingMessage" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Template" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Tokenizer" />
       <Member Id="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.Validator" />
@@ -436,8 +503,18 @@
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.AI.Embeddings">
     <Type Name="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" Id="T:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions">
+      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.#ctor(Azure.Core.TokenCredential,System.String,System.String)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.#ctor(System.String,System.String,System.String)" />
-      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.Endpoint" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureApiKey" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureApiVersion" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureDeployment" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureEndpoint" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.TokenCredential" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions" Id="T:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions">
+      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.LogRequests" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.RetryPolicy" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse" Id="T:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse">
       <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse.#ctor" />
@@ -450,36 +527,69 @@
       <Member Id="F:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.RateLimited" />
       <Member Id="F:Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponseStatus.Success" />
     </Type>
-    <Type Name="Microsoft.Teams.AI.AI.Embeddings.IEmbeddings`1" Id="T:Microsoft.Teams.AI.AI.Embeddings.IEmbeddings`1">
-      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.IEmbeddings`1.CreateEmbeddingsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
+    <Type Name="Microsoft.Teams.AI.AI.Embeddings.IEmbeddingsModel" Id="T:Microsoft.Teams.AI.AI.Embeddings.IEmbeddingsModel">
+      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.IEmbeddingsModel.CreateEmbeddingsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
     </Type>
-    <Type Name="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings`2" Id="T:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings`2">
-      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings`2.#ctor(`1,Microsoft.Extensions.Logging.ILoggerFactory)" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings`2.CreateEmbeddingsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
+    <Type Name="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings" Id="T:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings">
+      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings.#ctor(Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings.#ctor(Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings.CreateEmbeddingsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" Id="T:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions">
       <Member Id="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.#ctor(System.String,System.String)" />
       <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.ApiKey" />
-      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.Endpoint" />
-      <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.LogRequests" />
       <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.Model" />
       <Member Id="P:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.Organization" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.AI.Models">
+    <Type Name="Microsoft.Teams.AI.AI.Models.ActionCall" Id="T:Microsoft.Teams.AI.AI.Models.ActionCall">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ActionCall.#ctor(OpenAI.Chat.ChatToolCall)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ActionCall.#ctor(OpenAI.Chat.StreamingChatToolCallUpdate)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ActionCall.#ctor(System.String,Microsoft.Teams.AI.AI.Models.ActionFunction)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ActionCall.Function" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ActionCall.Id" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ActionCall.Type" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ActionCallType" Id="T:Microsoft.Teams.AI.AI.Models.ActionCallType">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ActionCallType.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ActionCallType.Function" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ActionFunction" Id="T:Microsoft.Teams.AI.AI.Models.ActionFunction">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ActionFunction.#ctor(System.String,System.String)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ActionFunction.Arguments" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ActionFunction.Name" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.AssistantsMessage" Id="T:Microsoft.Teams.AI.AI.Models.AssistantsMessage">
+      <Member Id="F:Microsoft.Teams.AI.AI.Models.AssistantsMessage.MessageContent" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.AssistantsMessage.#ctor(OpenAI.Assistants.MessageContent,OpenAI.Files.OpenAIFileClient)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.AssistantsMessage.AttachedFiles" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" Id="T:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.#ctor(Azure.Core.TokenCredential,System.String,System.String)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.#ctor(System.String,System.String,System.String)" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureApiKey" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureApiVersion" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureDefaultDeployment" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureEndpoint" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.TokenCredential" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions" Id="T:Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions">
       <Member Id="M:Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions.#ctor" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions.CompletionType" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions.LogRequests" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions.RetryPolicy" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions.Stream" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions.UseSystemMessages" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs" Id="T:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.#ctor(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,System.Boolean)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Memory" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.PromptFunctions" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.PromptTemplate" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Streaming" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Tokenizer" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.TurnContext" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.ChatCompletionAction" Id="T:Microsoft.Teams.AI.AI.Models.ChatCompletionAction">
       <Member Id="M:Microsoft.Teams.AI.AI.Models.ChatCompletionAction.#ctor" />
@@ -490,12 +600,28 @@
       <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatCompletionAction.Name" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatCompletionAction.Parameters" />
     </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ChatCompletionsFunctionToolCall" Id="T:Microsoft.Teams.AI.AI.Models.ChatCompletionsFunctionToolCall">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ChatCompletionsFunctionToolCall.#ctor(System.String,System.String,System.String)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatCompletionsFunctionToolCall.Arguments" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatCompletionsFunctionToolCall.Name" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall" Id="T:Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall">
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall.Id" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall.Type" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.ChatMessage" Id="T:Microsoft.Teams.AI.AI.Models.ChatMessage">
+      <Member Id="F:Microsoft.Teams.AI.AI.Models.ChatMessage.Content" />
       <Member Id="M:Microsoft.Teams.AI.AI.Models.ChatMessage.#ctor(Microsoft.Teams.AI.AI.Models.ChatRole)" />
-      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Content" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ChatMessage.GetContent``1" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ActionCallId" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ActionCalls" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Attachments" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Context" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.FunctionCall" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Name" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Role" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ToolCallId" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ToolCalls" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.ChatRole" Id="T:Microsoft.Teams.AI.AI.Models.ChatRole">
       <Member Id="F:Microsoft.Teams.AI.AI.Models.ChatRole.Value" />
@@ -513,24 +639,90 @@
       <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatRole.Tool" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.ChatRole.User" />
     </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs" Id="T:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.#ctor(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Models.PromptChunk)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.Chunk" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.Memory" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.TurnContext" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.Citation" Id="T:Microsoft.Teams.AI.AI.Models.Citation">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.Citation.#ctor(System.String,System.String,System.String)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.Citation.Content" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.Citation.Title" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.Citation.Url" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.FunctionCall" Id="T:Microsoft.Teams.AI.AI.Models.FunctionCall">
       <Member Id="M:Microsoft.Teams.AI.AI.Models.FunctionCall.#ctor(System.String,System.String)" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.FunctionCall.Arguments" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.FunctionCall.Name" />
     </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ImageContentPart" Id="T:Microsoft.Teams.AI.AI.Models.ImageContentPart">
+      <Member Id="F:Microsoft.Teams.AI.AI.Models.ImageContentPart.ImageUrl" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ImageContentPart.#ctor" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" Id="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModel">
       <Member Id="M:Microsoft.Teams.AI.AI.Models.IPromptCompletionModel.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents" Id="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents" />
+    <Type Name="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents/BeforeCompletionHandler" Id="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.BeforeCompletionHandler" />
+    <Type Name="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents/ChunkReceivedHandler" Id="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ChunkReceivedHandler" />
+    <Type Name="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents/ResponseReceivedHandler" Id="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ResponseReceivedHandler" />
+    <Type Name="Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel" Id="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel">
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel.Events" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.MessageContentParts" Id="T:Microsoft.Teams.AI.AI.Models.MessageContentParts">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.MessageContentParts.#ctor(System.String)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.MessageContentParts.Type" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.MessageContext" Id="T:Microsoft.Teams.AI.AI.Models.MessageContext">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.MessageContext.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.MessageContext.Citations" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.MessageContext.Intent" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.OpenAIFile" Id="T:Microsoft.Teams.AI.AI.Models.OpenAIFile">
+      <Member Id="F:Microsoft.Teams.AI.AI.Models.OpenAIFile.FileContent" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Models.OpenAIFile.FileInfo" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.OpenAIFile.#ctor(OpenAI.Files.OpenAIFile,System.BinaryData)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.OpenAIFile.GetMimeType" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.OpenAIModel" Id="T:Microsoft.Teams.AI.AI.Models.OpenAIModel">
       <Member Id="M:Microsoft.Teams.AI.AI.Models.OpenAIModel.#ctor(Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Models.OpenAIModel.#ctor(Microsoft.Teams.AI.AI.Models.OpenAIModelOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Models.OpenAIModel.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.OpenAIModel.Events" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Models.OpenAIModelOptions" Id="T:Microsoft.Teams.AI.AI.Models.OpenAIModelOptions">
       <Member Id="M:Microsoft.Teams.AI.AI.Models.OpenAIModelOptions.#ctor(System.String,System.String)" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.OpenAIModelOptions.ApiKey" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.OpenAIModelOptions.DefaultModel" />
       <Member Id="P:Microsoft.Teams.AI.AI.Models.OpenAIModelOptions.Organization" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.PromptChunk" Id="T:Microsoft.Teams.AI.AI.Models.PromptChunk">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.PromptChunk.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.PromptChunk.delta" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter" Id="T:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter">
+      <Member Id="E:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.BeforeCompletion" />
+      <Member Id="E:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.ChunkReceived" />
+      <Member Id="E:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.ResponseReceived" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.#ctor" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.OnBeforeCompletion(Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.OnChunkReceived(Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.OnResponseReceived(Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs)" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs" Id="T:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs">
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.#ctor(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptResponse,Microsoft.Teams.AI.Application.StreamingResponse)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Memory" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Response" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Streamer" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.TurnContext" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.TextContentPart" Id="T:Microsoft.Teams.AI.AI.Models.TextContentPart">
+      <Member Id="F:Microsoft.Teams.AI.AI.Models.TextContentPart.Text" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Models.TextContentPart.#ctor" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Models.ToolType" Id="T:Microsoft.Teams.AI.AI.Models.ToolType">
+      <Member Id="F:Microsoft.Teams.AI.AI.Models.ToolType.Function" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.AI.Moderator">
@@ -546,6 +738,7 @@
       <Member Id="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.BreakByBlocklists" />
       <Member Id="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Categories" />
       <Member Id="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Endpoint" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.HaltOnBlockListHit" />
       <Member Id="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.Moderate" />
       <Member Id="P:Microsoft.Teams.AI.AI.Moderator.AzureContentSafetyModeratorOptions.SeverityLevel" />
     </Type>
@@ -660,14 +853,19 @@
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.BeginTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.CompletePromptAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.ContinueTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.DefaultPrompt" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.Model" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.Prompts" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1" Id="T:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1">
+      <Member Id="F:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.EndStreamHandler" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.#ctor(Microsoft.Teams.AI.AI.Models.IPromptCompletionModel,Microsoft.Teams.AI.AI.Prompts.PromptManager,Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.ActionPlannerPromptFactory{`0})" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.DefaultPrompt" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.LogRepairs" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.MaxRepairAttempts" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.Model" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.Prompts" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.StartStreamingMessage" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.Tokenizer" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1/ActionPlannerPromptFactory" Id="T:Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1.ActionPlannerPromptFactory" />
@@ -690,12 +888,15 @@
     <Type Name="Microsoft.Teams.AI.AI.Planners.PredictedDoCommand" Id="T:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand">
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.#ctor(System.String)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.#ctor(System.String,System.String)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.Schema" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.Action" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.ActionId" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.Parameters" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.PredictedDoCommand.Type" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Planners.PredictedSayCommand" Id="T:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand">
+      <Member Id="M:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.#ctor(Microsoft.Teams.AI.AI.Models.ChatMessage)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.#ctor(System.String)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Schema" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Response" />
@@ -704,17 +905,21 @@
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.AI.Planners.Experimental">
     <Type Name="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1" Id="T:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1">
-      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.#ctor(Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.#ctor(Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions,Microsoft.Extensions.Logging.ILoggerFactory)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.BeginTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.ContinueTaskAsync(Microsoft.Bot.Builder.ITurnContext,`0,Microsoft.Teams.AI.AI.AI{`0},System.Threading.CancellationToken)" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.CreateAssistantAsync(System.String,System.String,Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.CreateAssistantAsync(Azure.Core.TokenCredential,OpenAI.Assistants.AssistantCreationOptions,System.String,System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.CreateAssistantAsync(System.String,OpenAI.Assistants.AssistantCreationOptions,System.String,System.String,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" Id="T:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions">
-      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.#ctor(Azure.Core.TokenCredential,System.String,System.String)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.#ctor(System.String,System.String,System.String)" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.ApiKey" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.AssistantId" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.Endpoint" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.Organization" />
       <Member Id="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.PollingInterval" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.TokenCredential" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState" Id="T:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState">
       <Member Id="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsState.#ctor" />
@@ -740,17 +945,26 @@
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration" Id="T:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration">
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.AdditionalData" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.FrequencyPenalty" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.IncludeHistory" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.IncludeImages" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.IncludeInput" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.MaxInputTokens" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.MaxTokens" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.Model" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ParallelToolCalls" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.PresencePenalty" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.StopSequences" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.Temperature" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ToolChoice" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.TopP" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.Type" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration/ChatToolChoice" Id="T:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice">
+      <Member Id="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.Auto" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.None" />
+      <Member Id="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.Required" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration/CompletionType" Id="T:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.CompletionType">
       <Member Id="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.CompletionType.Chat" />
@@ -803,6 +1017,7 @@
     <Type Name="Microsoft.Teams.AI.AI.Prompts.PromptResponse" Id="T:Microsoft.Teams.AI.AI.Prompts.PromptResponse">
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.PromptResponse.#ctor" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.PromptResponse.Error" />
+      <Member Id="P:Microsoft.Teams.AI.AI.Prompts.PromptResponse.Input" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.PromptResponse.Message" />
       <Member Id="P:Microsoft.Teams.AI.AI.Prompts.PromptResponse.Status" />
     </Type>
@@ -838,6 +1053,10 @@
       <Member Id="F:Microsoft.Teams.AI.AI.Prompts.Sections.ActionAugmentationSection.Actions" />
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.ActionAugmentationSection.#ctor(System.Collections.Generic.List{Microsoft.Teams.AI.AI.Models.ChatCompletionAction},System.String)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.ActionAugmentationSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Prompts.Sections.ActionOutputMessageSection" Id="T:Microsoft.Teams.AI.AI.Prompts.Sections.ActionOutputMessageSection">
+      <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.ActionOutputMessageSection.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.ActionOutputMessageSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection" Id="T:Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection">
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.AssistantMessageSection.#ctor(System.String,System.Int32,System.String)" />
@@ -909,6 +1128,10 @@
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.TextSection.#ctor(System.String,Microsoft.Teams.AI.AI.Models.ChatRole,System.Int32,System.Boolean,System.String,System.String)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.TextSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
     </Type>
+    <Type Name="Microsoft.Teams.AI.AI.Prompts.Sections.UserInputMessageSection" Id="T:Microsoft.Teams.AI.AI.Prompts.Sections.UserInputMessageSection">
+      <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.UserInputMessageSection.#ctor(System.Int32,System.String,System.String)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.UserInputMessageSection.RenderAsMessagesAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,System.Int32,System.Threading.CancellationToken)" />
+    </Type>
     <Type Name="Microsoft.Teams.AI.AI.Prompts.Sections.UserMessageSection" Id="T:Microsoft.Teams.AI.AI.Prompts.Sections.UserMessageSection">
       <Member Id="M:Microsoft.Teams.AI.AI.Prompts.Sections.UserMessageSection.#ctor(System.String,System.Int32,System.String)" />
     </Type>
@@ -916,13 +1139,13 @@
   <Namespace Name="Microsoft.Teams.AI.AI.Tokenizers">
     <Type Name="Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer" Id="T:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer">
       <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.#ctor" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.#ctor(SharpToken.GptEncoding)" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.#ctor(Microsoft.ML.Tokenizers.Tokenizer)" />
       <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.#ctor(System.String)" />
-      <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.Decode(System.Collections.Generic.List{System.Int32})" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.Decode(System.Collections.Generic.IEnumerable{System.Int32})" />
       <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.GPTTokenizer.Encode(System.String)" />
     </Type>
     <Type Name="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" Id="T:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer">
-      <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer.Decode(System.Collections.Generic.List{System.Int32})" />
+      <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer.Decode(System.Collections.Generic.IEnumerable{System.Int32})" />
       <Member Id="M:Microsoft.Teams.AI.AI.Tokenizers.ITokenizer.Encode(System.String)" />
     </Type>
   </Namespace>
@@ -957,6 +1180,67 @@
       <Member Id="P:Microsoft.Teams.AI.AI.Validators.Validation.Feedback" />
       <Member Id="P:Microsoft.Teams.AI.AI.Validators.Validation.Valid" />
       <Member Id="P:Microsoft.Teams.AI.AI.Validators.Validation.Value" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Teams.AI.Application">
+    <Type Name="Microsoft.Teams.AI.Application.FeedbackLoopData" Id="T:Microsoft.Teams.AI.Application.FeedbackLoopData">
+      <Member Id="M:Microsoft.Teams.AI.Application.FeedbackLoopData.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.Application.FeedbackLoopData.ActionName" />
+      <Member Id="P:Microsoft.Teams.AI.Application.FeedbackLoopData.ActionValue" />
+      <Member Id="P:Microsoft.Teams.AI.Application.FeedbackLoopData.ReplyToId" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue" Id="T:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue">
+      <Member Id="M:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.Feedback" />
+      <Member Id="P:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.Reaction" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.FeedbackLoopHandler`1" Id="T:Microsoft.Teams.AI.Application.FeedbackLoopHandler`1" />
+    <Type Name="Microsoft.Teams.AI.Application.HandoffHandler`1" Id="T:Microsoft.Teams.AI.Application.HandoffHandler`1" />
+    <Type Name="Microsoft.Teams.AI.Application.IInputFileDownloader`1" Id="T:Microsoft.Teams.AI.Application.IInputFileDownloader`1">
+      <Member Id="M:Microsoft.Teams.AI.Application.IInputFileDownloader`1.DownloadFilesAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.InputFile" Id="T:Microsoft.Teams.AI.Application.InputFile">
+      <Member Id="M:Microsoft.Teams.AI.Application.InputFile.#ctor(System.BinaryData,System.String)" />
+      <Member Id="P:Microsoft.Teams.AI.Application.InputFile.Content" />
+      <Member Id="P:Microsoft.Teams.AI.Application.InputFile.ContentType" />
+      <Member Id="P:Microsoft.Teams.AI.Application.InputFile.ContentUrl" />
+      <Member Id="P:Microsoft.Teams.AI.Application.InputFile.Filename" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.StreamingChannelData" Id="T:Microsoft.Teams.AI.Application.StreamingChannelData">
+      <Member Id="M:Microsoft.Teams.AI.Application.StreamingChannelData.#ctor" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingChannelData.feedbackLoopEnabled" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingChannelData.streamId" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingChannelData.StreamSequence" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingChannelData.StreamType" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.StreamingResponse" Id="T:Microsoft.Teams.AI.Application.StreamingResponse">
+      <Member Id="M:Microsoft.Teams.AI.Application.StreamingResponse.#ctor(Microsoft.Bot.Builder.ITurnContext)" />
+      <Member Id="M:Microsoft.Teams.AI.Application.StreamingResponse.EndStream" />
+      <Member Id="M:Microsoft.Teams.AI.Application.StreamingResponse.QueueInformativeUpdate(System.String)" />
+      <Member Id="M:Microsoft.Teams.AI.Application.StreamingResponse.QueueTextChunk(System.String,System.Collections.Generic.IList{Microsoft.Teams.AI.AI.Models.Citation})" />
+      <Member Id="M:Microsoft.Teams.AI.Application.StreamingResponse.UpdatesSent" />
+      <Member Id="M:Microsoft.Teams.AI.Application.StreamingResponse.WaitForQueue" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingResponse.Attachments" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingResponse.Citations" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingResponse.EnableFeedbackLoop" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingResponse.EnableGeneratedByAILabel" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingResponse.Message" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingResponse.SensitivityLabel" />
+      <Member Id="P:Microsoft.Teams.AI.Application.StreamingResponse.StreamId" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.StreamType" Id="T:Microsoft.Teams.AI.Application.StreamType">
+      <Member Id="F:Microsoft.Teams.AI.Application.StreamType.Final" />
+      <Member Id="F:Microsoft.Teams.AI.Application.StreamType.Informative" />
+      <Member Id="F:Microsoft.Teams.AI.Application.StreamType.Streaming" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.TeamsAttachmentDownloader`1" Id="T:Microsoft.Teams.AI.Application.TeamsAttachmentDownloader`1">
+      <Member Id="M:Microsoft.Teams.AI.Application.TeamsAttachmentDownloader`1.#ctor(Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions,System.Net.Http.HttpClient)" />
+      <Member Id="M:Microsoft.Teams.AI.Application.TeamsAttachmentDownloader`1.DownloadFilesAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions" Id="T:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions">
+      <Member Id="M:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.#ctor(System.String,Microsoft.Teams.AI.TeamsAdapter)" />
+      <Member Id="P:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.Adapter" />
+      <Member Id="P:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.BotAppId" />
     </Type>
   </Namespace>
   <Namespace Name="Microsoft.Teams.AI.Exceptions">
@@ -1010,6 +1294,7 @@
       <Member Id="F:Microsoft.Teams.AI.State.TempState.ActionOutputsKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.AuthTokenKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.DuplicateTokenExchangeKey" />
+      <Member Id="F:Microsoft.Teams.AI.State.TempState.InputFilesKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.InputKey" />
       <Member Id="F:Microsoft.Teams.AI.State.TempState.OutputKey" />
       <Member Id="M:Microsoft.Teams.AI.State.TempState.#ctor" />
@@ -1017,6 +1302,7 @@
       <Member Id="P:Microsoft.Teams.AI.State.TempState.AuthTokens" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.DuplicateTokenExchange" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.Input" />
+      <Member Id="P:Microsoft.Teams.AI.State.TempState.InputFiles" />
       <Member Id="P:Microsoft.Teams.AI.State.TempState.Output" />
     </Type>
     <Type Name="Microsoft.Teams.AI.State.TurnState" Id="T:Microsoft.Teams.AI.State.TurnState">

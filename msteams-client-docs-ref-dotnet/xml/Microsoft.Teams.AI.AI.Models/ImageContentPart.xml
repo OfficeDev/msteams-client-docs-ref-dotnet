@@ -1,0 +1,62 @@
+<Type Name="ImageContentPart" FullName="Microsoft.Teams.AI.AI.Models.ImageContentPart">
+  <TypeSignature Language="C#" Value="public class ImageContentPart : Microsoft.Teams.AI.AI.Models.MessageContentParts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageContentPart extends Microsoft.Teams.AI.AI.Models.MessageContentParts" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.ImageContentPart" />
+  <TypeSignature Language="VB.NET" Value="Public Class ImageContentPart&#xA;Inherits MessageContentParts" />
+  <TypeSignature Language="F#" Value="type ImageContentPart = class&#xA;    inherit MessageContentParts" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Models.MessageContentParts</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The image content part of the ChatMessage
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageContentPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ImageContentPart.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            The constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public string ImageUrl;" />
+      <MemberSignature Language="ILAsm" Value=".field public string ImageUrl" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Models.ImageContentPart.ImageUrl" />
+      <MemberSignature Language="VB.NET" Value="Public ImageUrl As String " />
+      <MemberSignature Language="F#" Value="val mutable ImageUrl : string" Usage="Microsoft.Teams.AI.AI.Models.ImageContentPart.ImageUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The URL of the image.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

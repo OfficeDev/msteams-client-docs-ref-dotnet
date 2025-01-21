@@ -1,0 +1,117 @@
+<Type Name="FeedbackLoopData" FullName="Microsoft.Teams.AI.Application.FeedbackLoopData">
+  <TypeSignature Language="C#" Value="public class FeedbackLoopData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FeedbackLoopData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.FeedbackLoopData" />
+  <TypeSignature Language="VB.NET" Value="Public Class FeedbackLoopData" />
+  <TypeSignature Language="F#" Value="type FeedbackLoopData = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Data returned when the thumbsup or thumbsdown button is clicked and response is received.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FeedbackLoopData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.FeedbackLoopData.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionName">
+      <MemberSignature Language="C#" Value="public string ActionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActionName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.FeedbackLoopData.ActionName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ActionName As String" />
+      <MemberSignature Language="F#" Value="member this.ActionName : string with get, set" Usage="Microsoft.Teams.AI.Application.FeedbackLoopData.ActionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The action name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionValue">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue? ActionValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue ActionValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.FeedbackLoopData.ActionValue" />
+      <MemberSignature Language="VB.NET" Value="Public Property ActionValue As FeedbackLoopDataActionValue" />
+      <MemberSignature Language="F#" Value="member this.ActionValue : Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue with get, set" Usage="Microsoft.Teams.AI.Application.FeedbackLoopData.ActionValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="actionValue")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="actionValue")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The action value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplyToId">
+      <MemberSignature Language="C#" Value="public string? ReplyToId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReplyToId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.FeedbackLoopData.ReplyToId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReplyToId As String" />
+      <MemberSignature Language="F#" Value="member this.ReplyToId : string with get, set" Usage="Microsoft.Teams.AI.Application.FeedbackLoopData.ReplyToId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="replyToId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="replyToId")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The activity ID that the feedback provided on.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

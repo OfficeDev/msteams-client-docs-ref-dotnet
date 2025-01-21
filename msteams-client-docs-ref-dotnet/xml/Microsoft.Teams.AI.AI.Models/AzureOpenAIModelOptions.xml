@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Teams.AI.AI.Models.BaseOpenAIModelOptions</BaseTypeName>
@@ -20,6 +21,32 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureOpenAIModelOptions (Azure.Core.TokenCredential tokenCredential, string azureDefaultDeployment, string azureEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Core.TokenCredential tokenCredential, string azureDefaultDeployment, string azureEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.#ctor(Azure.Core.TokenCredential,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenCredential As TokenCredential, azureDefaultDeployment As String, azureEndpoint As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions : Azure.Core.TokenCredential * string * string -&gt; Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" Usage="new Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions (tokenCredential, azureDefaultDeployment, azureEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenCredential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="azureDefaultDeployment" Type="System.String" />
+        <Parameter Name="azureEndpoint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenCredential">token credential</param>
+        <param name="azureDefaultDeployment">the deployment name</param>
+        <param name="azureEndpoint">azure endpoint</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public AzureOpenAIModelOptions (string azureApiKey, string azureDefaultDeployment, string azureEndpoint);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string azureApiKey, string azureDefaultDeployment, string azureEndpoint) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.#ctor(System.String,System.String,System.String)" />
@@ -28,7 +55,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="azureApiKey" Type="System.String" />
@@ -47,7 +74,7 @@
       </Docs>
     </Member>
     <Member MemberName="AzureApiKey">
-      <MemberSignature Language="C#" Value="public string AzureApiKey { get; set; }" />
+      <MemberSignature Language="C#" Value="public string? AzureApiKey { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AzureApiKey" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.AzureApiKey" />
       <MemberSignature Language="VB.NET" Value="Public Property AzureApiKey As String" />
@@ -55,7 +82,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -77,7 +104,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -99,7 +126,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -121,7 +148,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -129,6 +156,28 @@
       <Docs>
         <summary>
             Deployment endpoint to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenCredential">
+      <MemberSignature Language="C#" Value="public Azure.Core.TokenCredential? TokenCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Core.TokenCredential TokenCredential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.TokenCredential" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenCredential As TokenCredential" />
+      <MemberSignature Language="F#" Value="member this.TokenCredential : Azure.Core.TokenCredential with get, set" Usage="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions.TokenCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Core.TokenCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The token credential to use when making requests to Azure OpenAI.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

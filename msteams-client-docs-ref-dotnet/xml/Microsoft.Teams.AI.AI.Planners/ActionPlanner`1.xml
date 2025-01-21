@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TState">
@@ -32,15 +33,15 @@
             The ActionPlanner is a powerful planner that uses a LLM to generate plans. The planner can
             trigger parameterized actions and send text based responses to the user. The ActionPlanner
             supports the following advanced features:
-            - //////Augmentations:////// Augmentations virtually eliminate the need for prompt engineering. Prompts
+            - Augmentations: Augmentations virtually eliminate the need for prompt engineering. Prompts
               can be configured to use a named augmentation which will be automatically appended to the outgoing
               prompt. Augmentations let the developer specify whether they want to support multi-step plans (sequence),
               use OpenAI's functions support (functions), or create an AutoGPT style agent (monologue).
-            - //////Validations:////// Validators are used to validate the response returned by the LLM and can guarantee
+            - Validations: Validators are used to validate the response returned by the LLM and can guarantee
               that the parameters passed to an action match a supplied schema. The validator used is automatically
               selected based on the augmentation being used. Validators also prevent hallucinated action names
               making it impossible for the LLM to trigger an action that doesn't exist.
-            - //////Repair:////// The ActionPlanner will automatically attempt to repair invalid responses returned by the
+            - Repair: The ActionPlanner will automatically attempt to repair invalid responses returned by the
               LLM using a feedback loop. When a validation fails, the ActionPlanner sends the error back to the
               model, along with an instruction asking it to fix its mistake. This feedback technique leads to a
               dramatic reduction in the number of invalid responses returned by the model.
@@ -56,7 +57,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;" />
@@ -83,7 +84,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
@@ -121,7 +122,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;</ReturnType>
@@ -166,7 +167,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
@@ -197,6 +198,50 @@
         <exception cref="T:System.Exception">thrown when there was an issue generating a plan</exception>
       </Docs>
     </Member>
+    <Member MemberName="DefaultPrompt">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;.ActionPlannerPromptFactory DefaultPrompt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1/ActionPlannerPromptFactory&lt;!TState&gt; DefaultPrompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.DefaultPrompt" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultPrompt As ActionPlannerOptions(Of TState).ActionPlannerPromptFactory" />
+      <MemberSignature Language="F#" Value="member this.DefaultPrompt : Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.ActionPlannerPromptFactory" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.DefaultPrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;+ActionPlannerPromptFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the default prompt manager in use
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.IPromptCompletionModel Model { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel Model" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.Model" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Model As IPromptCompletionModel" />
+      <MemberSignature Language="F#" Value="member this.Model : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the prompt completion model in use
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Options">
       <MemberSignature Language="C#" Value="public readonly Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt; Options;" />
       <MemberSignature Language="ILAsm" Value=".field public initonly class Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions`1&lt;!TState&gt; Options" />
@@ -206,7 +251,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Planners.ActionPlannerOptions&lt;TState&gt;</ReturnType>
@@ -215,6 +260,28 @@
         <summary>
             Options used to configure the planner.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompts">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptManager Prompts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.PromptManager Prompts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.ActionPlanner`1.Prompts" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Prompts As PromptManager" />
+      <MemberSignature Language="F#" Value="member this.Prompts : Microsoft.Teams.AI.AI.Prompts.PromptManager" Usage="Microsoft.Teams.AI.AI.Planners.ActionPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.Prompts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the prompt manager in use
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,0 +1,91 @@
+<Type Name="TeamsAttachmentDownloaderOptions" FullName="Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions">
+  <TypeSignature Language="C#" Value="public class TeamsAttachmentDownloaderOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsAttachmentDownloaderOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsAttachmentDownloaderOptions" />
+  <TypeSignature Language="F#" Value="type TeamsAttachmentDownloaderOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The TeamsAttachmentDownloader options
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsAttachmentDownloaderOptions (string botAppId, Microsoft.Teams.AI.TeamsAdapter adapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string botAppId, class Microsoft.Teams.AI.TeamsAdapter adapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.#ctor(System.String,Microsoft.Teams.AI.TeamsAdapter)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (botAppId As String, adapter As TeamsAdapter)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions : string * Microsoft.Teams.AI.TeamsAdapter -&gt; Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions" Usage="new Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions (botAppId, adapter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="botAppId" Type="System.String" />
+        <Parameter Name="adapter" Type="Microsoft.Teams.AI.TeamsAdapter" />
+      </Parameters>
+      <Docs>
+        <param name="botAppId">The bot's application id.</param>
+        <param name="adapter">The teams adapter</param>
+        <summary>
+            The constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.TeamsAdapter Adapter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.TeamsAdapter Adapter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.Adapter" />
+      <MemberSignature Language="VB.NET" Value="Public Property Adapter As TeamsAdapter" />
+      <MemberSignature Language="F#" Value="member this.Adapter : Microsoft.Teams.AI.TeamsAdapter with get, set" Usage="Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.Adapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.TeamsAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bot app password.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BotAppId">
+      <MemberSignature Language="C#" Value="public string BotAppId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BotAppId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.BotAppId" />
+      <MemberSignature Language="VB.NET" Value="Public Property BotAppId As String" />
+      <MemberSignature Language="F#" Value="member this.BotAppId : string with get, set" Usage="Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions.BotAppId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bot app id.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

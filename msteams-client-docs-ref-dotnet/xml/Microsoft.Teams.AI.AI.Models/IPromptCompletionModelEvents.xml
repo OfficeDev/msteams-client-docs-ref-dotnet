@@ -1,0 +1,19 @@
+<Type Name="IPromptCompletionModelEvents" FullName="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents">
+  <TypeSignature Language="C#" Value="public interface IPromptCompletionModelEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPromptCompletionModelEvents" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPromptCompletionModelEvents" />
+  <TypeSignature Language="F#" Value="type IPromptCompletionModelEvents = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Events emitted by a IPromptCompletionStreamingModel.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members />
+</Type>

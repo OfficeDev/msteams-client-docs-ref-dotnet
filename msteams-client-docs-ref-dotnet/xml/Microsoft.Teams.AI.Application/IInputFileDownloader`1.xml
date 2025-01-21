@@ -1,0 +1,59 @@
+<Type Name="IInputFileDownloader&lt;TState&gt;" FullName="Microsoft.Teams.AI.Application.IInputFileDownloader&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public interface IInputFileDownloader&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInputFileDownloader`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.IInputFileDownloader`1" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IInputFileDownloader(Of TState)" />
+  <TypeSignature Language="F#" Value="type IInputFileDownloader&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TState">Type of application state.</typeparam>
+    <summary>
+            A plugin responsible for downloading files relative to the current user's input.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DownloadFilesAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.Application.InputFile&gt;&gt; DownloadFilesAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.Application.InputFile&gt;&gt; DownloadFilesAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.IInputFileDownloader`1.DownloadFilesAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DownloadFilesAsync (turnContext As ITurnContext, turnState As TState, Optional cancellationToken As CancellationToken = Nothing) As Task(Of List(Of InputFile))" />
+      <MemberSignature Language="F#" Value="abstract member DownloadFilesAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.Application.InputFile&gt;&gt;" Usage="iInputFileDownloader.DownloadFilesAsync (turnContext, turnState, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.Application.InputFile&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">The turn context.</param>
+        <param name="turnState">The turn state.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Download any files relative to the current user's input.
+            </summary>
+        <returns>A list of input files</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
