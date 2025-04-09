@@ -1,0 +1,115 @@
+<Type Name="ChunkReceivedEventArgs" FullName="Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class ChunkReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChunkReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class ChunkReceivedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type ChunkReceivedEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the arguments for a ChunkReceived event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChunkReceivedEventArgs (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Models.PromptChunk chunk);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Models.PromptChunk chunk) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.#ctor(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Models.PromptChunk)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (turnContext As ITurnContext, memory As IMemory, chunk As PromptChunk)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Models.PromptChunk -&gt; Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs" Usage="new Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs (turnContext, memory, chunk)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="chunk" Type="Microsoft.Teams.AI.AI.Models.PromptChunk" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="memory">An interface for accessing state.</param>
+        <param name="chunk">Message delta received from the model.</param>
+        <summary>
+            Creates a new instance of ChunkReceivedEventArgs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Chunk">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.PromptChunk Chunk { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.PromptChunk Chunk" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.Chunk" />
+      <MemberSignature Language="VB.NET" Value="Public Property Chunk As PromptChunk" />
+      <MemberSignature Language="F#" Value="member this.Chunk : Microsoft.Teams.AI.AI.Models.PromptChunk with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.Chunk" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.PromptChunk</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Message delta received from the model.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Memory">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.State.IMemory Memory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.State.IMemory Memory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.Memory" />
+      <MemberSignature Language="VB.NET" Value="Public Property Memory As IMemory" />
+      <MemberSignature Language="F#" Value="member this.Memory : Microsoft.Teams.AI.State.IMemory with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.Memory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.State.IMemory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An interface for accessing state values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.ITurnContext TurnContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.ITurnContext TurnContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.TurnContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property TurnContext As ITurnContext" />
+      <MemberSignature Language="F#" Value="member this.TurnContext : Microsoft.Bot.Builder.ITurnContext with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs.TurnContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current turn context.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -24,6 +25,34 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PredictedSayCommand (Microsoft.Teams.AI.AI.Models.ChatMessage response);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Models.ChatMessage response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.#ctor(Microsoft.Teams.AI.AI.Models.ChatMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (response As ChatMessage)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.PredictedSayCommand : Microsoft.Teams.AI.AI.Models.ChatMessage -&gt; Microsoft.Teams.AI.AI.Planners.PredictedSayCommand" Usage="new Microsoft.Teams.AI.AI.Planners.PredictedSayCommand response" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonConstructor]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonConstructor&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="response" Type="Microsoft.Teams.AI.AI.Models.ChatMessage" />
+      </Parameters>
+      <Docs>
+        <param name="response">The response that the AI system should say.</param>
+        <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public PredictedSayCommand (string response);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string response) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.#ctor(System.String)" />
@@ -32,14 +61,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonConstructor]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonConstructor&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
       <Parameters>
         <Parameter Name="response" Type="System.String" />
       </Parameters>
@@ -52,17 +75,21 @@
       </Docs>
     </Member>
     <Member MemberName="Response">
-      <MemberSignature Language="C#" Value="public string Response { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Response" />
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.ChatMessage Response { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.ChatMessage Response" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Response" />
-      <MemberSignature Language="VB.NET" Value="Public Property Response As String" />
-      <MemberSignature Language="F#" Value="member this.Response : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Response" />
+      <MemberSignature Language="VB.NET" Value="Public Property Response As ChatMessage" />
+      <MemberSignature Language="F#" Value="member this.Response : Microsoft.Teams.AI.AI.Models.ChatMessage with get, set" Usage="Microsoft.Teams.AI.AI.Planners.PredictedSayCommand.Response" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonConverter(typeof(Microsoft.Teams.AI.Utilities.JsonConverters.ChatMessageJsonConverter))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonConverter(typeof(Microsoft.Teams.AI.Utilities.JsonConverters.ChatMessageJsonConverter))&gt;]</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("response")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("response")&gt;]</AttributeName>
@@ -73,7 +100,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String</ReturnType>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.ChatMessage</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -92,7 +119,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Json.Schema.JsonSchema</ReturnType>
@@ -118,7 +145,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

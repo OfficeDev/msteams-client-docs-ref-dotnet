@@ -1,0 +1,61 @@
+<Type Name="PromptChunk" FullName="Microsoft.Teams.AI.AI.Models.PromptChunk">
+  <TypeSignature Language="C#" Value="public class PromptChunk" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PromptChunk extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.PromptChunk" />
+  <TypeSignature Language="VB.NET" Value="Public Class PromptChunk" />
+  <TypeSignature Language="F#" Value="type PromptChunk = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Streaming chunk passed in the `ChunkReceived` event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptChunk ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.PromptChunk.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="delta">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.ChatMessage? delta { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.ChatMessage delta" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.PromptChunk.delta" />
+      <MemberSignature Language="VB.NET" Value="Public Property delta As ChatMessage" />
+      <MemberSignature Language="F#" Value="member this.delta : Microsoft.Teams.AI.AI.Models.ChatMessage with get, set" Usage="Microsoft.Teams.AI.AI.Models.PromptChunk.delta" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.ChatMessage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Delta for the response message being buffered up.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,191 @@
+<Type Name="StreamingChannelData" FullName="Microsoft.Teams.AI.Application.StreamingChannelData">
+  <TypeSignature Language="C#" Value="public class StreamingChannelData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StreamingChannelData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.StreamingChannelData" />
+  <TypeSignature Language="VB.NET" Value="Public Class StreamingChannelData" />
+  <TypeSignature Language="F#" Value="type StreamingChannelData = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Structure of the outgoing channelData field for streaming responses.
+            
+            The expected sequence of streamTypes is:
+            `informative`, `streaming`, `streaming`, ..., `final`.
+            
+            Once a `final` message is sent, the stream is considered ended.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamingChannelData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingChannelData.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="feedbackLoopEnabled">
+      <MemberSignature Language="C#" Value="public bool? feedbackLoopEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; feedbackLoopEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingChannelData.feedbackLoopEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property feedbackLoopEnabled As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.feedbackLoopEnabled : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Teams.AI.Application.StreamingChannelData.feedbackLoopEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="feedbackLoopEnabled")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="feedbackLoopEnabled")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the Feedback Loop in Teams that allows a user to
+            give thumbs up or down to a response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="feedbackLoopType">
+      <MemberSignature Language="C#" Value="public string? feedbackLoopType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string feedbackLoopType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingChannelData.feedbackLoopType" />
+      <MemberSignature Language="VB.NET" Value="Public Property feedbackLoopType As String" />
+      <MemberSignature Language="F#" Value="member this.feedbackLoopType : string with get, set" Usage="Microsoft.Teams.AI.Application.StreamingChannelData.feedbackLoopType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="feedbackLoopType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="feedbackLoopType")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the type of feedback loop. Set to "default" by default. It can be set to one of "default" or "custom".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="streamId">
+      <MemberSignature Language="C#" Value="public string? streamId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string streamId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingChannelData.streamId" />
+      <MemberSignature Language="VB.NET" Value="Public Property streamId As String" />
+      <MemberSignature Language="F#" Value="member this.streamId : string with get, set" Usage="Microsoft.Teams.AI.Application.StreamingChannelData.streamId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="streamId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="streamId")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             ID of the stream.
+             Assigned after the initial update is sent.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamSequence">
+      <MemberSignature Language="C#" Value="public int? StreamSequence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; StreamSequence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingChannelData.StreamSequence" />
+      <MemberSignature Language="VB.NET" Value="Public Property StreamSequence As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.StreamSequence : Nullable&lt;int&gt; with get, set" Usage="Microsoft.Teams.AI.Application.StreamingChannelData.StreamSequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="streamSequence")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="streamSequence")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sequence number of the message in the stream.
+            Starts at 1 for the first message and increments from there.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamType">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application.StreamType StreamType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Teams.AI.Application.StreamType StreamType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingChannelData.StreamType" />
+      <MemberSignature Language="VB.NET" Value="Public Property StreamType As StreamType" />
+      <MemberSignature Language="F#" Value="member this.StreamType : Microsoft.Teams.AI.Application.StreamType with get, set" Usage="Microsoft.Teams.AI.Application.StreamingChannelData.StreamType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter), new System.Object[] { Mono.Cecil.CustomAttributeArgument })]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter), new System.Object[] { Mono.Cecil.CustomAttributeArgument })&gt;]</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="streamType")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="streamType")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application.StreamType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of message being sent.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

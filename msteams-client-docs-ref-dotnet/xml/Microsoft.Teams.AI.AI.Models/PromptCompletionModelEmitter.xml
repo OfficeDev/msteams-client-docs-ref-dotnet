@@ -1,0 +1,177 @@
+<Type Name="PromptCompletionModelEmitter" FullName="Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter">
+  <TypeSignature Language="C#" Value="public class PromptCompletionModelEmitter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PromptCompletionModelEmitter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter" />
+  <TypeSignature Language="VB.NET" Value="Public Class PromptCompletionModelEmitter" />
+  <TypeSignature Language="F#" Value="type PromptCompletionModelEmitter = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Emitter class that handles the subscription of streaming events.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptCompletionModelEmitter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeCompletion">
+      <MemberSignature Language="C#" Value="public event Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.BeforeCompletionHandler? BeforeCompletion;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents/BeforeCompletionHandler BeforeCompletion" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.BeforeCompletion" />
+      <MemberSignature Language="VB.NET" Value="Public Event BeforeCompletion As IPromptCompletionModelEvents.BeforeCompletionHandler " />
+      <MemberSignature Language="F#" Value="member this.BeforeCompletion : Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.BeforeCompletionHandler " Usage="member this.BeforeCompletion : Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.BeforeCompletionHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents+BeforeCompletionHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Triggered before the model is called to complete a prompt.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChunkReceived">
+      <MemberSignature Language="C#" Value="public event Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ChunkReceivedHandler? ChunkReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents/ChunkReceivedHandler ChunkReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.ChunkReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Event ChunkReceived As IPromptCompletionModelEvents.ChunkReceivedHandler " />
+      <MemberSignature Language="F#" Value="member this.ChunkReceived : Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ChunkReceivedHandler " Usage="member this.ChunkReceived : Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ChunkReceivedHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents+ChunkReceivedHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Triggered when a chunk is received from the model via streaming.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeCompletion">
+      <MemberSignature Language="C#" Value="public virtual void OnBeforeCompletion (Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnBeforeCompletion(class Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.OnBeforeCompletion(Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub OnBeforeCompletion (args As BeforeCompletionEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnBeforeCompletion : Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs -&gt; unit&#xA;override this.OnBeforeCompletion : Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs -&gt; unit" Usage="promptCompletionModelEmitter.OnBeforeCompletion args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args" />
+        <summary>
+            Invokes the BeforeCompletionHandler.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChunkReceived">
+      <MemberSignature Language="C#" Value="public virtual void OnChunkReceived (Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnChunkReceived(class Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.OnChunkReceived(Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub OnChunkReceived (args As ChunkReceivedEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnChunkReceived : Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs -&gt; unit&#xA;override this.OnChunkReceived : Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs -&gt; unit" Usage="promptCompletionModelEmitter.OnChunkReceived args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args" />
+        <summary>
+            Invokes the ChunkReceivedHandler.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResponseReceived">
+      <MemberSignature Language="C#" Value="public virtual void OnResponseReceived (Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnResponseReceived(class Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.OnResponseReceived(Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub OnResponseReceived (args As ResponseReceivedEventArgs)" />
+      <MemberSignature Language="F#" Value="abstract member OnResponseReceived : Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs -&gt; unit&#xA;override this.OnResponseReceived : Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs -&gt; unit" Usage="promptCompletionModelEmitter.OnResponseReceived args" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args" />
+        <summary>
+            Invokes the ResponseReceivedHandler.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseReceived">
+      <MemberSignature Language="C#" Value="public event Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ResponseReceivedHandler? ResponseReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents/ResponseReceivedHandler ResponseReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter.ResponseReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Event ResponseReceived As IPromptCompletionModelEvents.ResponseReceivedHandler " />
+      <MemberSignature Language="F#" Value="member this.ResponseReceived : Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ResponseReceivedHandler " Usage="member this.ResponseReceived : Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ResponseReceivedHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents+ResponseReceivedHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Triggered after the model finishes returning a response.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

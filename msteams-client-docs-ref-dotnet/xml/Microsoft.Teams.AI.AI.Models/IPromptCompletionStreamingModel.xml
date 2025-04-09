@@ -1,0 +1,46 @@
+<Type Name="IPromptCompletionStreamingModel" FullName="Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel">
+  <TypeSignature Language="C#" Value="public interface IPromptCompletionStreamingModel : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPromptCompletionStreamingModel implements class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPromptCompletionStreamingModel&#xA;Implements IPromptCompletionModel" />
+  <TypeSignature Language="F#" Value="type IPromptCompletionStreamingModel = interface&#xA;    interface IPromptCompletionModel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Models.IPromptCompletionModel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            An AI model that can be used to complete streaming prompts.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter? Events { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter Events" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel.Events" />
+      <MemberSignature Language="VB.NET" Value="Public Property Events As PromptCompletionModelEmitter" />
+      <MemberSignature Language="F#" Value="member this.Events : Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter with get, set" Usage="Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Events emitted by the model.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

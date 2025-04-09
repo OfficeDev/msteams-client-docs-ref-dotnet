@@ -1,0 +1,30 @@
+<Type Name="IPromptCompletionModelEvents+ResponseReceivedHandler" FullName="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents+ResponseReceivedHandler">
+  <TypeSignature Language="C#" Value="public delegate void IPromptCompletionModelEvents.ResponseReceivedHandler(object sender, ResponseReceivedEventArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed IPromptCompletionModelEvents/ResponseReceivedHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ResponseReceivedHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub IPromptCompletionModelEvents.ResponseReceivedHandler(sender As Object, args As ResponseReceivedEventArgs)" />
+  <TypeSignature Language="F#" Value="type IPromptCompletionModelEvents.ResponseReceivedHandler = delegate of obj * ResponseReceivedEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="args" Type="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">To be added.</param>
+    <param name="args">To be added.</param>
+    <summary>
+            Defines the method that is triggered after the model finishes returning a response.
+            </summary>
+    <returns />
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

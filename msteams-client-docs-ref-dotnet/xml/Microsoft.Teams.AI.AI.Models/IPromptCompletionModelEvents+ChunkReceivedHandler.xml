@@ -1,0 +1,30 @@
+<Type Name="IPromptCompletionModelEvents+ChunkReceivedHandler" FullName="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents+ChunkReceivedHandler">
+  <TypeSignature Language="C#" Value="public delegate void IPromptCompletionModelEvents.ChunkReceivedHandler(object sender, ChunkReceivedEventArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed IPromptCompletionModelEvents/ChunkReceivedHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ChunkReceivedHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub IPromptCompletionModelEvents.ChunkReceivedHandler(sender As Object, args As ChunkReceivedEventArgs)" />
+  <TypeSignature Language="F#" Value="type IPromptCompletionModelEvents.ChunkReceivedHandler = delegate of obj * ChunkReceivedEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="args" Type="Microsoft.Teams.AI.AI.Models.ChunkReceivedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">To be added.</param>
+    <param name="args">To be added.</param>
+    <summary>
+            Defines the method that is triggered when a chunk is received from the model via streaming.
+            </summary>
+    <returns />
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

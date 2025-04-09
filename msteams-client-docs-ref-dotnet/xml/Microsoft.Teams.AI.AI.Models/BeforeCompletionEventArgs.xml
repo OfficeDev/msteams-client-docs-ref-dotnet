@@ -1,0 +1,187 @@
+<Type Name="BeforeCompletionEventArgs" FullName="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs">
+  <TypeSignature Language="C#" Value="public class BeforeCompletionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BeforeCompletionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class BeforeCompletionEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type BeforeCompletionEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the arguments for a BeforeCompletion event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BeforeCompletionEventArgs (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; promptFunctions, Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, Microsoft.Teams.AI.AI.Prompts.PromptTemplate promptTemplate, bool streaming);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; promptFunctions, class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer tokenizer, class Microsoft.Teams.AI.AI.Prompts.PromptTemplate promptTemplate, bool streaming) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.#ctor(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.IPromptFunctions{System.Collections.Generic.List{System.String}},Microsoft.Teams.AI.AI.Tokenizers.ITokenizer,Microsoft.Teams.AI.AI.Prompts.PromptTemplate,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (turnContext As ITurnContext, memory As IMemory, promptFunctions As IPromptFunctions(Of List(Of String)), tokenizer As ITokenizer, promptTemplate As PromptTemplate, streaming As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; * Microsoft.Teams.AI.AI.Tokenizers.ITokenizer * Microsoft.Teams.AI.AI.Prompts.PromptTemplate * bool -&gt; Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs" Usage="new Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs (turnContext, memory, promptFunctions, tokenizer, promptTemplate, streaming)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="promptFunctions" Type="Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;" />
+        <Parameter Name="tokenizer" Type="Microsoft.Teams.AI.AI.Tokenizers.ITokenizer" />
+        <Parameter Name="promptTemplate" Type="Microsoft.Teams.AI.AI.Prompts.PromptTemplate" />
+        <Parameter Name="streaming" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="memory">An interface for accessing state.</param>
+        <param name="promptFunctions">Functions to use when rendering the prompt.</param>
+        <param name="tokenizer">Tokenizer to ue when rendering the prompt.</param>
+        <param name="promptTemplate">Prompt template being configured.</param>
+        <param name="streaming">Returns true if streaming is enabled.</param>
+        <summary>
+            Creates a new instance of the BeforeCompletionEventArgs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Memory">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.State.IMemory Memory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.State.IMemory Memory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Memory" />
+      <MemberSignature Language="VB.NET" Value="Public Property Memory As IMemory" />
+      <MemberSignature Language="F#" Value="member this.Memory : Microsoft.Teams.AI.State.IMemory with get, set" Usage="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Memory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.State.IMemory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An interface for accessing state values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromptFunctions">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; PromptFunctions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.IPromptFunctions`1&lt;class System.Collections.Generic.List`1&lt;string&gt;&gt; PromptFunctions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.PromptFunctions" />
+      <MemberSignature Language="VB.NET" Value="Public Property PromptFunctions As IPromptFunctions(Of List(Of String))" />
+      <MemberSignature Language="F#" Value="member this.PromptFunctions : Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;string&gt;&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.PromptFunctions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.IPromptFunctions&lt;System.Collections.Generic.List&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Functions to use when rendering the prompt.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromptTemplate">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptTemplate PromptTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.PromptTemplate PromptTemplate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.PromptTemplate" />
+      <MemberSignature Language="VB.NET" Value="Public Property PromptTemplate As PromptTemplate" />
+      <MemberSignature Language="F#" Value="member this.PromptTemplate : Microsoft.Teams.AI.AI.Prompts.PromptTemplate with get, set" Usage="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.PromptTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Prompt template being completed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Streaming">
+      <MemberSignature Language="C#" Value="public bool Streaming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Streaming" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Streaming" />
+      <MemberSignature Language="VB.NET" Value="Public Property Streaming As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Streaming : bool with get, set" Usage="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Streaming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns 'true' if the prompt response is being streamed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tokenizer">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Tokenizers.ITokenizer Tokenizer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Tokenizers.ITokenizer Tokenizer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Tokenizer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tokenizer As ITokenizer" />
+      <MemberSignature Language="F#" Value="member this.Tokenizer : Microsoft.Teams.AI.AI.Tokenizers.ITokenizer with get, set" Usage="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.Tokenizer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Tokenizers.ITokenizer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Tokenizer to use when rendering the prompt.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.ITurnContext TurnContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.ITurnContext TurnContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.TurnContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property TurnContext As ITurnContext" />
+      <MemberSignature Language="F#" Value="member this.TurnContext : Microsoft.Bot.Builder.ITurnContext with get, set" Usage="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs.TurnContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current turn context.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

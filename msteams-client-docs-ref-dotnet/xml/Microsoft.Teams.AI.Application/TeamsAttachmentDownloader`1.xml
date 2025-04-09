@@ -1,0 +1,93 @@
+<Type Name="TeamsAttachmentDownloader&lt;TState&gt;" FullName="Microsoft.Teams.AI.Application.TeamsAttachmentDownloader&lt;TState&gt;">
+  <TypeSignature Language="C#" Value="public class TeamsAttachmentDownloader&lt;TState&gt; : Microsoft.Teams.AI.Application.IInputFileDownloader&lt;TState&gt; where TState : TurnState, new()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsAttachmentDownloader`1&lt;.ctor (class Microsoft.Teams.AI.State.TurnState) TState&gt; extends System.Object implements class Microsoft.Teams.AI.Application.IInputFileDownloader`1&lt;!TState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.TeamsAttachmentDownloader`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsAttachmentDownloader(Of TState)&#xA;Implements IInputFileDownloader(Of TState)" />
+  <TypeSignature Language="F#" Value="type TeamsAttachmentDownloader&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt; = class&#xA;    interface IInputFileDownloader&lt;'State (requires 'State :&gt; TurnState and 'State : (new : unit -&gt; 'State))&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TState">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Teams.AI.State.TurnState</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.Application.IInputFileDownloader&lt;TState&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TState" />
+    <summary>
+            Downloads attachments from Teams using the Bot access token.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsAttachmentDownloader (Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions options, System.Net.Http.HttpClient? httpClient = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions options, class System.Net.Http.HttpClient httpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.TeamsAttachmentDownloader`1.#ctor(Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions,System.Net.Http.HttpClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As TeamsAttachmentDownloaderOptions, Optional httpClient As HttpClient = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Application.TeamsAttachmentDownloader&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; : Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions * System.Net.Http.HttpClient -&gt; Microsoft.Teams.AI.Application.TeamsAttachmentDownloader&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt;" Usage="new Microsoft.Teams.AI.Application.TeamsAttachmentDownloader&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State : (new : unit -&gt; 'State))&gt; (options, httpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.Application.TeamsAttachmentDownloaderOptions" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+      </Parameters>
+      <Docs>
+        <param name="options">The options</param>
+        <param name="httpClient">Optional. The http client</param>
+        <summary>
+            Creates the TeamsAttachmentDownloader
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException" />
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadFilesAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.Application.InputFile&gt;&gt; DownloadFilesAsync (Microsoft.Bot.Builder.ITurnContext turnContext, TState turnState, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.Application.InputFile&gt;&gt; DownloadFilesAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, !TState turnState, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.TeamsAttachmentDownloader`1.DownloadFilesAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DownloadFilesAsync (turnContext As ITurnContext, turnState As TState, Optional cancellationToken As CancellationToken = Nothing) As Task(Of List(Of InputFile))" />
+      <MemberSignature Language="F#" Value="abstract member DownloadFilesAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.Application.InputFile&gt;&gt;&#xA;override this.DownloadFilesAsync : Microsoft.Bot.Builder.ITurnContext * 'State * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.Application.InputFile&gt;&gt;" Usage="teamsAttachmentDownloader.DownloadFilesAsync (turnContext, turnState, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.Application.IInputFileDownloader`1.DownloadFilesAsync(Microsoft.Bot.Builder.ITurnContext,`0,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.List&lt;Microsoft.Teams.AI.Application.InputFile&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="turnState" Type="TState" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="turnState">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

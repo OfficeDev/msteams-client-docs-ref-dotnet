@@ -1,0 +1,85 @@
+<Type Name="CompletionConfiguration+ChatToolChoice" FullName="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration+ChatToolChoice">
+  <TypeSignature Language="C#" Value="public enum CompletionConfiguration.ChatToolChoice" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed CompletionConfiguration/ChatToolChoice extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CompletionConfiguration.ChatToolChoice" />
+  <TypeSignature Language="F#" Value="type CompletionConfiguration.ChatToolChoice = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            ChatToolChoice
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration/ChatToolChoice Auto = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.Auto" />
+      <MemberSignature Language="VB.NET" Value="Auto" />
+      <MemberSignature Language="F#" Value="Auto = 1" Usage="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration+ChatToolChoice</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Auto
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration/ChatToolChoice None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration+ChatToolChoice</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            None
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration/ChatToolChoice Required = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.Required" />
+      <MemberSignature Language="VB.NET" Value="Required" />
+      <MemberSignature Language="F#" Value="Required = 2" Usage="Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration.ChatToolChoice.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.CompletionConfiguration+ChatToolChoice</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Required
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

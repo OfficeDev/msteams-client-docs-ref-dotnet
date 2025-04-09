@@ -1,20 +1,21 @@
 <Type Name="AzureOpenAIEmbeddingsOptions" FullName="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions">
-  <TypeSignature Language="C#" Value="public class AzureOpenAIEmbeddingsOptions : Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureOpenAIEmbeddingsOptions extends Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" />
+  <TypeSignature Language="C#" Value="public class AzureOpenAIEmbeddingsOptions : Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AzureOpenAIEmbeddingsOptions extends Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" />
-  <TypeSignature Language="VB.NET" Value="Public Class AzureOpenAIEmbeddingsOptions&#xA;Inherits OpenAIEmbeddingsOptions" />
-  <TypeSignature Language="F#" Value="type AzureOpenAIEmbeddingsOptions = class&#xA;    inherit OpenAIEmbeddingsOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AzureOpenAIEmbeddingsOptions&#xA;Inherits BaseOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="F#" Value="type AzureOpenAIEmbeddingsOptions = class&#xA;    inherit BaseOpenAIEmbeddingsOptions" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions</BaseTypeName>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
     <summary>
-            Additional options needed to use the Azure OpenAI service.
+            Options for configuring an `OpenAIEmbeddings` to generate embeddings using an Azure OpenAI hosted model.
             </summary>
     <remarks>
             The Azure OpenAI API version is set to latest by default.
@@ -22,48 +23,162 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AzureOpenAIEmbeddingsOptions (string apiKey, string model, string endpoint);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string model, string endpoint) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.#ctor(System.String,System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, model As String, endpoint As String)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions : string * string * string -&gt; Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" Usage="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions (apiKey, model, endpoint)" />
+      <MemberSignature Language="C#" Value="public AzureOpenAIEmbeddingsOptions (Azure.Core.TokenCredential tokenCredential, string azureDefaultDeployment, string azureEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Core.TokenCredential tokenCredential, string azureDefaultDeployment, string azureEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.#ctor(Azure.Core.TokenCredential,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenCredential As TokenCredential, azureDefaultDeployment As String, azureEndpoint As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions : Azure.Core.TokenCredential * string * string -&gt; Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" Usage="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions (tokenCredential, azureDefaultDeployment, azureEndpoint)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="apiKey" Type="System.String" />
-        <Parameter Name="model" Type="System.String" />
-        <Parameter Name="endpoint" Type="System.String" />
+        <Parameter Name="tokenCredential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="azureDefaultDeployment" Type="System.String" />
+        <Parameter Name="azureEndpoint" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="apiKey">OpenAI API key.</param>
-        <param name="model">The model to use for embeddings. This should be the model deployment name, not the model</param>
-        <param name="endpoint">Endpoint for your Azure OpenAI deployment.</param>
+        <param name="tokenCredential">token credential</param>
+        <param name="azureDefaultDeployment">the deployment name</param>
+        <param name="azureEndpoint">azure endpoint</param>
         <summary>
-            Create an instance of the AzureOpenAIEmbeddingsOptions class.
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Endpoint">
-      <MemberSignature Language="C#" Value="public string Endpoint { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.Endpoint" />
-      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
-      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.Endpoint" />
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AzureOpenAIEmbeddingsOptions (string azureApiKey, string azureDeployment, string azureEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string azureApiKey, string azureDeployment, string azureEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (azureApiKey As String, azureDeployment As String, azureEndpoint As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions : string * string * string -&gt; Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" Usage="new Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions (azureApiKey, azureDeployment, azureEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="azureApiKey" Type="System.String" />
+        <Parameter Name="azureDeployment" Type="System.String" />
+        <Parameter Name="azureEndpoint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="azureApiKey">API key to use when making requests to Azure OpenAI.</param>
+        <param name="azureDeployment">Name of the Azure OpenAI deployment (model) to use.</param>
+        <param name="azureEndpoint">Deployment endpoint to use.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureApiKey">
+      <MemberSignature Language="C#" Value="public string? AzureApiKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureApiKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureApiKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureApiKey As String" />
+      <MemberSignature Language="F#" Value="member this.AzureApiKey : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureApiKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Endpoint for your Azure OpenAI deployment.
+            API key to use when making requests to Azure OpenAI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureApiVersion">
+      <MemberSignature Language="C#" Value="public string? AzureApiVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureApiVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureApiVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureApiVersion As String" />
+      <MemberSignature Language="F#" Value="member this.AzureApiVersion : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureApiVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Version of the API being called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureDeployment">
+      <MemberSignature Language="C#" Value="public string AzureDeployment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureDeployment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureDeployment" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureDeployment As String" />
+      <MemberSignature Language="F#" Value="member this.AzureDeployment : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureDeployment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the Azure OpenAI deployment (model) to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AzureEndpoint">
+      <MemberSignature Language="C#" Value="public string AzureEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AzureEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property AzureEndpoint As String" />
+      <MemberSignature Language="F#" Value="member this.AzureEndpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.AzureEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Deployment endpoint to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenCredential">
+      <MemberSignature Language="C#" Value="public Azure.Core.TokenCredential? TokenCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Core.TokenCredential TokenCredential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.TokenCredential" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenCredential As TokenCredential" />
+      <MemberSignature Language="F#" Value="member this.TokenCredential : Azure.Core.TokenCredential with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions.TokenCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Core.TokenCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The token credential to use when making requests to Azure OpenAI.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

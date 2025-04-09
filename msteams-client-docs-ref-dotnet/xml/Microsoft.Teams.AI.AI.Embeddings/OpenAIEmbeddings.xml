@@ -1,0 +1,109 @@
+<Type Name="OpenAIEmbeddings" FullName="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings">
+  <TypeSignature Language="C#" Value="public class OpenAIEmbeddings : Microsoft.Teams.AI.AI.Embeddings.IEmbeddingsModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIEmbeddings extends System.Object implements class Microsoft.Teams.AI.AI.Embeddings.IEmbeddingsModel" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenAIEmbeddings&#xA;Implements IEmbeddingsModel" />
+  <TypeSignature Language="F#" Value="type OpenAIEmbeddings = class&#xA;    interface IEmbeddingsModel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Embeddings.IEmbeddingsModel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A `IEmbeddingsModel` for calling OpenAI and Azure OpenAI hosted models.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenAIEmbeddings (Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default, System.Net.Http.HttpClient? httpClient = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory, class System.Net.Http.HttpClient httpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings.#ctor(Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As AzureOpenAIEmbeddingsOptions, Optional loggerFactory As ILoggerFactory = Nothing, Optional httpClient As HttpClient = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings : Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions * Microsoft.Extensions.Logging.ILoggerFactory * System.Net.Http.HttpClient -&gt; Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings" Usage="new Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings (options, loggerFactory, httpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Embeddings.AzureOpenAIEmbeddingsOptions" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options for configuring an `OpenAIModel` to call an Azure OpenAI hosted model.</param>
+        <param name="loggerFactory">The logger factory instance.</param>
+        <param name="httpClient">HTTP client.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Models.OpenAIModel" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenAIEmbeddings (Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default, System.Net.Http.HttpClient? httpClient = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory, class System.Net.Http.HttpClient httpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings.#ctor(Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As OpenAIEmbeddingsOptions, Optional loggerFactory As ILoggerFactory = Nothing, Optional httpClient As HttpClient = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings : Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions * Microsoft.Extensions.Logging.ILoggerFactory * System.Net.Http.HttpClient -&gt; Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings" Usage="new Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings (options, loggerFactory, httpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" />
+        <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
+        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options for configuring an `OpenAIEmbeddings` to call an OpenAI hosted model.</param>
+        <param name="loggerFactory">The logger factory instance.</param>
+        <param name="httpClient">HTTP client.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEmbeddingsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt; CreateEmbeddingsAsync (System.Collections.Generic.IList&lt;string&gt; inputs, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt; CreateEmbeddingsAsync(class System.Collections.Generic.IList`1&lt;string&gt; inputs, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddings.CreateEmbeddingsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateEmbeddingsAsync (inputs As IList(Of String), Optional cancellationToken As CancellationToken = Nothing) As Task(Of EmbeddingsResponse)" />
+      <MemberSignature Language="F#" Value="abstract member CreateEmbeddingsAsync : System.Collections.Generic.IList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt;&#xA;override this.CreateEmbeddingsAsync : System.Collections.Generic.IList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt;" Usage="openAIEmbeddings.CreateEmbeddingsAsync (inputs, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Teams.AI.AI.Embeddings.IEmbeddingsModel.CreateEmbeddingsAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Embeddings.EmbeddingsResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

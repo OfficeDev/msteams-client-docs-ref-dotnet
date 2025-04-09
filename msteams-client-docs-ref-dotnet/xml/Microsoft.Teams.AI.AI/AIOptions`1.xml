@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TState">
@@ -36,7 +37,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="planner" Type="Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt;" />
@@ -58,7 +59,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
@@ -80,6 +81,52 @@
              </remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableFeedbackLoop">
+      <MemberSignature Language="C#" Value="public bool EnableFeedbackLoop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableFeedbackLoop" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.EnableFeedbackLoop" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableFeedbackLoop As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnableFeedbackLoop : bool with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.EnableFeedbackLoop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. If true, the AI system will enable the feedback loop in Teams that allows a user to give thumbs up or down to a response.
+            Defaults to "false".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FeedbackLoopType">
+      <MemberSignature Language="C#" Value="public string FeedbackLoopType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FeedbackLoopType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.AIOptions`1.FeedbackLoopType" />
+      <MemberSignature Language="VB.NET" Value="Public Property FeedbackLoopType As String" />
+      <MemberSignature Language="F#" Value="member this.FeedbackLoopType : string with get, set" Usage="Microsoft.Teams.AI.AI.AIOptions&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState)&gt;.FeedbackLoopType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the type of feedback loop. Set to "default" by default. It can be set to one of "default" or "custom".
+            The <see cref="P:Microsoft.Teams.AI.AI.AIOptions`1.EnableFeedbackLoop" /> property should be set to true to use this property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MaxSteps">
       <MemberSignature Language="C#" Value="public int? MaxSteps { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaxSteps" />
@@ -89,7 +136,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -113,7 +160,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
@@ -137,7 +184,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Moderator.IModerator&lt;TState&gt;</ReturnType>
@@ -161,7 +208,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Planners.IPlanner&lt;TState&gt;</ReturnType>

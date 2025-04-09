@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,7 +28,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -44,7 +45,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.Exceptions.TeamsAIException</ReturnType>
@@ -52,6 +53,28 @@
       <Docs>
         <summary>
             Error returned.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;? Input { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Teams.AI.AI.Models.ChatMessage&gt; Input" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Prompts.PromptResponse.Input" />
+      <MemberSignature Language="VB.NET" Value="Public Property Input As IList(Of ChatMessage)" />
+      <MemberSignature Language="F#" Value="member this.Input : System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Prompts.PromptResponse.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.ChatMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User input message sent to the model. null if no input was sent.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -66,7 +89,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Models.ChatMessage</ReturnType>
@@ -88,7 +111,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptResponseStatus</ReturnType>

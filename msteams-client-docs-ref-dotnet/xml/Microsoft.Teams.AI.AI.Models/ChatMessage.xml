@@ -7,14 +7,21 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Text.Json.Serialization.JsonConverter(typeof(Microsoft.Teams.AI.Utilities.JsonConverters.ChatMessageJsonConverter))]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonConverter(typeof(Microsoft.Teams.AI.Utilities.JsonConverters.ChatMessageJsonConverter))&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Chat Message
+            Represents a message that will be passed to the Chat Completions API
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -28,34 +35,147 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="role" Type="Microsoft.Teams.AI.AI.Models.ChatRole" />
       </Parameters>
       <Docs>
         <param name="role"> The role associated with this message payload. </param>
-        <summary> Initializes a new instance of ChatMessage. </summary>
+        <summary>
+            Initializes a new instance of ChatMessage.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Content">
-      <MemberSignature Language="C#" Value="public string? Content { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Content" />
-      <MemberSignature Language="VB.NET" Value="Public Property Content As String" />
-      <MemberSignature Language="F#" Value="member this.Content : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.Content" />
+    <Member MemberName="ActionCallId">
+      <MemberSignature Language="C#" Value="public string? ActionCallId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActionCallId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ActionCallId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ActionCallId As String" />
+      <MemberSignature Language="F#" Value="member this.ActionCallId : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.ActionCallId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("actionCallId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("actionCallId")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
+            The ID of the tool call resolved by the provided content. `toolCallId` is required if role is `tool`.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionCalls">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ActionCall&gt;? ActionCalls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Models.ActionCall&gt; ActionCalls" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ActionCalls" />
+      <MemberSignature Language="VB.NET" Value="Public Property ActionCalls As List(Of ActionCall)" />
+      <MemberSignature Language="F#" Value="member this.ActionCalls : System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ActionCall&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.ActionCalls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("actionCalls")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("actionCalls")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Models.ActionCall&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The tool calls generated by the model, such as function calls.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attachments">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Bot.Schema.Attachment&gt;? Attachments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Bot.Schema.Attachment&gt; Attachments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Attachments" />
+      <MemberSignature Language="VB.NET" Value="Public Property Attachments As List(Of Attachment)" />
+      <MemberSignature Language="F#" Value="member this.Attachments : System.Collections.Generic.List&lt;Microsoft.Bot.Schema.Attachment&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.Attachments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("attachments")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("attachments")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Bot.Schema.Attachment&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Attachments for the bot to send back.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public object? Content;" />
+      <MemberSignature Language="ILAsm" Value=".field public object Content" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Models.ChatMessage.Content" />
+      <MemberSignature Language="VB.NET" Value="Public Content As Object " />
+      <MemberSignature Language="F#" Value="val mutable Content : obj" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.Content" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
             The text associated with this message payload.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.MessageContext? Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.MessageContext Context" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChatMessage.Context" />
+      <MemberSignature Language="VB.NET" Value="Public Property Context As MessageContext" />
+      <MemberSignature Language="F#" Value="member this.Context : Microsoft.Teams.AI.AI.Models.MessageContext with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("context")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("context")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.MessageContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The context used for this message.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -70,8 +190,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use ActionCalls instead")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use ActionCalls instead")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Models.FunctionCall</ReturnType>
       </ReturnValue>
@@ -80,6 +206,34 @@
             The name and arguments of a function that should be called, as generated by the model.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContent&lt;TContent&gt;">
+      <MemberSignature Language="C#" Value="public TContent GetContent&lt;TContent&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TContent GetContent&lt;TContent&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ChatMessage.GetContent``1" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetContent(Of TContent) () As TContent" />
+      <MemberSignature Language="F#" Value="member this.GetContent : unit -&gt; 'Content" Usage="chatMessage.GetContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TContent</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TContent" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TContent">To be added.</typeparam>
+        <summary>
+            Gets the content with the given type.
+            Will throw an exception if the content is not of the given type.
+            </summary>
+        <returns>The content.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -92,7 +246,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -116,7 +270,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Models.ChatRole</ReturnType>
@@ -124,6 +278,62 @@
       <Docs>
         <summary>
             The role associated with this message payload.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolCallId">
+      <MemberSignature Language="C#" Value="public string? ToolCallId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolCallId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ToolCallId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ToolCallId As String" />
+      <MemberSignature Language="F#" Value="member this.ToolCallId : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.ToolCallId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use ActionCalldId instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use ActionCalldId instead.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ID of the tool call resolved by the provided content. `toolCallId` is required if role is `tool`.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolCalls">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall&gt;? ToolCalls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall&gt; ToolCalls" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ChatMessage.ToolCalls" />
+      <MemberSignature Language="VB.NET" Value="Public Property ToolCalls As IList(Of ChatCompletionsToolCall)" />
+      <MemberSignature Language="F#" Value="member this.ToolCalls : System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Models.ChatMessage.ToolCalls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use ActionCalls instead")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use ActionCalls instead")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.ChatCompletionsToolCall&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The tool calls generated by the model, such as function calls.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

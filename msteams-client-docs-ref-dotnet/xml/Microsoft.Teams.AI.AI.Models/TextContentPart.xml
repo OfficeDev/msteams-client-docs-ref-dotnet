@@ -1,0 +1,62 @@
+<Type Name="TextContentPart" FullName="Microsoft.Teams.AI.AI.Models.TextContentPart">
+  <TypeSignature Language="C#" Value="public class TextContentPart : Microsoft.Teams.AI.AI.Models.MessageContentParts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextContentPart extends Microsoft.Teams.AI.AI.Models.MessageContentParts" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.TextContentPart" />
+  <TypeSignature Language="VB.NET" Value="Public Class TextContentPart&#xA;Inherits MessageContentParts" />
+  <TypeSignature Language="F#" Value="type TextContentPart = class&#xA;    inherit MessageContentParts" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Models.MessageContentParts</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The image content part of the ChatMessage
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextContentPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.TextContentPart.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            The constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text;" />
+      <MemberSignature Language="ILAsm" Value=".field public string Text" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Models.TextContentPart.Text" />
+      <MemberSignature Language="VB.NET" Value="Public Text As String " />
+      <MemberSignature Language="F#" Value="val mutable Text : string" Usage="Microsoft.Teams.AI.AI.Models.TextContentPart.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The text of the message
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

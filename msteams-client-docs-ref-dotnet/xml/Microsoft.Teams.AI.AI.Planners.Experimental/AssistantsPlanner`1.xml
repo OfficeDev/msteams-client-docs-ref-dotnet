@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TState">
@@ -33,25 +34,23 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AssistantsPlanner (Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default, System.Net.Http.HttpClient? httpClient = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory, class System.Net.Http.HttpClient httpClient) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.#ctor(Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions,Microsoft.Extensions.Logging.ILoggerFactory,System.Net.Http.HttpClient)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (options As AssistantsPlannerOptions, Optional loggerFactory As ILoggerFactory = Nothing, Optional httpClient As HttpClient = Nothing)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; : Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions * Microsoft.Extensions.Logging.ILoggerFactory * System.Net.Http.HttpClient -&gt; Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt;" Usage="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; (options, loggerFactory, httpClient)" />
+      <MemberSignature Language="C#" Value="public AssistantsPlanner (Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions options, Microsoft.Extensions.Logging.ILoggerFactory? loggerFactory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions options, class Microsoft.Extensions.Logging.ILoggerFactory loggerFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.#ctor(Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions,Microsoft.Extensions.Logging.ILoggerFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (options As AssistantsPlannerOptions, Optional loggerFactory As ILoggerFactory = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; : Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions * Microsoft.Extensions.Logging.ILoggerFactory -&gt; Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt;" Usage="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt; (options, loggerFactory)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" />
         <Parameter Name="loggerFactory" Type="Microsoft.Extensions.Logging.ILoggerFactory" />
-        <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
       </Parameters>
       <Docs>
         <param name="options">Options for configuring the AssistantsPlanner.</param>
         <param name="loggerFactory">The logger factory instance.</param>
-        <param name="httpClient">HTTP client.</param>
         <summary>
             Create new AssistantsPlanner.
             </summary>
@@ -70,7 +69,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
@@ -104,7 +103,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Planners.Plan&gt;</ReturnType>
@@ -127,33 +126,70 @@
       </Docs>
     </Member>
     <Member MemberName="CreateAssistantAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt; CreateAssistantAsync (string apiKey, string? organization, Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams request, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt; CreateAssistantAsync(string apiKey, string organization, class Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.CreateAssistantAsync(System.String,System.String,Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateAssistantAsync (apiKey As String, organization As String, request As AssistantCreateParams, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Assistant)" />
-      <MemberSignature Language="F#" Value="static member CreateAssistantAsync : string * string * Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt;" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt;.CreateAssistantAsync (apiKey, organization, request, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;OpenAI.Assistants.Assistant&gt; CreateAssistantAsync (Azure.Core.TokenCredential tokenCredential, OpenAI.Assistants.AssistantCreationOptions request, string model, string endpoint, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class OpenAI.Assistants.Assistant&gt; CreateAssistantAsync(class Azure.Core.TokenCredential tokenCredential, class OpenAI.Assistants.AssistantCreationOptions request, string model, string endpoint, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.CreateAssistantAsync(Azure.Core.TokenCredential,OpenAI.Assistants.AssistantCreationOptions,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateAssistantAsync (tokenCredential As TokenCredential, request As AssistantCreationOptions, model As String, endpoint As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Assistant)" />
+      <MemberSignature Language="F#" Value="static member CreateAssistantAsync : Azure.Core.TokenCredential * OpenAI.Assistants.AssistantCreationOptions * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;OpenAI.Assistants.Assistant&gt;" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt;.CreateAssistantAsync (tokenCredential, request, model, endpoint, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.OpenAI.Models.Assistant&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;OpenAI.Assistants.Assistant&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="apiKey" Type="System.String" />
-        <Parameter Name="organization" Type="System.String" />
-        <Parameter Name="request" Type="Microsoft.Teams.AI.AI.OpenAI.Models.AssistantCreateParams" />
+        <Parameter Name="tokenCredential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="request" Type="OpenAI.Assistants.AssistantCreationOptions" />
+        <Parameter Name="model" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.String" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="apiKey">OpenAI API key.</param>
-        <param name="organization">OpenAI organization.</param>
+        <param name="tokenCredential">Azure token credential to authenticate requests</param>
         <param name="request">Definition of the assistant to create.</param>
+        <param name="model">The underlying LLM model.</param>
+        <param name="endpoint">Azure OpenAI API Endpoint.</param>
         <param name="cancellationToken">A cancellation token that can be used by other objects
             or threads to receive notice of cancellation.</param>
         <summary>
-            Static helper method for programmatically creating an assistant.
+            Static helper method for programatically creating an assistant.
+            </summary>
+        <returns>The created assistant.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAssistantAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;OpenAI.Assistants.Assistant&gt; CreateAssistantAsync (string apiKey, OpenAI.Assistants.AssistantCreationOptions request, string model, string? endpoint = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class OpenAI.Assistants.Assistant&gt; CreateAssistantAsync(string apiKey, class OpenAI.Assistants.AssistantCreationOptions request, string model, string endpoint, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner`1.CreateAssistantAsync(System.String,OpenAI.Assistants.AssistantCreationOptions,System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateAssistantAsync (apiKey As String, request As AssistantCreationOptions, model As String, Optional endpoint As String = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Assistant)" />
+      <MemberSignature Language="F#" Value="static member CreateAssistantAsync : string * OpenAI.Assistants.AssistantCreationOptions * string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;OpenAI.Assistants.Assistant&gt;" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlanner&lt;'State (requires 'State :&gt; Microsoft.Teams.AI.State.TurnState and 'State :&gt; Microsoft.Teams.AI.AI.Planners.Experimental.IAssistantsState)&gt;.CreateAssistantAsync (apiKey, request, model, endpoint, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;OpenAI.Assistants.Assistant&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="apiKey" Type="System.String" />
+        <Parameter Name="request" Type="OpenAI.Assistants.AssistantCreationOptions" />
+        <Parameter Name="model" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="apiKey">OpenAI or Azure OpenAI API key.</param>
+        <param name="request">Definition of the assistant to create.</param>
+        <param name="model">The underlying LLM model.</param>
+        <param name="endpoint">Azure OpenAI API Endpoint.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Static helper method for programatically creating an assistant.
             </summary>
         <returns>The created assistant.</returns>
         <remarks>To be added.</remarks>

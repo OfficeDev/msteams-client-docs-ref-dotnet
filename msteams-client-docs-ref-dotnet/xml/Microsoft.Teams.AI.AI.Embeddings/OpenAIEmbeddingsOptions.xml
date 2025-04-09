@@ -1,20 +1,21 @@
 <Type Name="OpenAIEmbeddingsOptions" FullName="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions">
-  <TypeSignature Language="C#" Value="public class OpenAIEmbeddingsOptions" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIEmbeddingsOptions extends System.Object" />
+  <TypeSignature Language="C#" Value="public class OpenAIEmbeddingsOptions : Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIEmbeddingsOptions extends Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" />
-  <TypeSignature Language="VB.NET" Value="Public Class OpenAIEmbeddingsOptions" />
-  <TypeSignature Language="F#" Value="type OpenAIEmbeddingsOptions = class" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenAIEmbeddingsOptions&#xA;Inherits BaseOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="F#" Value="type OpenAIEmbeddingsOptions = class&#xA;    inherit BaseOpenAIEmbeddingsOptions" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
     <summary>
-            Options for the OpenAI embeddings.
+            Options for configuring an `OpenAIEmbeddings` to generate embeddings using an OpenAI hosted model.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -28,17 +29,17 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="apiKey" Type="System.String" />
         <Parameter Name="model" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="apiKey">OpenAI API key.</param>
-        <param name="model">The model to use.</param>
+        <param name="apiKey">API key to use when calling the OpenAI API.</param>
+        <param name="model">Model to use for embeddings.</param>
         <summary>
-            Create an instance of the OpenAIEmbeddingsOptions class.
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -52,62 +53,18 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            OpenAI API key.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Endpoint">
-      <MemberSignature Language="C#" Value="public string? Endpoint { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.Endpoint" />
-      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
-      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.Endpoint" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Optional. OpenAI endpoint.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LogRequests">
-      <MemberSignature Language="C#" Value="public bool LogRequests { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool LogRequests" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.LogRequests" />
-      <MemberSignature Language="VB.NET" Value="Public Property LogRequests As Boolean" />
-      <MemberSignature Language="F#" Value="member this.LogRequests : bool with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.OpenAIEmbeddingsOptions.LogRequests" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            A flag indicating if the planner should log requests with the provided logger.
+            API key to use when calling the OpenAI API.
             </summary>
         <value>To be added.</value>
         <remarks>
-            This is useful for debugging prompts and defaults to `false`.
+            A new API key can be created at https://platform.openai.com/account/api-keys.
             </remarks>
       </Docs>
     </Member>
@@ -120,7 +77,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -144,7 +101,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

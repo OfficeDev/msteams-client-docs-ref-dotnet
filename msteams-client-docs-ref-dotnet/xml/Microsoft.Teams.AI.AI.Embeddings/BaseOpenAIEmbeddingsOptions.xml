@@ -1,0 +1,89 @@
+<Type Name="BaseOpenAIEmbeddingsOptions" FullName="Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions">
+  <TypeSignature Language="C#" Value="public class BaseOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BaseOpenAIEmbeddingsOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class BaseOpenAIEmbeddingsOptions" />
+  <TypeSignature Language="F#" Value="type BaseOpenAIEmbeddingsOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base embeddings options common to both OpenAI and Azure OpenAI services.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BaseOpenAIEmbeddingsOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogRequests">
+      <MemberSignature Language="C#" Value="public bool? LogRequests { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; LogRequests" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.LogRequests" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogRequests As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.LogRequests : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.LogRequests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Whether to log requests to the console.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is useful for debugging prompts.
+            The default value is `false`.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryPolicy">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;TimeSpan&gt;? RetryPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;valuetype System.TimeSpan&gt; RetryPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.RetryPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property RetryPolicy As List(Of TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.RetryPolicy : System.Collections.Generic.List&lt;TimeSpan&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Embeddings.BaseOpenAIEmbeddingsOptions.RetryPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Retry policy to use when calling the OpenAI API.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default retry policy is `{ TimeSpan.FromMilliseconds(2000), TimeSpan.FromMilliseconds(5000) }`
+            which means that the first retry will be after 2 seconds and the second retry will be after 5 seconds.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

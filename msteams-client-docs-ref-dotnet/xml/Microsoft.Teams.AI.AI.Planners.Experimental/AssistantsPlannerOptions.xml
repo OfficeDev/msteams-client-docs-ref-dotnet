@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -20,23 +21,51 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public AssistantsPlannerOptions (string apiKey, string assistantId);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string assistantId) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.#ctor(System.String,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, assistantId As String)" />
-      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions : string * string -&gt; Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" Usage="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions (apiKey, assistantId)" />
+      <MemberSignature Language="C#" Value="public AssistantsPlannerOptions (Azure.Core.TokenCredential tokenCredential, string assistantId, string? endpoint = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Azure.Core.TokenCredential tokenCredential, string assistantId, string endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.#ctor(Azure.Core.TokenCredential,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenCredential As TokenCredential, assistantId As String, Optional endpoint As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions : Azure.Core.TokenCredential * string * string -&gt; Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" Usage="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions (tokenCredential, assistantId, endpoint)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenCredential" Type="Azure.Core.TokenCredential" />
+        <Parameter Name="assistantId" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenCredential">The token credential object. This can be set to DefaultAzureCredential to use managed identity auth.</param>
+        <param name="assistantId">The Assistant ID.</param>
+        <param name="endpoint">Optional. The Azure OpenAI Endpoint</param>
+        <summary>
+            Create an instance of the AsssistantsPlannerOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssistantsPlannerOptions (string apiKey, string assistantId, string? endpoint = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string apiKey, string assistantId, string endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (apiKey As String, assistantId As String, Optional endpoint As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions : string * string * string -&gt; Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions" Usage="new Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions (apiKey, assistantId, endpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="apiKey" Type="System.String" />
         <Parameter Name="assistantId" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="apiKey">OpenAI API key.</param>
+        <param name="apiKey">OpenAI API key or Azure OpenAI API key.</param>
         <param name="assistantId">The Assistant ID.</param>
+        <param name="endpoint">Optional. The Azure OpenAI Endpoint</param>
         <summary>
             Create an instance of the AssistantsPlannerOptions class.
             </summary>
@@ -44,7 +73,7 @@
       </Docs>
     </Member>
     <Member MemberName="ApiKey">
-      <MemberSignature Language="C#" Value="public string ApiKey { get; set; }" />
+      <MemberSignature Language="C#" Value="public string? ApiKey { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApiKey" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.ApiKey" />
       <MemberSignature Language="VB.NET" Value="Public Property ApiKey As String" />
@@ -52,14 +81,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            OpenAI API key.
+            OpenAI API key or Azure OpenAI API key.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -74,7 +103,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -82,6 +111,28 @@
       <Docs>
         <summary>
             The Assistant ID.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public string? Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property Endpoint As String" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : string with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Azure OpenAI Endpoint.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -96,7 +147,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -118,7 +169,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
@@ -127,6 +178,28 @@
         <summary>
             Optional. The polling interval while waiting for the run to complete.
             If not provide, the default value is 1 second.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenCredential">
+      <MemberSignature Language="C#" Value="public Azure.Core.TokenCredential? TokenCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Azure.Core.TokenCredential TokenCredential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.TokenCredential" />
+      <MemberSignature Language="VB.NET" Value="Public Property TokenCredential As TokenCredential" />
+      <MemberSignature Language="F#" Value="member this.TokenCredential : Azure.Core.TokenCredential with get, set" Usage="Microsoft.Teams.AI.AI.Planners.Experimental.AssistantsPlannerOptions.TokenCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Azure.Core.TokenCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. The token credential to use when making requests to Azure OpenAI.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

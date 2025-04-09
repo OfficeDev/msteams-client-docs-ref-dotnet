@@ -1,0 +1,139 @@
+<Type Name="ResponseReceivedEventArgs" FullName="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class ResponseReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResponseReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class ResponseReceivedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type ResponseReceivedEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the arguments for a ResponseReceived event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResponseReceivedEventArgs (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.Teams.AI.State.IMemory memory, Microsoft.Teams.AI.AI.Prompts.PromptResponse response, Microsoft.Teams.AI.Application.StreamingResponse streamer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.Teams.AI.State.IMemory memory, class Microsoft.Teams.AI.AI.Prompts.PromptResponse response, class Microsoft.Teams.AI.Application.StreamingResponse streamer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.#ctor(Microsoft.Bot.Builder.ITurnContext,Microsoft.Teams.AI.State.IMemory,Microsoft.Teams.AI.AI.Prompts.PromptResponse,Microsoft.Teams.AI.Application.StreamingResponse)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (turnContext As ITurnContext, memory As IMemory, response As PromptResponse, streamer As StreamingResponse)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs : Microsoft.Bot.Builder.ITurnContext * Microsoft.Teams.AI.State.IMemory * Microsoft.Teams.AI.AI.Prompts.PromptResponse * Microsoft.Teams.AI.Application.StreamingResponse -&gt; Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs" Usage="new Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs (turnContext, memory, response, streamer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="memory" Type="Microsoft.Teams.AI.State.IMemory" />
+        <Parameter Name="response" Type="Microsoft.Teams.AI.AI.Prompts.PromptResponse" />
+        <Parameter Name="streamer" Type="Microsoft.Teams.AI.Application.StreamingResponse" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">Current turn context.</param>
+        <param name="memory">An interface for accessing state.</param>
+        <param name="response">Response returned by the model.</param>
+        <param name="streamer">Streamer instance.</param>
+        <summary>
+            Creates a new instance of ResponseReceivedEventArgs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Memory">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.State.IMemory Memory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.State.IMemory Memory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Memory" />
+      <MemberSignature Language="VB.NET" Value="Public Property Memory As IMemory" />
+      <MemberSignature Language="F#" Value="member this.Memory : Microsoft.Teams.AI.State.IMemory with get, set" Usage="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Memory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.State.IMemory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An interface for accessing state values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Prompts.PromptResponse Response { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Prompts.PromptResponse Response" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Response" />
+      <MemberSignature Language="VB.NET" Value="Public Property Response As PromptResponse" />
+      <MemberSignature Language="F#" Value="member this.Response : Microsoft.Teams.AI.AI.Prompts.PromptResponse with get, set" Usage="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Final response returned by the model.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Streamer">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.Application.StreamingResponse Streamer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.Application.StreamingResponse Streamer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Streamer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Streamer As StreamingResponse" />
+      <MemberSignature Language="F#" Value="member this.Streamer : Microsoft.Teams.AI.Application.StreamingResponse with get, set" Usage="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.Streamer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.Application.StreamingResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Streamer object instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Builder.ITurnContext TurnContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Builder.ITurnContext TurnContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.TurnContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property TurnContext As ITurnContext" />
+      <MemberSignature Language="F#" Value="member this.TurnContext : Microsoft.Bot.Builder.ITurnContext with get, set" Usage="Microsoft.Teams.AI.AI.Models.ResponseReceivedEventArgs.TurnContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current turn context.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

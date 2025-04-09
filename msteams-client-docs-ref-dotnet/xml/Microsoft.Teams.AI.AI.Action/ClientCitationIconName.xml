@@ -1,0 +1,422 @@
+<Type Name="ClientCitationIconName" FullName="Microsoft.Teams.AI.AI.Action.ClientCitationIconName">
+  <TypeSignature Language="C#" Value="public static class ClientCitationIconName" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ClientCitationIconName extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Action.ClientCitationIconName" />
+  <TypeSignature Language="VB.NET" Value="Public Class ClientCitationIconName" />
+  <TypeSignature Language="F#" Value="type ClientCitationIconName = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the different possible values for the client citation icon name.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdobeFlash">
+      <MemberSignature Language="C#" Value="public static readonly string AdobeFlash;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string AdobeFlash" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobeFlash" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly AdobeFlash As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdobeFlash : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobeFlash" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Adobe Flash icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdobeIllustrator">
+      <MemberSignature Language="C#" Value="public static readonly string AdobeIllustrator;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string AdobeIllustrator" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobeIllustrator" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly AdobeIllustrator As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdobeIllustrator : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobeIllustrator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Adobe Illustrator icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdobeInDesign">
+      <MemberSignature Language="C#" Value="public static readonly string AdobeInDesign;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string AdobeInDesign" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobeInDesign" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly AdobeInDesign As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdobeInDesign : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobeInDesign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Adobe InDesign icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdobePhotoshop">
+      <MemberSignature Language="C#" Value="public static readonly string AdobePhotoshop;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string AdobePhotoshop" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobePhotoshop" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly AdobePhotoshop As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdobePhotoshop : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.AdobePhotoshop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Adobe Photoshop icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GIF">
+      <MemberSignature Language="C#" Value="public static readonly string GIF;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string GIF" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.GIF" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly GIF As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable GIF : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.GIF" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the GIF icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public static readonly string Image;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Image" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Image" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Image As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable Image : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Image icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MicrosoftExcel">
+      <MemberSignature Language="C#" Value="public static readonly string MicrosoftExcel;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string MicrosoftExcel" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftExcel" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MicrosoftExcel As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable MicrosoftExcel : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftExcel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Microsoft Excel icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MicrosoftLoop">
+      <MemberSignature Language="C#" Value="public static readonly string MicrosoftLoop;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string MicrosoftLoop" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftLoop" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MicrosoftLoop As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable MicrosoftLoop : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftLoop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Microsoft Loop icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MicrosoftPowerPoint">
+      <MemberSignature Language="C#" Value="public static readonly string MicrosoftPowerPoint;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string MicrosoftPowerPoint" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftPowerPoint" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MicrosoftPowerPoint As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable MicrosoftPowerPoint : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftPowerPoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Microsoft PowerPoint icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MicrosoftVisio">
+      <MemberSignature Language="C#" Value="public static readonly string MicrosoftVisio;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string MicrosoftVisio" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftVisio" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MicrosoftVisio As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable MicrosoftVisio : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftVisio" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Microsoft Visio icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MicrosoftWhiteboard">
+      <MemberSignature Language="C#" Value="public static readonly string MicrosoftWhiteboard;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string MicrosoftWhiteboard" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftWhiteboard" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MicrosoftWhiteboard As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable MicrosoftWhiteboard : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftWhiteboard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Microsoft Whiteboard icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MicrosoftWord">
+      <MemberSignature Language="C#" Value="public static readonly string MicrosoftWord;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string MicrosoftWord" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftWord" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MicrosoftWord As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable MicrosoftWord : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.MicrosoftWord" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Microsoft Word icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PDF">
+      <MemberSignature Language="C#" Value="public static readonly string PDF;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PDF" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.PDF" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly PDF As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable PDF : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.PDF" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the PDF icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sketch">
+      <MemberSignature Language="C#" Value="public static readonly string Sketch;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Sketch" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Sketch" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Sketch As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable Sketch : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Sketch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Sketch icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sound">
+      <MemberSignature Language="C#" Value="public static readonly string Sound;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Sound" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Sound" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Sound As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable Sound : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Sound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Sound icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceCode">
+      <MemberSignature Language="C#" Value="public static readonly string SourceCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SourceCode" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.SourceCode" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly SourceCode As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable SourceCode : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.SourceCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Source Code icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public static readonly string Text;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Text" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Text" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Text As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable Text : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Text icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Video">
+      <MemberSignature Language="C#" Value="public static readonly string Video;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Video" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Video" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Video As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable Video : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.Video" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the Video icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZIP">
+      <MemberSignature Language="C#" Value="public static readonly string ZIP;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ZIP" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Action.ClientCitationIconName.ZIP" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ZIP As String " />
+      <MemberSignature Language="F#" Value=" staticval mutable ZIP : string" Usage="Microsoft.Teams.AI.AI.Action.ClientCitationIconName.ZIP" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the ZIP icon name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

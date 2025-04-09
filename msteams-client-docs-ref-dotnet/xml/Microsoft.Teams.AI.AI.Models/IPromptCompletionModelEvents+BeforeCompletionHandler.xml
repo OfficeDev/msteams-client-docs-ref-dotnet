@@ -1,0 +1,30 @@
+<Type Name="IPromptCompletionModelEvents+BeforeCompletionHandler" FullName="Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents+BeforeCompletionHandler">
+  <TypeSignature Language="C#" Value="public delegate void IPromptCompletionModelEvents.BeforeCompletionHandler(object sender, BeforeCompletionEventArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed IPromptCompletionModelEvents/BeforeCompletionHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.BeforeCompletionHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub IPromptCompletionModelEvents.BeforeCompletionHandler(sender As Object, args As BeforeCompletionEventArgs)" />
+  <TypeSignature Language="F#" Value="type IPromptCompletionModelEvents.BeforeCompletionHandler = delegate of obj * BeforeCompletionEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="args" Type="Microsoft.Teams.AI.AI.Models.BeforeCompletionEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">To be added.</param>
+    <param name="args">To be added.</param>
+    <summary>
+            Defines the method that is triggered before the model is called to complete a prompt.
+            </summary>
+    <returns />
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

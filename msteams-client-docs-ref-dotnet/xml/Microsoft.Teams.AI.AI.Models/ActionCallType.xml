@@ -1,0 +1,61 @@
+<Type Name="ActionCallType" FullName="Microsoft.Teams.AI.AI.Models.ActionCallType">
+  <TypeSignature Language="C#" Value="public class ActionCallType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActionCallType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.ActionCallType" />
+  <TypeSignature Language="VB.NET" Value="Public Class ActionCallType" />
+  <TypeSignature Language="F#" Value="type ActionCallType = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an ActionCall type
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionCallType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ActionCallType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Function">
+      <MemberSignature Language="C#" Value="public static string Function { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Function" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ActionCallType.Function" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Function As String" />
+      <MemberSignature Language="F#" Value="static member Function : string" Usage="Microsoft.Teams.AI.AI.Models.ActionCallType.Function" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Function action call type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

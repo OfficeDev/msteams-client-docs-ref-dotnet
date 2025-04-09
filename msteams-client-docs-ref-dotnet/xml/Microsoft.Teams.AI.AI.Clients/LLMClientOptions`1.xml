@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TContent" />
@@ -34,7 +35,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="model" Type="Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
@@ -49,6 +50,71 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableFeedbackLoop">
+      <MemberSignature Language="C#" Value="public bool? EnableFeedbackLoop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; EnableFeedbackLoop" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.EnableFeedbackLoop" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableFeedbackLoop As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.EnableFeedbackLoop : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.EnableFeedbackLoop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional, controls the feedback loop for streaming responses.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndStreamHandler">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ResponseReceivedHandler? EndStreamHandler;" />
+      <MemberSignature Language="ILAsm" Value=".field public class Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents/ResponseReceivedHandler EndStreamHandler" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.EndStreamHandler" />
+      <MemberSignature Language="VB.NET" Value="Public EndStreamHandler As IPromptCompletionModelEvents.ResponseReceivedHandler " />
+      <MemberSignature Language="F#" Value="val mutable EndStreamHandler : Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents.ResponseReceivedHandler" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.EndStreamHandler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModelEvents+ResponseReceivedHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional handler to run when a stream is about to conclude.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FeedbackLoopType">
+      <MemberSignature Language="C#" Value="public string? FeedbackLoopType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FeedbackLoopType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.FeedbackLoopType" />
+      <MemberSignature Language="VB.NET" Value="Public Property FeedbackLoopType As String" />
+      <MemberSignature Language="F#" Value="member this.FeedbackLoopType : string with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.FeedbackLoopType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. Represents the type of feedback loop. It can be set to one of "default" or "custom".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="HistoryVariable">
       <MemberSignature Language="C#" Value="public string HistoryVariable { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string HistoryVariable" />
@@ -58,7 +124,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -82,7 +148,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -106,7 +172,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -128,7 +194,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -150,7 +216,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -172,7 +238,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Models.IPromptCompletionModel</ReturnType>
@@ -180,6 +246,28 @@
       <Docs>
         <summary>
             AI model to use for completing prompts.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartStreamingMessage">
+      <MemberSignature Language="C#" Value="public string? StartStreamingMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StartStreamingMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Clients.LLMClientOptions`1.StartStreamingMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartStreamingMessage As String" />
+      <MemberSignature Language="F#" Value="member this.StartStreamingMessage : string with get, set" Usage="Microsoft.Teams.AI.AI.Clients.LLMClientOptions&lt;'Content&gt;.StartStreamingMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional message to send a client at the start of a streaming response.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -194,7 +282,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Prompts.PromptTemplate</ReturnType>
@@ -216,7 +304,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Tokenizers.ITokenizer</ReturnType>
@@ -238,7 +326,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Teams.AI.AI.Validators.IPromptResponseValidator</ReturnType>

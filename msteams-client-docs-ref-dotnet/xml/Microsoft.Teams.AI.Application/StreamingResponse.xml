@@ -1,0 +1,379 @@
+<Type Name="StreamingResponse" FullName="Microsoft.Teams.AI.Application.StreamingResponse">
+  <TypeSignature Language="C#" Value="public class StreamingResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StreamingResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.StreamingResponse" />
+  <TypeSignature Language="VB.NET" Value="Public Class StreamingResponse" />
+  <TypeSignature Language="F#" Value="type StreamingResponse = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             A helper class for streaming responses to the client.
+             This class is used to send a series of updates to the client in a single response. The expected
+             sequence of calls is:
+             
+             `QueueInformativeUpdate()`, `QueueTextChunk()`, `QueueTextChunk()`, ..., `EndStream()`.
+            
+              Once `EndStream()` is called, the stream is considered ended and no further updates can be sent.
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamingResponse (Microsoft.Bot.Builder.ITurnContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Bot.Builder.ITurnContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingResponse.#ctor(Microsoft.Bot.Builder.ITurnContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (context As ITurnContext)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Application.StreamingResponse : Microsoft.Bot.Builder.ITurnContext -&gt; Microsoft.Teams.AI.Application.StreamingResponse" Usage="new Microsoft.Teams.AI.Application.StreamingResponse context" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Bot.Builder.ITurnContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Context for the current turn of conversation with the user.</param>
+        <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Teams.AI.Application.StreamingResponse" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attachments">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Bot.Schema.Attachment&gt;? Attachments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Bot.Schema.Attachment&gt; Attachments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.Attachments" />
+      <MemberSignature Language="VB.NET" Value="Public Property Attachments As List(Of Attachment)" />
+      <MemberSignature Language="F#" Value="member this.Attachments : System.Collections.Generic.List&lt;Microsoft.Bot.Schema.Attachment&gt; with get, set" Usage="Microsoft.Teams.AI.Application.StreamingResponse.Attachments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Bot.Schema.Attachment&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Fluent interface for accessing the attachments.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Citations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Action.ClientCitation&gt;? Citations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Teams.AI.AI.Action.ClientCitation&gt; Citations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.Citations" />
+      <MemberSignature Language="VB.NET" Value="Public Property Citations As List(Of ClientCitation)" />
+      <MemberSignature Language="F#" Value="member this.Citations : System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Action.ClientCitation&gt; with get, set" Usage="Microsoft.Teams.AI.Application.StreamingResponse.Citations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Teams.AI.AI.Action.ClientCitation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The citations for the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableFeedbackLoop">
+      <MemberSignature Language="C#" Value="public bool? EnableFeedbackLoop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; EnableFeedbackLoop" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.EnableFeedbackLoop" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableFeedbackLoop As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.EnableFeedbackLoop : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Teams.AI.Application.StreamingResponse.EnableFeedbackLoop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the Feedback Loop in Teams that allows a user to give thumbs up or down to a response.
+            Defaults to false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableGeneratedByAILabel">
+      <MemberSignature Language="C#" Value="public bool? EnableGeneratedByAILabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; EnableGeneratedByAILabel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.EnableGeneratedByAILabel" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableGeneratedByAILabel As Nullable(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.EnableGeneratedByAILabel : Nullable&lt;bool&gt; with get, set" Usage="Microsoft.Teams.AI.Application.StreamingResponse.EnableGeneratedByAILabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the "Generated by AI" label in Teams.
+            Defaults to false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndStream">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task EndStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task EndStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingResponse.EndStream" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndStream () As Task" />
+      <MemberSignature Language="F#" Value="member this.EndStream : unit -&gt; System.Threading.Tasks.Task" Usage="streamingResponse.EndStream " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Ends the stream by sending the final message to the client.
+            </summary>
+        <returns>A Task representing the async operation</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Teams.AI.Exceptions.TeamsAIException">Throws if the stream has already ended.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FeedbackLoopType">
+      <MemberSignature Language="C#" Value="public string FeedbackLoopType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FeedbackLoopType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.FeedbackLoopType" />
+      <MemberSignature Language="VB.NET" Value="Public Property FeedbackLoopType As String" />
+      <MemberSignature Language="F#" Value="member this.FeedbackLoopType : string with get, set" Usage="Microsoft.Teams.AI.Application.StreamingResponse.FeedbackLoopType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Represents the type of feedback loop. Set to "default" by default. It can be set to one of "default" or "custom".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.Message" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Teams.AI.Application.StreamingResponse.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Fluent interface for accessing the message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueInformativeUpdate">
+      <MemberSignature Language="C#" Value="public void QueueInformativeUpdate (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void QueueInformativeUpdate(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingResponse.QueueInformativeUpdate(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub QueueInformativeUpdate (text As String)" />
+      <MemberSignature Language="F#" Value="member this.QueueInformativeUpdate : string -&gt; unit" Usage="streamingResponse.QueueInformativeUpdate text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text of the update to send.</param>
+        <summary>
+            Queues an informative update to be sent to the client.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Teams.AI.Exceptions.TeamsAIException">Throws if the stream has already ended.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueTextChunk">
+      <MemberSignature Language="C#" Value="public void QueueTextChunk (string text, System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.Citation&gt;? citations = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void QueueTextChunk(string text, class System.Collections.Generic.IList`1&lt;class Microsoft.Teams.AI.AI.Models.Citation&gt; citations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingResponse.QueueTextChunk(System.String,System.Collections.Generic.IList{Microsoft.Teams.AI.AI.Models.Citation})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub QueueTextChunk (text As String, Optional citations As IList(Of Citation) = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.QueueTextChunk : string * System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.Citation&gt; -&gt; unit" Usage="streamingResponse.QueueTextChunk (text, citations)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="citations" Type="System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.Citation&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="text">Partial text of the message to send.</param>
+        <param name="citations">Citations to include in the message.</param>
+        <summary>
+            Queues a chunk of partial message text to be sent to the client.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Teams.AI.Exceptions.TeamsAIException">Throws if the stream has already ended.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SensitivityLabel">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo? SensitivityLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo SensitivityLabel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.SensitivityLabel" />
+      <MemberSignature Language="VB.NET" Value="Public Property SensitivityLabel As SensitivityUsageInfo" />
+      <MemberSignature Language="F#" Value="member this.SensitivityLabel : Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo with get, set" Usage="Microsoft.Teams.AI.Application.StreamingResponse.SensitivityLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Action.SensitivityUsageInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The sensitivity label for the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCitations">
+      <MemberSignature Language="C#" Value="public void SetCitations (System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.Citation&gt; citations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCitations(class System.Collections.Generic.IList`1&lt;class Microsoft.Teams.AI.AI.Models.Citation&gt; citations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingResponse.SetCitations(System.Collections.Generic.IList{Microsoft.Teams.AI.AI.Models.Citation})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCitations (citations As IList(Of Citation))" />
+      <MemberSignature Language="F#" Value="member this.SetCitations : System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.Citation&gt; -&gt; unit" Usage="streamingResponse.SetCitations citations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="citations" Type="System.Collections.Generic.IList&lt;Microsoft.Teams.AI.AI.Models.Citation&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="citations">Citations to be included in the message.</param>
+        <summary>
+             Sets the citations for the full message.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamId">
+      <MemberSignature Language="C#" Value="public string? StreamId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StreamId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.StreamingResponse.StreamId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StreamId As String" />
+      <MemberSignature Language="F#" Value="member this.StreamId : string" Usage="Microsoft.Teams.AI.Application.StreamingResponse.StreamId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the stream ID of the current response.
+            Assigned after the initial update is sent.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatesSent">
+      <MemberSignature Language="C#" Value="public int UpdatesSent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 UpdatesSent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingResponse.UpdatesSent" />
+      <MemberSignature Language="VB.NET" Value="Public Function UpdatesSent () As Integer" />
+      <MemberSignature Language="F#" Value="member this.UpdatesSent : unit -&gt; int" Usage="streamingResponse.UpdatesSent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the number of updates sent for the stream.
+            </summary>
+        <returns>Number of updates sent so far.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForQueue">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WaitForQueue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WaitForQueue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.StreamingResponse.WaitForQueue" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForQueue () As Task" />
+      <MemberSignature Language="F#" Value="member this.WaitForQueue : unit -&gt; System.Threading.Tasks.Task" Usage="streamingResponse.WaitForQueue " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Waits for the outgoing activity queue to be empty.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

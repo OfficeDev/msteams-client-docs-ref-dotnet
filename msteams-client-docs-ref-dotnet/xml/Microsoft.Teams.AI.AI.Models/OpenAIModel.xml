@@ -1,12 +1,13 @@
 <Type Name="OpenAIModel" FullName="Microsoft.Teams.AI.AI.Models.OpenAIModel">
-  <TypeSignature Language="C#" Value="public class OpenAIModel : Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIModel extends System.Object implements class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel" />
+  <TypeSignature Language="C#" Value="public class OpenAIModel : Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenAIModel extends System.Object implements class Microsoft.Teams.AI.AI.Models.IPromptCompletionModel, class Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.OpenAIModel" />
-  <TypeSignature Language="VB.NET" Value="Public Class OpenAIModel&#xA;Implements IPromptCompletionModel" />
-  <TypeSignature Language="F#" Value="type OpenAIModel = class&#xA;    interface IPromptCompletionModel" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenAIModel&#xA;Implements IPromptCompletionStreamingModel" />
+  <TypeSignature Language="F#" Value="type OpenAIModel = class&#xA;    interface IPromptCompletionStreamingModel&#xA;    interface IPromptCompletionModel" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Teams.AI</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -15,12 +16,33 @@
     <Interface>
       <InterfaceName>Microsoft.Teams.AI.AI.Models.IPromptCompletionModel</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
     <summary>
-            A `PromptCompletionModel` for calling OpenAI and Azure OpenAI hosted models.
+            A `IPromptCompletionModel` for calling OpenAI and Azure OpenAI hosted models.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            The model has been updated to support calling OpenAI's new o1 family of models. That currently 
+            comes with a few constraints. These constraints are mostly handled for you but are worth noting:
+                
+            * The o1 models introduce a new `max_completion_tokens` parameter and they've deprecated the
+              `max_tokens` parameter. The model will automatically convert the incoming `max_tokens` parameter
+              to `max_completion_tokens` for you. But you should be aware that o1 has hidden token usage and costs
+              that aren't constrained by the `max_completion_tokens` parameter. This means that you may see an
+              increase in token usage and costs when using the o1 models. 
+              
+            * The o1 models do not currently support the sending of system messages which just means that the 
+            `useSystemMessages` parameter is ignored when calling the o1 models.
+            
+            * The o1 models do not currently support setting the `temperature`, `top_p`, and `presence_penalty` 
+              parameters so they will be ignored.
+            
+            * The o1 models do not currently support the use of tools so you will need to use the "monologue" 
+              augmentation to call actions.
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -32,7 +54,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Models.AzureOpenAIModelOptions" />
@@ -58,7 +80,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="options" Type="Microsoft.Teams.AI.AI.Models.OpenAIModelOptions" />
@@ -87,7 +109,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Teams.AI</AssemblyName>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Teams.AI.AI.Prompts.PromptResponse&gt;</ReturnType>
@@ -111,6 +133,31 @@
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter? Events { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter Events" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.OpenAIModel.Events" />
+      <MemberSignature Language="VB.NET" Value="Public Property Events As PromptCompletionModelEmitter" />
+      <MemberSignature Language="F#" Value="member this.Events : Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter with get, set" Usage="Microsoft.Teams.AI.AI.Models.OpenAIModel.Events" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Teams.AI.AI.Models.IPromptCompletionStreamingModel.Events</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.PromptCompletionModelEmitter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Events emitted by the model.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

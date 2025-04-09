@@ -1,0 +1,95 @@
+<Type Name="FeedbackLoopDataActionValue" FullName="Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue">
+  <TypeSignature Language="C#" Value="public class FeedbackLoopDataActionValue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FeedbackLoopDataActionValue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue" />
+  <TypeSignature Language="VB.NET" Value="Public Class FeedbackLoopDataActionValue" />
+  <TypeSignature Language="F#" Value="type FeedbackLoopDataActionValue = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The feedback loop data's action value.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FeedbackLoopDataActionValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Feedback">
+      <MemberSignature Language="C#" Value="public string? Feedback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Feedback" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.Feedback" />
+      <MemberSignature Language="VB.NET" Value="Public Property Feedback As String" />
+      <MemberSignature Language="F#" Value="member this.Feedback : string with get, set" Usage="Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.Feedback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="feedback")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="feedback")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The feedback provided by the user when prompted with "What did you lke/dislike?"
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reaction">
+      <MemberSignature Language="C#" Value="public string? Reaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reaction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.Reaction" />
+      <MemberSignature Language="VB.NET" Value="Public Property Reaction As String" />
+      <MemberSignature Language="F#" Value="member this.Reaction : string with get, set" Usage="Microsoft.Teams.AI.Application.FeedbackLoopDataActionValue.Reaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty(PropertyName="reaction")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty(PropertyName="reaction")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Either "like" or "dislike"
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

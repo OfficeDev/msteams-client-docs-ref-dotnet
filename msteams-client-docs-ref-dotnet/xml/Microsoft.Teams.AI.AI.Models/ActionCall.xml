@@ -1,0 +1,174 @@
+<Type Name="ActionCall" FullName="Microsoft.Teams.AI.AI.Models.ActionCall">
+  <TypeSignature Language="C#" Value="public class ActionCall" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActionCall extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.AI.Models.ActionCall" />
+  <TypeSignature Language="VB.NET" Value="Public Class ActionCall" />
+  <TypeSignature Language="F#" Value="type ActionCall = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Action called by the model.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionCall (OpenAI.Chat.ChatToolCall toolCall);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class OpenAI.Chat.ChatToolCall toolCall) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ActionCall.#ctor(OpenAI.Chat.ChatToolCall)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (toolCall As ChatToolCall)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.ActionCall : OpenAI.Chat.ChatToolCall -&gt; Microsoft.Teams.AI.AI.Models.ActionCall" Usage="new Microsoft.Teams.AI.AI.Models.ActionCall toolCall" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolCall" Type="OpenAI.Chat.ChatToolCall" />
+      </Parameters>
+      <Docs>
+        <param name="toolCall" />
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.Teams.AI.AI.Models.ActionCall" /> from <see cref="T:OpenAI.Chat.ChatToolCall" /></summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Teams.AI.Exceptions.TeamsAIException">Thrown if `toolCall` has an invalid type</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionCall (OpenAI.Chat.StreamingChatToolCallUpdate toolCall);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class OpenAI.Chat.StreamingChatToolCallUpdate toolCall) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ActionCall.#ctor(OpenAI.Chat.StreamingChatToolCallUpdate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (toolCall As StreamingChatToolCallUpdate)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.ActionCall : OpenAI.Chat.StreamingChatToolCallUpdate -&gt; Microsoft.Teams.AI.AI.Models.ActionCall" Usage="new Microsoft.Teams.AI.AI.Models.ActionCall toolCall" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolCall" Type="OpenAI.Chat.StreamingChatToolCallUpdate" />
+      </Parameters>
+      <Docs>
+        <param name="toolCall" />
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.Teams.AI.AI.Models.ActionCall" /> from <see cref="T:OpenAI.Chat.StreamingChatToolCallUpdate" /></summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Teams.AI.Exceptions.TeamsAIException">Thrown if `toolCall` has an invalid type</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActionCall (string id, Microsoft.Teams.AI.AI.Models.ActionFunction function);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, class Microsoft.Teams.AI.AI.Models.ActionFunction function) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.AI.Models.ActionCall.#ctor(System.String,Microsoft.Teams.AI.AI.Models.ActionFunction)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (id As String, function As ActionFunction)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.AI.Models.ActionCall : string * Microsoft.Teams.AI.AI.Models.ActionFunction -&gt; Microsoft.Teams.AI.AI.Models.ActionCall" Usage="new Microsoft.Teams.AI.AI.Models.ActionCall (id, function)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="function" Type="Microsoft.Teams.AI.AI.Models.ActionFunction" />
+      </Parameters>
+      <Docs>
+        <param name="id" />
+        <param name="function" />
+        <summary>
+            Creates an instance of <see cref="T:Microsoft.Teams.AI.AI.Models.ActionCall" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Function">
+      <MemberSignature Language="C#" Value="public Microsoft.Teams.AI.AI.Models.ActionFunction? Function { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Teams.AI.AI.Models.ActionFunction Function" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ActionCall.Function" />
+      <MemberSignature Language="VB.NET" Value="Public Property Function As ActionFunction" />
+      <MemberSignature Language="F#" Value="member this.Function : Microsoft.Teams.AI.AI.Models.ActionFunction with get, set" Usage="Microsoft.Teams.AI.AI.Models.ActionCall.Function" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("function")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("function")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Teams.AI.AI.Models.ActionFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The function that the model called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string? Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ActionCall.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As String" />
+      <MemberSignature Language="F#" Value="member this.Id : string with get, set" Usage="Microsoft.Teams.AI.AI.Models.ActionCall.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("id")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("id")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The ID of the action call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.AI.Models.ActionCall.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As String" />
+      <MemberSignature Language="F#" Value="member this.Type : string" Usage="Microsoft.Teams.AI.AI.Models.ActionCall.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Text.Json.Serialization.JsonPropertyName("type")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Text.Json.Serialization.JsonPropertyName("type")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of the action. Currently, only "function" is supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

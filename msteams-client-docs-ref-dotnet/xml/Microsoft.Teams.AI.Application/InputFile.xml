@@ -1,0 +1,135 @@
+<Type Name="InputFile" FullName="Microsoft.Teams.AI.Application.InputFile">
+  <TypeSignature Language="C#" Value="public class InputFile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InputFile extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.Application.InputFile" />
+  <TypeSignature Language="VB.NET" Value="Public Class InputFile" />
+  <TypeSignature Language="F#" Value="type InputFile = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an upload file
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InputFile (BinaryData content, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.BinaryData content, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.Application.InputFile.#ctor(System.BinaryData,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (content As BinaryData, contentType As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.Application.InputFile : BinaryData * string -&gt; Microsoft.Teams.AI.Application.InputFile" Usage="new Microsoft.Teams.AI.Application.InputFile (content, contentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.BinaryData" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">The input file content</param>
+        <param name="contentType">the input file content type</param>
+        <summary>
+            The constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public BinaryData Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.BinaryData Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.InputFile.Content" />
+      <MemberSignature Language="VB.NET" Value="Public Property Content As BinaryData" />
+      <MemberSignature Language="F#" Value="member this.Content : BinaryData with get, set" Usage="Microsoft.Teams.AI.Application.InputFile.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.BinaryData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The downloaded content of the file
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.InputFile.ContentType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentType As String" />
+      <MemberSignature Language="F#" Value="member this.ContentType : string with get, set" Usage="Microsoft.Teams.AI.Application.InputFile.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The content type of the file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentUrl">
+      <MemberSignature Language="C#" Value="public string? ContentUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.InputFile.ContentUrl" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentUrl As String" />
+      <MemberSignature Language="F#" Value="member this.ContentUrl : string with get, set" Usage="Microsoft.Teams.AI.Application.InputFile.ContentUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. URL to the content of the file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public string? Filename { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filename" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.Application.InputFile.Filename" />
+      <MemberSignature Language="VB.NET" Value="Public Property Filename As String" />
+      <MemberSignature Language="F#" Value="member this.Filename : string with get, set" Usage="Microsoft.Teams.AI.Application.InputFile.Filename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional. The file name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

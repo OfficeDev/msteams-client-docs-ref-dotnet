@@ -1,0 +1,148 @@
+<Type Name="TeamsAdapter" FullName="Microsoft.Teams.AI.TeamsAdapter">
+  <TypeSignature Language="C#" Value="public class TeamsAdapter : Microsoft.Bot.Builder.Integration.AspNet.Core.CloudAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsAdapter extends Microsoft.Bot.Builder.Integration.AspNet.Core.CloudAdapter" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Teams.AI.TeamsAdapter" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsAdapter&#xA;Inherits CloudAdapter" />
+  <TypeSignature Language="F#" Value="type TeamsAdapter = class&#xA;    inherit CloudAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+    <AssemblyVersion>1.10.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Bot.Builder.Integration.AspNet.Core.CloudAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An adapter that implements the Bot Framework Protocol and can be hosted in different cloud environments both public and private.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TeamsAdapter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.TeamsAdapter" /> class. (Public cloud. No auth. For testing.)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsAdapter (Microsoft.Extensions.Configuration.IConfiguration configuration, System.Net.Http.IHttpClientFactory? httpClientFactory = default, Microsoft.Extensions.Logging.ILogger? logger = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Extensions.Configuration.IConfiguration configuration, class System.Net.Http.IHttpClientFactory httpClientFactory, class Microsoft.Extensions.Logging.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TeamsAdapter.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (configuration As IConfiguration, Optional httpClientFactory As IHttpClientFactory = Nothing, Optional logger As ILogger = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.TeamsAdapter : Microsoft.Extensions.Configuration.IConfiguration * System.Net.Http.IHttpClientFactory * Microsoft.Extensions.Logging.ILogger -&gt; Microsoft.Teams.AI.TeamsAdapter" Usage="new Microsoft.Teams.AI.TeamsAdapter (configuration, httpClientFactory, logger)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+        <Parameter Name="httpClientFactory" Type="System.Net.Http.IHttpClientFactory" />
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> instance.</param>
+        <param name="httpClientFactory">The <see cref="T:System.Net.Http.IHttpClientFactory" /> this adapter should use.</param>
+        <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger" /> implementation this adapter should use.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.TeamsAdapter" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsAdapter (Microsoft.Extensions.Configuration.IConfiguration configuration, Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory credentialsFactory, System.Net.Http.IHttpClientFactory? httpClientFactory = default, Microsoft.Extensions.Logging.ILogger? logger = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Extensions.Configuration.IConfiguration configuration, class Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory credentialsFactory, class System.Net.Http.IHttpClientFactory httpClientFactory, class Microsoft.Extensions.Logging.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TeamsAdapter.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (configuration As IConfiguration, credentialsFactory As ServiceClientCredentialsFactory, Optional httpClientFactory As IHttpClientFactory = Nothing, Optional logger As ILogger = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Teams.AI.TeamsAdapter : Microsoft.Extensions.Configuration.IConfiguration * Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory * System.Net.Http.IHttpClientFactory * Microsoft.Extensions.Logging.ILogger -&gt; Microsoft.Teams.AI.TeamsAdapter" Usage="new Microsoft.Teams.AI.TeamsAdapter (configuration, credentialsFactory, httpClientFactory, logger)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+        <Parameter Name="credentialsFactory" Type="Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory" />
+        <Parameter Name="httpClientFactory" Type="System.Net.Http.IHttpClientFactory" />
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> instance.</param>
+        <param name="credentialsFactory">The <see cref="T:Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory" /> instance.</param>
+        <param name="httpClientFactory">The <see cref="T:System.Net.Http.IHttpClientFactory" /> this adapter should use.</param>
+        <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger" /> implementation this adapter should use.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Teams.AI.TeamsAdapter" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpClientFactory">
+      <MemberSignature Language="C#" Value="public System.Net.Http.IHttpClientFactory HttpClientFactory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Http.IHttpClientFactory HttpClientFactory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Teams.AI.TeamsAdapter.HttpClientFactory" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HttpClientFactory As IHttpClientFactory" />
+      <MemberSignature Language="F#" Value="member this.HttpClientFactory : System.Net.Http.IHttpClientFactory" Usage="Microsoft.Teams.AI.TeamsAdapter.HttpClientFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.IHttpClientFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Http Client Factory
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ProcessAsync (Microsoft.AspNetCore.Http.HttpRequest httpRequest, Microsoft.AspNetCore.Http.HttpResponse httpResponse, Microsoft.Bot.Builder.IBot bot, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ProcessAsync(class Microsoft.AspNetCore.Http.HttpRequest httpRequest, class Microsoft.AspNetCore.Http.HttpResponse httpResponse, class Microsoft.Bot.Builder.IBot bot, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Teams.AI.TeamsAdapter.ProcessAsync(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.AspNetCore.Http.HttpResponse,Microsoft.Bot.Builder.IBot,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ProcessAsync (httpRequest As HttpRequest, httpResponse As HttpResponse, bot As IBot, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="override this.ProcessAsync : Microsoft.AspNetCore.Http.HttpRequest * Microsoft.AspNetCore.Http.HttpResponse * Microsoft.Bot.Builder.IBot * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsAdapter.ProcessAsync (httpRequest, httpResponse, bot, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Teams.AI</AssemblyName>
+        <AssemblyVersion>1.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpRequest" Type="Microsoft.AspNetCore.Http.HttpRequest" />
+        <Parameter Name="httpResponse" Type="Microsoft.AspNetCore.Http.HttpResponse" />
+        <Parameter Name="bot" Type="Microsoft.Bot.Builder.IBot" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="httpRequest">To be added.</param>
+        <param name="httpResponse">To be added.</param>
+        <param name="bot">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
